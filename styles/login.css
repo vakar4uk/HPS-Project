@@ -1,0 +1,34 @@
+/* background */
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    /* background: url("/images/background.png"); */
+    /* background-repeat: no-repeat; */
+    background-color: rgba(66, 113, 222, 0.8);               
+}
+
+#content {
+    width: 100%;
+}
+
+#content > div {
+    width: 50%;
+    float: left;
+    text-align: center;
+    margin-top: 300px;
+}
+
+span > img {
+    width: 240px;
+    height: 80px;
+}
+
+#login {
+    float: left;
+}
+
+#username, #password {
+    width: 300px;
+}
