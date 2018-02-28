@@ -2,85 +2,47 @@
 
 
 
-$host     = '127.0.0.1';
-$port     = "8889";
+$host     = "localhost";
 $socket   = "";
 $user     = "root";
-$password = "";
-$dbname   = "user_login";
+$dbPassword = "root";
+$dbname   = "hps_login";
 
+$connection = mysqli_connect($host,  $user, $dbPassword) or die("Could not connect to database!");
 
+if (!$connection)
+{
+    echo "Failed to connect to MySQL: " . mysqli_connect_error();
+}
 
+$selectedDB = mysqli_select_db("hps_login", $connection);
 
-    $uname = $_POST['username'];    
-    $password1 = $_POST['password'];   
-   
-   
-    $uname = mysqli_real_escape_string($uname);       
-    $password1 = mysqli_real_escape_string($password1);
-
-  
+$userName = $_POST['username'];    
+$userPassword = $_POST['password']; 
     
+$userName = stripslashes($userName);
+$userPassword = stripslashes($userPassword);
 
-    $connection = mysqli_connect($host,  $user, $password, $dbname);
-    
-    if (!$connection) {
-        die('Could not connect: ' . mysqli_connect_error());
-        
-    } else {
-        echo 'Connected successfully';
-    }
+$query = "SELECT * FROM hps_login.users WHERE username='$userName' AND password='$userPassword'";
+echo $query;
 
-        
-    
-    
+$result = mysqli_query($query);
+echo $result;
 
-/*
-
-    $host = "localhost";
-    $username= "root";
-    $password = "root";
-    $db = "user_login";*/
-
-    //mysqli_connect($host, $username, $password);
-    //mysqli_select_db($db);
-
-    
+if (!$result) {
+    echo "Could not run query: " . mysqli_connect_error();
+    exit;
+}
 
 
-    if(isset($_GET['username'])) {
+$count = mysqli_num_rows($result);
 
-        
-        
-        
+if($count > 0) {
+    echo "It worked!";
+}
 
-        $result = "select * from login where username='$uname'AND password='$password1'";
-        $row = mysqli_fetch_array($result);    
-        
-
-        if($row['username'] === $uname && $row['password'] === $password1){
-            echo "Login success!";
-
-            header( "Location: signup.php" ); die;
-        }
-
-        else{
-            echo "Failed";
-            header( "Location: failed.php" ); die;
-        }
-    
-
-        // if(mysqli_num_rows($result) === 1) {
-        //     echo "You have successfully logged in!";
-        //     exit();
-            
-        // } else {
-        //     echo "You have entered incorrect password!";
-        //     exit();
-        // }
-
-    }
-
-    mysqli_close($connection);
+else {
+    echo "It didn't";    
+}
 
 ?>

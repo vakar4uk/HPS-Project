@@ -20,7 +20,7 @@
 
 
         <div class="container-fluid">
-            <form action="/login.php" method="post">
+            <form action="login.php" method="post">
                 <div class="form-group">
                     <label for="username" class="sr-only">Username</label>
                     <input type="text" class="form-control" id="username" name="username" placeholder="What's your username?">
