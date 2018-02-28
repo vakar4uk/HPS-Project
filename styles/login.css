@@ -1,7 +1,7 @@
 /* background */
 * {
     margin: 0;
-    padding: 0;
+    padding: 0;     
 }
 html {
     /* background: url("/images/background.png"); */
@@ -25,7 +25,7 @@ span > img {
     height: 80px;
 }
 
-#login {
+#login-btn {
     float: left;
 }
 

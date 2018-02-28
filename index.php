@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,18 +20,18 @@
 
 
         <div class="container-fluid">
-            <form id="login" action="login.php">
+            <form action="/login.php" method="post">
                 <div class="form-group">
                     <label for="username" class="sr-only">Username</label>
                     <input type="text" class="form-control" id="username" name="username" placeholder="What's your username?">
                 </div>
 
                 <div class="form-group">
-						<label for="lg_password" class="sr-only">Password</label>
-						<input type="password" class="form-control" id="password" name="lg_password" placeholder="What's your password?">
+						<label for="password" class="sr-only">Password</label>
+						<input type="password" class="form-control" id="password" name="password" placeholder="What's your password?">
                 </div>
                 
-                <button id="login" type="submit" class="btn btn-lg btn-info">Login</button>
+                <button type="submit" id="login-btn" value="LOGIN" class="btn btn-lg btn-info">Login</button>
             </form>
         </div>
     </div>
