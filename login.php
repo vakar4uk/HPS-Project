@@ -2,13 +2,13 @@
 
 
 
-$host     = "localhost";
+$host     = '127.0.0.1';
 $socket   = "";
 $user     = "root";
 $dbPassword = "root";
-$dbname   = "hps_login";
+$dbname   = "hps";
 
-$connection = mysqli_connect($host,  $user, $dbPassword) or die("Could not connect to database!");
+$connection = mysqli_connect($host,  $user, $dbPassword, $dbname, "8889") or die("Failed to connect to MySQL: " . mysqli_connect_error());
 
 if (!$connection)
 {
@@ -23,11 +23,10 @@ $userPassword = $_POST['password'];
 $userName = stripslashes($userName);
 $userPassword = stripslashes($userPassword);
 
-$query = "SELECT * FROM hps_login.users WHERE username='$userName' AND password='$userPassword'";
-echo $query;
+$query = "SELECT * FROM user_login WHERE user_name='$userName' AND user_password='$userPassword'";
 
-$result = mysqli_query($query);
-echo $result;
+
+$result = mysqli_query($connection,$query);
 
 if (!$result) {
     echo "Could not run query: " . mysqli_connect_error();
@@ -37,12 +36,12 @@ if (!$result) {
 
 $count = mysqli_num_rows($result);
 
-if($count > 0) {
-    echo "It worked!";
+if($count == 1) {
+    header("Location: signup.php"); /* Redirect browser */
+} else {
+    header("Location: failed.php"); /* Redirect browser */
 }
 
-else {
-    echo "It didn't";    
-}
+
 
 ?>

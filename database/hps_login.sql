@@ -4,7 +4,7 @@
 --
 -- Host: localhost:3306
 -- Generation Time: Feb 28, 2018 at 05:34 AM
--- Server version: 5.6.34-log
+-- Server vusersersion: 5.6.34-log
 -- PHP Version: 7.1.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
