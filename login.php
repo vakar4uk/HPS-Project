@@ -3,7 +3,6 @@
 
 
 $host     = '127.0.0.1';
-$socket   = "";
 $user     = "root";
 $dbPassword = "root";
 $dbname   = "hps";
