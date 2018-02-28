@@ -30,12 +30,6 @@
 						<label for="password" class="sr-only">Password</label>
 						<input type="password" class="form-control" id="password" name="password" placeholder="What's your password?">
                 </div>
-                
-                <?php
-                    if(!$count) {
-                     <p>Incorrect user name or password</p>
-                    }
-                ?>
 
                 <button type="submit" id="login-btn" value="LOGIN" class="btn btn-lg btn-info">Login</button>
             </form>
