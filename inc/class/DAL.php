@@ -19,6 +19,7 @@ class DAL {
         }        
         return $connection;
     }
+    
 
     // Get username
     function getUsername() {
@@ -33,7 +34,7 @@ class DAL {
     // Set username
     function setUsername($userName) {
         $this->userName = $userName;
-        // return $this->userName;        
+               
     }    
 
     // Set password
