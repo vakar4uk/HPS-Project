@@ -18,7 +18,8 @@ $userName = stripslashes($userName);
 $dal->setPassword($_POST['password']);
 $userPassword = $dal->getPassword();
 // Check the variable for possible injections
-$userPassword = stripslashes($userPassword);    
+$userPassword = stripslashes($userPassword); 
+bsakjdsakj   
 
 // Run the query using fucntion in DAL 
 $query = $dal->getLoginCredentials($userName, $userPassword, $connection);
