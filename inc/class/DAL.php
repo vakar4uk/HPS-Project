@@ -33,8 +33,7 @@ class DAL {
 
     // Set username
     function setUsername($userName) {
-        $this->userName = $userName;
-               
+        $this->userName = $userName;               
     }    
 
     // Set password
