@@ -8,39 +8,21 @@ $dal = new DAL();
 // running connection function from DAL.php and assigning it to $connection value for further use
 $connection = $dal->db_connect();
 
+// Get the username form the input using function in DAL
 $dal->setUsername($_POST['username']);
 $userName = $dal->getUsername();
+// Check the variable for possible injections
+$userName = stripslashes($userName);
 
-echo "<br><br>Username is: " . $userName;
-
+// Get the password form the input using function in DAL
 $dal->setPassword($_POST['password']);
 $userPassword = $dal->getPassword();
-echo "<br><br>Password is: " . $userPassword;
+// Check the variable for possible injections
+$userPassword = stripslashes($userPassword);    
 
-    
-$userName = stripslashes($userName);
-$userPassword = stripslashes($userPassword);
+// Run the query using fucntion in DAL 
+$query = $dal->getLoginCredentials($userName, $userPassword, $connection);
 
-$query = "SELECT * FROM user_login WHERE user_name='$userName' AND user_password='$userPassword'";
-
-
-
-$result = mysqli_query($connection, $query);
-
-if (!$result) {
-    echo "Could not run query: " . mysqli_connect_error();
-    exit;
-}
-
-
-$count = mysqli_num_rows($result);
-
-if($count == 1) {
-    header("Location: signup.php"); /* Redirect browser */
-} else {
-    header("Location: failed.php"); /* Redirect browser */
-}
-
-
+$validate = $dal->loginValidation($query);
 
 ?>
