@@ -1,18 +1,28 @@
 <?php
 
 // Including config.php file to get credentials and run conecting fucntion
-require_once('C:\Users\DM387091\Documents\HPS Project\Login page\conf\config.php');
+require_once('conf\config.php');
+
+$dal = new DAL();
 
 // running connection function from DAL.php and assigning it to $connection value for further use
-$connection = db_connect();
+$connection = $dal->db_connect();
 
-$userName = $_POST['username'];    
-$userPassword = $_POST['password']; 
+$dal->setUsername($_POST['username']);
+$userName = $dal->getUsername();
+
+echo "<br><br>Username is: " . $userName;
+
+$dal->setPassword($_POST['password']);
+$userPassword = $dal->getPassword();
+echo "<br><br>Password is: " . $userPassword;
+
     
 $userName = stripslashes($userName);
 $userPassword = stripslashes($userPassword);
 
 $query = "SELECT * FROM user_login WHERE user_name='$userName' AND user_password='$userPassword'";
+
 
 
 $result = mysqli_query($connection, $query);

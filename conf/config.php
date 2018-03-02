@@ -1,7 +1,7 @@
 <?php
 
 // Including the connection function
-require_once('C:\Users\DM387091\Documents\HPS Project\Login page\inc\class\DAL.php');
+require_once('inc\class\DAL.php');
 
 // Defining credentials for DB connection
 define("DB_HOST", "127.0.0.1");
