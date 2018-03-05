@@ -9,9 +9,12 @@ html {
     background-color: #1D52B5;
 }
 
+/* Main container */
 #content {
     width: 100%;
+    position: absolute;
 }
+
 
 #content > div {
     width: 50%;
@@ -23,6 +26,17 @@ html {
 span > img {
     width: 240px;
     height: 80px;
+}
+
+/* Login box */
+#login-form {
+    position: relative;
+    margin: auto auto;
+    padding-left: 90px;
+}
+
+input {
+    
 }
 
 #login-btn {
