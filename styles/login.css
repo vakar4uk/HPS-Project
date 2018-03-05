@@ -6,12 +6,7 @@
 html {
     /* background: url("/images/background.png"); */
     /* background-repeat: no-repeat; */
-    background-color: rgba(140, 12, 72, 0.80);               
-}
-
-body {
-    background-color: rgba(152, 14, 33, 0.80);               
-    
+    background-color: #1D52B5;
 }
 
 #content {
