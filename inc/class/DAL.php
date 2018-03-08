@@ -44,7 +44,7 @@ class DAL {
     
     // Create query to take username and password from database
     function getLoginCredentials($userName, $userPassword, $db) {
-       $sql = "SELECT * FROM user_login WHERE user_name='$userName' AND user_password='$userPassword'";
+       $sql = "SELECT * FROM users WHERE userName='$userName' AND password='$userPassword'";
        $result = mysqli_query($db, $sql);
        if (!$result) {
             return mysqli_connect_error();        
