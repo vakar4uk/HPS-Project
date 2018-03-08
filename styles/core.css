@@ -1,0 +1,9 @@
+.row.content {height: 613px;}
+.sidenav {
+       background-color: rgba(29, 77, 139, 0.98);
+      height: 100%;
+      width:50%;
+    }
+    @media screen and (max-width: 767px) {
+      .row.content {height: auto;} 
+    }
