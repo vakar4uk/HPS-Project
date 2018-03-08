@@ -1,7 +1,25 @@
-<<<<<<< HEAD
-body{
-    background-color: #29509F !important;
+html {
+    /* background: url("/images/background.png"); */
+    /* background-repeat: no-repeat; */
+     background-color: rgba(29, 77, 139, 0.98);              
 }
+/*content div*/
+#content > div {
+    width: 50%;
+    float: left;
+    text-align: center;
+    margin-top: 300px;
+}
+.clearfix{
+    background-color:white;
+}
+/* company logo here*/
+span > img {
+    width: 600px;
+    height: 120px;
+    margin-top: 10px;
+}
+
 
 /*style for form */
 
@@ -39,29 +57,11 @@ body{
 
     /* Styles */
     color: #777777;
-=======
-
-/* background */
-* {
-    margin: 0;
-    padding: 0;     
-}
-html {
-    /* background: url("/images/background.png"); */
-    /* background-repeat: no-repeat; */
-     background-color: rgba(29, 77, 139, 0.98);              
-}
-/*content div*/
-#content > div {
-    width: 50%;
-    float: left;
->>>>>>> sagun
     text-align: center;
     line-height: 42px;
     transition: all 0.3s ease-out;
     pointer-events: none;
 }
-<<<<<<< HEAD
 
 
 
@@ -85,16 +85,6 @@ html {
     background: #f9f9f9;
     color: #777;
     transition: color 0.3s ease-out;
-=======
-.clearfix{
-    background-color:white;
-}
-/* company logo here*/
-span > img {
-    width: 600px;
-    height: 120px;
-    margin-top: 10px;
->>>>>>> sagun
 }
 /* Styles go here for form-1 div*/
 .form-1 {
@@ -104,46 +94,12 @@ span > img {
     padding: 10px;
     position: relative; /* For the submit button positioning */
 
-<<<<<<< HEAD
 .form-1 input[type=text] {
     margin-bottom: 10px;
-=======
-    /* Styles */
-    box-shadow: 
-        0 0 1px rgba(0, 0, 0, 0.3), 
-        0 3px 7px rgba(0, 0, 0, 0.3), 
-        inset 0 1px rgba(255,255,255,1),
-        inset 0 -3px 2px rgba(0,0,0,0.25);
-    border-radius: 5px;
-    background: linear-gradient(#eeefef, #ffffff 10%);
-}
-/* style for username and password box*/
-.form-1 input[type=text],
-.form-1 input[type=password] {
-    font-family: 'Lato', Calibri, Arial, sans-serif;
-    font-size: 15px;
-    font-weight: 600;
-    text-shadow: 0 1px 0 rgba(255,255,255,0.8);
-    width: 400px;
-    height:50px;
-    /* Size and position */
-    padding: 10px 18px 10px 5px;
-
-    /* Styles */
-    border: none; /* Remove the default border */
-    box-shadow: 
-    inset 0 0 5px rgba(0,0,0,0.1),
-    inset 0 3px 2px rgba(0,0,0,0.1);
-    border-radius: 3px;
-    background: #f9f9f9;
-    color: #777;
-    transition: color 0.3s ease-out;
->>>>>>> sagun
 }
 .form-1 input[type=text]:hover ~ i,
 .form-1 input[type=password]:hover ~ i {
     color: #52cfeb;
-<<<<<<< HEAD
 }
 
 .form-1 input[type=text]:focus ~ i,
@@ -224,87 +180,3 @@ span > img {
         inset 0 0 5px rgba(0,0,0,0.3),
         inset 0 3px 4px rgba(0,0,0,0.3);
 }
-=======
-}
-
-.form-1 input[type=text]:focus ~ i,
-.form-1 input[type=password]:focus ~ i {
-    color: #42A2BC;
-}
-
-.form-1 input[type=text]:focus,
-.form-1 input[type=password]:focus,
-.form-1 button[type=submit]:focus {
-    outline: none;
-}
-/* arrow botton*/
-.form-1 .submit {
-    /* Size and position */
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    top: 40px;
-    right: -10px;
-    padding: 10px;
-    z-index: 2;
-
-    /* Styles */
-    background: #ffffff;
-    border-radius: 100%;
-    box-shadow: 
-        0 0 2px rgba(0,0,0,0.1),
-        0 3px 2px rgba(0,0,0,0.1),
-        inset 0 -3px 2px rgba(0,0,0,0.2);
-}
-.form-1 .submit:after {
-    /* Size and position */
-    content: "";
-    width: 10px;
-    height: 10px;
-    position: absolute;
-    top: -2px;
-    left: 30px;
-
-    /* Styles */
-    background: #ffffff;
-    
-    /* Other masks trick */
-    
-}
-.form-1 button {
-    /* Size and position */
-    width: 100%;
-    height: 100%;
-    margin-top: -1px;
-
-    /* Icon styles */
-    font-size: 1.4em;
-    line-height: 1.75;
-    color: white;
-
-    /* Styles */
-    border: none; /* Remove the default border */
-    border-radius: inherit;
-    background: linear-gradient(#52cfeb, #42A2BC);
-    box-shadow: 
-        inset 0 1px 0 rgba(255,255,255,0.3),
-        0 1px 2px rgba(0,0,0,0.35),
-        inset 0 3px 2px rgba(255,255,255,0.2),
-        inset 0 -3px 2px rgba(0,0,0,0.1);
-
-    cursor: pointer;
-}
-.form-1 button:hover,
-.form-1 button[type=submit]:focus {
-    background: #52cfeb;
-    transition: all 0.3s ease-out;
-}
-
-.form-1 button:active {
-    background: #42A2BC;
-    box-shadow: 
-        inset 0 0 5px rgba(0,0,0,0.3),
-        inset 0 3px 4px rgba(0,0,0,0.3);
-}
-
->>>>>>> sagun
