@@ -24,7 +24,7 @@ span > img {
     width: 600px;
     height: 120px;
     margin-top: 10px;
-    margin-left: 450px;
+    margin-left: 380px;
 }
 /* Styles go here for form-1 div*/
 .form-1 {
@@ -42,7 +42,7 @@ span > img {
         inset 0 -3px 2px rgba(0,0,0,0.25);
     border-radius: 5px;
     background: linear-gradient(#eeefef, #ffffff 10%);
-    margin-top: 200px; margin-right: 520px; float: right
+    margin-top: 170px; margin-right: 460px; float: right
 }
 /* style for username and password box*/
 .form-1 input[type=text],
