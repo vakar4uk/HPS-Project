@@ -7,7 +7,7 @@ require_once('inc\class\DAL.php');
 define("DB_HOST", "127.0.0.1");
 define("DB_PASSWORD", "root");
 define("DB_USER", "root");
-define("DB_DB", "hps");
+define("DB_DB", "hps_database");
 define("DB_PORT", "8889");
 
 ?>
