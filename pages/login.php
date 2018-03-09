@@ -1,5 +1,3 @@
-
-
 <div id="content">
     <div class="logo-container"><img src="images/logo2.png" alt=""></div>
     <div class="container-fluid">
@@ -15,10 +13,12 @@
                 <input type="password" class="form-control" id="password" 
                     name="password" placeholder="What's your password?" required/>
                 
-                <?php
-                    if($isValid)  {
-                        echo "<div class='alert alert-danger'>ssssup</div>";
-                    }                  
+                <?php 
+                    
+                    if (isset($_GET['error'])) {
+                        echo "<div id='alert-message' class='alert alert-danger'>Invalid password/username. Please try again!</div>";
+                    }
+
                 ?>
                 
             </p>

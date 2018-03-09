@@ -4,6 +4,7 @@ class DAL {
 
     private $userName;
     private $userPassword;
+    public $isValid;
 
     function __constructor() {}
 
@@ -59,11 +60,14 @@ class DAL {
         $isValid = true;
         $count = mysqli_num_rows($query);
         if($count == 1) {
-           header('\signup.php'); /* Redirect browser */
+          
+           header('Location: pages/dashboard.php'); /* Redirect browser */
         } else {
-           $isValid = false;
-           header('\login.php');  /* Redirect browser */
-        }        
+            /* Redirect browser */
+            header('Location: index.php?error');
+            exit();
+         }   
+       
     }
 }    
 
