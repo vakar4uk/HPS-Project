@@ -55,13 +55,15 @@ class DAL {
     
     // Chech match of the credentials in database
     function loginValidation($query) {
+        global $isValid;
+        $isValid = true;
         $count = mysqli_num_rows($query);
         if($count == 1) {
-            header("Location: /pages/signup.php"); /* Redirect browser */
+           header('\signup.php'); /* Redirect browser */
         } else {
-            header("Location: /pages/failed.php"); /* Redirect browser */
-        }
-        
+           $isValid = false;
+           header('\login.php');  /* Redirect browser */
+        }        
     }
 }    
 
