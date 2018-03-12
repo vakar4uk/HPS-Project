@@ -5,13 +5,17 @@
         <form action='/login-logic.php' method="post" class="form-1">
             <p>
                 <label for="username" class="sr-only">Username</label>
-                <input type="text" class="form-control" id="username" 
-                    name="username" placeholder="What's your username?" required />
+                <input class="form-control" type="text"  id="username" required="" 
+                    placeholder="What's your username?" name="username"
+                    oninvalid="this.setCustomValidity('Please enter your username.')"
+                    oninput="setCustomValidity('')"></input>
             </p>
             <p>
                 <label for="password" class="sr-only">Password</label>
-                <input type="password" class="form-control" id="password" 
-                    name="password" placeholder="What's your password?" required/>
+                <input class="form-control" type="password"  id="password" required="" 
+                    placeholder="What's your password?" name="password"
+                    oninvalid="this.setCustomValidity('Please enter your password.')"
+                    oninput="setCustomValidity('')"></input>
                 
                 <?php 
                     
