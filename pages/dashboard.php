@@ -21,9 +21,19 @@
 <body>
     <?php
 
-        include('navbar.php');
+        include('navbars/left-navbar.php');
+        include('navbars/top-navbar.php');
+        include('navbars/second-top-navbar.php');      
         
     ?>
+    
+
+    <div class="col-lg-9 col-md-9"><br><br><br>
+        <div class="details">
+            <br>
+            <h2>We would need a few details to get you started!</h2>
+        </div>  
+    </div>  
 
 <script src="../app.js"></script>
 </body>
