@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <div class="row content">
-    <div class="col-sm-3 sidenav hidden-xs">
+    <div class="col-lg-3 col-md-3 sidenav hidden-xs">
       <div ><span style="float:right;"><img src="images/logo2.png" alt="" style="width:200px; padding:20px;"></span></div>
       <ul class="nav nav-pills nav-stacked">
         <div style="padding:30px;"><h2 style="font-size: 15px; color: white;">Florida Blue(X7)</h2></div>
