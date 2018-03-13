@@ -4,6 +4,7 @@ class DAL {
 
     private $userName;
     private $userPassword;
+    public $isValid;
 
     function __constructor() {}
 
@@ -44,7 +45,7 @@ class DAL {
     
     // Create query to take username and password from database
     function getLoginCredentials($userName, $userPassword, $db) {
-       $sql = "SELECT * FROM users WHERE userName='$userName' AND password='$userPassword'";
+       $sql = "SELECT * FROM user_login WHERE user_name='$userName' AND user_password='$userPassword'";
        $result = mysqli_query($db, $sql);
        if (!$result) {
             return mysqli_connect_error();        
@@ -55,13 +56,18 @@ class DAL {
     
     // Chech match of the credentials in database
     function loginValidation($query) {
+        global $isValid;
+        $isValid = true;
         $count = mysqli_num_rows($query);
         if($count == 1) {
-            header("Location: /pages/signup.php"); /* Redirect browser */
+          
+           header('Location: pages/dashboard.php'); /* Redirect browser */
         } else {
-            header("Location: /pages/failed.php"); /* Redirect browser */
-        }
-        
+            /* Redirect browser */
+            header('Location: index.php?error');
+            exit();
+         }   
+       
     }
 }    
 

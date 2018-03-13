@@ -14,12 +14,26 @@ html {
      background-color: rgba(29, 77, 139, 0.98);              
 }
 /*content div*/
+<<<<<<< HEAD
 #content > div {
     width: 50%;
     float: left;
     text-align: center;
     margin-top: 200px;
+=======
+#content {
+    width: 100%;
+    background-color: rgba(29, 77, 139, 0.98);
+    text-align: center;
+    margin-top: 150px;
 }
+
+/* HPS logo container */
+.logo-container {
+    padding-bottom: 50px;  
+>>>>>>> Dmytro
+}
+
 .clearfix{
     background-color:white;
 }
@@ -41,6 +55,7 @@ span > img {
     position: relative; /* For the submit button positioning */
 
     /* Styles */
+<<<<<<< HEAD
     box-shadow: 
         0 0 1px rgba(0, 0, 0, 0.3), 
         0 3px 7px rgba(0, 0, 0, 0.3), 
@@ -55,6 +70,15 @@ span > img {
 =======
     margin-top: 170px; margin-right: 460px; float: right
 >>>>>>> sagun
+=======
+    /* box-shadow: 
+        0 0 1px rgba(0, 0, 0, 0.3), 
+        0 3px 7px rgba(0, 0, 0, 0.3), 
+        inset 0 1px rgba(255,255,255,1),
+        inset 0 -3px 2px rgba(0,0,0,0.25); */
+    border-radius: 7px;
+    background: white;
+>>>>>>> Dmytro
 }
 /* style for username and password box*/
 .form-1 input[type=text],
@@ -70,11 +94,11 @@ span > img {
 
     /* Styles */
     border: none; /* Remove the default border */
-    box-shadow: 
-    inset 0 0 5px rgba(0,0,0,0.1),
-    inset 0 3px 2px rgba(0,0,0,0.1);
-    border-radius: 3px;
-    background: #f9f9f9;
+    /* box-shadow: 
+        inset 0 0 5px rgba(0,0,0,0.1),
+        inset 0 3px 2px rgba(0,0,0,0.1); */
+    /* border-radius: 3px; */
+    /* background: #f9f9f9; */
     color: #777;
     transition: color 0.3s ease-out;
 }
@@ -96,6 +120,7 @@ span > img {
 /* arrow botton*/
 .form-1 .submit {
     /* Size and position */
+<<<<<<< HEAD
     width: 70px;
     height: 70px;
     position: absolute;
@@ -115,6 +140,23 @@ span > img {
         0 0 2px rgba(0,0,0,0.1),
         0 3px 2px rgba(0,0,0,0.1),
         inset 0 -3px 2px rgba(0,0,0,0.2);*/
+=======
+    width: 50px;
+    /* height: 50px; */
+    position: absolute;
+    top: 20px;
+    right: -10px;
+    padding: 10px;
+    z-index: 2;
+
+    /* Styles */
+    background: #ffffff;
+    border-radius: 50%;
+    /* box-shadow: 
+        0 0 2px rgba(0,0,0,0.1),
+        0 3px 2px rgba(0,0,0,0.1),
+        inset 0 -3px 2px rgba(0,0,0,0.2); */
+>>>>>>> Dmytro
 }
 .form-1 .submit:after {
     /* Size and position */
@@ -133,9 +175,9 @@ span > img {
 }
 .form-1 button {
     /* Size and position */
-    width: 100%;
-    height: 100%;
-    margin-top: -1px;
+    width: 95px;
+    height: 95px;
+    margin-top: -4px;
 
     /* Icon styles */
     font-size: 1.4em;
@@ -157,7 +199,7 @@ span > img {
 .form-1 button:hover,
 .form-1 button[type=submit]:focus {
     background: #52cfeb;
-    transition: all 0.3s ease-out;
+    
 }
 
 .form-1 button:active {
@@ -166,7 +208,11 @@ span > img {
         inset 0 0 5px rgba(0,0,0,0.3),
         inset 0 3px 4px rgba(0,0,0,0.3);
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
 >>>>>>> sagun
+=======
+}
+>>>>>>> Dmytro
