@@ -1,45 +1,45 @@
+html {
+    width: 100%;
+}
 
-.container-fluid{
-    height:100%;
-    width:100%;
+#dashboard-title {
+    color:#1F27E9;
+    margin-left: 45%;
+    font-size: 1.5em;    
+}
+
+nav.navbar.navbar-default {
+    background: rgba(220, 224, 229, 0.98);
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.navbar-brand > img {
+    height: 30px;
+    width: 140px;
+}
+
+#left-navbar {
+     position: fixed;
+     height: 100%;
+     width: 20%;
+     background: rgba(29, 77, 139, 0.98);
  }
- .row.content {height: 100%;
- width:63%; position:fixed;}
- .sidenav {
-        background-color: rgba(29, 77, 139, 0.98);
-       height: 100%;
-       width:100%;
-       position: fixed;
-       
-     }
-     
-        .icon span{
-            margin-left:120px;
-            margin-top:30px;
-        }
-        .icon-1 span{
-            margin-left:200px;
-            margin-top:20px;
-            color:white;
-        }
-        .details{
-            width: 1050px;
-            background-color: rgba(29, 77, 139, 0.98);
-            margin-left:40px;
-            height:120px;
-            text-align: center;
-        }
-  h2{
-      margin-top:10px;
-  }
- .navbar{
-    width:1156px;
-    margin-left:-15px;
-    height:70px;
+
+ #left-navbar > li:hover {
+    width: 105%;
+    background: rgba(14, 67, 32, 0.90);
+    color: black;
+    font-size: 1.2em;
  }
- nav .navbar-nav{
-     margin-top:10px; margin-left:200px;
+
+ #left-navbar > li > a:hover {   
+    color: black;
  }
- .navbar-1{
-    width:1156px; margin-left:-15px; height:50px; margin-top:-20px; background-color:#56E6E8;
- }
+
+ #left-navbar > li > a {    
+    padding: 16% 15px;
+    text-align: center;
+    color: white;
+}

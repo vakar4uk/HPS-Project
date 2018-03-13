@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="stylesheet" href="\styles\dashboard.css?version=2">
+    <link rel="stylesheet" href="\styles\dashboard.css?version=1">
     <link rel="stylesheet" href="\styles\bootstrap-3.3.7-dist\css\bootstrap.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 
     
     <link rel="icon" href="../images/icon.png">
@@ -20,20 +20,30 @@
 
 <body>
     <?php
+        session_start();
+ 
 
-        include('navbars/left-navbar.php');
-        include('navbars/top-navbar.php');
-        include('navbars/second-top-navbar.php');      
+        if($_SESSION['loggedIn']){
+            //allow
+            echo "asdadaskdasdkas lasdlkandlas asldnalksndlknsa asldnasndlknasd lasndlnaslkdna asldnalksnlkansd aklndlkansdlk" . $_SESSION['loggedIn'];
+            include('navbars/top-navbar.php');
+            include('navbars/left-navbar.php');
+        }
+        
+            else {
+                //redirect to the login page
+                header('Location: ../../index.php');
+                session_destroy();
+            }
+         
+
+        
+        // include('navbars/second-top-navbar.php');      
         
     ?>
     
 
-    <div class="col-lg-9 col-md-9"><br><br><br>
-        <div class="details">
-            <br>
-            <h2>We would need a few details to get you started!</h2>
-        </div>  
-    </div>  
+   
 
 <script src="../app.js"></script>
 </body>

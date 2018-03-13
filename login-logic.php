@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 // Including config.php file to get credentials and run conecting fucntion
 require_once('conf\config.php');
 
@@ -24,5 +26,10 @@ $userPassword = stripslashes($userPassword);
 $query = $dal->getLoginCredentials($userName, $userPassword, $connection);
 
 $validate = $dal->loginValidation($query);
+
+if(!$validate) {
+    $_SESSION['loggedIn'] = true;  
+} else $_SESSION['loggedIn'] = false;  
+
 
 ?>

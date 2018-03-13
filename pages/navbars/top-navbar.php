@@ -1,24 +1,27 @@
-<div class="col-lg-9 col-md-9 col-sm-9">
-    <nav class="navbar">
-    
-      <ul class="nav navbar-nav">
+<?php
+
+  session_start(); 
+
+  define("TITLE", "Dashboard");
+
+?>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="dashboard.php">
+        <img alt="Brand" src="../images/logo2.png">
+      </a>
       
-      <li><a href="#">Core</a></li>
-      <li><a href="#">Product, Plan & Rating</a></li>
-      <li><a href="#">Finance & Billing</a></li>
-      <li><a href="#">Exchange Link</a></li>
-      <li><a href="#">SLP</a></li>
-      <li><a href="#">SalesLink</a></li>
-      <li><a href="#">Operations</a></li>
+    </div>    
+      
+    <p id="dashboard-title" class="navbar-text"><?php echo TITLE; ?></p>      
+      
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><i class="fas fa-cog"></i></a></li>
+      <li><a href="#"><i class="fas fa-ellipsis-h"></i></a></li>        
     </ul>
 
-    <div class="icon">
-    <a href="#">
-    <span class="glyphicon glyphicon-cog" ></span>
-    </a>
-    <a href="#" style="margin-left:-90px;">
-    <span class="glyphicon glyphicon-option-horizontal" ></span>
-    </a>
-  </div>
+  </div><!-- /.container-fluid -->
 </nav>
-</div>
