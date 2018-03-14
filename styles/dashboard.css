@@ -1,0 +1,45 @@
+html {
+    width: 100%;
+}
+
+#dashboard-title {
+    color:#1F27E9;
+    margin-left: 45%;
+    font-size: 1.5em;    
+}
+
+nav.navbar.navbar-default {
+    background: rgba(220, 224, 229, 0.98);
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.navbar-brand > img {
+    height: 30px;
+    width: 140px;
+}
+
+#left-navbar {
+     position: fixed;
+     height: 100%;
+     width: 20%;
+     background: rgba(29, 77, 139, 0.98);
+ }
+
+ #left-navbar > li:hover {
+    width: 105%;
+    background: rgba(14, 67, 32, 0.90);
+    color: black;
+    font-size: 1.2em;
+ }
+
+ #left-navbar > li > a:hover {   
+    color: black;
+ }
+
+ #left-navbar > li > a {    
+    padding: 16% 15px;
+    text-align: center;
+    color: white;
+}

@@ -1,12 +1,9 @@
 <?php
-
 class DAL {
-
-    private $userName;
-    private $userPassword;
-
+    private $username;
+    private $password;
+    public $isValid;
     function __constructor() {}
-
     // Connecting to database using credentials form config.php file    
     function db_connect() {
         static $connection;
@@ -20,23 +17,18 @@ class DAL {
         return $connection;
     }
     
-
     // Get username
     function getUsername() {
         return $this->userName;                     
     }
-
     // Get password
     function getPassword() {
         return $this->userPassword;                     
     }
-
     // Set username
     function setUsername($userName) {
-        $this->userName = $userName;
-               
+        $this->userName = $userName;               
     }    
-
     // Set password
     function setPassword($userPassword) {
         $this->userPassword = $userPassword;
@@ -45,7 +37,7 @@ class DAL {
     
     // Create query to take username and password from database
     function getLoginCredentials($userName, $userPassword, $db) {
-       $sql = "SELECT * FROM users WHERE userName='$userName' AND password='$userPassword'";
+       $sql = "SELECT * FROM user WHERE username='$userName' AND password='$userPassword'";
        $result = mysqli_query($db, $sql);
        if (!$result) {
             return mysqli_connect_error();        
@@ -56,14 +48,18 @@ class DAL {
     
     // Chech match of the credentials in database
     function loginValidation($query) {
+        global $isValid;
+        $isValid = true;
         $count = mysqli_num_rows($query);
         if($count == 1) {
-            header("Location: /pages/signup.php"); /* Redirect browser */
+          
+           header('Location: pages/dashboard.php'); /* Redirect browser */
         } else {
-            header("Location: /pages/failed.php"); /* Redirect browser */
-        }
-        
+            /* Redirect browser */
+            header('Location: index.php?error');
+            exit();
+         }   
+       
     }
 }    
-
 ?>
