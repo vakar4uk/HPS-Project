@@ -27,9 +27,9 @@ $query = $dal->getLoginCredentials($userName, $userPassword, $connection);
 
 $validate = $dal->loginValidation($query);
 
-if(!$validate) {
-    $_SESSION['loggedIn'] = true;  
-} else $_SESSION['loggedIn'] = false;  
+if($isValid) {
+    $_SESSION['loggedIn'] = 1;  
+} else $_SESSION['loggedIn'] = 0;  
 
 
 ?>

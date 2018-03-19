@@ -27,7 +27,7 @@
                 
             </p>
             <p class="submit">
-                <button id="submit-button" type="submit" name="submit" value="submit"><i class="fa fa-arrow-right"></i></button>
+                <button id="submit-button" type="submit" name="submit" value="submit"><i class="fa fa-arrow-right fa-2x"></i></button>
             </p>
         </form>
     </div>
