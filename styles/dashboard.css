@@ -42,3 +42,26 @@ nav.navbar.navbar-default {
     text-align: center;
     color: white;
 }
+
+.carriers {    
+    margin-top: 80px;
+    margin-left: 230px;
+}
+
+.carrier-display {
+    height: 300px;
+    margin: 20px 30px;
+    background: #6060A4;
+}
+
+.carrier-logo {
+    width: 200px;
+    height: 150px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+div.thumbnail {
+    margin-top: 10px;
+    height: 200px;
+}

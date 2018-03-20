@@ -1,3 +1,7 @@
+<?php 
+    include('..\inc\arrays.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="stylesheet" href="\styles\dashboard.css?version=2">
+    <link rel="stylesheet" href="\styles\dashboard.css?version=3">
     <link rel="stylesheet" href="\styles\bootstrap-3.3.7-dist\css\bootstrap.css">
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 
@@ -27,6 +31,7 @@
             //allow            
             include('navbars/top-navbar.php');
             include('navbars/left-navbar.php');
+            include('dashboard-content.php');            
         }
         
             else {
