@@ -31,6 +31,7 @@
             if($_SESSION['loggedIn'] === 1){
                 //allow            
                 include('navbars/top-navbar.php');
+                include('navbars/second-top-navbar.php');
                 // include('navbars/left-navbar.php');
                 // include('dashboard-content.php');           
                 include('dashboard-carrierdetails.html');           
