@@ -65,3 +65,93 @@ div.thumbnail {
     margin-top: 10px;
     height: 200px;
 }
+
+
+/* ************************* */
+/* Dashboard-carrierdetails */
+#carierdetails-container {
+    text-align: center;
+    width: 70%;
+}
+
+.jumbotron {
+    -moz-box-shadow: 0 0 7px #C1C1C1;
+    -webkit-box-shadow: 0 0 7px #C1C1C1;
+    box-shadow: 0 0 7px #C1C1C1; 
+}
+
+.carrier-details {
+    margin-top: 150px;    
+    text-align: center;
+       
+}
+
+.carrier-details > .jumbotron {
+    background-color: rgba(29, 77, 139, 0.98); 
+}
+
+.jumbotron > span {
+    float: right;
+}
+
+.carrier-details > .jumbotron {
+    padding: 20px 20px;
+    color: white;
+    background-color: rgba(29, 77, 139, 0.98);    
+}
+
+.form-control {
+    border: none;
+}
+
+.jumbotron > .description {
+    padding-top: 15px;
+    padding-bottom: 17px;
+    font-size: 0.9em;
+    color: #C5BABA;
+}
+
+.my-container {    
+    -moz-box-shadow: 0 0 7px #C1C1C1;
+    -webkit-box-shadow: 0 0 7px #C1C1C1;
+    box-shadow: 0 0 7px #C1C1C1; 
+}
+
+.carrier-name {   
+    padding-top: 40px;
+    padding-bottom: 30px;
+    margin-bottom: 15px;
+}
+
+.carrier-name > p {
+    float: left;
+    vertical-align: middle;
+    padding-left: 12px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    color: #7272C8;
+    font-size: 1.2em;
+    font-weight: 600;    
+}
+
+#carriername-input {
+    border: none;    
+    box-shadow: none;  
+}
+
+#hr {
+    width: 97%;
+    margin: 0px;
+    display: inline-block;
+    border: 0.5px solid #BEBCBC;
+}
+
+#icons {
+    float: right;
+    margin-right: 50px;
+    color: #57D4E7;
+}
+
+.svg-inline--fa.fa-ellipsis-v.fa-w-6.fa-1x {
+    margin-left: 10px;
+}
