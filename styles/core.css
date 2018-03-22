@@ -33,11 +33,11 @@ width:63%; position:fixed;}
  	margin-top:10px;
  }
 .navbar{
-width:1156px; margin-left:-15px; height:70px;
+width:1156px; margin-left:-15px; height:60px;
 }
 nav .navbar-nav{
-	margin-top:10px; margin-left:200px;
+	margin-top: 5px; margin-left:200px;
 }
 .navbar-1{
-   width:1156px; margin-left:-15px; height:70px; margin-top:-20px; background-color:#56E6E8;
+   width:1156px; margin-left:-15px; height:60px; margin-top:-20px; background-color:#56E6E8;
 }
