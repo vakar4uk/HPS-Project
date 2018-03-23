@@ -1,24 +1,29 @@
-<div class="col-sm-9">
-    <nav class="navbar-1">
-      <div style="margin-left:90px;" >
-      <ul class="nav navbar-nav">
-      
-      <li><a href="#" style="color: white;">Carrier Details</a></li>
-      <li><a href="#">Business Details</a></li>
-      <li><a href="#">States</a></li>
-      <li><a href="#">Line of Business</a></li>
-      <li><a href="#">Legal Entity</a></li>
-    </ul>
-    <div class="icon-1">
-      <a href="#">
-          <span class="glyphicon glyphicon-modal-window"></span>
-        </a>
-     <a href="#" style="margin-left:-170px;">
-          <span class="glyphicon glyphicon-option-vertical"></span>
-        </a>
+<div class="col-lg-12 col-md-12 my-container">
+    <nav class="navbar navbar-inverse navbar-fixed-top center">
+        <div id="text" class="container">    
+        <ul class="nav navbar-nav">       
+            <li><a href="#">Carrier Details</a></li>
+            <li><a href="#">Business Details</a></li>
+            <li><a href="#">States</a></li>
+            <li><a href="#">Line of Business</a></li>
+            <li><a href="#">Legal Entity</a></li>   
+        </ul>
         
-    </div>
-  </div>
+        
+        <!-- <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Link</a></li>
+            <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+            </ul> -->
+            </li>
+        </ul>
     
-</nav>
+        </div>
+    </nav>
 </div>

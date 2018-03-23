@@ -19,6 +19,7 @@
             
             <?php 
                 
+<<<<<<< HEAD
                 if (isset($_GET['error'])) {
                     echo "<div id='alert-message' class='alert alert-danger'>Invalid password/username. Please try again!</div>";
                 }
@@ -29,5 +30,21 @@
             <button id="submit-button" type="submit" name="submit" value="submit"><i class="fa fa-arrow-right"></i></button>
         </p>
     </form>
+=======
+                <?php 
+                    
+                    if (isset($_GET['error'])) {
+                        echo "<div id='alert-message' class='alert alert-danger'>Invalid password/username. Please try again!</div>";
+                    }
+
+                ?>
+                
+            </p>
+            <p class="submit">
+                <button id="submit-button" type="submit" name="submit" value="submit"><i class="fa fa-arrow-right fa-2x"></i></button>
+            </p>
+        </form>
+    </div>
+>>>>>>> Dmytro
 </div>
 </div>

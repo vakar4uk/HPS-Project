@@ -1,24 +1,30 @@
-<div class="col-lg-9 col-md-9 col-sm-9">
-    <nav class="navbar">
-    
-      <ul class="nav navbar-nav">
-      
-      <li><a href="#">Core</a></li>
-      <li><a href="#">Product, Plan & Rating</a></li>
-      <li><a href="#">Finance & Billing</a></li>
-      <li><a href="#">Exchange Link</a></li>
-      <li><a href="#">SLP</a></li>
-      <li><a href="#">SalesLink</a></li>
-      <li><a href="#">Operations</a></li>
-    </ul>
+<?php
 
-    <div class="icon">
-    <a href="#">
-    <span class="glyphicon glyphicon-cog" ></span>
-    </a>
-    <a href="#" style="margin-left:-90px;">
-    <span class="glyphicon glyphicon-option-horizontal" ></span>
-    </a>
-  </div>
-</nav>
-</div>
+  session_start(); 
+
+  define("TITLE", "Dashboard");
+
+?>
+  <div class="col-lg-12 col-md-12">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div id="text">
+          <div class="navbar-header">      
+                <a class="navbar-brand" href="#">Florida Blue</a>
+          </div>
+          
+          <ul class="nav navbar-nav center">            
+            <li><a href="#">CORE</a></li>
+            <li><a href="#">PPR</a></li>
+            <li><a href="#">EXCHANGELINK</a></li>
+            <li><a href="#">SLP</a></li>
+            <li><a href="#">SALESLINK</a></li>
+            <li><a href="#">OPERATIONS</a></li>
+            <li><a href="#">FINANCE & BILLING</a></li>
+              
+          </ul>
+        </div>
+      </div>      
+    </nav>
+</div>   
+  

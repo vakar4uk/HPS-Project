@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .container-fluid{
     height:100%;
     width:100%;
@@ -60,6 +61,91 @@
     margin-top: 150px;    
     text-align: center;
        
+=======
+html {
+    width: 100%;
+}
+
+#my-container.container { 
+    width: 100%;  
+    margin: auto auto;
+   
+}
+
+nav.navbar.navbar-default {
+    background: #6060A4;   
+    color: white;
+    border-color: #6060A4;
+}
+
+nav.navbar.navbar-inverse {
+    margin-top: 50px;
+    border-color: #BDBDC6;
+    background: #BDBDC6;   
+}
+
+
+#text > .navbar-header >.navbar-brand{
+    text-align: center;
+    color: #FFFFFF;  
+}
+
+#text > ul.nav.navbar-nav  a{
+    color: #FFFFFF;
+    margin: auto 10px;
+}
+
+#text > ul.nav.navbar-nav > li:hover{
+    background: #FFFFFF;    
+}
+
+#text > ul.nav.navbar-nav  a:hover{
+    color: #6060A4;
+    
+}
+
+.carriers {    
+    margin-top: 50px;
+    margin-left: 230px;
+}
+
+.carrier-display {
+    height: 300px;
+    margin: 10px 30px;
+    background: #6060A4;
+}
+
+.carrier-logo {
+    width: 200px;
+    height: 150px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+div.thumbnail {
+    margin-top: 10px;
+    height: 200px;
+}
+
+
+/* ************************* */
+/* Dashboard-carrierdetails */
+#carierdetails-container {
+    text-align: center;
+    width: 70%;
+}
+
+.jumbotron {
+    -moz-box-shadow: 0 0 7px #C1C1C1;
+    -webkit-box-shadow: 0 0 7px #C1C1C1;
+    box-shadow: 0 0 7px #C1C1C1; 
+}
+
+.carrier-details {
+    margin-top: 150px;    
+    text-align: center;
+       
+>>>>>>> Dmytro
 }
 
 .carrier-details > .jumbotron {
