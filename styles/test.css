@@ -1,0 +1,11 @@
+/* background */
+
+html, .row {
+     background-color: rgba(248, 237, 226, 0.98);              
+}
+
+
+.jumbotron {
+    background: navy;
+}
+
