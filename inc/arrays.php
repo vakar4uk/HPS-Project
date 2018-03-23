@@ -20,4 +20,43 @@ $carriers = array(
     ),
 );
 
+$lineOfBusiness = array(
+    array(
+        "name" => "Health"
+    ),
+    array(
+        "name" => "Dental"
+    ),
+    array(
+        "name" => "Vision"
+    ),
+    array(
+        "name" => "Travel"
+    ),
+    array(
+        "name" => "Health"
+    ),
+    array(
+        "name" => "Dental"
+    ),
+    array(
+        "name" => "Vision"
+    ),
+    array(
+        "name" => "Travel"
+    ),
+    array(
+        "name" => "Health"
+    ),
+    array(
+        "name" => "Dental"
+    ),
+    array(
+        "name" => "Vision"
+    ),
+    array(
+        "name" => "Travel"
+    ),
+);
+
 ?>

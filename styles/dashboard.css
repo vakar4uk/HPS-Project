@@ -152,3 +152,16 @@ div.thumbnail {
 .svg-inline--fa.fa-ellipsis-v.fa-w-6.fa-1x {
     margin-left: 10px;
 }
+
+.svg-inline--fa.fa-sliders-v.fa-w-16.fa-1x {
+    margin-left: 10px;
+}
+
+#business-type {
+    margin-bottom: 20px;
+}
+
+#business-type > button {
+    width: 200px;
+    height: 75px;
+}

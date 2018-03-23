@@ -1,5 +1,11 @@
+<?php 
+
+    include('navbars&footers/top-navbar.php');
+
+?>
+
 <div class="col-lg-12">
-<div id="carierdetails-container" class="container">    
+    <div id="carierdetails-container" class="container">    
         
             <div class="carrier-details">
                 <!-- Header text -->

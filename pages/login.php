@@ -1,5 +1,5 @@
 <div id="content">
-    <div class="logo-container"><img src="images/logo2.png" alt=""></div>
+    <div class="logo-container"><img src="images/whiteoutline.png" alt=""></div>
     <div class="container-fluid">
         <!-- All login logic is in login.php file -->
         <form action='/login-logic.php' method="post" class="form-1">
