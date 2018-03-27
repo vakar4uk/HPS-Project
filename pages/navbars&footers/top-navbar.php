@@ -2,7 +2,7 @@
 
   session_start(); 
 
-  include('C:\Users\DM387091\Documents\HPS Project\Login page\inc\arrays.php');
+  include('..\inc\arrays.php');
 
   define("TITLE", "Dashboard");
 
