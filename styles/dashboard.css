@@ -165,3 +165,9 @@ div.thumbnail {
     width: 180px;
     height: 75px;
 }
+
+#state-list > button {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 10px;    
+}
