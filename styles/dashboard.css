@@ -134,9 +134,24 @@
     margin-left: 10px;
 }
 
+<<<<<<< HEAD
 /*button*/
 
 .btn-primary {
     background-color: pink;
 }
 
+=======
+.svg-inline--fa.fa-sliders-v.fa-w-16.fa-1x {
+    margin-left: 10px;
+}
+
+#business-type {
+    margin-bottom: 20px;
+}
+
+#business-type > button {
+    width: 180px;
+    height: 75px;
+}
+>>>>>>> master

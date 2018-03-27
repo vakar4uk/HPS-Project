@@ -1,7 +1,6 @@
-var signoutBtn = document.getElementById("sign-out");
-var modal = document.getElementById('myModal');
+var busSelBtn = document.getElementById("selected-business-type");
 
-function message() {
-    // modal.style.display = "block";
-    alert("clicked");
+function selectBusinessType() {
+    // busSelBtn.classList.remove("btn-info");
+    busSelBtn.classList.toggle("btn-info");
 }
