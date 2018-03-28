@@ -19,6 +19,7 @@
 
     <link rel="stylesheet" href="..\styles\dashboard.css?version=1">
     <link rel="stylesheet" href="..\styles\bootstrap-3.3.7-dist\css\bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 
     
@@ -59,7 +60,7 @@
               <li><a href="#">Business Details</a></li>
               <li><a href="dashboard-states.php">States</a></li>
               <li><a href="dashboard-lineofbusiness.php">Line of Business</a></li>
-              <li><a href="#">Legal Entity</a></li>   
+              <li><a href="dashboard-legalentity.php">Legal Entity</a></li>   
           </ul>
       </nav>
   </div>
