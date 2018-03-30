@@ -120,7 +120,7 @@ div.thumbnail {
     margin-bottom: 15px;
 }
 
-.carrier-name > p {
+.carrier-name  p {
     float: left;
     vertical-align: middle;
     padding-left: 12px;

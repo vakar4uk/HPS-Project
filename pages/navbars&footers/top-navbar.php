@@ -2,7 +2,7 @@
 
   session_start(); 
 
-  include('C:\Users\DM387091\Documents\HPS Project\Login page\inc\arrays.php');
+  include('..\inc\arrays.php');
 
   define("TITLE", "Dashboard");
 
@@ -17,7 +17,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="stylesheet" href="..\styles\dashboard.css?version=1">
+    <link rel="stylesheet" href="..\styles\dashboard.css?version=2">
     <link rel="stylesheet" href="..\styles\bootstrap-3.3.7-dist\css\bootstrap.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>

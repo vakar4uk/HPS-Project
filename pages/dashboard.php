@@ -35,6 +35,6 @@
 
 <?php
 
-     include('/navbars/footer.php');
+    include('navbars&footers/footer.php');
 
 ?>

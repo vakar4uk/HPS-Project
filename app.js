@@ -1,5 +1,48 @@
 // Select type of business
-var indBusBtn = document.getElementById("business-individual");
-indBusBtn.addEventListener("click", function() {
-    console.log("CLICKED!!!");
+var individualBusBtn = document.getElementById("business-individual");
+var groupBusBtn = document.getElementById("business-group");
+var individualBusiness = document.getElementById("individual-business-display");
+var groupBusiness = document.getElementById("group-business-display");
+
+var exchangeTypeBtn = document.getElementsByClassName("exchange-type-btn");
+
+var carrierCodeIndividual = document.getElementById("carrier-code-individual");
+var carrierCodeGroup = document.getElementById("carrier-code-group");
+
+var submitIndividual = document.getElementById("submit-individual");
+var submitGroup = document.getElementById("submit-group");
+
+var carrierCode = document.getElementsByClassName("carrier-code");
+
+
+individualBusBtn.addEventListener("click", function() {
+    individualBusBtn.classList.toggle("btn-info");
+    groupBusBtn.classList.add("btn-info");
+
+    individualBusiness.style.display = "block";
+    groupBusiness.style.display = "none";   
+
 });
+
+groupBusBtn.addEventListener("click", function() {
+    groupBusBtn.classList.toggle("btn-info");
+    individualBusBtn.classList.add("btn-info");
+
+    groupBusiness.style.display = "block";
+    individualBusiness.style.display = "none";
+});
+
+for (var i = 0; i < exchangeTypeBtn.length; i++) {
+    exchangeTypeBtn[i].addEventListener("click", function() {
+        carrierCodeIndividual.style.display = "block";
+        carrierCodeGroup.style.display = "block";        
+    });
+}
+
+for (var i = 0; i < carrierCode.length; i++) {
+    carrierCode[i].addEventListener("keydown", function() {
+        submitIndividual.style.display = "block";
+        submitGroup.style.display = "block";
+
+    });    
+}
