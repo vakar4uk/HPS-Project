@@ -12,7 +12,8 @@ var carrierCodeGroup = document.getElementById("carrier-code-group");
 var submitIndividual = document.getElementById("submit-individual");
 var submitGroup = document.getElementById("submit-group");
 
-var carrierCode = document.getElementsByClassName("carrier-code");
+var inputCodeIndividual = document.getElementById("input-code-individual");
+var inputCodeGroup = document.getElementById("input-code-group");
 
 
 individualBusBtn.addEventListener("click", function() {
@@ -39,10 +40,10 @@ for (var i = 0; i < exchangeTypeBtn.length; i++) {
     });
 }
 
-for (var i = 0; i < carrierCode.length; i++) {
-    carrierCode[i].addEventListener("keydown", function() {
-        submitIndividual.style.display = "block";
-        submitGroup.style.display = "block";
+inputCodeIndividual.addEventListener("keydown", function() {
+    submitIndividual.style.display = "block";
+});
 
-    });    
-}
+inputCodeGroup.addEventListener("keydown", function() {
+    submitGroup.style.display = "block";
+});

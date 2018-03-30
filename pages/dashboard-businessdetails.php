@@ -38,7 +38,7 @@
                                                     <br>
                                                     <div id="carrier-code-individual" class="col-lg-12 col-md-12" style="display: none;">
                                                         <p>Carrier Code for Individual</p>
-                                                        <input class="form-group carrier-code" type="text" name="">
+                                                        <input id="input-code-individual" class="form-group" type="text" name="">
                                                     </div>                                        
                                             </div>
                                             <div class="row">
@@ -65,12 +65,12 @@
                                                     <br>
                                                     <div id="carrier-code-group" class="col-lg-12 col-md-12" style="display: none;">
                                                         <p>Carrier Code for Group</p>
-                                                        <input class="form-group carrier-code" type="text" name="">
+                                                        <input id="input-code-group" class="form-group" type="text" name="">
                                                     </div>                                         
                                             </div>
                                             <div class="row">
-                                                <div class="col-lg-12 col-md-12 submit-business" style="display: none;">
-                                                    <button id="submit-group" class="btn btn-lg btn-block btn-success" type="submit">Submit</button>
+                                                <div id="submit-group"  class="col-lg-12 col-md-12" style="display: none;">
+                                                    <button class="btn btn-lg btn-block btn-success" type="submit">Submit</button>
                                                 </div>
                                             </div>
                                         </div>
