@@ -57,7 +57,7 @@
           <div id="text" class="container">    
           <ul class="nav navbar-nav">       
               <li><a href="dashboard-carrierdetails.php">Carrier Details</a></li>
-              <li><a href="#">Business Details</a></li>
+              <li><a href="dashboard-businessdetails.php">Business Details</a></li>
               <li><a href="dashboard-states.php">States</a></li>
               <li><a href="dashboard-lineofbusiness.php">Line of Business</a></li>
               <li><a href="dashboard-legalentity.php">Legal Entity</a></li>   
