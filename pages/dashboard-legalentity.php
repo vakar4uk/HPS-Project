@@ -1,5 +1,5 @@
 <?php
-    include('navbars&footers/top-navbar.php');
+    include('navbars_footers/top-navbar.php');
 ?>
 
 <div class="row">

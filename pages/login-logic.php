@@ -3,7 +3,7 @@
 session_start();
 
 // Including config.php file to get credentials and run conecting fucntion
-require_once('conf\config.php');
+require_once('conf/config.php');
 
 $dal = new DAL();
 
@@ -26,6 +26,9 @@ $userPassword = stripslashes($userPassword);
 $query = $dal->getLoginCredentials($userName, $userPassword, $connection);
 
 $validate = $dal->loginValidation($query);
+
+// Always login without database
+$isValid = true;
 
 if($isValid) {
     $_SESSION['loggedIn'] = 1;  

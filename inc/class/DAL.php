@@ -59,8 +59,6 @@ class DAL {
         global $isValid;
         $isValid = true;
         $count = mysqli_num_rows($query);
-        // MAKES YOU LOGIN WITHOUT A DATABASE
-        $count = 1;
         if($count == 1) {          
            header('Location: pages/dashboard.php'); /* Redirect browser */
            return $isValid;
