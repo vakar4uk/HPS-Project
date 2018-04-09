@@ -1,56 +1,75 @@
-.container-fluid{
-    height:100%;
-    width:100%;
- }
- .row.content {height: 100%;
- width:63%; position:fixed;}
- .sidenav {
-        background-color: rgba(29, 77, 139, 0.98);
-       height: 100%;
-       width:100%;
-       position: fixed;
-       
-     }
-     
-        .icon span{
-            margin-left:120px;
-            margin-top:30px;
-        }
-        .icon-1 span{
-            margin-left:200px;
-            margin-top:20px;
-            color:white;
-        }
-        .details{
-            width: 1050px;
-            background-color: rgba(29, 77, 139, 0.98);
-            margin-left:40px;
-            height:120px;
-            text-align: center;
-        }
-  h2{
-      margin-top:10px;
-  }
- .navbar{
-    width:1156px;
-    margin-left:-15px;
-    height:70px;
- }
- nav .navbar-nav{
-     margin-top:10px; margin-left:200px;
- }
- .navbar-1{
-    width:1156px; margin-left:-15px; height:50px; margin-top:-20px; background-color:#56E6E8;
- }
+html {
+    width: 100%;
+}
 
- /* ************************* */
+#my-container.container { 
+    width: 100%;  
+    margin: auto auto;
+   
+}
+
+nav.navbar.navbar-default {
+    background: #6060A4;   
+    color: white;
+    border-color: #6060A4;
+}
+
+nav.navbar.navbar-inverse {
+    margin-top: 50px;
+    border-color: #BDBDC6;
+    background: #BDBDC6;   
+}
+
+
+#text > .navbar-header >.navbar-brand{
+    text-align: center;
+    color: #FFFFFF;  
+}
+
+#text > ul.nav.navbar-nav  a{
+    color: #FFFFFF;
+    margin: auto 10px;
+}
+
+#text > ul.nav.navbar-nav > li:hover{
+    background: #FFFFFF;    
+}
+
+#text > ul.nav.navbar-nav  a:hover{
+    color: #6060A4;
+    
+}
+
+.carriers {    
+    margin-top: 50px;
+    margin-left: 230px;
+}
+
+.carrier-display {
+    height: 300px;
+    margin: 10px 30px;
+    background: #6060A4;
+}
+
+.carrier-logo {
+    width: 200px;
+    height: 150px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+div.thumbnail {
+    margin-top: 10px;
+    height: 200px;
+}
+
+
+/* ************************* */
 /* Dashboard-carrierdetails */
 #carierdetails-container {
     text-align: center;
     width: 70%;
-    font-family: Verdana
 }
-
 
 .jumbotron {
     -moz-box-shadow: 0 0 7px #C1C1C1;
@@ -134,14 +153,6 @@
     margin-left: 10px;
 }
 
-<<<<<<< HEAD
-/*button*/
-
-.btn-primary {
-    background-color: pink;
-}
-
-=======
 .svg-inline--fa.fa-sliders-v.fa-w-16.fa-1x {
     margin-left: 10px;
 }
@@ -154,4 +165,16 @@
     width: 180px;
     height: 75px;
 }
->>>>>>> master
+
+.btn {
+    float: left;
+    color: white;
+    background-color: #57D4E7;
+    height: 45px;
+    width: 23%;
+    padding: 25px 50px;
+    margin-top: 25px;
+    margin-left: 30px;
+}
+
+
