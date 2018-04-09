@@ -17,15 +17,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="stylesheet" href="../styles/dashboard.css?version=2">
+    <link rel="stylesheet" href="../styles/dashboard.css?version=1">
     <link rel="stylesheet" href="../styles/bootstrap-3.3.7-dist/css/bootstrap.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 
     
     <link rel="icon" href="../images/icon.png">
-    <script src="/inc/lib/jquery-3.3.1.min.js"></script>
-
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script>
  <title>Dashboard</title>
 </head>
 

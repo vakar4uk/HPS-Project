@@ -114,3 +114,7 @@ $allStates = array(
 );
 
 ?>
+
+<script type="text/javascript">
+    var statesJS = [<?php echo json_encode($allStates); ?>];
+</script>

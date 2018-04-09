@@ -77,10 +77,14 @@ div.thumbnail {
     box-shadow: 0 0 7px #C1C1C1; 
 }
 
+#bank-details-btn {
+    margin-bottom: 30px;
+}
+
 .carrier-details {
     margin-top: 150px;    
     text-align: center;
-       
+    padding-bottom: 30px;   
 }
 
 .carrier-details > .jumbotron {
@@ -170,4 +174,9 @@ div.thumbnail {
     width: 70px;
     height: 70px;
     margin-bottom: 10px;    
+}
+
+//Legal Entity
+.container-fluid > btn-success {
+    margin-bottom: 25px;
 }

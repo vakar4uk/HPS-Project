@@ -33,7 +33,7 @@
                     </div>
                         <?php foreach ($allStates as $shortName => $name) { ?>                        
                                 <div id="state-list" class="col-lg-2 col-md-2">                            
-                                    <button id="selected-business-type" class="btn btn-info btn-lg" onclick="selectBusinessType()"><?php echo $shortName; ?></button>                    
+                                    <button id="states" class="btn btn-info btn-lg"><?php echo $shortName; ?></button>                    
                                 </div>            
                         <?php } ?>                        
                     </div>

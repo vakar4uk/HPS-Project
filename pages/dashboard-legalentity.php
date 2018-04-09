@@ -203,7 +203,7 @@
                 <div class="row">
                     <div class="container-fluid">
                         <div class="col-lg-12">
-                            <button class="btn btn-lg btn-success btn-block" type="submit">Add Bank Details</button>                       
+                            <button id="bank-details-btn" class="btn btn-lg btn-success btn-block" type="submit">Add Bank Details</button>                       
                         </div>                                        
                     </div>
                 </div>
@@ -215,5 +215,5 @@
 
 
         <?php
-    include('navbars&footers/footer.php');
+    include('navbars_footers/footer.php');
 ?>

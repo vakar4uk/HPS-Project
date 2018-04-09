@@ -14,7 +14,7 @@
                 
                 // include('navbars/left-navbar.php');
                 // include('dashboard-content.php');           
-                include('dashboard-carrierdetails.html');           
+                include('dashboard-carrierdetails.php');           
             }
             
                 else {
