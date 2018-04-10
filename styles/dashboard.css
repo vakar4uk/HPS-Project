@@ -170,7 +170,6 @@ div.thumbnail {
     height: 75px;
 }
 
-<<<<<<< HEAD
 .btn {
     float: left;
     color: white;
@@ -183,15 +182,3 @@ div.thumbnail {
 }
 
 
-=======
-#state-list > button {
-    width: 70px;
-    height: 70px;
-    margin-bottom: 10px;    
-}
-
-//Legal Entity
-.container-fluid > btn-success {
-    margin-bottom: 25px;
-}
->>>>>>> Dmytro
