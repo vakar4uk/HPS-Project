@@ -2,18 +2,55 @@
     include('navbars_footers/top-navbar.php');
 ?>
 
-<li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </li>
-        
+<div id="my-dropdown">
 <div class="row">
+    <div class="col-lg-4">
+    <div class="btn-group" role="group" aria-label="...">
+    <!-- <button type="button" class="btn btn-default">1</button>
+    <button type="button" class="btn btn-default">2</button> -->
+
+    <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Year:2015
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a href="#">Dropdown link</a></li>
+            <li><a href="#">Dropdown link</a></li>
+        </ul>
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            State:
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a href="#">Dropdown link</a></li>
+            <li><a href="#">Dropdown link</a></li>
+        </ul>
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Default Template
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a href="#">Dropdown link</a></li>
+            <li><a href="#">Dropdown link</a></li>
+        </ul>
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Business Type
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a href="#">Dropdown link</a></li>
+            <li><a href="#">Dropdown link</a></li>
+        </ul>
+    </div>
+</div>
+    </div>
+</div>
+</div>
+
+
+    
+    <div class="row">
     <div class="col-lg-12">
         <div id="carierdetails-container" class="container">
             <div class="carrier-details">
@@ -100,6 +137,10 @@
         </div>
     </div>
 </div>
+
+
+
+
 
 <?php
     include('navbars_footers/footer.php');

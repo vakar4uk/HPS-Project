@@ -180,3 +180,7 @@ div.thumbnail {
 .container-fluid > btn-success {
     margin-bottom: 25px;
 }
+
+#my-dropdown {
+    margin-top: 100px;
+}
