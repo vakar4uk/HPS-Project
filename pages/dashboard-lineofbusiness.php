@@ -1,5 +1,5 @@
 <?php
-    include('navbars&footers/top-navbar.php');
+    include('navbars_footers/top-navbar.php');
 ?>
 
 <div class="col-lg-12">
@@ -39,10 +39,10 @@
                         <?php } ?>
 
                         <div class="col-lg-6 col-md-6">
-                            <button class="btn btn-lg btn-block btn-default">Copy from off exchange for individual</button>
+                            <button class="btn btn-lg btn-default">Copy from off exchange for individual</button>
                         </div>
                         <div class="col-lg-6 col-md-6">
-                            <button class="btn btn-lg btn-block btn-danger">Clear All</button>
+                            <button class="btn btn-lg btn-danger">Clear All</button>
                         </div>
                     </div>
                     
@@ -50,7 +50,7 @@
                 </div>
             </div>
 
-            <button class="btn btn-lg btn-block btn-success">Submit</button>
+            <!-- <button class="btn btn-lg btn-block btn-success">Submit</button> -->
 
         </div>
 
