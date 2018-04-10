@@ -2,7 +2,7 @@
 
     session_start();
 
-    include('navbars&footers/top-navbar.php');
+    include('navbars_footers/top-navbar.php');
     // include('navbars&footers/second-top-navbar.php');
 
 ?>
@@ -35,6 +35,6 @@
 
 <?php
 
-    include('navbars&footers/footer.php');
+    include('navbars_footers/footer.php');
 
 ?>
