@@ -14,7 +14,7 @@
                 
                 // include('navbars/left-navbar.php');
                 // include('dashboard-content.php');           
-                include('dashboard-carrierdetails.html');           
+                include('dashboard-carrierdetails.php');           
             }
             
                 else {
@@ -35,6 +35,6 @@
 
 <?php
 
-     include('/navbars/footer.php');
+    include('navbars&footers/footer.php');
 
 ?>

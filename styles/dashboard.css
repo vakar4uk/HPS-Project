@@ -4,7 +4,7 @@ html {
 
 #my-container.container { 
     width: 100%;  
-    margin: auto auto;
+    margin: auto 20px;
    
 }
 
@@ -77,10 +77,14 @@ div.thumbnail {
     box-shadow: 0 0 7px #C1C1C1; 
 }
 
+#bank-details-btn {
+    margin-bottom: 30px;
+}
+
 .carrier-details {
     margin-top: 150px;    
     text-align: center;
-       
+    padding-bottom: 30px;   
 }
 
 .carrier-details > .jumbotron {
@@ -120,7 +124,7 @@ div.thumbnail {
     margin-bottom: 15px;
 }
 
-.carrier-name > p {
+.carrier-name  p {
     float: left;
     vertical-align: middle;
     padding-left: 12px;
@@ -166,6 +170,7 @@ div.thumbnail {
     height: 75px;
 }
 
+<<<<<<< HEAD
 .btn {
     float: left;
     color: white;
@@ -178,3 +183,15 @@ div.thumbnail {
 }
 
 
+=======
+#state-list > button {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 10px;    
+}
+
+//Legal Entity
+.container-fluid > btn-success {
+    margin-bottom: 25px;
+}
+>>>>>>> Dmytro
