@@ -47,3 +47,5 @@ inputCodeIndividual.addEventListener("keydown", function() {
 inputCodeGroup.addEventListener("keydown", function() {
     submitGroup.style.display = "block";
 });
+
+var clearSt = document.getElementById('clear-states-btn');

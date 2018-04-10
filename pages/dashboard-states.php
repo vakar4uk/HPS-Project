@@ -33,7 +33,7 @@
                     </div>
                         <?php foreach ($allStates as $shortName => $name) { ?>                        
                                 <div id="state-list" class="col-lg-2 col-md-2">                            
-                                    <button id="states" class="btn btn-info btn-lg"><?php echo $shortName; ?></button>                    
+                                    <button id="states" class="btn btn-info btn-lg selected-states"><?php echo $shortName; ?></button>                    
                                 </div>            
                         <?php } ?>                        
                     </div>
@@ -42,7 +42,7 @@
                             <button class="btn btn-lg btn-block btn-default">Copy from off exchange for individual</button>
                     </div>
                     <div class="col-lg-6 col-md-4">
-                            <button class="btn btn-lg  btn-block btn-danger">Clear All</button>
+                            <button id="clear-states-btn" class="btn btn-lg  btn-block btn-danger">Clear All</button>
                     </div>
                     
                     
@@ -56,6 +56,26 @@
     </div>
 </div>
 
+<script type="text/javascript">
+	//Change the color of the button when you click on a particular state
+	var selectedStates = document.getElementsByClassName('selected-states');
+	for(var i = 0; i < selectedStates.length; i++) {
+		selectedStates[i].addEventListener('click', function() {
+			this.classList.toggle('btn-info');
+		});
+	}
+
+	//Clear all selected states
+	var clearStates = document.getElementById('clear-states-btn');
+	clearStates = addEventListener('click', function() {
+		//for(var k = 0; k < 50; k++) {			
+			selectedStates.classList.add('btn-info');			
+		//}
+	});
+
+</script>
+
+
 <?php
-    include('navbars&footers/footer.php');
+    include('navbars_footers/footer.php');
 ?>
