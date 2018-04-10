@@ -1,19 +1,7 @@
 <?php
-
   session_start(); 
-
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/navbars&footers/top-navbar.php
-  include('..\inc\arrays.php');
-=======
   include('../inc/arrays.php');
->>>>>>> Dmytro:pages/navbars_footers/top-navbar.php
-=======
-  include('../inc/arrays.php');
->>>>>>> master
-
   define("TITLE", "Dashboard");
-
 ?>
 
 <!DOCTYPE html>

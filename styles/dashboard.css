@@ -170,15 +170,13 @@ div.thumbnail {
     height: 75px;
 }
 
-.btn {
-    float: left;
-    color: white;
-    background-color: #57D4E7;
-    height: 45px;
-    width: 23%;
-    padding: 25px 50px;
-    margin-top: 25px;
-    margin-left: 30px;
+#state-list > button {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 10px;    
 }
 
-
+//Legal Entity
+.container-fluid > btn-success {
+    margin-bottom: 25px;
+}
