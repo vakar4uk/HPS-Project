@@ -50,7 +50,7 @@
         </div>
       </div>      
     </nav>
-
+    <div class="row">
     <div class="col-lg-12 col-md-12 my-container">
       <nav class="navbar navbar-inverse navbar-fixed-top center">
           <div id="text" class="container">    
@@ -59,6 +59,21 @@
               <li><a href="dashboard-businessdetails.php">Business Details</a></li>
               <li><a href="dashboard-states.php">States</a></li>
               <li><a href="dashboard-lineofbusiness.php">Line of Business</a></li>
+              <li><a href="dashboard-legalentity.php">Legal Entity</a></li>   
+          </ul>
+      </nav>
+  </div>
+    </div>
+    
+
+  <div class="col-lg-12 col-md-12 my-container">
+      <nav class="navbar navbar-inverse navbar-fixed-top center">
+          <div id="text" class="container">    
+          <ul class="nav navbar-nav">       
+              <li><a href="dashboard-carrierdetails.php">Plan Information</a></li>
+              <li><a href="dashboard-businessdetails.php">Benefits and CSR</a></li>
+              <li><a href="dashboard-states.php">Rates</a></li>
+              <li><a href="dashboard-lineofbusiness.php">Plan Coverage</a></li>
               <li><a href="dashboard-legalentity.php">Legal Entity</a></li>   
           </ul>
       </nav>

@@ -2,7 +2,7 @@
     <div class="logo-container"><img src="images/whiteoutline.png" alt=""></div>
     <div class="container-fluid">
         <!-- All login logic is in login-logic.php file -->
-        <form action="../login-logic.php" method="POST" class="form-1">
+        <form action="/login-logic.php" method="POST" class="form-1">
             <p>
                 <label for="username" class="sr-only">Username</label>
                 <input class="form-control" type="text"  id="username" required="" 

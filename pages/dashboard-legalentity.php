@@ -86,11 +86,11 @@
                                 <div class="container-fluid">
                                     <div class="col-lg-4">
                                         <select class="selectpicker form-group" data-style="btn-default">
-                                    <option value="" selected disabled hidden>Select phone type...</option>
-                                    <option value="work-phone">Work</option>
-                                    <option value="cell-phone">Cell</option>
-                                    <option value="home-phone">Home</option>
-                                </select>
+                                            <option value="" selected disabled hidden>Select phone type...</option>
+                                            <option value="work-phone">Work</option>
+                                            <option value="cell-phone">Cell</option>
+                                            <option value="home-phone">Home</option>
+                                        </select>
                                     </div>
                                     <div class="col-lg-8">
                                         <div class="form-group">
