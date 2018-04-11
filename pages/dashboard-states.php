@@ -29,52 +29,48 @@
                     
                     <div class="row"><br>
                         <div class="col-lg-12 col-md-12">
-
-                    </div>
-                        <?php foreach ($allStates as $shortName => $name) { ?>                        
-                                <div id="state-list" class="col-lg-2 col-md-2">                            
-                                    <button id="states" class="btn btn-info btn-lg selected-states"><?php echo $shortName; ?></button>                    
+                    
+                        	<?php foreach ($allStates as $shortName => $name) { ?>                        
+                        		<div id="state-list" class="col-lg-2 col-md-2">                            
+                                	<button class="btn btn-info btn-lg selected-states"><?php echo $shortName; ?></button>                    
                                 </div>            
-                        <?php } ?>                        
-                    </div>
-
-                    <div class="col-lg-6 col-md-4">
-                            <button class="btn btn-lg btn-block btn-default">Copy from off exchange for individual</button>
-                    </div>
-                    <div class="col-lg-6 col-md-4">
-                            <button id="clear-states-btn" class="btn btn-lg  btn-block btn-danger">Clear All</button>
-                    </div>
-                    
-                    
-                </div>
+                         	<?php } ?>                        
+                    	</div>
+					</div>
+					<div class="row">
+                    	<div class="col-lg-6 col-md-6">
+                            <button class="btn btn-lg btn-default">Copy from off exchange for individual</button>
+                    	</div>
+                    	<div class="col-lg-6 col-md-6">
+                            <button id="clear-states-btn" class="btn btn-lg btn-danger">Clear All</button>
+                    	</div>
+					</div>					
+                </div>							
             </div>
-
-            <!-- <button class="btn btn-lg btn-block btn-success">Submit</button> -->
-
+			<div class="row">
+				<div class="col-lg-12">
+					<a class="btn btn-lg btn-block btn-success" href="dashboard-lineofbusiness.php">Submit</a>
+				</div>
+			</div>            
         </div>
-
     </div>
 </div>
 
 <script type="text/javascript">
-	//Change the color of the button when you click on a particular state
+	// <!-- Change the color of the button when you click on a particular state -->
 	var selectedStates = document.getElementsByClassName('selected-states');
 	for(var i = 0; i < selectedStates.length; i++) {
 		selectedStates[i].addEventListener('click', function() {
 			this.classList.toggle('btn-info');
 		});
 	}
-
-	//Clear all selected states
-	var clearStates = document.getElementById('clear-states-btn');
-	clearStates = addEventListener('click', function() {
-		//for(var k = 0; k < 50; k++) {			
-			selectedStates.classList.add('btn-info');			
-		//}
+	<!-- Clear all selected states -->
+	var clearStates = document.getElementById('clear-states-btn').addEventListener('click', function() {
+		for(var i = 0; i < 50; i++) {			
+			selectedStates[i].classList.add('btn-info');			
+		}
 	});
-
 </script>
-
 
 <?php
     include('navbars_footers/footer.php');

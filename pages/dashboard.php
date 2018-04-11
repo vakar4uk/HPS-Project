@@ -2,7 +2,7 @@
 
     session_start();
 
-    include('navbars&footers/top-navbar.php');
+    include('navbars_footers/top-navbar.php');
     // include('navbars&footers/second-top-navbar.php');
 
 ?>
@@ -14,7 +14,7 @@
                 
                 // include('navbars/left-navbar.php');
                 // include('dashboard-content.php');           
-                include('dashboard-carrierdetails.php');           
+                include('dashboard-carrierdetails.html');           
             }
             
                 else {
@@ -35,6 +35,6 @@
 
 <?php
 
-    include('navbars&footers/footer.php');
+    include('navbars_footers/footer.php');
 
 ?>

@@ -48,4 +48,13 @@ inputCodeGroup.addEventListener("keydown", function() {
     submitGroup.style.display = "block";
 });
 
-var clearSt = document.getElementById('clear-states-btn');
+// ======================
+// Make navbar links become active when clicked
+// ======================
+// var coreNavbar = document.getElementsByClassName('core-navbar');
+// for(var i = 0; i < coreNavbar.length; i++) {
+//   coreNavbar[i].addEventListener('click', function(){
+    
+//     alert('sup');
+//   });
+// }
