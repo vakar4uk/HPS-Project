@@ -8,6 +8,13 @@ html {
    
 }
 
+#my-dropdown {
+    width: 100%;  
+    background: #A6A6B2;   
+    color: #938888;
+    border-color: #B8B8E8;
+}
+
 nav.navbar.navbar-default {
     background: #6060A4;   
     color: white;

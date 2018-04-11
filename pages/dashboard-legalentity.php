@@ -41,7 +41,7 @@
                                     </div>
                                     <div class="col-lg-8">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" id="addressLine1" placeholder="Address Line 1">
+                                            <input type="text" class="form-control" id="addressLine1" placeholder="Address Line 1" required>
                                         </div>
                                     </div>
                                 </div>

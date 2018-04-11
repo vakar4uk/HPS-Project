@@ -2,9 +2,11 @@
     include('navbars_footers/top-navbar.php');
 ?>
 
+
+
 <div id="my-dropdown">
 <div class="row">
-    <div class="col-lg-4">
+    <div class="col-lg-6">
     <div class="btn-group" role="group" aria-label="...">
     <!-- <button type="button" class="btn btn-default">1</button>
     <button type="button" class="btn btn-default">2</button> -->

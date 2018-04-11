@@ -66,7 +66,7 @@
     </div>
     
 
-  <div class="col-lg-12 col-md-12 my-container">
+  <!-- <div class="col-lg-12 col-md-12 my-container">
       <nav class="navbar navbar-inverse navbar-fixed-top center">
           <div id="text" class="container">    
           <ul class="nav navbar-nav">       
@@ -77,7 +77,7 @@
               <li><a href="dashboard-legalentity.php">Legal Entity</a></li>   
           </ul>
       </nav>
-  </div>
+  </div> -->
 
 </div>   
   
