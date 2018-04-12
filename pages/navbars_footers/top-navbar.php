@@ -37,8 +37,8 @@
                 <a class="navbar-brand" href="#">Florida Blue</a>
           </div>
           
-          <ul class="nav navbar-nav center">            
-            <li><a href="#">CORE</a></li>
+          <ul class="nav nav-pills navbar-nav">            
+            <li class="active"><a href="#">CORE</a></li>
             <li><a href="#">PPR</a></li>
             <li><a href="#">EXCHANGELINK</a></li>
             <li><a href="#">SLP</a></li>
@@ -54,14 +54,16 @@
     <div class="col-lg-12 col-md-12 my-container">
       <nav class="navbar navbar-inverse navbar-fixed-top center">
           <div id="text" class="container">    
-          <ul class="nav navbar-nav">       
-              <li><a href="dashboard-carrierdetails.php">Carrier Details</a></li>
-              <li><a href="dashboard-businessdetails.php">Business Details</a></li>
-              <li><a href="dashboard-states.php">States</a></li>
-              <li><a href="dashboard-lineofbusiness.php">Line of Business</a></li>
-              <li><a href="dashboard-legalentity.php">Legal Entity</a></li>   
-          </ul>
-      </nav>
+            <ul class="nav navbar-nav">       
+                <li class="active core-navbar"><a href="dashboard-carrierdetails.php">Carrier Details</a></li>
+                <li class="core-navbar"><a href="dashboard-businessdetails.php">Business Details</a></li>
+                <li class="core-navbar"><a href="dashboard-states.php">States</a></li>
+                <li class="core-navbar"><a href="dashboard-lineofbusiness.php">Line of Business</a></li>
+                <li class="core-navbar"><a href="dashboard-legalentity.php">Legal Entity</a></li>   
+            </ul>
+          </div>
+        </nav>
+   </div>
   </div>
     </div>
     
@@ -79,5 +81,21 @@
       </nav>
   </div> -->
 
-</div>   
+
+<!-- 
+======================
+ Make navbar links become active when clicked
+====================== 
+-->
+<script type="text/javascript">  
+
+var coreNavbar = document.getElementsByClassName('core-navbar');
+  for(var i = 0; i < coreNavbar.length; i++) {
+    coreNavbar[i].addEventListener('click', function(){
+      
+      this.classList.add('active');
+    });
+  }
+
+</script>
   

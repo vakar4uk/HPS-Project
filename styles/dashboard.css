@@ -2,10 +2,28 @@ html {
     width: 100%;
 }
 
+nav .nav.navbar-nav .active {
+    background: none;
+    color: black;
+}
+
+.nav-pills > li.active > a{
+    color: #000000 !important;
+}
+
+.nav>li>a:focus, .nav>li>a:hover {
+    text-decoration: none;
+    background-color: transparent !important;
+}
+
+nav .nav.navbar-nav > li  a:hover {
+    background: #9D9D95;
+    color: black;
+}
+
 #my-container.container { 
     width: 100%;  
-    margin: auto 20px;
-   
+    margin: auto 20px;   
 }
 
 #my-dropdown {
@@ -168,13 +186,14 @@ div.thumbnail {
     margin-left: 10px;
 }
 
+/* Buttons of business types on dashboard-lineofbusiness page */
 #business-type {
     margin-bottom: 20px;
 }
 
 #business-type > button {
-    width: 180px;
-    height: 75px;
+	margin: 15px;
+    width: 140px;
 }
 
 #state-list > button {
@@ -183,11 +202,15 @@ div.thumbnail {
     margin-bottom: 10px;    
 }
 
-//Legal Entity
-.container-fluid > btn-success {
+/* Legal Entity */
+.container-fluid > .btn-success {
     margin-bottom: 25px;
 }
 
-#my-dropdown {
-    margin-top: 100px;
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
 }
