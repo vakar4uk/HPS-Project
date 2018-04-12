@@ -64,7 +64,7 @@
 			this.classList.toggle('btn-info');
 		});
 	}
-	<!-- Clear all selected states -->
+	// Clear all selected states
 	var clearStates = document.getElementById('clear-states-btn').addEventListener('click', function() {
 		for(var i = 0; i < 50; i++) {			
 			selectedStates[i].classList.add('btn-info');			

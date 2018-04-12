@@ -2,14 +2,16 @@ html {
     width: 100%;
 }
 
-nav .nav.navbar-nav .active {
-    background: none;
-    color: black;
-}
-
 .nav-pills > li.active > a{
     color: #000000 !important;
+    border-radius: 5px;
 }
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+    color: #000000;
+    background-color: #FFFFFF;
+}
+
 
 .nav>li>a:focus, .nav>li>a:hover {
     text-decoration: none;
@@ -123,11 +125,16 @@ div.thumbnail {
     border: none;
 }
 
-.jumbotron > .description {
+.jumbotron p.description {
     padding-top: 15px;
     padding-bottom: 17px;
     font-size: 0.9em;
     color: #C5BABA;
+}
+
+#toggle-notification {
+    margin-top: -15px;
+    margin-bottom: 25px;
 }
 
 .my-container {    
