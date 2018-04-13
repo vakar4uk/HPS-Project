@@ -1,5 +1,5 @@
 <?php 
-
+    include('navbars_footers/header.php');
     include('navbars_footers/top-navbar.php');
 
 ?>
@@ -34,7 +34,8 @@
                     <div class="carrier-name">
                         <p>Carrier Logo</p>
                         <label>
-                                <input class="btn btn-block btn-sm btn-info" type="file">
+                                <span>Click to upload or drop an image here...</span>
+                                <input id="logo-upload" class="btn btn-block btn-sm btn-info" type="file">
                         </label>
                         <span id="icons"><i class="far fa-list-alt"></i><i class="fas fa-ellipsis-v fa-1x"></i></span>
                     </div>
@@ -67,3 +68,4 @@ for(var i = 0; i < toggleNotification.length; i++) {
     });
 }
 </script>
+<!-- SHOW/HIDE notification's message -->

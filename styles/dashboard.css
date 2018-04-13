@@ -1,6 +1,75 @@
 html {
     width: 100%;
+    background-color: rgba(29, 77, 139, 0.98);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+body .main-dashboard {
+    background-color: rgba(29, 77, 139, 0.98); 
+}
+
+/* ====================== */
+/* Main-Dashboard Container */
+
+.main-dashboard {
+    width: 100%;
+    height: 100%;
+}
+
+.dashboard-container {
+    padding-top: 40px;
+}
+
+.fa-user {
+    opacity: 0.9;
+    color: #9C9595;
+    height: 150px;
+}
+
+.user-greeter p{
+    color: white;
+    font-size: 2.5em;
+}
+
+div.dashboard-table {
+    border-radius: 10px;
+    color: rgba(29, 77, 139, 0.70);
+    margin-top: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background: white;
+    height: 350px;
+}
+
+div.dashboard-table a {
+    text-decoration: none;
+}
+
+div.dashboard-table div.cell {
+    padding-top: 20px;
+    border-bottom: 2px solid #C8BCBC;  
+}
+
+div.dashboard-table div.cell-left {
+    padding-top: 10px;
+    border-right: 2px solid #C8BCBC;  
+}
+div.dashboard-table div.cell-middle {
+    padding-top: 10px;
+}
+div.dashboard-table div.cell-right {
+    padding-top: 10px;    
+    border-left: 2px solid #C8BCBC;    
+}
+
+div.text-center p  {
+    margin-top: 10px;
+}
+
+/* Main-Dashboard Container */
+/* ====================== */
 
 .nav-pills > li.active > a{
     color: #000000 !important;
@@ -119,6 +188,15 @@ div.thumbnail {
     padding: 20px 20px;
     color: white;
     background-color: rgba(29, 77, 139, 0.98);    
+}
+
+.my-container .carrier-name label span {
+    color: #7272C8;
+}
+
+input#logo-upload {
+    height: 110px;
+    padding: 45px 45px;
 }
 
 .form-control {
