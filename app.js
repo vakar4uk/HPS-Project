@@ -1,4 +1,4 @@
-// Select type of business
+/*Select type of business
 var individualBusBtn = document.getElementById("business-individual");
 var groupBusBtn = document.getElementById("business-group");
 var individualBusiness = document.getElementById("individual-business-display");
@@ -49,3 +49,4 @@ inputCodeGroup.addEventListener("keydown", function() {
 });
 
 var clearSt = document.getElementById('clear-states-btn');
+*/
