@@ -227,21 +227,7 @@ input#logo-upload {
     margin-bottom: 15px;
 }
 
-.carrier-name  p {
-    float: left;
-    vertical-align: middle;
-    padding-left: 12px;
-    padding-bottom: 0;
-    margin-bottom: 0;
-    color: #7272C8;
-    font-size: 1.2em;
-    font-weight: 600;    
-}
 
-#carriername-input {
-    border: none;    
-    box-shadow: none;  
-}
 
 #hr {
     width: 97%;
@@ -323,11 +309,10 @@ input[type=number]::-webkit-outer-spin-button {
     padding-bottom: 10px;
     
 }
-
+*/
 
 
 #offexchange {
-    float: left;
     background-color:rgba(215, 212, 212, 0.77);
     color: rgba(110, 110, 110, 0.77);
     margin-left: 20px;
@@ -338,4 +323,12 @@ input[type=number]::-webkit-outer-spin-button {
     padding-top: 10px;
     padding-bottom: 10px;
     
+}
+
+.carrier-name  p {
+    float: left;
+    padding-left: 12px;
+    color: #7272C8;
+    font-size: 1.2em;
+    font-weight: 600;    
 }
