@@ -153,9 +153,8 @@ div.thumbnail {
 }
 
 
-
+/* ************************* */
 /* Dashboard-carrierdetails */
-
 #carierdetails-container {
     text-align: center;
     width: 70%;
@@ -281,9 +280,17 @@ input#logo-upload {
     margin-bottom: 10px;    
 }
 
-/*Legal Entity*/
-.container-fluid > btn-success {
+/* Legal Entity */
+.container-fluid > .btn-success {
     margin-bottom: 25px;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
 }
 
 

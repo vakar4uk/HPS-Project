@@ -1,24 +1,15 @@
 <!-- Check whether the user has been logged in -->
 <?php 
-
     session_start();
-
-<<<<<<< HEAD
-    include('navbars_footers/top-navbar.php');
-    // include('navbars&footers/second-top-navbar.php');
-=======
     if($_SESSION['loggedIn'] !== 1){
         echo "You need to log in!";
         header('Location: ../../index.php');
         session_destroy();
     }
->>>>>>> Dmytro
-
     // Setting temporary name and last name
     // should come from database
     $firstName = "John";
     $lastName = "Dow";
-
 ?>
 <!-- Check whether the user has been logged in -->
 
@@ -108,11 +99,5 @@
     
 
 <?php
-<<<<<<< HEAD
-
     include('navbars_footers/footer.php');
-
-=======
-    include('navbars_footers/footer.php');
->>>>>>> Dmytro
 ?>

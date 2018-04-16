@@ -1,7 +1,6 @@
 <?php 
     include('navbars_footers/header.php');
     include('navbars_footers/top-navbar.php');
-
 ?>
 
 <div class="col-lg-12">
