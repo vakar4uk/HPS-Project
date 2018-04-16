@@ -90,7 +90,7 @@
                         <div class="text-center btn btn-block">
                             <a href="#">
                                 <i class="fas fa-sign-out-alt fa-5x"></i>
-                                <p class="lead">Sign Out</p>
+                                <p class="lead"><a href="C:\Users\DM387091\Documents\HPS Project\Login page\logout-logic.php">Sign Out</a></p>
                             </a>
                         </div>
                     </div>
