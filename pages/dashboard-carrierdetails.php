@@ -6,11 +6,10 @@
 
 <div class="col-lg-12">
     <div id="carierdetails-container" class="container">    
-        
             <div class="carrier-details">
                 <!-- Header text -->
-                <div class="jumbotron">
-                    <span class="hide-show-btn"><i id="toggle-notification" class="fas fa-chevron-up fa-2x pull-right"></i></span>
+                <div id="toggle-notification" class="jumbotron">
+                    <span class="hide-show-btn"><i class="fas fa-times fa-2x pull-right"></i></span>
                     <div id="notification-message">
                         <h3>We would need a few details to get you started!</h3>
                         <p class="description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
@@ -49,23 +48,35 @@
 
 <!-- SHOW/HIDE notification's message -->
 <script>
-    var toggleNotification = document.getElementsByClassName("hide-show-btn");
-var isVisible = true;
-for(var i = 0; i < toggleNotification.length; i++) {
-    toggleNotification[i].addEventListener("click", function() {
-        if(isVisible) {
-            $('#notification-message').slideUp('slow');
-            document.getElementById('toggle-notification').classList.remove('fa-chevron-up');
-            document.getElementById('toggle-notification').classList.add('fa-chevron-down');
-            isVisible = false;
-        } else {
-            $('#notification-message').slideDown('slow');
-            document.getElementById('toggle-notification').classList.remove('fa-chevron-down');
-            document.getElementById('toggle-notification').classList.add('fa-chevron-up');                
-            isVisible = true;
-        }
+
+// CLOSE MESSAGE
+var toggleNotification = document.getElementById("toggle-notification");
+toggleNotification.addEventListener('click', function() {
+    $('#toggle-notification').slideUp('slow');
+});
+
+
+// SHOW/HIDE message
+// var toggleNotification = document.getElementsByClassName("hide-show-btn");
+// var isVisible = true;
+// for(var i = 0; i < toggleNotification.length; i++) {
+//     toggleNotification[i].addEventListener("click", function() {
+//         if(isVisible) {
+//             $('#notification-message').slideUp('slow');
+//             document.getElementById('toggle-notification').classList.remove('fa-chevron-up');
+//             document.getElementById('toggle-notification').classList.add('fa-chevron-down');
+//             isVisible = false;
+//         } else {
+//             $('#notification-message').slideDown('slow');
+//             document.getElementById('toggle-notification').classList.remove('fa-chevron-down');
+//             document.getElementById('toggle-notification').classList.add('fa-chevron-up');                
+//             isVisible = true;
+//         }
         
-    });
-}
+//     });
+// }
 </script>
 <!-- SHOW/HIDE notification's message -->
+<?php
+    include('navbars_footers/top-navbar.php');
+?>

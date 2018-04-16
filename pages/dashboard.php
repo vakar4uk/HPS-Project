@@ -88,9 +88,9 @@
                     </div>
                     <div class="col-lg-4 col-md-4 cell-right">
                         <div class="text-center btn btn-block">
-                            <a href="#">
+                            <a href="../logout-logic.php">
                                 <i class="fas fa-sign-out-alt fa-5x"></i>
-                                <p class="lead"><a href="C:\Users\DM387091\Documents\HPS Project\Login page\logout-logic.php">Sign Out</a></p>
+                                <p class="lead">Sign Out</p>
                             </a>
                         </div>
                     </div>

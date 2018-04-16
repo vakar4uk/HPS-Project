@@ -147,6 +147,11 @@ nav.navbar.navbar-inverse {
     margin-top: 10px;
 }
 
+#carrier-name {
+    color: white;
+    margin-bottom: 5px;
+}
+
 div.thumbnail {
     margin-top: 10px;
     height: 200px;

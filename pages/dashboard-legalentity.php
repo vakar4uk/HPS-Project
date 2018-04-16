@@ -1,4 +1,5 @@
 <?php
+    include('navbars_footers/header.php');
     include('navbars_footers/top-navbar.php');
 ?>
 
@@ -214,6 +215,6 @@
 </div>
 
 
-        <?php
+<?php
     include('navbars_footers/footer.php');
 ?>
