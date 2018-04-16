@@ -192,8 +192,12 @@ div.thumbnail {
 }
 
 #business-type > button {
-	margin: 15px;
-    width: 140px;
+	/* margin: 15px; */
+    width: 220px;
+}
+
+#selected-business-type {
+    width: 200px;
 }
 
 #state-list > button {

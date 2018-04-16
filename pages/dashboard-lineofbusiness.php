@@ -39,11 +39,13 @@
 						</div>
 					</div>
 					<div class="row">
-                        <div class="col-lg-6 col-md-6">
+                        <!-- <div class="col-lg-6 col-md-6">
                             <button class="btn btn-lg btn-default">Copy from off exchange for individual</button>
-                        </div>
-                        <div class="col-lg-6 col-md-6">
-                            <button id="clear-business-btn" class="btn btn-lg btn-danger">Clear All</button>
+                        </div> -->
+
+                        <div id="business-type" class="col-lg-12 col-md-12">   
+                            
+                            <button id="clear-business-btn" class="btn btn-lg btn-danger pull-right">Clear All</button>
                         </div>
                     </div>
                     
@@ -51,8 +53,9 @@
                 </div>
             </div>
             <div class="row">
-				<div class="col-lg-12">
-					<a class="btn btn-lg btn-block btn-success" href="dashboard-legalentity.php">Submit</a>
+            <div id="business-type" class="col-lg-12 col-md-12">   
+                    
+					<a class="btn btn-lg btn-success pull-right" href="dashboard-legalentity.php">Submit</a>
 				</div>
 		</div>
         </div>
