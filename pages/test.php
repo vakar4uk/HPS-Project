@@ -17,26 +17,40 @@
                 <form id="entity-address" action="">
                     <div class="my-container">
                         <div class="carrier-name">
-                            <p>Business type</p><span id="icons"><i class="far fa-envelope fa-1x"></i><i class="fas fa-ellipsis-v fa-1x"></i></span>
+                            <p>Business Type</p><span id="icons"><i class="far fa-envelope fa-1x"></i><i class="fas fa-ellipsis-v fa-1x"></i></span>
                             <hr id="hr">
                             <br>
+
+                            
                     
                             <div class="row">
                                 <div class="container col-md-4">
                                     <button id="business-individual" class="btn btn-md" type="button">Individual</button>
                                 </div>
                             </div>
-                                
+                            
                         
                                                 
                             <div class="row">
-                                <div class="container col-md-4">
-                                    <button id="business-individual-onexchange" class="btn btn-md" type="button">On Exchange</button>
+                                <div class="col-md-4">
+                                    <button id="onexchange" class="btn btn-md" type="button">On Exchange</button>
                                 </div>
-                                <div class="container col-md-4">
-                                    <button id="business-individual-offexchange" class="btn btn-md" type="button">On Exchange</button>
+                                <div class="col-md-4">
+                                    <button id="offexchange" class="btn btn-md" type="button">On Exchange</button>
                                 </div>
                                                                       
+                            </div>
+
+                            
+
+                            <div class="row">                
+                               <div class="container col-md-4">
+                               <br>
+                                        <p>Carrier Code for On Exchange</p>
+                                                <input id="input-code-individual-onexchange" class="form-group" type="text" name="">
+                                        <p>Carrier Code for Off Exchange</p>
+                                                <input id="input-code-individual-offexchange" class="form-group" type="text" name="">
+                                </div>                                        
                             </div>
                                 
                             
@@ -50,13 +64,14 @@
                             </div>
 
                                                 
-                            <div class="row">
+                            <div class="row">                
+                            <div class="container col-md-4">
                             <br>
-                                <div id="carrier-code-group" class="col-lg-12 col-md-12" style="display: none;">
-                                <p>Carrier Code for Group</p>
-                                <input id="input-code-group" class="form-group" type="text" name="">
-                                </div>  
-                            </div>
+                                     <p>Carrier Code for Group</p>
+                                             <input id="input-code-group" class="form-group" type="text" name="">
+                                     
+                             </div>                                        
+                         </div>
 
 
                             
