@@ -25,46 +25,37 @@
                                 <div class="container col-md-4">
                                     <button id="business-individual" class="btn btn-md" type="button">Individual</button>
                                 </div>
-                                <div id="individual-business-display" style="display:none;">
-                                            <br>                                                                                                                           
-                                            <div class="row">
-                                                <div class="col-lg-6 col-md-6">
-                                                    <button id="business-individual-onexchange" class="btn btn-lg btn-block btn-info exchange-type-btn" type="button">On Exchange</button>
-                                                </div>
-                                                <div class="col-lg-6 col-md-6">
-                                                    <button id="business-individual-offexchange" class="btn btn-lg btn-block btn-info exchange-type-btn" type="button">Off Exchange</button>
-                                                </div>                                       
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-lg-12 col-md-12">
-                                                    <button id="submit-individual" class="btn btn-lg btn-block btn-success" type="submit" style="display: none;">Submit</button>
-                                                </div>
-                                            </div>
-                                </div>
                             </div>
+                                
+                        
+                                                
+                            <div class="row">
+                                <div class="container col-md-4">
+                                    <button id="business-individual-onexchange" class="btn btn-md" type="button">On Exchange</button>
+                                </div>
+                                <div class="container col-md-4">
+                                    <button id="business-individual-offexchange" class="btn btn-md" type="button">On Exchange</button>
+                                </div>
+                                                                      
+                            </div>
+                                
+                            
+
+
 
                             <div class="row">
                                 <div class="container col-md-4">
                                     <button id="business-group" class="btn btn-md" type="button">Group</button>
                                 </div>
                             </div>
-                            <div id="group-business-display" style="display:none;">
-                                            <br>                                                                                                                           
-                                            <div class="row">
-                                                <div class="col-lg-6 col-md-6">
-                                                    <button id="business-group-onexchange" class="btn btn-lg btn-block btn-info exchange-type-btn" type="button">On Exchange</button>
-                                                </div>
-                                                <div class="col-lg-6 col-md-6">
-                                                    <button id="business-group-offexchange" class="btn btn-lg btn-block btn-info exchange-type-btn" type="button">Off Exchange</button>
-                                                </div>     
+
                                                 
-                                                <div class="row">
-                                                    <br>
-                                                    <div id="carrier-code-group" class="col-lg-12 col-md-12" style="display: none;">
-                                                        <p>Carrier Code for Group</p>
-                                                        <input id="input-code-group" class="form-group" type="text" name="">
-                                                    </div>  
-                                            </div>
+                            <div class="row">
+                            <br>
+                                <div id="carrier-code-group" class="col-lg-12 col-md-12" style="display: none;">
+                                <p>Carrier Code for Group</p>
+                                <input id="input-code-group" class="form-group" type="text" name="">
+                                </div>  
                             </div>
 
 

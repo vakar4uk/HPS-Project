@@ -281,14 +281,13 @@ input#logo-upload {
     margin-bottom: 10px;    
 }
 
-<<<<<<< HEAD
 /*Legal Entity*/
 .container-fluid > btn-success {
     margin-bottom: 25px;
 }
 
 
-/*Deanna's Testing Code
+/*Deanna's Testing Code*/
 #business-individual{
     float: left;
     background-color:rgba(215, 212, 212, 0.77);
@@ -318,22 +317,31 @@ input#logo-upload {
     
 }
 
-.btn-md:focus{
-    background-color:#16D6EA !important;
-    color: white !important;
+#business-individual-onexchange{
+    float: left;
+    background-color:rgba(215, 212, 212, 0.77);
+    color: rgba(110, 110, 110, 0.77);
+    margin-left: 20px;
+    margin-top: 35px;
+    margin-bottom: 20px;
+    padding-left: 75px;
+    padding-right: 75px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+ 
+    
 }
 
-=======
-/* Legal Entity */
-.container-fluid > .btn-success {
-    margin-bottom: 25px;
+#business-individual-offexchange {
+    float: left;
+    background-color:rgba(215, 212, 212, 0.77);
+    color: rgba(110, 110, 110, 0.77);
+    margin-left: 20px;
+    margin-top: 35px;
+    margin-bottom: 20px;
+    padding-left: 75px;
+    padding-right: 75px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
 }
-
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    margin: 0; 
-}
->>>>>>> Dmytro
