@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
   session_start(); 
   include('../inc/arrays.php');
@@ -14,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="stylesheet" href="../styles/dashboard.css?version=1">
+    <link rel="stylesheet" href="../styles/dashboard.css?version=3">
     <link rel="stylesheet" href="../styles/bootstrap-3.3.7-dist/css/bootstrap.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
@@ -27,10 +26,6 @@
 
 <body>
   <div class="col-lg-12 col-md-12">
-=======
-
-
->>>>>>> Dmytro
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div id="text">
