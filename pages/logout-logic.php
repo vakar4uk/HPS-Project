@@ -4,7 +4,7 @@
 
     echo "You have been succesfuly logged out";
     session_destroy();
+    header('Location: index.php');
 
 ?>
 
-<a href="/index.php">Go to Login Page</a>

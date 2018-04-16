@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
   session_start(); 
   include('../inc/arrays.php');
@@ -26,39 +27,38 @@
 
 <body>
   <div class="col-lg-12 col-md-12">
+=======
+
+
+>>>>>>> Dmytro
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div id="text">
-          <div class="navbar-header">      
-                <a class="navbar-brand" href="#">Florida Blue</a>
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">Florida Blue</a>
           </div>
-          
-          <ul class="nav navbar-nav center">            
-            <li><a href="#">CORE</a></li>
+          <ul class="nav nav-pills navbar-nav">
+            <li class="active"><a href="#">CORE</a></li>
             <li><a href="#">PPR</a></li>
             <li><a href="#">EXCHANGELINK</a></li>
             <li><a href="#">SLP</a></li>
             <li><a href="#">SALESLINK</a></li>
             <li><a href="#">OPERATIONS</a></li>
             <li><a href="#">FINANCE & BILLING</a></li>
-              
           </ul>
         </div>
-      </div>      
+      </div>
     </nav>
 
-    <div class="col-lg-12 col-md-12 my-container">
-      <nav class="navbar navbar-inverse navbar-fixed-top center">
-          <div id="text" class="container">    
-          <ul class="nav navbar-nav">       
-              <li><a href="dashboard-carrierdetails.php">Carrier Details</a></li>
-              <li><a href="dashboard-businessdetails.php">Business Details</a></li>
-              <li><a href="dashboard-states.php">States</a></li>
-              <li><a href="dashboard-lineofbusiness.php">Line of Business</a></li>
-              <li><a href="dashboard-legalentity.php">Legal Entity</a></li>   
-          </ul>
-      </nav>
-  </div>
 
-</div>   
-  
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div id="text" class="container">
+        <ul class="nav nav-pills navbar-nav">
+          <li <?php if($currentLocation=='dashboard-carrierdetails.php' ) {echo 'class="active"';} ?>><a href="dashboard-carrierdetails.php">Carrier Details</a></li>
+          <li <?php if($currentLocation=='dashboard-businessdetails.php' ) {echo 'class="active"';} ?>><a href="dashboard-businessdetails.php">Business Details</a></li>
+          <li <?php if($currentLocation=='dashboard-states.php' ) {echo 'class="active"';} ?>><a href="dashboard-states.php">States</a></li>
+          <li <?php if($currentLocation=='dashboard-lineofbusiness.php' ) {echo 'class="active"';} ?>><a href="dashboard-lineofbusiness.php">Line of Business</a></li>
+          <li <?php if($currentLocation=='dashboard-legalentity.php' ) {echo 'class="active"';} ?>><a href="dashboard-legalentity.php">Legal Entity</a></li>
+        </ul>
+      </div>
+    </nav>

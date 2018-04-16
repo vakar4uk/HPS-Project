@@ -29,33 +29,53 @@
                     
                     <div class="row"><br>
                         <div class="col-lg-12 col-md-12">
-
-                    </div>
-                    <?php foreach ($lineOfBusiness as $line) { ?>                        
-                            <div id="business-type" class="col-lg-3 col-md-3">                            
-                                <button id="selected-business-type" class="btn btn-info btn-lg" onclick="selectBusinessType()"><?php echo $line["name"]; ?></button>                    
-                            </div>
-            
-                        <?php } ?>
-
+							                    
+                    			<?php foreach ($lineOfBusiness as $line) { ?>                        
+                            		<div id="business-type" class="col-lg-3 col-md-3">                            
+                                		<button id="selected-business-type" class="btn btn-info btn-lg selected-business"><?php echo $line["name"]; ?></button>                    
+                            		</div>            
+          			            <?php } ?>
+							
+						</div>
+					</div>
+					<div class="row">
                         <div class="col-lg-6 col-md-6">
                             <button class="btn btn-lg btn-default">Copy from off exchange for individual</button>
                         </div>
                         <div class="col-lg-6 col-md-6">
-                            <button class="btn btn-lg btn-danger">Clear All</button>
+                            <button id="clear-business-btn" class="btn btn-lg btn-danger">Clear All</button>
                         </div>
                     </div>
                     
                     
                 </div>
             </div>
-
-            <!-- <button class="btn btn-lg btn-block btn-success">Submit</button> -->
-
+            <div class="row">
+				<div class="col-lg-12">
+					<a class="btn btn-lg btn-block btn-success" href="dashboard-legalentity.php">Submit</a>
+				</div>
+		</div>
         </div>
-
+		
     </div>
 </div>
+
+<script type="text/javascript">
+	<!-- Change the color of the button when you click on a particular state -->
+	var selectedBusiness = document.getElementsByClassName('selected-business');
+	for(var i = 0; i < selectedBusiness.length; i++) {
+		selectedBusiness[i].addEventListener('click', function() {
+			this.classList.toggle('btn-info');
+		});
+	}
+	<!-- Clear all selected states -->
+	var clearBusiness = document.getElementById('clear-business-btn').addEventListener('click', function() {
+		for(var i = 0; i < selectedBusiness.length; i++) {			
+			selectedBusiness[i].classList.add('btn-info');			
+		}
+	});
+</script>
+
 
 <?php
     include('navbars_footers/footer.php');
