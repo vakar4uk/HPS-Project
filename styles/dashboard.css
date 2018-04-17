@@ -1,6 +1,8 @@
 html {
     width: 100%;
-    background-color: rgba(29, 77, 139, 0.98);
+    height: 100%;
+    margin: 0;
+    /* background-color: rgba(29, 77, 139, 0.98); */
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -74,6 +76,42 @@ div.text-center p  {
 .nav-pills > li.active > a{
     color: #000000 !important;
     border-radius: 5px;
+}
+
+#text .nav.nav-pills.navbar-nav > li > a {
+    border-radius: 0px;
+}
+
+#text .nav.nav-pills.navbar-nav > li.active a{
+    background: #BDBDC6;    
+}
+
+#text .nav.nav-pills.navbar-nav.core-nav {
+    height: 47px;
+}
+
+#text .nav.nav-pills.navbar-nav.core-nav > li:hover {  
+    /* padding-bottom: 5px;   */
+    margin-bottom: 0;
+    /* background: #FFFFFF; */
+    border: none;
+    color: black;
+}
+
+#text .nav.nav-pills.navbar-nav.core-nav > li a:hover {  
+    color: black;
+    display: inherit;
+}
+
+#text .nav.nav-pills.navbar-nav.core-nav > li a{  
+    text-decoration: none;
+    display: block;
+    color: rgba(252, 252, 252, 0.98);
+}
+
+#text .nav.nav-pills.navbar-nav.core-nav > li.active a{
+    background: #FFFFFF;
+    /* padding-bottom: 19px;   */
 }
 
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
@@ -189,7 +227,7 @@ div.thumbnail {
     float: right;
 }
 
-.carrier-details > .jumbotron {
+div#toggle-notification.jumbotron {
     padding: 20px 20px;
     color: white;
     background-color: rgba(29, 77, 139, 0.98);    
@@ -259,6 +297,21 @@ input#logo-upload {
     float: right;
     margin-right: 50px;
     color: #57D4E7;
+}
+
+/* div.carrier-details > div#show-btn.pull-right {
+    display: none;
+    position: relative;
+    top: -30px;
+    color: #7272C8;
+} */
+
+#hide-btn {
+    /* display: none; */
+    position: static;    
+    color: #7272C8;
+    margin-bottom: -30px;
+    margin-left: 101%;
 }
 
 .svg-inline--fa.fa-ellipsis-v.fa-w-6.fa-1x {

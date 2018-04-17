@@ -2,7 +2,7 @@
       <div class="container-fluid">
         <div id="text">       
           <div class="navbar-header">
-            <a class="navbar-brand btn float-left" href="dashboard.php">
+            <a class="navbar-brand btn float-left" href="landing.php">
               <i class="fas fa-th-large"></i>
             </a>            
             </div>
@@ -23,7 +23,7 @@
 
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div id="text" class="container-fluid">
-        <ul class="nav nav-pills navbar-nav">
+        <ul class="nav nav-pills navbar-nav core-nav">
           <li <?php if($currentLocation=='dashboard-carrierdetails.php' ) {echo 'class="active"';} ?>><a href="dashboard-carrierdetails.php">Carrier Details</a></li>
           <li <?php if($currentLocation=='dashboard-businessdetails.php' ) {echo 'class="active"';} ?>><a href="dashboard-businessdetails.php">Business Details</a></li>
           <li <?php if($currentLocation=='dashboard-states.php' ) {echo 'class="active"';} ?>><a href="dashboard-states.php">States</a></li>

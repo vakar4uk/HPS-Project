@@ -6,15 +6,17 @@
 <div class="col-lg-12">
     <div id="carierdetails-container" class="container">
         <div class="carrier-details">
-            <!-- Header text -->
-            <div class="jumbotron">
-                <span><i class="fas fa-times fa-1x"></i></span>
-                <h3>Ok we are almost there! Now let's select your line of business!</h3>
+            <!-- Header text -->             
+            <div class="header-notification">
+            <div id="hide-btn"><i class="show-hide fas fa-chevron-up fa-2x"></i></div>               
+            <div id="toggle-notification" class="jumbotron">                                
+                <h3>Great! Now let's select your line of business</h3>
                 <p class="description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua.
+                            dolore magna aliqua.
                 </p>
+            </div>                   
             </div>
-            <!-- Header text -->   
+            <!-- Header text -->      
 
             <div class="my-container">
                 <div class="carrier-name">
@@ -52,31 +54,14 @@
                 </div>
             </div>
             <div class="row">
-				<div class="col-lg-12">
-					<a class="btn btn-lg btn-block btn-success" href="dashboard-legalentity.php">Submit</a>
-				</div>
-		</div>
+                <div class="col-lg-12">
+                    <a id="save-next-btn" href="dashboard-legalentity.php" class="btn btn-lg btn-primary pull-right">Next</a>
+            </div>
+        </div>	
         </div>
 		
     </div>
 </div>
-
-<script type="text/javascript">
-	<!-- Change the color of the button when you click on a particular state -->
-	var selectedBusiness = document.getElementsByClassName('selected-business');
-	for(var i = 0; i < selectedBusiness.length; i++) {
-		selectedBusiness[i].addEventListener('click', function() {
-			this.classList.toggle('btn-info');
-		});
-	}
-	<!-- Clear all selected states -->
-	var clearBusiness = document.getElementById('clear-business-btn').addEventListener('click', function() {
-		for(var i = 0; i < selectedBusiness.length; i++) {			
-			selectedBusiness[i].classList.add('btn-info');			
-		}
-	});
-</script>
-
 
 <?php
     include('navbars_footers/footer.php');

@@ -60,7 +60,7 @@ class DAL {
         $isValid = true;
         $count = mysqli_num_rows($query);
         if($count == 0) {          
-           header('Location: pages/dashboard.php'); /* Redirect browser */
+           header('Location: pages/landing.php'); /* Redirect browser */
            return $isValid;
         } else {
             /* Redirect browser */
