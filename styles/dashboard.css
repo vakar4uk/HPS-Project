@@ -187,13 +187,17 @@ div.thumbnail {
 }
 
 /* Buttons of business types on dashboard-lineofbusiness page */
-#business-type {
+#business-type > button{
     margin-bottom: 20px;
+    margin-right: 15px;
+
+    width: 220px;
 }
 
-#business-type > button {
-	/* margin: 15px; */
-    width: 220px;
+#business-type > a {
+    width:220px;
+    margin-right: 15px;
+    
 }
 
 #selected-business-type {
