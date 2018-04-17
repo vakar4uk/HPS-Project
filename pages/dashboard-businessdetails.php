@@ -1,4 +1,5 @@
 <?php
+    include('navbars_footers/header.php');
     include('navbars_footers/top-navbar.php');
 ?>
 
@@ -6,14 +7,17 @@
     <div class="col-lg-12">
         <div id="carierdetails-container" class="container">
             <div class="carrier-details">
-                <!-- Header text -->
-                <div class="jumbotron">
-                    <span><i class="fas fa-times fa-1x"></i></span>
-                    <h3>Great!Tell us more about your business!</h3>
+                <!-- Header text -->             
+                <div class="header-notification">
+                <div id="hide-btn"><i class="show-hide fas fa-chevron-up fa-2x"></i></div>               
+                <div id="toggle-notification" class="jumbotron">                                
+                    <h3>Great! Tell us more about your business!</h3>
                     <p class="description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua.
+                                dolore magna aliqua.
                     </p>
-                </div>
+                </div>                   
+            </div>
+            <!-- Header text -->
                 <form id="entity-address" action="">
                     <div class="my-container">
                         <div class="carrier-name">
@@ -68,26 +72,27 @@
                                                         <input id="input-code-group" class="form-group" type="text" name="">
                                                     </div>                                         
                                             </div>
-                                            <div class="row">
-                                                <div id="submit-group"  class="col-lg-12 col-md-12" style="display: none;">
-                                                    <button class="btn btn-lg btn-block btn-success" type="submit">Submit</button>
-                                                </div>
-                                            </div>
+                                            
                                         </div>
                                     </div>                                    
                                 </div>     
                                 </div>                               
                             </div> 
                                                       
-                        </div>                            
+                        </div>
                     </div>
-                </div>                    
+                    <a id="save-next-btn"  href="dashboard-states.php" class="btn btn-lg btn-primary pull-right">Next</a>
+                </div>
+                                  
             </form>
-
+            
             </div>
+            
         </div>
     </div>
 </div>
+
+
 
 <?php
     include('navbars_footers/footer.php');

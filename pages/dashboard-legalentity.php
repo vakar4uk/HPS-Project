@@ -1,4 +1,5 @@
 <?php
+    include('navbars_footers/header.php');
     include('navbars_footers/top-navbar.php');
 ?>
 
@@ -6,21 +7,23 @@
     <div class="col-lg-12">
         <div id="carierdetails-container" class="container">
             <div class="carrier-details">
-                <!-- Header text -->
-                <div class="jumbotron">
-                    <span><i class="fas fa-times fa-1x"></i></span>
-                    <h3>Ok great! Now let's select a legal entity!</h3>
+                <!-- Header text -->             
+            <div class="header-notification">
+            <div id="hide-btn"><i class="show-hide fas fa-chevron-up fa-2x"></i></div>               
+                <div id="toggle-notification" class="jumbotron">                                
+                    <h3>We are almost there! Now let's select a legal entity</h3>
                     <p class="description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua.
+                                dolore magna aliqua.
                     </p>
-                </div>
-                <!-- Header text -->
+                </div>                   
+            </div>
+            <!-- Header text -->  
                 <form id="entity-address" action="">
                     <div class="my-container">
                         <div class="carrier-name">
                             <p>Name of and Code of Legal Entity</p><span id="icons"><i class="far fa-envelope fa-1x"></i><i class="fas fa-ellipsis-v fa-1x"></i></span>
                             <hr id="hr">
-                            <input id="carriername-input" type="text" class="form-control" placeholder="John Doe, XC78">
+                            <input id="carriername-input" type="text" class="form-control" placeholder="John Doe, XC78" required>
                         </div>
                     </div>
 
@@ -214,6 +217,6 @@
 </div>
 
 
-        <?php
+<?php
     include('navbars_footers/footer.php');
 ?>
