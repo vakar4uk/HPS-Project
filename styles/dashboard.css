@@ -150,7 +150,7 @@ nav.navbar.navbar-inverse {
 
 #text > .navbar-header >.navbar-brand{
     text-align: center;
-    color: #C11C1C;  
+    color: #E9E9E9;  
 }
 
 #text > ul.nav.navbar-nav  a{
@@ -355,8 +355,59 @@ input[type=number]::-webkit-outer-spin-button {
 /* ================= */
 
 .dashboard-header {
-    padding-top: 15px;
+    padding-top: 10px;
     font-weight: bold;
+    color: white;
+}
+
+.dashboard-header a.navbar-brand i {
+    color: white;
+}
+
+.icons a {
+    color: white;
+    margin: 15px;
+}
+
+div.carrier {
+    background: #EBE5E5;
+    margin: 50px 0px;
+    
+    padding: 20px;
+    border-radius: 10px;
+    border: 5px solid red;
+}
+
+.color-coding {
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    padding: 10px;
+    background: yellow;
+}
+
+.thumbnail img {
+    padding: 50px;
+    height: 100%;;
+}
+
+div.carrier div.carrier-info {
+    margin: 15px 5px;
+}
+
+div.carrier div.carrier-info > h3{
+    color: rgba(29, 77, 139, 0.98); ;
+}
+
+.carrier-status {
+    padding-bottom: 15px;
+    width: 100%;
+    /* margin: 5px; */
+}
+
+.carrier-status .btn {
+    padding: 10px;
+    /* margin: 5px; */
 }
 
 /* ================= */

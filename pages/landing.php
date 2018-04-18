@@ -46,7 +46,7 @@
                 <div class="row container-fluid"> <!-- row -->
                     <div class="col-lg-4 col-md-4 cell cell-left">
                         <div class="text-center btn btn-block">
-                            <a href="dashboard-carrierdetails.php">
+                            <a href="dashboard.php">
                                 <i class="fas fa-th fa-5x"></i>
                                 <p class="lead">Dashboard</p>
                             </a>
