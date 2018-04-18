@@ -24,66 +24,108 @@
 
                             
                     
-                            <div class="row">
-                            <div class="container col-md-4">
-                                    <button id="business-individual" class="btn btn-md" type="button"  data-toggle="collapse" data-target="#multiCollapseExample1" aria-expanded="false" aria-controls="multiCollapseExample1">Individual</button>
+                            <div class="form-group row">
+                            <div class="col-md-6">
+                                    <button id="business-individual" class="btn btn-md" type="button">Individual</button>
+                            </div>     
+                            <div class="col-md-6">        
+                                    <button id="business-group" class="btn btn-md" type="button">Group</button>
                             </div>
                             </div>
-
+                          
                                
                                                 
-                            <div class="row">
-                            <div class="collapse multi-collapse" id="multiCollapseExample1">
-                            <div class="col-md-4">
-                                    <p>On or Off Exchange?</p>
-                                    <button id="onexchange" class="btn btn-md" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">On Exchange</button>
+                            <div class="form-group row">
+                            <div class="col-md-3">
+                                    <button id="onexchange" class="btn btn-md" type="button">On Exchange</button>
+                            </div>  
+                            <div class="col-md-3"> 
+                                   <button id="offexchange" class="btn btn-md" type="button">Off Exchange</button>                                   
                             </div>
-                                
-                            <div class="col-md-4">
-                                    <button id="offexchange" class="btn btn-md" type="button" data-toggle="collapse" data-target="#multiCollapseExample3" aria-expanded="false" aria-controls="multiCollapseExample3">Off Exchange</button>
+                            <div class="col-md-3">
+                                    <input class="form-control" id="input-code-group" type="text" placeholder="Group Carrier Code">
                             </div>
-                            </div> 
-                            </div>                                      
+                            </div>
+                         
+                        
+
+                            <div class="form-group row">
+                            <div class="col-md-3">
+                                    <input class="form-control" id="input-code-individual-onexchange" type="text" placeholder="Onexchange Carrier Code">
+                            </div>
+                            <div class="col-md-3">
+                                    <input class="form-control" id="input-code-individual-offexchange" type="text" placeholder="Offexchange Carrier Code"
+                            </div>
+                            
+                            </div>
                             
                             
 
-                            
 
-                            <div class="row">   
-                            <div class="collapse multi-collapse" id="multiCollapseExample2">
-                            <div class="container col-md-4">
-                               <br>
-                                    <p>Carrier Code for On Exchange</p>
-                                            <input id="input-code-individual-onexchange" class="form-group" type="text" placeholder="X7">
-                            <div class="collapse multi-collapse" id="multiCollapseExample3">
-                                    <p>Carrier Code for Off Exchange</p>
-                                            <input id="input-code-individual-offexchange" class="form-group" type="text" placeholder="X7">
-                            </div>                                        
-                            </div>
-                            </div>
-                            </div>
-                            
-
-
-                            <div class="row">
-                                <div class="container col-md-4">
-                                    <button id="business-group" class="btn btn-md" type="button" data-toggle="collapse" href="#multiCollapseExample4" role="button" aria-expanded="false" aria-controls="multiCollapseExample4">Group</button>
-                                </div>
-                            </div>
+                         
 
                                                 
-                            <div class="row">
-                            <div class="collapse multi-collapse" id="multiCollapseExample4">
-                            <div class="container col-md-4">
-                            <br>
-                                     <p>Carrier Code for Group</p>
-                                             <input id="input-code-group" class="form-group" type="text" placeholder="X7">
-                                     
-                            </div>                                        
-                            </div>
-                            </div>
 
 
+<script>
+$(document).ready(function(){
+    $("button[id*=onexchange]").hide();
+
+    $("button[id*=business-individual]").click(function(){
+        $("button[id*=onexchange]").show();
+    });
+
+    $("button[id*=offexchange]").hide();
+
+    $("button[id*=business-individual]").click(function(){
+        $("button[id*=offexchange]").show();
+    });
+
+    
+    $("p[id*=1]").hide();
+
+    $("button[id*=business-individual]").click(function(){
+        $("p[id*=1]").show();
+    });
+
+    $("p[id*=2]").hide();
+
+    $("button[id*=onexchange]").click(function(){
+        $("p[id*=2]").show();
+    });
+
+    $("p[id*=3]").hide();
+
+    $("button[id*=offexchange]").click(function(){
+        $("p[id*=3]").show();
+    });
+
+    $("p[id*=4]").hide();
+
+    $("button[id*=business-group]").click(function(){
+        $("p[id*=4]").show();
+    });
+
+    $("input[id*=input-code-individual-onexchange]").hide();
+
+    $("button[id*=onexchange]").click(function(){
+        $("input[id*=input-code-individual-onexchange]").show();
+    });
+
+    $("input[id*=input-code-individual-offexchange]").hide();
+
+    $("button[id*=offexchange]").click(function(){
+        $("input[id*=input-code-individual-offexchange]").show();
+    });
+
+    $("input[id*=input-code-group]").hide();
+
+    $("button[id*=business-group]").click(function(){
+        $("input[id*=input-code-group]").show();
+    });
+
+});
+</script>
                             
                           </div>
                     </div>

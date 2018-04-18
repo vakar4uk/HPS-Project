@@ -193,29 +193,26 @@ div.thumbnail {
 }
 
 #business-individual{
-    float: left;
     background-color:rgba(215, 212, 212, 0.77);
     color: rgba(110, 110, 110, 0.77);
-    margin-left: 40px;
     margin-top: 35px;
     margin-bottom: 25px;
-    padding-left: 75px;
-    padding-right: 75px;
+    margin-left: 15px;
+    padding-left: 173px;
+    padding-right: 173px;
     padding-top: 10px;
     padding-bottom: 10px;
     
 }
 
 #business-group{
-    float: left;
     background-color:rgba(215, 212, 212, 0.77);
     color: rgba(110, 110, 110, 0.77);
-    margin-left: 40px;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    padding-left: 85px;
-    padding-right: 85px;
-    padding-top: 10px;
+    margin-top: 35px;
+    margin-bottom: 25px;
+    padding-left: 160px;
+    padding-left: 173px;
+    padding-right: 173px;
     padding-bottom: 10px;
     
 }
@@ -224,10 +221,10 @@ div.thumbnail {
     background-color:rgba(215, 212, 212, 0.77);
     color: rgba(110, 110, 110, 0.77);
     margin-top: 10px;
-    margin-left: 15px;
     margin-bottom: 10px;
-    padding-left: 63px;
-    padding-right: 63px;
+    margin-left: 20px;
+    padding-left: 57px;
+    padding-right: 57px;
     padding-top: 10px;
     padding-bottom: 10px;
     
@@ -237,22 +234,18 @@ div.thumbnail {
 #offexchange {
     background-color:rgba(215, 212, 212, 0.77);
     color: rgba(110, 110, 110, 0.77);
-    margin-top: 43px;
-    margin-left: -130px;
+    margin-top: 10px;
     margin-bottom: 10px;
-    padding-left: 63px;
-    padding-right: 63px;
+    padding-left: 57px;
+    padding-right: 57px;
     padding-top: 10px;
     padding-bottom: 10px;
     
 }
 
 #input-code-individual-onexchange {
-    width: 100%;
-    margin-left: 40px;
+    margin-left: 20px;
     margin-top: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -261,12 +254,8 @@ div.thumbnail {
 }
 
 #input-code-individual-offexchange {
-    width: 100%;
-    margin-left: 40px;
     margin-top: 10px;
     margin-bottom: 40px;
-    padding-top: 10px;
-    padding-bottom: 10px;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -275,14 +264,12 @@ div.thumbnail {
 }
 
 #input-code-group {
-    width: 100%;
-    margin-left: 40px;
-    margin-top: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    margin-top: 15px;
+    margin-left: 25px;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
     color: rgba(110, 110, 110, 0.77);
 }
+
