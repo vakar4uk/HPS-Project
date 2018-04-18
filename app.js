@@ -7,4 +7,10 @@ $(document).ready(function() {
         $('.show-hide').toggleClass('fa-chevron-up fa-chevron-down');
     });
     // HIDE/SHOW functionality of the notification message
+       // HIDE/SHOW functionality of the notification message
+       $('#slide-btn').click(function() {
+        $('#lineofbusiness').slideToggle();
+        $('.show-hide').toggleClass('fa-chevron-up fa-chevron-down');
+    });
+    // HIDE/SHOW functionality of the notification message
 });

@@ -321,6 +321,14 @@ input#logo-upload {
     margin-left: 101%;
 }
 
+#slide-btn {
+    /* display: none; */
+    position: static;    
+    color: #7272C8;
+    margin-bottom: -40px;
+    margin-left: 101%;
+}
+
 .svg-inline--fa.fa-ellipsis-v.fa-w-6.fa-1x {
     margin-left: 10px;
 }
