@@ -38,7 +38,7 @@
           </div>
           
           <ul class="nav navbar-nav center">            
-            <li><a href="#">CORE</a></li>
+            <li><a href="dashboard.php">CORE</a></li>
             <li><a href="dashboard-ppr.php">PPR</a></li>
             <li><a href="#">EXCHANGELINK</a></li>
             <li><a href="#">SLP</a></li>
@@ -55,11 +55,11 @@
       <nav class="navbar navbar-inverse navbar-fixed-top center">
           <div id="text" class="container">    
           <ul class="nav navbar-nav">       
-              <li><a href="dashboard-carrierdetails.php">Carrier Details</a></li>
-              <li><a href="dashboard-businessdetails.php">Business Details</a></li>
-              <li><a href="dashboard-states.php">States</a></li>
-              <li><a href="dashboard-lineofbusiness.php">Line of Business</a></li>
-              <li><a href="dashboard-legalentity.php">Legal Entity</a></li>   
+              <li><a href="#">Plan Information</a></li>
+              <li><a href="#">Benefits and CSR</a></li>
+              <li><a href="#">Rates</a></li>
+              <li><a href="#">Plan Coverage</a></li>
+   
           </ul>
       </nav>
   </div>
