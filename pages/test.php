@@ -20,13 +20,14 @@
                             <h3>Business Type</h3><span id="icons"><i class="far fa-envelope fa-1x"></i><i class="fas fa-ellipsis-v fa-1x"></i></span>
                             <hr id="hr">
                             <br>
+                            
 
                             
                     
                             <div class="row">
-                                <div class="container col-md-4">
-                                    <button id="business-individual" class="btn btn-md" type="button" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Individual</button>
-                                </div>
+                            <div class="container col-md-4">
+                                    <button id="business-individual" class="btn btn-md" type="button"  data-toggle="collapse" data-target="#multiCollapseExample1" aria-expanded="false" aria-controls="multiCollapseExample1">Individual</button>
+                            </div>
                             </div>
 
                                
@@ -35,15 +36,16 @@
                             <div class="collapse multi-collapse" id="multiCollapseExample1">
                             <div class="col-md-4">
                                     <p>On or Off Exchange?</p>
-                                    <button id="onexchange" class="btn btn-md" type="button" data-toggle="collapse" href="#multiCollapseExample2" role="button" aria-expanded="false" aria-controls="multiCollapseExample2">On Exchange</button>
-                                </div>
+                                    <button id="onexchange" class="btn btn-md" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">On Exchange</button>
+                            </div>
                                 
-                                <div class="col-md-4">
-                                    <button id="offexchange" class="btn btn-md" type="button" data-toggle="collapse" href="#multiCollapseExample3" role="button" aria-expanded="false" aria-controls="multiCollapseExample3">Off Exchange</button>
-                                </div>
-                                                                      
+                            <div class="col-md-4">
+                                    <button id="offexchange" class="btn btn-md" type="button" data-toggle="collapse" data-target="#multiCollapseExample3" aria-expanded="false" aria-controls="multiCollapseExample3">Off Exchange</button>
                             </div>
-                            </div>
+                            </div> 
+                            </div>                                      
+                            
+                            
 
                             
 
@@ -51,23 +53,21 @@
                             <div class="collapse multi-collapse" id="multiCollapseExample2">
                             <div class="container col-md-4">
                                <br>
-                                        <p>Carrier Code for On Exchange</p>
-                                                <input id="input-code-individual-onexchange" class="form-group" type="text" placeholder="X7">
+                                    <p>Carrier Code for On Exchange</p>
+                                            <input id="input-code-individual-onexchange" class="form-group" type="text" placeholder="X7">
                             <div class="collapse multi-collapse" id="multiCollapseExample3">
-                                        <p>Carrier Code for Off Exchange</p>
-                                                <input id="input-code-individual-offexchange" class="form-group" type="text" placeholder="X7">
-                                </div>                                        
+                                    <p>Carrier Code for Off Exchange</p>
+                                            <input id="input-code-individual-offexchange" class="form-group" type="text" placeholder="X7">
+                            </div>                                        
                             </div>
                             </div>
                             </div>
-                                
                             
-
 
 
                             <div class="row">
                                 <div class="container col-md-4">
-                                    <button id="business-group" class="btn btn-md" type="button" data-toggle="collapse" href="#multiCollapseExample4" role="button" aria-expanded="false" aria-controls="multiCollapseExample4"">Group</button>
+                                    <button id="business-group" class="btn btn-md" type="button" data-toggle="collapse" href="#multiCollapseExample4" role="button" aria-expanded="false" aria-controls="multiCollapseExample4">Group</button>
                                 </div>
                             </div>
 
