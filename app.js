@@ -7,4 +7,7 @@ $(document).ready(function() {
         $('.show-hide').toggleClass('fa-chevron-up fa-chevron-down');
     });
     // HIDE/SHOW functionality of the notification message
+
+    $(".dashboard-header")
+    .html('<object data="http://google.com"/>');
 });

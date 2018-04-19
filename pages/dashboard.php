@@ -104,7 +104,9 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> <!-- Individual Carrier Display -->
+
+                    <!-- Individual Carrier Display -->
                     <div class="col-lg-4">
                         <div class="col-lg-12">
                             <div class="carrier">
@@ -129,8 +131,19 @@
                                 </div>
                             </div>
                         </div>
+                    </div>  <!-- Individual Carrier Display -->
+
+                    <div class="col-lg-4">
+                        <div class="col-lg-12">
+                            <a href="dashboard-carrierdetails.php">
+                                <div id="new-carrier-btn" class="pull-right">
+                                    <button class="btn btn-default vertical">+NEW</button>
+                                </div>
+                            </a>
+                        </div>
                     </div>
-                    <!-- Individual Carrier Display -->
+                </div> <!-- Individual Carrier Display -->
+
                 </div>
             </div>
         </div>

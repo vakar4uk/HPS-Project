@@ -10,8 +10,7 @@ html {
 }
 
 body {
-    /* height: 100%; */
-    /* width: 100%; */
+    overflow-x: hidden;
 }
 
 body .main-landing {
@@ -448,8 +447,65 @@ div.carrier-info {
     /* margin: 5px; */
 }
 
+.current-onboarding {
+    position: relative;
+}
+
 .current-onboarding p {
     color: white;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#new-carrier-btn {
+    background-color: cyan;
+    /* width: 200px;
+    height: 60px; */
+    /* text-orientation: sideways; */
+
+    width: 200px;
+    height: 0;
+    margin-right: 200px;
+}
+
+#new-carrier-btn {
+    position: absolute;
+    top: 110px;
+    left: 75%;
+    /* bottom: 100px; */
+    
+}
+
+.vertical {
+    background-color: #39DBDB;
+    color: white;
+    font-size: 1.6em;
+    font-weight: bold;
+    writing-mode:tb-rl;
+    -webkit-transform:rotate(-90deg);
+    -moz-transform:rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform:rotate(-90deg);
+    transform: rotate(-90deg);
+    white-space:nowrap;
+    display:block;
+    bottom:0;
+    width:223px;
+    height:120px;   
+    border-radius: 10px;
+}
+
+.vertical:hover {
+    color: black;
+}
+
+.vertical > a {
+    text-decoration: none;
+    color: white;
+}
+
+vertical > a:hover {
+    color: red;
 }
 
 
