@@ -1,19 +1,27 @@
-html {
-    width: 100%;
-    height: 100%;
+* {
+    padding: 0;
     margin: 0;
-    /* background-color: rgba(29, 77, 139, 0.98); */
+}
+
+html {
+    /* width: 100%; */
+    /* height: 100%;     */
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-body .main-dashboard {
+body {
+    /* height: 100%; */
+    /* width: 100%; */
+}
+
+body .main-landing {
     background-color: rgba(29, 77, 139, 0.98); 
 }
 
 /* ====================== */
 /* Landing Page Container */
 
-.main-dashboard {
+.main-landing {
     width: 100%;
     height: 100%;
 }
@@ -72,6 +80,12 @@ div.text-center p  {
 
 /* Main-Dashboard Container */
 /* ====================== */
+
+.main-dashboard {
+    /* height: 100%; */
+    /* width: 100%; */
+    background-color: rgba(28, 76, 139, 0.98); 
+}
 
 .nav-pills > li.active > a{
     color: #000000 !important;
@@ -369,6 +383,11 @@ input[type=number]::-webkit-outer-spin-button {
     margin: 15px;
 }
 
+
+/* .main-dashboard .dashboard-onboard-carriers {
+    height: 100px;
+} */
+
 div.carrier {
     background: #F0EAEA;
     margin: 50px 0px;    
@@ -384,17 +403,38 @@ div.carrier {
     background: yellow;
 }
 
-.thumbnail img {
-    padding: 50px;
+.thumbnail.onboarded img {
+    padding: 30px;
     height: 100%;;
+}
+
+.thumbnail.onboarding {
+    height: 120px;
+}
+
+.thumbnail.onboarding img {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 200px;
+    height: 100%;
 }
 
 div.carrier div.carrier-info {
     margin: 15px 5px;
 }
 
-div.carrier div.carrier-info > h3{
+div.carrier div.carrier-info > h4{
     color: rgba(29, 77, 139, 0.98); ;
+}
+
+div.carrier-info {
+    color: #968686;
+}
+
+.last-updated {
+    margin-top: 35px;
 }
 
 .carrier-status {
@@ -407,6 +447,12 @@ div.carrier div.carrier-info > h3{
     padding: 10px;
     /* margin: 5px; */
 }
+
+.current-onboarding p {
+    color: white;
+}
+
+
 
 /* ================= */
 /* DASHBOARD STYLING */

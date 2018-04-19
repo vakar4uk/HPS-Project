@@ -21,7 +21,7 @@
     include('navbars_footers/header.php')
 ?>
     <!-- The whole screen wrapped by .main-dashboard -->
-    <div class="main-dashboard">
+    <div class="main-landing">
         <div class="container dashboard-container">
             <div class="row"> <!-- row -->
                 <div class="col-lg-4">
@@ -99,7 +99,7 @@
             
         </div>
     </div>
-    <!-- The whole screen wrapped by .main-dashboard -->
+    <!-- The whole screen wrapped by .main-landing -->
     
 
 <?php

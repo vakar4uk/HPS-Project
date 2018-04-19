@@ -18,6 +18,10 @@ $carriers = array(
         "name" => "AIG",
         "logo" => "aig"
     ),
+    // array(
+    //     "name" => "Wellmark",
+    //     "logo" => "wellmark"
+    // ),
 );
 
 $lineOfBusiness = array(
