@@ -18,6 +18,12 @@
             </div>
             <!-- Header text -->
             
+<!-- Deana's code -->
+
+
+
+
+<!-- Deana's code -->
             <div id="slide-btn"><i class="fas fa-times fa-2x"></i></div>
 
             <div id="lineofbusiness"class="my-container">
