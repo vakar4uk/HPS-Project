@@ -51,7 +51,7 @@
                                     </div>
                                     <div class="carrier-status">
                                         <div class="row">
-                                            <div class="col-lg-3 col-md-3 btn btn-lg"><button class="btn btn-lg btn-block btn-danger">PROD</button></div>
+                                            <div class="col-lg-3 col-md-3 btn btn-lg"><button class="btn btn-lg btn-block btn-danger">PRO</button></div>
                                             <div class="col-lg-3 col-md-3 btn btn-lg"><button class="btn btn-lg btn-block btn-info">QUI</button></div>
                                             <div class="col-lg-3 col-md-3 btn btn-lg"><button class="btn btn-lg btn-block btn-warning">SUI</button></div>
                                             <div class="col-lg-3 col-md-3 btn btn-lg"><button class="btn btn-lg btn-block btn-success">DEV</button></div>
