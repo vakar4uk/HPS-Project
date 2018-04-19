@@ -33,16 +33,16 @@
                             <div class="row">
                             <br>
                                 <div class="container-fluid">
-                                    <div class="col-lg-2">
-                                        <select class="selectpicker form-group" data-style="btn-default" data-width=180px>
+                                    <div class="col-lg-4">
+                                        <select class="selectpicker form-group" data-style="btn-default" data-width=290px>
                                     <option value="" selected disabled hidden>Select address type...</option>
                                     <option value="business-address">Business</option>
                                     <option value="home-address">Home</option>
                                 </select>
                                     </div>
-                                    <div class="col-lg-10">
+                                    <div class="col-lg-8">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" id="addressLine1" placeholder="Address Line 1">
+                                            <input type="text" class="form-control" id="addressLine1" placeholder="Address Line 1" data-width=385px>
                                         </div>
                                     </div>
                                 </div>
@@ -66,7 +66,7 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-4">
-                                        <select class="selectpicker form-group" data-style="btn-default" data-width=350px>
+                                        <select class="selectpicker form-group" data-style="btn-default" data-width=280px>
                                         <option value="" selected disabled hidden>Select State...</option>
 
                                         <?php foreach ($allStates as $shortName => $name) { ?>                                                               
@@ -86,7 +86,7 @@
                             <div class="row">
                                 <div class="container-fluid">
                                     <div class="col-lg-4">
-                                        <select class="selectpicker form-group" data-style="btn-default" data-width=365px>
+                                        <select class="selectpicker form-group" data-style="btn-default" data-width=300px>
                                     <option value="" selected disabled hidden>Select phone type...</option>
                                     <option value="work-phone">Work</option>
                                     <option value="cell-phone">Cell</option>
