@@ -45,11 +45,11 @@
                                         <h5>Last Updated By: John Dow</h5>                                                              
                                     </div>
                                     <div class="carrier-status">
-                                        <div class="row container-fluid">                                            
-                                            <div class="col-lg-3 col-md-3 btn btn-lg btn-danger">PROD</div>
-                                            <div class="col-lg-3 col-md-3 btn btn-lg btn-info">QUA</div>
-                                            <div class="col-lg-3 col-md-3 btn btn-lg btn-warning">SIT</div>
-                                            <div class="col-lg-3 col-md-3 btn btn-lg btn-success">DEV</div>
+                                        <div class="row">                                            
+                                            <div class="col-lg-3 col-md-3 btn btn-lg"><button class="btn btn-lg btn-block btn-danger">PROD</button></div>
+                                            <div class="col-lg-3 col-md-3 btn btn-lg"><button class="btn btn-lg btn-block btn-info">QUI</button></div>
+                                            <div class="col-lg-3 col-md-3 btn btn-lg"><button class="btn btn-lg btn-block btn-warning">SUI</button></div>
+                                            <div class="col-lg-3 col-md-3 btn btn-lg"><button class="btn btn-lg btn-block btn-success">DEV</button></div>
                                             
                                             
                                         </div>

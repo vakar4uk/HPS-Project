@@ -370,12 +370,10 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 div.carrier {
-    background: #EBE5E5;
-    margin: 50px 0px;
-    
+    background: #F0EAEA;
+    margin: 50px 0px;    
     padding: 20px;
     border-radius: 10px;
-    border: 5px solid red;
 }
 
 .color-coding {
