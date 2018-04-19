@@ -6,17 +6,15 @@ html {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-body .main-dashboard {
-    background-color: rgba(29, 77, 139, 0.98); 
+.main-landing {
+    background-color: rgba(29, 77, 139, 0.98);
+    width: 100%;
+    height: 100%;
+    /* height: 100%; */
 }
 
 /* ====================== */
 /* Landing Page Container */
-
-.main-dashboard {
-    width: 100%;
-    height: 100%;
-}
 
 .dashboard-container {
     padding-top: 40px;
@@ -354,6 +352,12 @@ input[type=number]::-webkit-outer-spin-button {
 /* DASHBOARD STYLING */
 /* ================= */
 
+.main-dashboard {
+    height: 100%;
+    width: 100%;
+    background: rgba(29, 77, 139, 0.98);
+}
+
 .dashboard-header {
     padding-top: 10px;
     font-weight: bold;
@@ -406,6 +410,16 @@ div.carrier div.carrier-info > h3{
 .carrier-status .btn {
     padding: 10px;
     /* margin: 5px; */
+}
+
+div.onboarding-carriers {
+    width: 100%;
+    color: white;
+    background: rgba(29, 77, 139, 0.98);
+}
+
+.onboarding-carriers row {
+    background: rgba(29, 77, 139, 0.98);
 }
 
 /* ================= */
