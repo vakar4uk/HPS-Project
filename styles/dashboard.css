@@ -373,3 +373,15 @@ input[type=number]::-webkit-outer-spin-button {
     appearance: none;
     margin: 0; 
 }
+
+/* Line of Business Antony */
+#OnExchange{
+    display: none;
+}
+
+#OffExchange{
+    display: none;
+}
+#Group1{
+    display: none;
+}

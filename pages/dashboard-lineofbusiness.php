@@ -18,15 +18,55 @@
             </div>
             <!-- Header text -->
             
-<!-- Deana's code -->
+
+<!-- pick a line -->
 
 
+<div class="my-container">
+                <div class="carrier-name">
+                <p>Pick an Option</p>
+                <span id="icons">
+                    <i class="far fa-envelope fa-1x"></i>
+                    <i class="far fa-sliders-v fa-1x"></i>                                     
+                    <i class="fas fa-ellipsis-v fa-1x"></i>
+                    
+                   
+                </span>
+                    <hr id="hr">
+                    
+                    <div class="row"><br>
+                        <div class="col-lg-12 col-md-12">
+							                    
+                    			               
+                            		<div id="business-type" class="col-lg-4 col-md-4">                            
+                                		<button id="on" class="btn btn-info btn-lg selected-business">Individual On Exchange</button>                    
+                                    </div>  
+                                    <div id="business-type" class="col-lg-4 col-md-4">                            
+                                		<button id="off" class="btn btn-info btn-lg selected-business">Individual Off Exchange</button>                    
+                            		</div>  <div id="business-type" class="col-lg-4 col-md-4">                            
+                                		<button id="group" class="btn btn-info btn-lg selected-business">Group</button>                    
+                            		</div>            
+          			            
+							
+						</div>
+					</div>
+					<div class="row">
+                        <!-- <div class="col-lg-6 col-md-6">
+                            <button class="btn btn-lg btn-default">Copy from off exchange for individual</button>
+                        </div> -->
 
+                       
+                    </div>
+                    
+                    
+                </div>
+            </div>
 
-<!-- Deana's code -->
-            <div id="slide-btn"><i class="fas fa-times fa-2x"></i></div>
+<!-- pick a line -->
+<!--             
+            <div id="slide-btn"><i class="fas fa-times fa-2x"></i></div> -->
 
-            <div id="lineofbusiness"class="my-container">
+            <div id="OnExchange" class="my-container">
                 <div class="carrier-name">
                 <p>Line of business available for Individual On Exchange</p>
                 <span id="icons">
@@ -64,7 +104,7 @@
                 </div>
             </div>
 
-            <div class="my-container">
+            <div id="OffExchange"div class="my-container">
                 <div class="carrier-name">
                 <p>Line of business available for Individual Off Exchange</p>
                 <span id="icons">
@@ -102,7 +142,9 @@
                 </div>
             </div>
 
-            <div class="my-container">
+
+
+            <div id="Group1"div class="my-container">
                 <div class="carrier-name">
                 <p>Line of business available for Group</p>
                 <span id="icons">
