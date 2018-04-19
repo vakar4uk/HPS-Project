@@ -25,6 +25,7 @@
                     </div>
 
                     <div class="address-container">
+                       <div class="my-container">
                         <div class="carrier-name">
                             <p>Address</p><span id="icons"><i class="far fa-envelope fa-1x"></i><i class="fas fa-ellipsis-v fa-1x"></i></span>
                             <hr id="hr">
@@ -113,6 +114,7 @@
                 </form>
             </div> 
         </div>
+    </div>
             <button id="add-bank-address" class="btn btn-lg btn-success btn-block" type="submit">Add Address</button>                       
            
             <script>
@@ -125,10 +127,13 @@
                                 });
                     })();
                 </script> 
+                
+                &nbsp;
       
    
         <form id="entity-bank" action="">
             <div class="bank-details">
+               <div class="my-container">
                 <div class="carrier-name">
                     <p>Bank Details</p><span id="icons"><i class="far fa-envelope fa-1x"></i><i class="fas fa-ellipsis-v fa-1x"></i></span>
                     <hr id="hr">
@@ -213,7 +218,7 @@
                 
                
                 
-                
+                 </div>
                
             </div>           
         </form>  
@@ -233,7 +238,8 @@
                     e.preventDefault();
                                 });
                     })();
-                </script>   
+                </script> 
+                  
 
     </div>
 </div>
