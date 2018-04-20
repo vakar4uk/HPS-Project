@@ -1,103 +1,156 @@
-<!-- Check whether the user has been logged in -->
-<?php 
-    session_start();
-    if($_SESSION['loggedIn'] !== 1){
-        echo "You need to log in!";
-        header('Location: ../../index.php');
-        session_destroy();
-    }
-    // Setting temporary name and last name
-    // should come from database
-    $firstName = "John";
-    $lastName = "Dow";
-?>
-<!-- Check whether the user has been logged in -->
-
 <?php
     include('navbars_footers/header.php')
 ?>
-    <!-- The whole screen wrapped by .main-dashboard -->
-    <div class="main-dashboard">
-        <div class="container dashboard-container">
-            <div class="row"> <!-- row -->
-                <div class="col-lg-4">
-                    <div class="pull-left">
-                        <i class="far fa-user fa-5x"></i>                        
-                    </div>                    
+    <!-- main-dasbboard container fluid -->
+    <div class="main-dashboard container-fluid">
+        <!-- HEADER -->
+        <div class="dashboard-header">
+            <div class="row">
+                <div class="col-lg-4 icons">
+                    <a class="navbar-brand float-left" href="landing.php">
+                    <i class="fas fa-th-large"></i>
+                </a>
                 </div>
                 <div class="col-lg-4">
-                    <div class="text-center">
-                        <p><img src="../../images/whiteoutline.png" alt="" srcset=""></p>                       
-                    </div>                    
+                    <h1 class="text-center">HPS Configurator</h1>
                 </div>
-                <div class="col-lg-4">
-                    <div class="pull-right text-center user-greeter">
-                        <p class="lead">Hello!</p>
-                        <p class="lead"><strong><?php echo $firstName . " " . $lastName; ?></strong></p>
-                    </div>   
+                <div class="col-lg-4 icons">
+                    <a class="navbar-brand navbar-right float-right" href="#">
+                    <span><i class="fas fa-cog"></i></span>                     
+                </a>
+                    <a class="navbar-brand navbar-right float-right" href="#">
+                    <i class="fas fa-ellipsis-h"></i>
+                </a>
                 </div>
-            </div> <!-- row -->
-            
-            <div class="dashboard-table">
-                <div class="row container-fluid"> <!-- row -->
-                    <div class="col-lg-4 col-md-4 cell cell-left">
-                        <div class="text-center btn btn-block">
-                            <a href="dashboard-carrierdetails.php">
-                                <i class="fas fa-th fa-5x"></i>
-                                <p class="lead">Dashboard</p>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 cell cell-middle">
-                        <div class="text-center btn btn-block">
-                            <a href="#">
-                                <i class="fas fa-archive fa-5x"></i>
-                                <p class="lead">Manage Metadata</p>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 cell cell-right">
-                        <div class="text-center btn btn-block">
-                            <a href="#">
-                                <i class="far fa-file-alt fa-5x"></i>
-                                <p class="lead">Review & Approve</p>
-                            </a>
-                        </div>
-                    </div>
-                </div> <!-- row -->
-                <div class="row container-fluid"> <!-- row -->
-                    <div class="col-lg-4 col-md-4 cell-left">
-                        <div class="text-center btn btn-block">
-                            <a href="#">
-                                <i class="fas fa-upload fa-5x"></i>
-                                <p class="lead">Publish</p>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 cell-middle">
-                        <div class="text-center btn btn-block">
-                            <a href="#">
-                                <i class="fas fa-male fa-5x"></i>
-                                <p class="lead">System Administrator</p>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 cell-right">
-                        <div class="text-center btn btn-block">
-                            <a href="#">
-                                <i class="fas fa-sign-out-alt fa-5x"></i>
-                                <p class="lead"><a href="C:\Users\DM387091\Documents\HPS Project\Login page\logout-logic.php">Sign Out</a></p>
-                            </a>
-                        </div>
-                    </div>
-                </div> <!-- row -->
             </div>
-            
         </div>
-    </div>
-    <!-- The whole screen wrapped by .main-dashboard -->
-    
+        <!-- HEADER -->
 
-<?php
-    include('navbars_footers/footer.php');
+        <!-- on boarder carriers -->
+        <div class="dashboard-onboard-carriers">
+            <div class="container-fluid">
+                <div class="row">
+                    <?php foreach($carriers as $carrier) { ?>
+                    <div class="carrier-display">
+                        <div class="col-lg-3 col-md-3">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="carrier">
+                                        <!-- COLOR-CODED squares -->
+                                        <div class="color-coding"></div>
+                                        <!-- LOGOs -->
+                                        <a href="dashboard-carrierdetails.php">
+                                            <div class="thumbnail onboarded"><img src="../images/logos/<?php echo $carrier['logo']; ?>.png" alt=""></div>
+                                        </a>
+                                        <!-- Company's INFO -->
+                                        <div class="carrier-info">
+                                            <h3>
+                                                <?php echo $carrier['name']; ?>
+                                            </h3>
+                                            <h5>Last Updated: 12/12/12</h5>
+                                            <h5>Last Updated By: John Dow</h5>
+                                        </div>
+                                        <div class="carrier-status">
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-3 btn btn-lg"><button class="btn btn-lg btn-block btn-danger">PRO</button></div>
+                                                <div class="col-lg-3 col-md-3 btn btn-lg"><button class="btn btn-lg btn-block btn-info">QUI</button></div>
+                                                <div class="col-lg-3 col-md-3 btn btn-lg"><button class="btn btn-lg btn-block btn-warning">SUI</button></div>
+                                                <div class="col-lg-3 col-md-3 btn btn-lg"><button class="btn btn-lg btn-block btn-success">DEV</button></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+                    <?php } ?>
+                </div>
+            </div>
+
+        </div>
+        <!-- on boarder carriers -->
+
+        <!-- Current onboarding -->
+        <div class="current-onboarding">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p class="lead">Current Onboarding</p>
+                    </div>
+
+                    <!-- Individual Carrier Display -->
+                    <div class="col-lg-4">
+                        <div class="col-lg-12">
+                            <div class="carrier">
+                                <div class="color-coding"></div>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="thumbnail onboarding">
+                                            <img src="../images/logos/wellmark.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="carrier-info">
+                                            <h4>
+                                                Wellmark
+                                            </h4>
+                                            <div class="last-updated">
+                                                <h5>Last Updated: 12/12/12</h5>
+                                                <h5>Last Updated By: John Dow</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- Individual Carrier Display -->
+
+                    <!-- Individual Carrier Display -->
+                    <div class="col-lg-4">
+                        <div class="col-lg-12">
+                            <div class="carrier">
+                                <div class="color-coding"></div>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="thumbnail onboarding">
+                                            <img src="../images/logos/united.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="carrier-info">
+                                            <h4>
+                                                United Healthcare
+                                            </h4>
+                                            <div class="last-updated">
+                                                <h5>Last Updated: 12/12/12</h5>
+                                                <h5>Last Updated By: John Dow</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  <!-- Individual Carrier Display -->
+
+                    <div class="col-lg-4">
+                        <div class="col-lg-12">
+                            <a href="dashboard-carrierdetails.php">
+                                <div id="new-carrier-btn" class="pull-right">
+                                    <button class="btn btn-default vertical">+NEW</button>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div> <!-- Individual Carrier Display -->
+
+                </div>
+            </div>
+        </div>
+        <!-- Current onboarding -->
+
+    </div>
+    <!-- main-dasbboard container fluid -->
+
+    <?php
+    include('navbars_footers/footer.php')
 ?>

@@ -5,18 +5,16 @@
 
 <div class="col-lg-12">
     <div id="carierdetails-container" class="container">    
-        
             <div class="carrier-details">
-                <!-- Header text -->
-                <div class="jumbotron">
-                    <span class="hide-show-btn"><i id="toggle-notification" class="fas fa-chevron-up fa-2x pull-right"></i></span>
-                    <div id="notification-message">
+                <!-- Header text -->             
+                <div class="header-notification">
+                    <div id="hide-btn"><i class="show-hide fas fa-chevron-up fa-2x"></i></div>               
+                    <div id="toggle-notification" class="jumbotron">                                
                         <h3>We would need a few details to get you started!</h3>
                         <p class="description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua.
+                                    dolore magna aliqua.
                         </p>
-                    </div>
-                    
+                    </div>                   
                 </div>
                 <!-- Header text -->
 
@@ -43,9 +41,12 @@
                     </div>
                 </div>
 
-                <a href="dashboard-businessdetails.php" class="btn btn-lg btn-primary pull-right">Next</a>
+                <a id="save-next-btn"  href="dashboard-businessdetails.php" class="btn btn-lg btn-primary pull-right">Next</a>
 
             </div>
         </div>   
 </div>
 
+<?php
+    include('navbars_footers/footer.php');
+?>
