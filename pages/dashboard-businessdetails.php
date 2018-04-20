@@ -8,22 +8,18 @@ include('navbars_footers/top-navbar.php');
 
 
 <div class="row">
-
     <div class="col-lg-12">
-
         <div id="carierdetails-container" class="container">
-
             <div class="carrier-details">
-
                 <!-- Header text -->
                 <div class="header-notification">
-                    <div id="hide-btn"><i class="show-hide fas fa-chevron-up fa-2x"></i></div>               
-                    <div id="toggle-notification" class="jumbotron">                                
+                    <div id="hide-btn"><i class="show-hide fas fa-chevron-up fa-2x"></i></div>
+                    <div id="toggle-notification" class="jumbotron">
                         <h3>Perfect! So what all states is the service available in?</h3>
-                        <p class="description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                                    dolore magna aliqua.
+                        <p class="description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                            et dolore magna aliqua.
                         </p>
-                    </div>                   
+                    </div>
                 </div>
                 <!-- Header text -->
 
@@ -214,8 +210,8 @@ id="menu"></i>
                                                     "Add To-Do": {
                                                         name:
                                                         "Add To-Do", icon:
-                                                        "fas fa-clipboard-check"                                                    
-}
+                                                        "fas fa-clipboard-check"
+                                                    }
 
                                                 }
 
@@ -240,7 +236,6 @@ id="menu"></i>
 
 
                                     });
-
                                 </script>
 
 
@@ -250,7 +245,6 @@ id="menu"></i>
 
                     </div>
 
-            </div>
 
         </div>
 
