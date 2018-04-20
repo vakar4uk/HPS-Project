@@ -5,9 +5,9 @@
             <a class="navbar-brand btn float-left" href="landing.php">
               <i class="fas fa-th-large"></i>
             </a>            
-            </div>
+          </div>
           <ul class="nav nav-pills navbar-nav">
-            <li><a class="lead" href="#">Florida Blue</a></li>
+            <li><a class="lead" href="#">DYNAMIC NAME</a></li>
             <li class="active"><a href="#">CORE</a></li>
             <li><a href="#">PPR</a></li>
             <li><a href="#">EXCHANGELINK</a></li>
