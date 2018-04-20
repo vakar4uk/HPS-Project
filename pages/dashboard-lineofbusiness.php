@@ -132,7 +132,7 @@
                             <button class="btn btn-lg btn-default">Copy from off exchange for individual</button>
                         </div> -->
 
-                        <div id="business-type" class="col-lg-12 col-md-12">   
+                        <div id="business-clear" class="col-lg-12 col-md-12">   
                             
                             <button id="clear-business-btn" class="btn btn-lg btn-danger pull-right">Clear All</button>
                         </div>

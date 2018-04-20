@@ -396,6 +396,17 @@ input[type=number]::-webkit-outer-spin-button {
 #Group1{
     display: none;
 }
+
+#business-clear > button {
+    width:220px;
+    margin-right: 150px;
+    
+}
+/* #business-clear> button{
+    margin-bottom: 20px;
+     margin-right: 15px;
+
+} */
 /* DASHBOARD STYLING */
 /* ================= */
 
