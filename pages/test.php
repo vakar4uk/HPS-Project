@@ -17,12 +17,33 @@
                 <form id="entity-address" action="">
                     <div class="my-container">
                         <div class="carrier-name">
-                            <h3>Business Type</h3><span id="icons"><i class="far fa-envelope fa-1x"></i><i class="fas fa-ellipsis-v fa-1x"></i></span>
+                            <h3>Business Type</h3>
+                                <span id="icons">
+                                   
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav">
+
+                        
+                        <li><a href=""><i class="far fa-file-alt" style="color:rgba(60, 222, 204, 0.91);"></i></a></li>
+                    
+                        <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fas fa-ellipsis-v" style="color:rgba(60, 222, 204, 0.91);"></i></a>
+                        <ul class="dropdown-menu">
+
+                            <li><a href="#notes"><i id= "notes" class="far fa-file-alt dropdown-item" data-toggle="modal" data-target="#notes"></i>Notes</a></li>
+              
+                            <li><a href=""><i id= "custom" class="fas fa-sliders-h dropdown-item"></i>Customizations</a></li>
+                            <li><a href=""><i id= "todo" class="fas fa-clipboard-check dropdown-item""></i>Add To-Do</a></li>
+                        </ul>
+                        </li>
+                        </ul>
+
+                    </div>  
+          
+                            </span>
                             <hr id="hr">
                             <br>
-                            
-
-                            
+                              
                     
                             <div class="form-group row">
                             <div class="col-md-6">
@@ -58,74 +79,73 @@
                             </div>
                             
                             </div>
-                            
-                            
-
-
                          
 
-                                                
 
 
+<div class="modal" id="notes">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title"></h5>
+      <button class="close" data-dismiss="modal">&times;</button>
+    </div>
+    <div class="modal-body">
+      <div class="list-group">
+        <div class="d-flex w-100 justify-content-between">
+          <h6>Responsibilities</h6>
+
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+                            
 <script>
+
 $(document).ready(function(){
-    $("button[id*=onexchange]").hide();
 
-    $("button[id*=business-individual]").click(function(){
-        $("button[id*=onexchange]").show();
-    });
+    /*buttons toggle*/
 
-    $("button[id*=offexchange]").hide();
-
-    $("button[id*=business-individual]").click(function(){
-        $("button[id*=offexchange]").show();
-    });
+    $("button[id*=onexchange], button[id*=offexchange], input[id*=input-code-individual-onexchange], input[id*=input-code-individual-offexchange], input[id*=input-code-group]").hide();
 
     
-    $("p[id*=1]").hide();
+    $("button[id*=business-individual]").click(function(){
+        $("button[id*=onexchange], button[id*=offexchange]").toggle();
+    });
 
     $("button[id*=business-individual]").click(function(){
-        $("p[id*=1]").show();
+        $("input[id*=input-code-individual-onexchange], input[id*=input-code-individual-offexchange]").hide();
     });
-
-    $("p[id*=2]").hide();
 
     $("button[id*=onexchange]").click(function(){
-        $("p[id*=2]").show();
+        $("input[id*=input-code-individual-onexchange]").toggle();
     });
-
-    $("p[id*=3]").hide();
 
     $("button[id*=offexchange]").click(function(){
-        $("p[id*=3]").show();
+        $("input[id*=input-code-individual-offexchange]").toggle();
     });
-
-    $("p[id*=4]").hide();
-
+    
     $("button[id*=business-group]").click(function(){
-        $("p[id*=4]").show();
-    });
+        $("input[id*=input-code-group]").toggle();
+    });    
 
-    $("input[id*=input-code-individual-onexchange]").hide();
 
-    $("button[id*=onexchange]").click(function(){
-        $("input[id*=input-code-individual-onexchange]").show();
-    });
+    /*menu font awesome icon*/
 
-    $("input[id*=input-code-individual-offexchange]").hide();
-
-    $("button[id*=offexchange]").click(function(){
-        $("input[id*=input-code-individual-offexchange]").show();
-    });
-
-    $("input[id*=input-code-group]").hide();
-
-    $("button[id*=business-group]").click(function(){
-        $("input[id*=input-code-group]").show();
-    });
+    
 
 });
 </script>
+
+
                             
                           </div>
                     </div>

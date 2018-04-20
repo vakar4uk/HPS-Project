@@ -32,10 +32,13 @@
                 <div class="my-container">
                     <div class="carrier-name">
                         <p>Carrier Logo</p>
+
                         <label>
-                                <span>Click to upload or drop an image here...</span>
-                                <input id="logo-upload" class="btn btn-block btn-sm btn-info" type="file">
+                               
+                                <span><input id="logo-upload" class="btn btn-block btn-sm btn-info" type="file">Click to upload or drop an image here...</span>
                         </label>
+
+
                         <span id="icons"><i class="far fa-list-alt"></i><i class="fas fa-ellipsis-v fa-1x"></i></span>
                     </div>
                 </div>
@@ -46,25 +49,3 @@
         </div>   
 </div>
 
-<!-- SHOW/HIDE notification's message -->
-<script>
-    var toggleNotification = document.getElementsByClassName("hide-show-btn");
-var isVisible = true;
-for(var i = 0; i < toggleNotification.length; i++) {
-    toggleNotification[i].addEventListener("click", function() {
-        if(isVisible) {
-            $('#notification-message').slideUp('slow');
-            document.getElementById('toggle-notification').classList.remove('fa-chevron-up');
-            document.getElementById('toggle-notification').classList.add('fa-chevron-down');
-            isVisible = false;
-        } else {
-            $('#notification-message').slideDown('slow');
-            document.getElementById('toggle-notification').classList.remove('fa-chevron-down');
-            document.getElementById('toggle-notification').classList.add('fa-chevron-up');                
-            isVisible = true;
-        }
-        
-    });
-}
-</script>
-<!-- SHOW/HIDE notification's message -->
