@@ -31,10 +31,10 @@
                 <div class="my-container">
                     <div class="carrier-name">
                         <p>Carrier Logo</p>
-                        <label>
+                        <!-- <label>
                                 <span>Click to upload or drop an image here...</span>
                                 <input id="logo-upload" class="btn btn-block btn-sm btn-info" type="file">
-                        </label>
+                        </label> -->
                         <span id="icons"><i class="far fa-list-alt"></i><i class="fas fa-ellipsis-v fa-1x"></i></span>
                     </div>
                 </div>
