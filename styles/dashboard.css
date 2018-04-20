@@ -186,9 +186,7 @@ nav.navbar.navbar-inverse {
 }
 
 .carrier-display {
-    height: 300px;
-    margin: 10px 30px;
-    background: #6060A4;
+    /* height: 300px; */
 }
 
 .carrier-logo {
@@ -368,6 +366,7 @@ input[type=number]::-webkit-outer-spin-button {
 /* ================= */
 
 .dashboard-header {
+    margin-bottom: 50px;
     padding-top: 10px;
     font-weight: bold;
     color: white;
@@ -389,8 +388,8 @@ input[type=number]::-webkit-outer-spin-button {
 
 div.carrier {
     background: #F0EAEA;
-    margin: 50px 0px;    
-    padding: 20px;
+    margin: 10px 0px 30px 0px;    
+    padding: 20px 20px 0px 20px;
     border-radius: 10px;
 }
 
@@ -421,7 +420,7 @@ div.carrier {
 }
 
 div.carrier div.carrier-info {
-    margin: 15px 5px;
+    margin: 5px 5px;
 }
 
 div.carrier div.carrier-info > h4{
@@ -433,7 +432,7 @@ div.carrier-info {
 }
 
 .last-updated {
-    margin-top: 35px;
+    margin-top: 50px;
 }
 
 .carrier-status {
@@ -470,7 +469,7 @@ div.carrier-info {
 
 #new-carrier-btn {
     position: absolute;
-    top: 110px;
+    top: 70px;
     left: 75%;
     /* bottom: 100px; */
     
@@ -503,11 +502,6 @@ div.carrier-info {
     text-decoration: none;
     color: white;
 }
-
-vertical > a:hover {
-    color: red;
-}
-
 
 
 /* ================= */

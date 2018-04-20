@@ -31,39 +31,38 @@
             <div class="container-fluid">
                 <div class="row">
                     <?php foreach($carriers as $carrier) { ?>
-                    <div class="col-lg-3 col-md-3">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="carrier">
-                                    <!-- COLOR-CODED squares -->
-                                    <div class="color-coding"></div>
-                                    <!-- LOGOs -->
-                                    <a href="dashboard-carrierdetails.php">
-                                        <div class="thumbnail onboarded"><img src="../images/logos/<?php echo $carrier['logo']; ?>.png" alt=""></div>
-                                    </a>
-                                    <!-- Company's INFO -->
-                                    <div class="carrier-info">
-                                        <h3>
-                                            <?php echo $carrier['name']; ?>
-                                        </h3>
-                                        <h5>Last Updated: 12/12/12</h5>
-                                        <h5>Last Updated By: John Dow</h5>
-                                    </div>
-                                    <div class="carrier-status">
-                                        <div class="row">
-                                            <div class="col-lg-3 col-md-3 btn btn-lg"><button class="btn btn-lg btn-block btn-danger">PRO</button></div>
-                                            <div class="col-lg-3 col-md-3 btn btn-lg"><button class="btn btn-lg btn-block btn-info">QUI</button></div>
-                                            <div class="col-lg-3 col-md-3 btn btn-lg"><button class="btn btn-lg btn-block btn-warning">SUI</button></div>
-                                            <div class="col-lg-3 col-md-3 btn btn-lg"><button class="btn btn-lg btn-block btn-success">DEV</button></div>
+                    <div class="carrier-display">
+                        <div class="col-lg-3 col-md-3">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="carrier">
+                                        <!-- COLOR-CODED squares -->
+                                        <div class="color-coding"></div>
+                                        <!-- LOGOs -->
+                                        <a href="dashboard-carrierdetails.php">
+                                            <div class="thumbnail onboarded"><img src="../images/logos/<?php echo $carrier['logo']; ?>.png" alt=""></div>
+                                        </a>
+                                        <!-- Company's INFO -->
+                                        <div class="carrier-info">
+                                            <h3>
+                                                <?php echo $carrier['name']; ?>
+                                            </h3>
+                                            <h5>Last Updated: 12/12/12</h5>
+                                            <h5>Last Updated By: John Dow</h5>
+                                        </div>
+                                        <div class="carrier-status">
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-3 btn btn-lg"><button class="btn btn-lg btn-block btn-danger">PRO</button></div>
+                                                <div class="col-lg-3 col-md-3 btn btn-lg"><button class="btn btn-lg btn-block btn-info">QUI</button></div>
+                                                <div class="col-lg-3 col-md-3 btn btn-lg"><button class="btn btn-lg btn-block btn-warning">SUI</button></div>
+                                                <div class="col-lg-3 col-md-3 btn btn-lg"><button class="btn btn-lg btn-block btn-success">DEV</button></div>
+                                            </div>
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
-
                         </div>
-
-                    </div>
+                    </div>                    
                     <?php } ?>
                 </div>
             </div>
