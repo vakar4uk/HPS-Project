@@ -1,23 +1,26 @@
-<?php
+<?php 
+    include('navbars_footers/header.php');
     include('navbars_footers/top-navbar.php');
 ?>
 
-<div class="row">
-    <div class="col-lg-12">
-        <div id="carierdetails-container" class="container">
-            <div class="carrier-details">
-                <!-- Header text -->
-                <div class="jumbotron">
-                    <span><i class="fas fa-times fa-1x"></i></span>
-                    <h3>Great!Tell us more about your business!</h3>
+<div class="col-lg-12">
+<div id="carierdetails-container" class="container">    
+        <div class="carrier-details">
+            <!-- Header text -->             
+            <div class="header-notification">
+                <div id="hide-btn"><i class="show-hide fas fa-chevron-up fa-2x"></i></div>               
+                <div id="toggle-notification" class="jumbotron">                                
+                    <h3>We would need a few details to get you started!</h3>
                     <p class="description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua.
+                                dolore magna aliqua.
                     </p>
-                </div>
+                </div>                   
+            </div>
+   
                 <form id="entity-address" action="">
                     <div class="my-container">
                         <div class="carrier-name">
-                            <h3>Business Type</h3>
+                            <p>Business Type</p>
                                 <span id="icons">
                                    
                     <div class="collapse navbar-collapse" id="myNavbar">
@@ -30,10 +33,9 @@
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fas fa-ellipsis-v" style="color:rgba(60, 222, 204, 0.91);"></i></a>
                         <ul class="dropdown-menu">
 
-                            <li><a href="#notes"><i id= "notes" class="far fa-file-alt dropdown-item" data-toggle="modal" data-target="#notes"></i>Notes</a></li>
-              
-                            <li><a href=""><i id= "custom" class="fas fa-sliders-h dropdown-item"></i>Customizations</a></li>
-                            <li><a href=""><i id= "todo" class="fas fa-clipboard-check dropdown-item""></i>Add To-Do</a></li>
+                            <li><a href=""><i id= "notes" class="far fa-file-alt"></i>Notes</a></li>
+                            <li><a href=""><i id= "custom" class="fas fa-sliders-h"></i>Customizations</a></li>
+                            <li><a href=""><i id= "todo" class="fas fa-clipboard-check"></i>Add To-Do</a></li>
                         </ul>
                         </li>
                         </ul>
@@ -43,8 +45,7 @@
                             </span>
                             <hr id="hr">
                             <br>
-                              
-                    
+                            
                             <div class="form-group row">
                             <div class="col-md-6">
                                     <button id="business-individual" class="btn btn-md" type="button">Individual</button>
@@ -75,85 +76,17 @@
                                     <input class="form-control" id="input-code-individual-onexchange" type="text" placeholder="Onexchange Carrier Code">
                             </div>
                             <div class="col-md-3">
-                                    <input class="form-control" id="input-code-individual-offexchange" type="text" placeholder="Offexchange Carrier Code"
+                                    <input class="form-control" id="input-code-individual-offexchange" type="text" placeholder="Offexchange Carrier Code">
                             </div>
-                            
                             </div>
-                         
 
-
-
-<div class="modal" id="notes">
-<div class="modal-dialog">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h5 class="modal-title"></h5>
-      <button class="close" data-dismiss="modal">&times;</button>
-    </div>
-    <div class="modal-body">
-      <div class="list-group">
-        <div class="d-flex w-100 justify-content-between">
-          <h6>Responsibilities</h6>
-
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-
-                            
-<script>
-
-$(document).ready(function(){
-
-    /*buttons toggle*/
-
-    $("button[id*=onexchange], button[id*=offexchange], input[id*=input-code-individual-onexchange], input[id*=input-code-individual-offexchange], input[id*=input-code-group]").hide();
-
-    
-    $("button[id*=business-individual]").click(function(){
-        $("button[id*=onexchange], button[id*=offexchange]").toggle();
-    });
-
-    $("button[id*=business-individual]").click(function(){
-        $("input[id*=input-code-individual-onexchange], input[id*=input-code-individual-offexchange]").hide();
-    });
-
-    $("button[id*=onexchange]").click(function(){
-        $("input[id*=input-code-individual-onexchange]").toggle();
-    });
-
-    $("button[id*=offexchange]").click(function(){
-        $("input[id*=input-code-individual-offexchange]").toggle();
-    });
-    
-    $("button[id*=business-group]").click(function(){
-        $("input[id*=input-code-group]").toggle();
-    });    
-
-
-    /*menu font awesome icon*/
-
-    
-
-});
-</script>
-
-
-                            
-                          </div>
+                          
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+
 <?php
     include('navbars_footers/footer.php');
 ?>
