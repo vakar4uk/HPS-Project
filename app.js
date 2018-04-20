@@ -58,8 +58,7 @@ $(document).ready(function () {
 
     //Line of business toggle
 
-    /*buttons toggle*/
-
+    //Business Details Button Toggle//
 
 
     $("button[id*=onexchange], button[id*=offexchange], input[id*=input-code-individual-onexchange], input[id*=input-code-individual-offexchange], input[id*=input-code-group]").hide();
@@ -104,77 +103,8 @@ $(document).ready(function () {
 
     });
 
-
-
-
-
-    /*menu font awesome icon*/
-
-
-
-    $(function () {
-
-        $.contextMenu({
-
-            selector:
-            '.menu',
-
-            callback:
-            function (key,
-                options) {
-
-                var m =
-                    "clicked: " +
-                    key;
-
-                window.console &&
-                    console.log(m) ||
-                    alert(m);
-
-            },
-
-            items: {
-
-                "Notes": {
-                    name:
-                    "Edit", icon:
-                    "fa-edit"
-                },
-
-                "Customizations": {
-                    name:
-                    "Customizations",
-                    icon: "far fa-sliders-h"
-                },
-
-                "Add To-Do": {
-                    name:
-                    "Add To-Do", icon:
-                    "fas fa-clipboard-check"
-                }
-
-            }
-
-        });
-
-
-
-        $('.menu').on('click',
-            function (e) {
-
-                console.log('clicked',
-                    this);
-
-            })
-
-    });
-
-
-
-
-
-
-
 });
 
 
+
+    
