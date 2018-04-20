@@ -6,11 +6,9 @@ $(document).ready(function () {
         $('#toggle-notification').slideToggle();
         $('.show-hide').toggleClass('fa-chevron-up fa-chevron-down');
     });
-
-
-
-
     // HIDE/SHOW functionality of the notification message
+
+    // Line of business option selection
     $('#on').click(function () {
         $('#Group1').fadeOut();
         $('#OffExchange').fadeOut();
@@ -29,7 +27,28 @@ $(document).ready(function () {
         $('#Group1').fadeIn();
         
     });
-    // HIDE/SHOW functionality of the notification message
+    // Line of business option selection
+
+    // select states
+    $('.selected-states').click(function() {
+        $(this).toggleClass('btn-info');
+    });
+    // select states
+
+    // select business type
+    $('.selected-business').click(function() {
+        $('.selected-business').last().addClass('btn-info');
+        $(this).toggleClass('btn-info');
+    });
+    // select business type
+
+    // clear business
+    $('.clear-business-btn').click(function() {
+        alert('sup ');
+        $('.selected-business').addClass('btn-info');
+    });
+    // clear business
+    
 
 
     //Line of business toggle

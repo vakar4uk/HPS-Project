@@ -8,7 +8,7 @@
         <div class="carrier-details">
             <!-- Header text -->             
             <div class="header-notification">
-            <div id="hide-btn"><i class="show-hide fas fa-chevron-up fa-2x"></i></div>               
+                <div id="hide-btn"><i class="show-hide fas fa-chevron-up fa-2x"></i></div>               
                 <div id="toggle-notification" class="jumbotron">                                
                     <h3>Great! Now let's select your line of business</h3>
                     <p class="description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
@@ -172,9 +172,9 @@
                             <button class="btn btn-lg btn-default">Copy from off exchange for individual</button>
                         </div> -->
 
-                        <div id="business-type" class="col-lg-12 col-md-12">   
+                        <div  class="col-lg-12 col-md-12">   
                             
-                            <button id="clear-business-btn" class="btn btn-lg btn-danger pull-right">Clear All</button>
+                            <button id="clear-business-btn" class="btn btn-lg btn-danger clear-business-btn pull-right">Clear All</button>
                         </div>
                     </div>
                     
