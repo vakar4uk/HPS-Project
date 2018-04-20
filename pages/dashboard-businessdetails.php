@@ -84,9 +84,9 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-
+            <a id="save-next-btn"  href="dashboard-states.php" class="btn btn-lg btn-primary pull-right">Next</a>
+        </div>        
+    </div>    
 <?php
     include('navbars_footers/footer.php');
 ?>
