@@ -121,7 +121,7 @@
 							                    
                     			<?php foreach ($lineOfBusiness as $line) { ?>                        
                             		<div id="business-type" class="col-lg-3 col-md-3">                            
-                                		<button id="selected-business-type" class="btn btn-info btn-lg selected-business"><?php echo $line["name"]; ?></button>                    
+                                		<button id="selected-business-type" class="btn btn-info btn-block btn-lg selected-business"><?php echo $line["name"]; ?></button>                    
                             		</div>            
           			            <?php } ?>
 							

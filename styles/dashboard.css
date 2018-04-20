@@ -353,7 +353,7 @@ input#logo-upload {
     margin-bottom: 20px;
     margin-right: 15px;
 
-    width: 220px;
+    width: 210px;
 }
 
 #business-type > a {
@@ -363,7 +363,7 @@ input#logo-upload {
 }
 
 #selected-business-type {
-    width: 200px;
+    /* width: 200px; */
 }
 
 #state-list > button {
