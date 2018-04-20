@@ -35,6 +35,12 @@ $(document).ready(function () {
     });
     // select states
 
+    // clear states
+    $('#clear-states-btn').click(function() {       
+        $('.selected-states').addClass('btn-info');
+    });
+    // clear states
+
     // select business type
     $('.selected-business').click(function() {
         $('.selected-business').last().addClass('btn-info');
@@ -43,8 +49,7 @@ $(document).ready(function () {
     // select business type
 
     // clear business
-    $('.clear-business-btn').click(function() {
-        alert('sup ');
+    $('.clear-business-btn').click(function() {        
         $('.selected-business').addClass('btn-info');
     });
     // clear business
