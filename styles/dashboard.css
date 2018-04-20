@@ -385,6 +385,26 @@ input[type=number]::-webkit-outer-spin-button {
     margin: 0; 
 }
 
+input[type="file"] {
+    display: none;
+}
+
+#image-upload {
+    /* border: dotted 1px grey; */
+    margin-top: -20px;
+    width: 150px;
+    height: 50px;
+}
+
+#img-upload-icon {
+    color: rgba(173, 176, 181, 0.98);
+}
+
+#img-upload-icon:hover {
+    cursor: pointer;
+    color: #7272C8;
+}
+
 /* Line of Business Antony */
 #OnExchange{
     display: none;

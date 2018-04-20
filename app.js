@@ -8,6 +8,12 @@ $(document).ready(function () {
     });
     // HIDE/SHOW functionality of the notification message
 
+    // logo upload
+    var fileName = $('input[type=file]').val().split('\\').pop();
+    
+       
+    // logo upload
+
     // Line of business option selection
     $('#on').click(function () {
         $('#Group1').fadeOut();

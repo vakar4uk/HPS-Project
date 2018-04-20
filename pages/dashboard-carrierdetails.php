@@ -31,10 +31,9 @@
                     <div class="carrier-name">
                         <p>Carrier Logo</p>
 
-                        <label>
-                               
-                                <span><input id="logo-upload" class="btn btn-block btn-sm btn-info" type="file">Click to upload or drop an image here...</span>
-                        </label>
+                        <label id="image-upload">
+                            <input type="file" id="logo-input"><i id="img-upload-icon" class="fas fa-upload fa-5x"></i>
+                        </label> 
 
 
                         <span id="icons"><i class="far fa-list-alt"></i><i class="fas fa-ellipsis-v fa-1x"></i></span>
