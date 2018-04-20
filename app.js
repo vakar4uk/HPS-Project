@@ -12,15 +12,22 @@ $(document).ready(function () {
 
     // HIDE/SHOW functionality of the notification message
     $('#on').click(function () {
-        $('#OnExchange').slideToggle();
+        $('#Group1').fadeOut();
+        $('#OffExchange').fadeOut();
+        $('#OnExchange').fadeIn();
     });
 
     $('#off').click(function () {
-        $('#OffExchange').slideToggle();
+        $('#OnExchange').fadeOut();
+        $('#Group1').fadeOut();
+        $('#OffExchange').fadeIn();
     });
 
     $('#group').click(function () {
-        $('#Group1').slideToggle();
+        $('#OnExchange').fadeOut();
+        $('#OffExchange').fadeOut();
+        $('#Group1').fadeIn();
+        
     });
     // HIDE/SHOW functionality of the notification message
 
