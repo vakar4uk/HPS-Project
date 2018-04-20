@@ -1,7 +1,6 @@
 <?php 
     include('navbars_footers/header.php');
     include('navbars_footers/top-navbar.php');
-
 ?>
 
 <div class="col-lg-12">
@@ -31,10 +30,13 @@
                 <div class="my-container">
                     <div class="carrier-name">
                         <p>Carrier Logo</p>
-                        <!-- <label>
-                                <span>Click to upload or drop an image here...</span>
-                                <input id="logo-upload" class="btn btn-block btn-sm btn-info" type="file">
-                        </label> -->
+
+                        <label>
+                               
+                                <span><input id="logo-upload" class="btn btn-block btn-sm btn-info" type="file">Click to upload or drop an image here...</span>
+                        </label>
+
+
                         <span id="icons"><i class="far fa-list-alt"></i><i class="fas fa-ellipsis-v fa-1x"></i></span>
                     </div>
                 </div>

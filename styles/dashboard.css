@@ -540,3 +540,150 @@ div.carrier-info {
 
 /* ================= */
 /* DASHBOARD STYLING */
+
+
+
+
+/*Deanna's Testing Code
+
+.carrier-name  p {
+    float: left;
+    margin-left: 40px;
+    vertical-align: middle;
+    color: #7272C8;
+    font-size: 1.2em;
+    font-weight: 500;    
+}
+
+.carrier-name  h3 {
+    float: left;
+    margin-left: 10px;
+    vertical-align: middle;
+    color: #7272C8;
+    font-size: 1.2em;
+    font-weight: 500;    
+}*/
+
+#business-individual{
+    background-color:rgba(215, 212, 212, 0.77);
+    color: rgba(110, 110, 110, 0.77);
+    margin-top: 35px;
+    margin-bottom: 25px;
+    margin-left: 15px;
+    padding-left: 173px;
+    padding-right: 173px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+
+#business-individual:focus{
+    color: white;
+    background-color:rgba(60, 222, 204, 0.91);
+}
+
+#business-individual:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#business-group{
+    background-color:rgba(215, 212, 212, 0.77);
+    color: rgba(110, 110, 110, 0.77);
+    margin-top: 35px;
+    margin-bottom: 25px;
+    padding-left: 173px;
+    padding-right: 173px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+
+#business-group:focus{
+    color: white;
+    background-color:rgba(60, 222, 204, 0.91);
+}
+
+#business-group:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#onexchange {
+    background-color:rgba(215, 212, 212, 0.77);
+    color: rgba(110, 110, 110, 0.77);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    padding-left: 57px;
+    padding-right: 57px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+
+#onexchange:focus{
+    color:white;
+    background-color:rgba(60, 222, 204, 0.91);
+}
+
+#onexchange:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#offexchange {
+    background-color:rgba(215, 212, 212, 0.77);
+    color: rgba(110, 110, 110, 0.77);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 57px;
+    padding-right: 57px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+
+#offexchange:focus{
+    color: white;
+    background-color:rgba(60, 222, 204, 0.91);
+}
+
+#offexchange:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#input-code-individual-onexchange {
+    margin-left: 20px;
+    margin-top: 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: rgba(110, 110, 110, 0.77);
+}
+
+#input-code-individual-offexchange {
+    margin-top: 10px;
+    margin-bottom: 40px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: rgba(110, 110, 110, 0.77);
+}
+
+#input-code-group {
+    margin-top: 15px;
+    margin-left: 25px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: rgba(110, 110, 110, 0.77);
+}
+
+
+
+
+
+
+
+
