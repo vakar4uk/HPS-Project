@@ -88,7 +88,7 @@
                     </div>
                     <div class="col-lg-4 col-md-4 cell-right">
                         <div class="text-center btn btn-block">
-                            <a href="logout-logic.php">
+                            <a href="../logout-logic.php">
                                 <i class="fas fa-sign-out-alt fa-5x"></i>
                                 <p class="lead">Sign Out</p>
                             </a>
