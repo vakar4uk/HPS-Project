@@ -25,7 +25,12 @@
                             <hr id="hr">
                             <input id="carriername-input" type="text" class="form-control" placeholder="John Doe, XC78" required>
                         </div>
+                        <!-- <input type="submit" class="btn btn-lg btn-success btn-block"> -->
+                        <!-- <button id="add-bank-address" class="btn btn-lg btn-success btn-block" type="submit">Submit</button> -->
                     </div>
+                   
+             <br>
+                
 
                     <div class="address-container">
                        <div class="my-container">
@@ -37,7 +42,7 @@
                             <br>
                                 <div class="container-fluid">
                                     <div class="col-lg-4">
-                                        <select class="selectpicker form-group" data-style="btn-default" data-width=290px>
+                                        <select required class="selectpicker form-group" data-style="btn-default" data-width=290px >
                                     <option value="" selected disabled hidden>Select address type...</option>
                                     <option value="business-address">Business</option>
                                     <option value="home-address">Home</option>
@@ -45,7 +50,7 @@
                                     </div>
                                     <div class="col-lg-8">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" id="addressLine1" placeholder="Address Line 1" data-width=385px>
+                                            <input type="text" class="form-control" id="addressLine1" placeholder="Address Line 1" data-width=385px required>
                                         </div>
                                     </div>
                                 </div>
@@ -65,7 +70,7 @@
                                 <div class="container-fluid">
                                     <div class="col-lg-5">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" id="addressLine2" placeholder="City">
+                                            <input type="text" class="form-control" id="addressLine2" placeholder="City" required>
                                         </div>
                                     </div>
                                     <div class="col-lg-4">
@@ -80,7 +85,7 @@
                                     </div>
                                     <div class="col-lg-3">
                                         <div class="form-group" id="zipcodeField">
-                                            <input type="number" class="form-control" id="zipcode" placeholder="Zipcode">
+                                            <input type="number" class="form-control" id="zipcode" placeholder="Zipcode" required>
                                         </div>
                                     </div>
                                 </div>
@@ -98,7 +103,7 @@
                                     </div>
                                     <div class="col-lg-8">
                                         <div class="form-group">
-                                            <input type="number" class="form-control" id="phone-number" placeholder="Enter a phone number...">
+                                            <input type="number" class="form-control" id="phone-number" placeholder="Enter a phone number..." required>
                                         </div>
                                     </div>
                                 </div>
@@ -108,17 +113,30 @@
                                 <div class="container-fluid">
                                     <div class="col-lg-12">
                                         <div class="form-group">
-                                            <input type="email" class="form-control" id="email" placeholder="Enter your email address...">
+                                            <input type="email" class="form-control" id="email" placeholder="Enter your email address..." required >
+                                       
+                                       
+                                       
                                         </div>
                                    
                                     </div>
+                                    
                                 </div>
                             </div>
-                </form>
+                    
+             <!-- <button id="add-bank-address" class="btn btn-lg btn-success btn-block" type="submit">Submit</button> -->
+             <br>   
             </div> 
+        
+            
         </div>
+        
     </div>
-            <button id="add-bank-address" class="btn btn-lg btn-success btn-block" type="submit">Add Address</button>                       
+<!-- ADD ADDRESS BUTTON -->
+
+
+
+<button id="add-bank-address" class="btn btn-lg btn-success btn-block" type="submit">Add Address</button>                       
            <br>
             <script>
                 (function(){
@@ -131,10 +149,12 @@
                     })();
                 </script> 
                 
-                &nbsp;
+                
+                <!-- &nbsp; -->
       
-   
-        <form id="entity-bank" action="">
+  <!-- ADD ADDRESS BUTTON --> 
+<!-- 
+        <form id="entity-bank" action=""> -->
             <div class="bank-details">
                <div class="my-container">
                 <div class="carrier-name">
@@ -224,7 +244,7 @@
                  </div>
                
             </div>           
-        </form>  
+        <!-- </form>   -->
         <br>
            <!-- <div class="col-lg-12"> -->
                             <button id="add-bank-details" class="btn btn-lg btn-success btn-block" type="submit">Add Bank Details</button>                       
@@ -245,6 +265,19 @@
                   
 
     </div>
+        <!-- Submit Button -->
+        <input type="submit" class="btn btn-lg btn-success btn-block" placeholder="Save">  
+</form>  
+
+    <!-- <div class="row">
+            <div id="business-type"  class="col-lg-12 col-md-1">   
+                    
+					<a class="btn btn-lg btn-success pull-right" href="dashboard.php">Submit</a>
+				</div>
+		</div>
+        <br> -->
+
+        <!-- Submit Button -->
 </div>
 
 
