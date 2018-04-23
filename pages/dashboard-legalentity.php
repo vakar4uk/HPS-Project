@@ -42,7 +42,8 @@
                             <br>
                                 <div class="container-fluid">
                                     <div class="col-lg-4">
-                                        <select required class="selectpicker form-group" data-style="btn-default" data-width=290px >
+                                        <select class="selectpicker form-group" data-style="btn-default"data-width=290px> 
+                                        
                                     <option value="" selected disabled hidden>Select address type...</option>
                                     <option value="business-address">Business</option>
                                     <option value="home-address">Home</option>
@@ -166,12 +167,12 @@
                     <div class="container-fluid">
                         <div class="col-lg-6">
                             <div class="form-group">
-                                <input type="number" class="form-control" id="accountNumber" placeholder="Account Number">
+                                <input type="number" class="form-control" id="accountNumber" placeholder="Account Number" required>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group">
-                                <input type="number" class="form-control" id="bankNumCode" placeholder="Bank Num Code">
+                                <input type="number" class="form-control" id="bankNumCode" placeholder="Bank Num Code" required>
                             </div>
                         </div>
                     </div>
@@ -181,12 +182,12 @@
                     <div class="container-fluid">
                         <div class="col-lg-6">
                             <div class="form-group">
-                                <input type="number" class="form-control" id="accountNumber" placeholder="Batch Co Number">
+                                <input type="number" class="form-control" id="accountNumber" placeholder="Batch Co Number" required>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group">
-                                <input type="number" class="form-control" id="bankNumCode" placeholder="Site Code">
+                                <input type="number" class="form-control" id="bankNumCode" placeholder="Site Code" required>
                             </div>
                         </div>
                     </div>
@@ -195,7 +196,7 @@
                     <div class="container-fluid">
                         <div class="col-lg-12">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="accountNumber" placeholder="Batch Description">
+                                <input type="text" class="form-control" id="accountNumber" placeholder="Batch Description" required>
                             </div>
                         </div>                        
                     </div>
@@ -204,12 +205,12 @@
                     <div class="container-fluid">
                         <div class="col-lg-8">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="additionalBatchInfo" placeholder="Additional Batch Info">
+                                <input type="text" class="form-control" id="additionalBatchInfo" placeholder="Additional Batch Info" required>
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
-                                <input type="number" class="form-control" id="batchGroupCode" placeholder="Batch Group Code">
+                                <input type="number" class="form-control" id="batchGroupCode" placeholder="Batch Group Code" required>
                             </div>
                         </div>
                     </div>
@@ -218,22 +219,22 @@
                     <div class="container-fluid">
                         <div class="col-lg-3">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="bankName" placeholder="Bank Name">
+                                <input type="text" class="form-control" id="bankName" placeholder="Bank Name" required>
                             </div>
                         </div>
                         <div class="col-lg-3">
                             <div class="form-group">
-                                <input type="number" class="form-control" id="merchantId" placeholder="Merchant ID">
+                                <input type="number" class="form-control" id="merchantId" placeholder="Merchant ID" required>
                             </div>
                         </div>
                         <div class="col-lg-3">
                             <div class="form-group">
-                                <input type="number" class="form-control" id="securityKey" placeholder="Security Key">
+                                <input type="number" class="form-control" id="securityKey" placeholder="Security Key" required>
                             </div>
                         </div>
                         <div class="col-lg-3">
                             <div class="form-group">
-                                <input class="textbox-n form-control" type="text" onfocus="(this.type='date')"  id="date" placeholder="Security Exp Date"> 
+                                <input class="textbox-n form-control" type="text" onfocus="(this.type='date')"  id="date" placeholder="Security Exp Date" required> 
                             </div>                            
                         </div>                        
                     </div>
