@@ -55,8 +55,3 @@ $(document).ready(function () {
     // clear business
 
 
-    //Business Details Button Toggle//
-
-
-    
-    
