@@ -28,12 +28,19 @@
                 </div>
 
                 <div class="my-container">
-                    <div class="carrier-name">
+                    <div id="carrier-logo" class="carrier-name">
                         <p>Carrier Logo</p>
-
-                        <label id="image-upload">
-                            <input type="file" id="logo-input"><i id="img-upload-icon" class="fas fa-upload fa-5x"></i>
-                        </label> 
+                        <hr id="hr">
+                        <div id="image-upload">
+                            <label>
+                                <label for="logo-input"></label>
+                                <input type="file" id="logo-input"><i id="img-upload-icon" class="fas fa-upload fa-5x"></i>
+                                <p class="file-name">Please select a file.</p>                                
+                            </label> 
+                            <img class="text-center" id="user-logo" src="#" alt="Carrier logo" />
+                        </div>
+                        
+                        
 
 
                         <span id="icons"><i class="far fa-list-alt"></i><i class="fas fa-ellipsis-v fa-1x"></i></span>

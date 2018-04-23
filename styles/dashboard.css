@@ -288,6 +288,19 @@ input#logo-upload {
     margin-bottom: 15px;
 }
 
+div#carrier-logo {
+    padding-bottom: 80px;
+}
+
+#user-logo {
+    position: absolute;
+    left: 47%;
+    bottom: 12%;
+    width: 100px;
+    height: 100px;
+    display: none;
+}
+
 .carrier-name  p {
     float: left;
     vertical-align: middle;
@@ -391,7 +404,7 @@ input[type="file"] {
 
 #image-upload {
     /* border: dotted 1px grey; */
-    margin-top: -20px;
+    margin-top: 20px;
     width: 150px;
     height: 50px;
 }
