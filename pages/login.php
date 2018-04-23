@@ -1,15 +1,8 @@
 <div id="content">
-<<<<<<< HEAD
-<div class="logo-container"><img src="images/logo2.png" alt=""></div>
-<div class="container-fluid">
-    <!-- All login logic is in login.php file -->
-    <form action='/login-logic.php' method="post" class="form-1">
-=======
 <div class="logo-container"><img src="images/whiteoutline.png" alt=""></div>
 <div class="container-fluid">
     <!-- All login logic is in login-logic.php file -->
     <form action="../login-logic.php" method="POST" class="form-1">
->>>>>>> Dmytro
         <p>
             <label for="username" class="sr-only">Username</label>
             <input class="form-control" type="text"  id="username" required="" 
@@ -29,23 +22,13 @@
                 if (isset($_GET['error'])) {
                     echo "<div id='alert-message' class='alert alert-danger'>Invalid password/username. Please try again!</div>";
                 }
-<<<<<<< HEAD
-=======
-
->>>>>>> Dmytro
             ?>
             
         </p>
         <p class="submit">
-<<<<<<< HEAD
-            <button id="submit-button" type="submit" name="submit" value="submit"><i class="fa fa-arrow-right"></i></button>
-        </p>
-    </form>
-=======
             <button id="submit-button" type="submit" name="submit" value="submit"><i class="fa fa-arrow-right fa-2x"></i></button>
         </p>
     </form>
 </div>
->>>>>>> Dmytro
 </div>
 </div>

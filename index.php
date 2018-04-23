@@ -19,7 +19,9 @@
 
 <body>
     <?php
+
         include('pages/login.php');        
+
     ?>
 
 <script src="app.js"></script>
