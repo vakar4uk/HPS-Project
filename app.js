@@ -66,42 +66,12 @@ $(document).ready(function () {
 
 
 
-    $("button[id*=business-individual]").click(function () {
-
-        $("button[id*=onexchange], button[id*=offexchange]").toggle();
-
-    });
+    
 
 
-
-    $("button[id*=business-individual]").click(function () {
-
-        $("input[id*=input-code-individual-onexchange], input[id*=input-code-individual-offexchange]").hide();
-
-    });
-
-
-
-    $("button[id*=onexchange]").click(function () {
-
-        $("input[id*=input-code-individual-onexchange]").toggle();
-
-    });
-
-
-
-    $("button[id*=offexchange]").click(function () {
-
-        $("input[id*=input-code-individual-offexchange]").toggle();
-
-    });
-
-
-    $("button[id*=business-group]").click(function () {
-
-        $("input[id*=input-code-group]").toggle();
-
-    });
+    $( "button[id*=business-individual]" ).click(function() {
+        $(this).toggleClass( "selected" );
+      });
 
 });
 

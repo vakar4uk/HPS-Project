@@ -577,10 +577,10 @@ div.carrier-info {
     
 }
 
-#business-individual:focus{
+/*#business-individual:focus{
     color: white;
     background-color:rgba(60, 222, 204, 0.91);
-}
+}*/
 
 #business-individual:hover {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
@@ -598,10 +598,10 @@ div.carrier-info {
     
 }
 
-#business-group:focus{
+/*#business-group:focus{
     color: white;
     background-color:rgba(60, 222, 204, 0.91);
-}
+}*/
 
 #business-group:hover {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
@@ -620,10 +620,10 @@ div.carrier-info {
     
 }
 
-#onexchange:focus{
+/*#onexchange:focus{
     color:white;
     background-color:rgba(60, 222, 204, 0.91);
-}
+}*/
 
 #onexchange:hover {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
@@ -641,10 +641,10 @@ div.carrier-info {
     
 }
 
-#offexchange:focus{
+/*#offexchange:focus{
     color: white;
     background-color:rgba(60, 222, 204, 0.91);
-}
+}*/
 
 #offexchange:hover {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
@@ -680,10 +680,7 @@ div.carrier-info {
     color: rgba(110, 110, 110, 0.77);
 }
 
-
-
-
-
-
-
-
+.selected {
+    color: white;
+    background:green
+}
