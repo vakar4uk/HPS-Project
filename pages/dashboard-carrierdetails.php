@@ -32,12 +32,12 @@
                         <p>Carrier Logo</p>
                         <hr id="hr">
                         <div id="image-upload">
-                            <label>
-                                <label for="logo-input"></label>
-                                <input type="file" id="logo-input"><i id="img-upload-icon" class="fas fa-upload fa-5x"></i>
+                            <label id="logo-drop-area">
+                                <label class="logo-upload" for="logo-input"></label>
+                                <input type="file" id="logo-input" size="400"><i id="img-upload-icon" class="fas fa-upload fa-5x"></i>
                                 <p class="file-name">Please select a file.</p>                                
                             </label> 
-                            <img class="text-center" id="user-logo" src="#" alt="Carrier logo" />
+                            <img class="text-center" id="user-logo" src="#" alt="Carrier logo" data-toggle="modal" data-target="#logo-preview"/>
                         </div>
                         
                         
@@ -52,6 +52,18 @@
             </div>
         </div>   
 </div>
+
+<!-- Modal -->
+<div class="modal fade" id="logo-preview" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+       
+            
+            <!-- <div class="modal-body">                 -->
+                <img class="text-center thumbnail" id="user-logo-preview" src="#" alt="Carrier logo"/>                                
+            <!-- </div> -->
+    </div>
+</div>
+<!-- Modal -->
 
 <?php
     include('navbars_footers/footer.php');

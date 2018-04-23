@@ -16,6 +16,7 @@ $(document).ready(function () {
     
             reader.onload = function (e) {
                 $('#user-logo').attr('src', e.target.result);
+                $('#user-logo-preview').attr('src', e.target.result);
                 $('#user-logo').css("display", "block");
             }
     
@@ -25,8 +26,7 @@ $(document).ready(function () {
     
     $("#logo-input").change(function(){
         readURL(this);
-    });
-    
+    });    
        
     // logo upload
 

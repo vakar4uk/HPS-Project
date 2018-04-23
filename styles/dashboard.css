@@ -295,10 +295,16 @@ div#carrier-logo {
 #user-logo {
     position: absolute;
     left: 47%;
-    bottom: 12%;
-    width: 100px;
-    height: 100px;
+    bottom: 11%;
+    width: 150px;
+    height: 150px;
     display: none;
+}
+
+#user-logo-preview {
+    margin: 200px auto;
+    width: 500px;
+    height: 400px;
 }
 
 .carrier-name  p {
@@ -400,16 +406,27 @@ input[type=number]::-webkit-outer-spin-button {
 
 input[type="file"] {
     position: absolute;
-    bottom: 130px;
+    bottom: 7%;
+    size: 500;
     left: 18%;
     opacity: .01;
 }
 
+input#logo-input {
+    height: 210px;
+    width:150px;
+}
+
 #image-upload {
     /* border: dotted 1px grey; */
-    margin-top: 20px;
+    margin-top: 50px;
     width: 150px;
-    height: 50px;
+    height: 80px;
+}
+
+#logo-drop-area:hover {
+    cursor: pointer;
+    opacity: 0.6;
 }
 
 #img-upload-icon {
