@@ -53,11 +53,3 @@ $(document).ready(function () {
         $('.selected-business').addClass('btn-info');
     });
     // clear business
-    
-
-
-    //Line of business toggle
-
-    //Business Details Button Toggle//
-
-  
