@@ -577,10 +577,10 @@ div.carrier-info {
     
 }
 
-/*#business-individual:focus{
+#business-individual.testing{
+    background-color:#39DBDB;
     color: white;
-    background-color:rgba(60, 222, 204, 0.91);
-}*/
+}
 
 #business-individual:hover {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
@@ -598,10 +598,11 @@ div.carrier-info {
     
 }
 
-/*#business-group:focus{
+#business-group.testing{
+    background-color:#39DBDB;
     color: white;
-    background-color:rgba(60, 222, 204, 0.91);
-}*/
+}
+
 
 #business-group:hover {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
@@ -620,10 +621,10 @@ div.carrier-info {
     
 }
 
-/*#onexchange:focus{
-    color:white;
-    background-color:rgba(60, 222, 204, 0.91);
-}*/
+#onexchange.testing{
+    background-color:#39DBDB;
+    color: white;
+}
 
 #onexchange:hover {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
@@ -641,13 +642,13 @@ div.carrier-info {
     
 }
 
-/*#offexchange:focus{
+#offexchange.testing{
+    background-color:#39DBDB;
     color: white;
-    background-color:rgba(60, 222, 204, 0.91);
-}*/
+}
 
 #offexchange:hover {
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+        box-shadow: 0 12pcx 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
 #input-code-individual-onexchange {

@@ -33,21 +33,14 @@
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fas fa-ellipsis-v" style="color:rgba(60, 222, 204, 0.91);"></i></a>
                         <ul class="dropdown-menu">
 
-                            <li><a href="notes"><i id= "notes" class="far fa-file-alt dropdown-item"></i>Notes</a></li>
-
-                            <li><a href=""><i id= "custom" class="fas fa-sliders-h dropdown-item"></i>Customizations</a></li>
-                            <li><a href=""><i id= "todo" class="fas fa-clipboard-check dropdown-item"></i>Add To-Do</a></li>
+                            <li><a href=""><i id= "notes" class="far fa-file-alt"></i>Notes</a></li>
+                            <li><a href=""><i id= "custom" class="fas fa-sliders-h"></i>Customizations</a></li>
+                            <li><a href=""><i id= "todo" class="fas fa-clipboard-check"></i>Add To-Do</a></li>
                         </ul>
                         </li>
                         </ul>
 
-                        
-
-
-
-
                     </div>  
-
           
                             </span>
                             <hr id="hr">
@@ -89,66 +82,12 @@
 
 
 
-
-<script>
-
-//Business Details Button Toggle//
-
-
-$("button[id*=onexchange], button[id*=offexchange], input[id*=input-code-individual-onexchange], input[id*=input-code-individual-offexchange], input[id*=input-code-group]").hide();
-
-
-
-
-    $("button[id*=business-individual]").click(function () {
-
-        $("button[id*=onexchange], button[id*=offexchange]").toggle();
-
-    });
-
-
-
-    $("button[id*=business-individual]").click(function () {
-
-        $("input[id*=input-code-individual-onexchange], input[id*=input-code-individual-offexchange]").hide();
-
-    });
-
-
-
-    $("button[id*=onexchange]").click(function () {
-
-        $("input[id*=input-code-individual-onexchange]").toggle();
-
-    });
-
-
-
-    $("button[id*=offexchange]").click(function () {
-
-        $("input[id*=input-code-individual-offexchange]").toggle();
-
-    });
-
-
-    $("button[id*=business-group]").click(function () {
-
-        $("input[id*=input-code-group]").toggle();
-
-    });
-
-});
-
-
-
-</script>
-                          
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-
+            <a id="save-next-btn"  href="dashboard-states.php" class="btn btn-lg btn-primary pull-right">Next</a>
+        </div>        
+    </div>    
 <?php
     include('navbars_footers/footer.php');
 ?>

@@ -55,3 +55,39 @@ $(document).ready(function () {
     // clear business
 
 
+
+//Business Details Toggle//
+
+    
+    $("button[id*=onexchange], button[id*=offexchange], input[id*=input-code-individual-onexchange], input[id*=input-code-individual-offexchange], input[id*=input-code-group]").hide();
+    
+    
+        $("button[id*=business-individual]").click(function () {
+            $("button[id*=onexchange], button[id*=offexchange]").toggle();
+        });
+    
+        $("button[id*=business-individual], button[id*=business-group], button[id*=onexchange], button[id*=offexchange]").click(function() {
+            $(this).toggleClass( "testing" );
+        });
+    
+        $("button[id*=business-individual]").click(function () {
+            $("input[id*=input-code-individual-onexchange], input[id*=input-code-individual-offexchange]").hide();
+        });
+    
+        $("button[id*=onexchange]").click(function () {
+            $("input[id*=input-code-individual-onexchange]").toggle();
+        });
+    
+        $("button[id*=offexchange]").click(function () {
+            $("input[id*=input-code-individual-offexchange]").toggle();
+        });
+    
+        $("button[id*=business-group]").click(function () {
+            $("input[id*=input-code-group]").toggle();
+    
+        });
+    
+});
+    
+
+    
