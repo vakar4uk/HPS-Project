@@ -31,13 +31,72 @@
             <div class="container-fluid">
                 <div class="row">
                     <?php foreach($carriers as $carrier) { ?>
+                   
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
+                                                        <h4 id="modal-logo" class="modal-title thumbnail" id="myModalLabel"><img src="../images/logos/<?php echo $carrier['logo']; ?>.png" alt=""></h4>
+                                                        <span id="modal-carrier-info" class="pull-right">                                                           
+                                                            <h5>Last Updated: 12/12/12</h5>
+                                                            <h5>Last Updated By: John Dow</h5>
+                                                        </span>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                    <table id="modal-table" class="table table-bordered">                                                        
+                                                        <tbody class="text-center align-middle">
+                                                        <tr>
+                                                            <td class="active">Core</td>
+                                                            <td class="success"><a href="dashboard-carrierdetails.php">Carrier Details</a></td>
+                                                            <td class="success"><a href="dashboard-businessdetails.php">Business Details</a></td>
+                                                            <td class="success"><a href="dashboard-states.php">States</a></td>
+                                                            <td class="success"><a href="dashboard-legalentity.php">Legal Entities</a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <div class="row">
+                                                                <td class="active">Product, Plans & Rating</td>
+                                                                <td class="success">Plan Info.</td>
+                                                                <td class="success">Load Plans & Rates</td>
+                                                                <td class="danger">Coverage Edits</td>          
+                                                            </div>
+                                                                                                              
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="active">Finance & Billing</td>
+                                                            <td class="success">Billing & Finance Info.</td>
+                                                            <td class="warning">Configure Batch Jobs</td>
+                                                            <td class="success">Set Program Rules</td>                                                            
+                                                            <td class="success">Manage db Entries</td>                                                            
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="active">Exchangelink</td>
+                                                            <td class="success">WTX/WMB</td>
+                                                            <td class="success">EMC</td>
+                                                            <td class="success">Core Services</td>                                                                                                                
+                                                        </tr>                                                        
+                                                        </tbody>
+                                                  </table>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Modal -->
+
+                    
+                    
                     <div class="carrier-display">
                         <div class="col-lg-3 col-md-3">
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="carrier">
                                         <!-- COLOR-CODED squares -->
-                                        <div class="color-coding"></div>
+                                        <div class="color-coding" data-toggle="modal" data-target="#myModal"></div>
+                                        
                                         <!-- LOGOs -->
                                         <a href="dashboard-carrierdetails.php">
                                             <div class="thumbnail onboarded"><img src="../images/logos/<?php echo $carrier['logo']; ?>.png" alt=""></div>
@@ -150,6 +209,10 @@
 
     </div>
     <!-- main-dasbboard container fluid -->
+
+    <!-- MODAL -->
+    
+    <!-- MODAL -->
 
     <?php
     include('navbars_footers/footer.php')

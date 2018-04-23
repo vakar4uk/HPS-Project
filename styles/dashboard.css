@@ -288,6 +288,19 @@ input#logo-upload {
     margin-bottom: 15px;
 }
 
+div#carrier-logo {
+    padding-bottom: 80px;
+}
+
+#user-logo {
+    position: absolute;
+    left: 47%;
+    bottom: 12%;
+    width: 100px;
+    height: 100px;
+    display: none;
+}
+
 .carrier-name  p {
     float: left;
     vertical-align: middle;
@@ -385,6 +398,29 @@ input[type=number]::-webkit-outer-spin-button {
     margin: 0; 
 }
 
+input[type="file"] {
+    position: absolute;
+    bottom: 130px;
+    left: 18%;
+    opacity: .01;
+}
+
+#image-upload {
+    /* border: dotted 1px grey; */
+    margin-top: 20px;
+    width: 150px;
+    height: 50px;
+}
+
+#img-upload-icon {
+    color: rgba(173, 176, 181, 0.98);
+}
+
+#img-upload-icon:hover {
+    cursor: pointer;
+    color: #7272C8;
+}
+
 /* Line of Business Antony */
 #OnExchange{
     display: none;
@@ -398,6 +434,38 @@ input[type=number]::-webkit-outer-spin-button {
 }
 /* DASHBOARD STYLING */
 /* ================= */
+
+#modal-logo {
+    width: 100px;
+    height: 75px;    
+}
+
+#modal-logo img {
+    padding: 15px;
+}
+
+#modal-carrier-info {
+   position: absolute;
+   right: 10%;
+   top: 5%;
+}
+
+#modal-table {
+    width: 100%;
+    height: 60%;
+    empty-cells: hide;
+}
+
+#modal-table a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #302E2E;
+    font-weight: 500;
+}
+
+#modal-table a:hover {
+    color: #7272C8;
+}
 
 .dashboard-header {
     margin-bottom: 50px;
@@ -433,6 +501,11 @@ div.carrier {
     border-radius: 10px;
     padding: 10px;
     background: yellow;
+}
+
+.color-coding:hover {
+    cursor: pointer;
+    opacity: 0.6;
 }
 
 .thumbnail.onboarded img {
