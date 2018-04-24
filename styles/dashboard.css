@@ -213,6 +213,18 @@ div.thumbnail {
     height: 200px;
 }
 
+/* ========================= */
+/* ALL CORE TABS */
+/* ========================= */
+
+#save-next-btn {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+/* ========================= */
+/* ALL CORE TABS */
+/* ========================= */
 
 /* ************************* */
 /* Dashboard-carrierdetails */
@@ -234,7 +246,7 @@ div.thumbnail {
 .carrier-details {
     margin-top: 150px;    
     text-align: center;
-    padding-bottom: 30px;   
+    padding-bottom: 10px;   
 }
 
 .carrier-details > .jumbotron {
@@ -295,10 +307,15 @@ div#carrier-logo {
 #user-logo {
     position: absolute;
     left: 47%;
-    bottom: 11%;
+    bottom: 12%;
     width: 150px;
     height: 150px;
     display: none;
+}
+
+#user-logo:hover {
+    opacity: 0.7;
+    cursor: pointer;
 }
 
 #user-logo-preview {
@@ -452,6 +469,10 @@ input#logo-input {
 /* DASHBOARD STYLING */
 /* ================= */
 
+div.modal-body {
+    padding-bottom: 0px;
+}
+
 #modal-logo {
     width: 100px;
     height: 75px;    
@@ -473,6 +494,23 @@ input#logo-input {
     empty-cells: hide;
 }
 
+#modal-table .active {
+    font-weight: 600;
+    color: rgba(29, 77, 139, 0.98);
+}
+
+#modal-table .success {
+    background: #46B546;
+}
+
+#modal-table .warning {
+    background: #E9E92E;
+}
+
+#modal-table .danger {
+    background: #DE4242;
+}
+
 #modal-table a {
     text-decoration: none;
     cursor: pointer;
@@ -480,8 +518,13 @@ input#logo-input {
     font-weight: 500;
 }
 
+#modal-table tr td {
+    padding: auto;
+    vertical-align: middle;
+}
+
 #modal-table a:hover {
-    color: #7272C8;
+    color: #FFFFFF;
 }
 
 .dashboard-header {

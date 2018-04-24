@@ -29,7 +29,7 @@
 
                 <div class="my-container">
                     <div id="carrier-logo" class="carrier-name">
-                        <p>Carrier Logo</p>
+                        <p>Carrier Logo</p><span id="icons"><i class="far fa-envelope fa-1x"></i><i class="fas fa-ellipsis-v fa-1x"></i></span>
                         <hr id="hr">
                         <div id="image-upload">
                             <label id="logo-drop-area">
@@ -38,29 +38,18 @@
                                 <p class="file-name">Please select a file.</p>                                
                             </label> 
                             <img class="text-center" id="user-logo" src="#" alt="Carrier logo" data-toggle="modal" data-target="#logo-preview"/>
-                        </div>
-                        
-                        
-
-
-                        <span id="icons"><i class="far fa-list-alt"></i><i class="fas fa-ellipsis-v fa-1x"></i></span>
+                        </div>                 
                     </div>
                 </div>
-
                 <a id="save-next-btn"  href="dashboard-businessdetails.php" class="btn btn-lg btn-primary pull-right">Next</a>
-
             </div>
         </div>   
 </div>
 
 <!-- Modal -->
 <div class="modal fade" id="logo-preview" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-       
-            
-            <!-- <div class="modal-body">                 -->
-                <img class="text-center thumbnail" id="user-logo-preview" src="#" alt="Carrier logo"/>                                
-            <!-- </div> -->
+    <div class="modal-dialog" role="document">      
+        <img class="text-center thumbnail" id="user-logo-preview" src="#" alt="Carrier logo"/>   
     </div>
 </div>
 <!-- Modal -->
