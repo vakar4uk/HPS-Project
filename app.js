@@ -31,7 +31,7 @@ $(document).ready(function () {
     // logo upload
 
     // Line of business option selection
-    $('#on').click(function () {
+    $('#lineofbusiness1').click(function () {
         $('#Group1').fadeOut();
         $('#OffExchange').fadeOut();
         $('#OnExchange').fadeIn();

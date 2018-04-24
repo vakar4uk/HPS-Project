@@ -21,7 +21,7 @@
                 <form id="entity-address" action="">
                     <div class="my-container">
                         <div class="carrier-name">
-                            <p>Name of and Code of Legal Entity</p><span id="icons"><i class="far fa-envelope fa-1x"></i><i class="fas fa-ellipsis-v fa-1x"></i></span>
+                            <p>Name of and Code of Legal Entity *</p><span id="icons"><i class="far fa-envelope fa-1x"></i><i class="fas fa-ellipsis-v fa-1x"></i></span>
                             <hr id="hr">
                             <input id="carriername-input" type="text" class="form-control" placeholder="John Doe, XC78" required>
                         </div>
@@ -51,7 +51,7 @@
                                     </div>
                                     <div class="col-lg-8">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" id="addressLine1" placeholder="Address Line 1" data-width=385px required>
+                                            <input type="text" class="form-control" id="addressLine1" placeholder="Address Line 1 *" data-width=385px required>
                                         </div>
                                     </div>
                                 </div>
@@ -71,7 +71,7 @@
                                 <div class="container-fluid">
                                     <div class="col-lg-5">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" id="addressLine2" placeholder="City" required>
+                                            <input type="text" class="form-control" id="addressLine2" placeholder="City *" required>
                                         </div>
                                     </div>
                                     <div class="col-lg-4">
@@ -86,7 +86,7 @@
                                     </div>
                                     <div class="col-lg-3">
                                         <div class="form-group" id="zipcodeField">
-                                            <input type="number" class="form-control" id="zipcode" placeholder="Zipcode" required>
+                                            <input type="number" class="form-control" id="zipcode" placeholder="Zipcode *" required>
                                         </div>
                                     </div>
                                 </div>
@@ -104,7 +104,7 @@
                                     </div>
                                     <div class="col-lg-8">
                                         <div class="form-group">
-                                            <input type="number" class="form-control" id="phone-number" placeholder="Enter a phone number..." required>
+                                            <input type="number" class="form-control" id="phone-number" placeholder="Enter a phone number. *" required>
                                         </div>
                                     </div>
                                 </div>
@@ -114,7 +114,7 @@
                                 <div class="container-fluid">
                                     <div class="col-lg-12">
                                         <div class="form-group">
-                                            <input type="email" class="form-control" id="email" placeholder="Enter your email address..." required >
+                                            <input type="email" class="form-control" id="email" placeholder="Enter your email address *" required >
                                        
                                        
                                        
@@ -167,12 +167,12 @@
                     <div class="container-fluid">
                         <div class="col-lg-6">
                             <div class="form-group">
-                                <input type="number" class="form-control" id="accountNumber" placeholder="Account Number" required>
+                                <input type="number" class="form-control" id="accountNumber" placeholder="Account Number *" required>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group">
-                                <input type="number" class="form-control" id="bankNumCode" placeholder="Bank Num Code" required>
+                                <input type="number" class="form-control" id="bankNumCode" placeholder="Bank Num Code *" required>
                             </div>
                         </div>
                     </div>
@@ -182,12 +182,12 @@
                     <div class="container-fluid">
                         <div class="col-lg-6">
                             <div class="form-group">
-                                <input type="number" class="form-control" id="accountNumber" placeholder="Batch Co Number" required>
+                                <input type="number" class="form-control" id="accountNumber" placeholder="Batch Co Number *" required>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group">
-                                <input type="number" class="form-control" id="bankNumCode" placeholder="Site Code" required>
+                                <input type="number" class="form-control" id="bankNumCode" placeholder="Site Code *" required>
                             </div>
                         </div>
                     </div>
@@ -196,7 +196,7 @@
                     <div class="container-fluid">
                         <div class="col-lg-12">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="accountNumber" placeholder="Batch Description" required>
+                                <input type="text" class="form-control" id="accountNumber" placeholder="Batch Description *" required>
                             </div>
                         </div>                        
                     </div>
@@ -205,12 +205,12 @@
                     <div class="container-fluid">
                         <div class="col-lg-8">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="additionalBatchInfo" placeholder="Additional Batch Info" required>
+                                <input type="text" class="form-control" id="additionalBatchInfo" placeholder="Additional Batch Info *" required>
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
-                                <input type="number" class="form-control" id="batchGroupCode" placeholder="Batch Group Code" required>
+                                <input type="number" class="form-control" id="batchGroupCode" placeholder="Batch Group Code *" required>
                             </div>
                         </div>
                     </div>
@@ -219,22 +219,22 @@
                     <div class="container-fluid">
                         <div class="col-lg-3">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="bankName" placeholder="Bank Name" required>
+                                <input type="text" class="form-control" id="bankName" placeholder="Bank Name *" required>
                             </div>
                         </div>
                         <div class="col-lg-3">
                             <div class="form-group">
-                                <input type="number" class="form-control" id="merchantId" placeholder="Merchant ID" required>
+                                <input type="number" class="form-control" id="merchantId" placeholder="Merchant ID *" required>
                             </div>
                         </div>
                         <div class="col-lg-3">
                             <div class="form-group">
-                                <input type="number" class="form-control" id="securityKey" placeholder="Security Key" required>
+                                <input type="number" class="form-control" id="securityKey" placeholder="Security Key *" required>
                             </div>
                         </div>
                         <div class="col-lg-3">
                             <div class="form-group">
-                                <input class="textbox-n form-control" type="text" onfocus="(this.type='date')"  id="date" placeholder="Security Exp Date" required> 
+                                <input class="textbox-n form-control" type="text" onfocus="(this.type='date')"  id="date" placeholder="Security Exp Date *" required> 
                             </div>                            
                         </div>                        
                     </div>
