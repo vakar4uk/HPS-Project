@@ -8,6 +8,28 @@ $(document).ready(function () {
     });
     // HIDE/SHOW functionality of the notification message
 
+    // logo upload    
+
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+    
+            reader.onload = function (e) {
+                $('#user-logo').attr('src', e.target.result);
+                $('#user-logo-preview').attr('src', e.target.result);
+                $('#user-logo').css("display", "block");
+            }
+    
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    
+    $("#logo-input").change(function(){
+        readURL(this);
+    });    
+       
+    // logo upload
+
     // Line of business option selection
     $('#on').click(function () {
         $('#Group1').fadeOut();

@@ -288,6 +288,25 @@ input#logo-upload {
     margin-bottom: 15px;
 }
 
+div#carrier-logo {
+    padding-bottom: 80px;
+}
+
+#user-logo {
+    position: absolute;
+    left: 47%;
+    bottom: 11%;
+    width: 150px;
+    height: 150px;
+    display: none;
+}
+
+#user-logo-preview {
+    margin: 200px auto;
+    width: 500px;
+    height: 400px;
+}
+
 .carrier-name  p {
     float: left;
     vertical-align: middle;
@@ -385,6 +404,40 @@ input[type=number]::-webkit-outer-spin-button {
     margin: 0; 
 }
 
+input[type="file"] {
+    position: absolute;
+    bottom: 7%;
+    size: 500;
+    left: 18%;
+    opacity: .01;
+}
+
+input#logo-input {
+    height: 210px;
+    width:150px;
+}
+
+#image-upload {
+    /* border: dotted 1px grey; */
+    margin-top: 50px;
+    width: 150px;
+    height: 80px;
+}
+
+#logo-drop-area:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+#img-upload-icon {
+    color: rgba(173, 176, 181, 0.98);
+}
+
+#img-upload-icon:hover {
+    cursor: pointer;
+    color: #7272C8;
+}
+
 /* Line of Business Antony */
 #OnExchange{
     display: none;
@@ -398,6 +451,38 @@ input[type=number]::-webkit-outer-spin-button {
 }
 /* DASHBOARD STYLING */
 /* ================= */
+
+#modal-logo {
+    width: 100px;
+    height: 75px;    
+}
+
+#modal-logo img {
+    padding: 15px;
+}
+
+#modal-carrier-info {
+   position: absolute;
+   right: 10%;
+   top: 5%;
+}
+
+#modal-table {
+    width: 100%;
+    height: 60%;
+    empty-cells: hide;
+}
+
+#modal-table a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #302E2E;
+    font-weight: 500;
+}
+
+#modal-table a:hover {
+    color: #7272C8;
+}
 
 .dashboard-header {
     margin-bottom: 50px;
@@ -433,6 +518,11 @@ div.carrier {
     border-radius: 10px;
     padding: 10px;
     background: yellow;
+}
+
+.color-coding:hover {
+    cursor: pointer;
+    opacity: 0.6;
 }
 
 .thumbnail.onboarded img {
@@ -475,9 +565,18 @@ div.carrier-info {
     /* margin: 5px; */
 }
 
-.carrier-status .btn {
+.carrier-status a.btn {
     padding: 10px;
+    padding-left: -2px;
+    margin-left: -5px;
+    margin-right: 8px;
+    /* width: 60px; */
     /* margin: 5px; */
+}
+
+#prod-btn {
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .current-onboarding {
