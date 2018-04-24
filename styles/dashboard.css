@@ -213,6 +213,18 @@ div.thumbnail {
     height: 200px;
 }
 
+/* ========================= */
+/* ALL CORE TABS */
+/* ========================= */
+
+#save-next-btn {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+/* ========================= */
+/* ALL CORE TABS */
+/* ========================= */
 
 /* ************************* */
 /* Dashboard-carrierdetails */
@@ -234,7 +246,7 @@ div.thumbnail {
 .carrier-details {
     margin-top: 150px;    
     text-align: center;
-    padding-bottom: 30px;   
+    padding-bottom: 10px;   
 }
 
 .carrier-details > .jumbotron {
@@ -286,6 +298,30 @@ input#logo-upload {
     padding-top: 40px;
     padding-bottom: 30px;
     margin-bottom: 15px;
+}
+
+div#carrier-logo {
+    padding-bottom: 80px;
+}
+
+#user-logo {
+    position: absolute;
+    left: 47%;
+    bottom: 12%;
+    width: 150px;
+    height: 150px;
+    display: none;
+}
+
+#user-logo:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+#user-logo-preview {
+    margin: 200px auto;
+    width: 500px;
+    height: 400px;
 }
 
 .carrier-name  p {
@@ -385,6 +421,40 @@ input[type=number]::-webkit-outer-spin-button {
     margin: 0; 
 }
 
+input[type="file"] {
+    position: absolute;
+    bottom: 7%;
+    size: 500;
+    left: 18%;
+    opacity: .01;
+}
+
+input#logo-input {
+    height: 210px;
+    width:150px;
+}
+
+#image-upload {
+    /* border: dotted 1px grey; */
+    margin-top: 50px;
+    width: 150px;
+    height: 80px;
+}
+
+#logo-drop-area:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+#img-upload-icon {
+    color: rgba(173, 176, 181, 0.98);
+}
+
+#img-upload-icon:hover {
+    cursor: pointer;
+    color: #7272C8;
+}
+
 /* Line of Business Antony */
 #OnExchange{
     display: none;
@@ -409,6 +479,64 @@ input[type=number]::-webkit-outer-spin-button {
 } */
 /* DASHBOARD STYLING */
 /* ================= */
+
+div.modal-body {
+    padding-bottom: 0px;
+}
+
+#modal-logo {
+    width: 100px;
+    height: 75px;    
+}
+
+#modal-logo img {
+    padding: 15px;
+}
+
+#modal-carrier-info {
+   position: absolute;
+   right: 10%;
+   top: 5%;
+}
+
+#modal-table {
+    width: 100%;
+    height: 60%;
+    empty-cells: hide;
+}
+
+#modal-table .active {
+    font-weight: 600;
+    color: rgba(29, 77, 139, 0.98);
+}
+
+#modal-table .success {
+    background: #46B546;
+}
+
+#modal-table .warning {
+    background: #E9E92E;
+}
+
+#modal-table .danger {
+    background: #DE4242;
+}
+
+#modal-table a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #302E2E;
+    font-weight: 500;
+}
+
+#modal-table tr td {
+    padding: auto;
+    vertical-align: middle;
+}
+
+#modal-table a:hover {
+    color: #FFFFFF;
+}
 
 .dashboard-header {
     margin-bottom: 50px;
@@ -444,6 +572,11 @@ div.carrier {
     border-radius: 10px;
     padding: 10px;
     background: yellow;
+}
+
+.color-coding:hover {
+    cursor: pointer;
+    opacity: 0.6;
 }
 
 .thumbnail.onboarded img {
@@ -486,9 +619,18 @@ div.carrier-info {
     /* margin: 5px; */
 }
 
-.carrier-status .btn {
+.carrier-status a.btn {
     padding: 10px;
+    padding-left: -2px;
+    margin-left: -5px;
+    margin-right: 8px;
+    /* width: 60px; */
     /* margin: 5px; */
+}
+
+#prod-btn {
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .current-onboarding {
@@ -551,3 +693,144 @@ div.carrier-info {
 
 /* ================= */
 /* DASHBOARD STYLING */
+
+
+
+
+/*Deanna's Testing Code
+
+.carrier-name  p {
+    float: left;
+    margin-left: 40px;
+    vertical-align: middle;
+    color: #7272C8;
+    font-size: 1.2em;
+    font-weight: 500;    
+}
+
+.carrier-name  h3 {
+    float: left;
+    margin-left: 10px;
+    vertical-align: middle;
+    color: #7272C8;
+    font-size: 1.2em;
+    font-weight: 500;    
+}*/
+
+#business-individual{
+    background-color:rgba(215, 212, 212, 0.77);
+    color: rgba(110, 110, 110, 0.77);
+    margin-top: 35px;
+    margin-bottom: 25px;
+    margin-left: 15px;
+    padding-left: 173px;
+    padding-right: 173px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+
+#business-individual.testing{
+    background-color:#39DBDB;
+    color: white;
+}
+
+#business-individual:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#business-group{
+    background-color:rgba(215, 212, 212, 0.77);
+    color: rgba(110, 110, 110, 0.77);
+    margin-top: 35px;
+    margin-bottom: 25px;
+    padding-left: 173px;
+    padding-right: 173px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+
+#business-group.testing{
+    background-color:#39DBDB;
+    color: white;
+}
+
+
+#business-group:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#onexchange {
+    background-color:rgba(215, 212, 212, 0.77);
+    color: rgba(110, 110, 110, 0.77);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    padding-left: 57px;
+    padding-right: 57px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+
+#onexchange.testing{
+    background-color:#39DBDB;
+    color: white;
+}
+
+#onexchange:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#offexchange {
+    background-color:rgba(215, 212, 212, 0.77);
+    color: rgba(110, 110, 110, 0.77);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 57px;
+    padding-right: 57px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+
+#offexchange.testing{
+    background-color:#39DBDB;
+    color: white;
+}
+
+#offexchange:hover {
+        box-shadow: 0 12pcx 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#input-code-individual-onexchange {
+    margin-left: 20px;
+    margin-top: 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: rgba(110, 110, 110, 0.77);
+}
+
+#input-code-individual-offexchange {
+    margin-top: 10px;
+    margin-bottom: 40px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: rgba(110, 110, 110, 0.77);
+}
+
+#input-code-group {
+    margin-top: 15px;
+    margin-left: 25px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: rgba(110, 110, 110, 0.77);
+}
+

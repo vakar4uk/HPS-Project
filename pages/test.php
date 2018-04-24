@@ -33,21 +33,14 @@
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fas fa-ellipsis-v" style="color:rgba(60, 222, 204, 0.91);"></i></a>
                         <ul class="dropdown-menu">
 
-                            <li><a href="notes"><i id= "notes" class="far fa-file-alt dropdown-item"></i>Notes</a></li>
-
-                            <li><a href=""><i id= "custom" class="fas fa-sliders-h dropdown-item"></i>Customizations</a></li>
-                            <li><a href=""><i id= "todo" class="fas fa-clipboard-check dropdown-item"></i>Add To-Do</a></li>
+                            <li><a href=""><i id= "notes" class="far fa-file-alt"></i>Notes</a></li>
+                            <li><a href=""><i id= "custom" class="fas fa-sliders-h"></i>Customizations</a></li>
+                            <li><a href=""><i id= "todo" class="fas fa-clipboard-check"></i>Add To-Do</a></li>
                         </ul>
                         </li>
                         </ul>
 
-                        
-
-
-
-
                     </div>  
-
           
                             </span>
                             <hr id="hr">
@@ -88,7 +81,7 @@
                             </div>
 
 
-                          
+
                     </div>
                 </div>
             </div>

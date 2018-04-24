@@ -1,10 +1,10 @@
 <?php
 
     session_start();
-	 header('Location: index.php');
+
     echo "You have been succesfuly logged out";
     session_destroy();
-   
+    header('Location: index.php');
 
 ?>
 

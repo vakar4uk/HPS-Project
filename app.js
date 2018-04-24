@@ -8,6 +8,28 @@ $(document).ready(function () {
     });
     // HIDE/SHOW functionality of the notification message
 
+    // logo upload    
+
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+    
+            reader.onload = function (e) {
+                $('#user-logo').attr('src', e.target.result);
+                $('#user-logo-preview').attr('src', e.target.result);
+                $('#user-logo').css("display", "block");
+            }
+    
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    
+    $("#logo-input").change(function(){
+        readURL(this);
+    });    
+       
+    // logo upload
+
     // Line of business option selection
     $('#on').click(function () {
         $('#Group1').fadeOut();
@@ -53,128 +75,41 @@ $(document).ready(function () {
         $('.selected-business').addClass('btn-info');
     });
     // clear business
+
+
+
+//Business Details Toggle//
+
+    
+    $("button[id*=onexchange], button[id*=offexchange], input[id*=input-code-individual-onexchange], input[id*=input-code-individual-offexchange], input[id*=input-code-group]").hide();
+    
+    
+        $("button[id*=business-individual]").click(function () {
+            $("button[id*=onexchange], button[id*=offexchange]").toggle();
+        });
+    
+        $("button[id*=business-individual], button[id*=business-group], button[id*=onexchange], button[id*=offexchange]").click(function() {
+            $(this).toggleClass( "testing" );
+        });
+    
+        $("button[id*=business-individual]").click(function () {
+            $("input[id*=input-code-individual-onexchange], input[id*=input-code-individual-offexchange]").hide();
+        });
+    
+        $("button[id*=onexchange]").click(function () {
+            $("input[id*=input-code-individual-onexchange]").toggle();
+        });
+    
+        $("button[id*=offexchange]").click(function () {
+            $("input[id*=input-code-individual-offexchange]").toggle();
+        });
+    
+        $("button[id*=business-group]").click(function () {
+            $("input[id*=input-code-group]").toggle();
+    
+        });
+    
+});
     
 
-
-    //Line of business toggle
-
-    /*buttons toggle*/
-
-
-
-    $("button[id*=onexchange], button[id*=offexchange], input[id*=input-code-individual-onexchange], input[id*=input-code-individual-offexchange], input[id*=input-code-group]").hide();
-
-
-
-
-    $("button[id*=business-individual]").click(function () {
-
-        $("button[id*=onexchange], button[id*=offexchange]").toggle();
-
-    });
-
-
-
-    $("button[id*=business-individual]").click(function () {
-
-        $("input[id*=input-code-individual-onexchange], input[id*=input-code-individual-offexchange]").hide();
-
-    });
-
-
-
-    $("button[id*=onexchange]").click(function () {
-
-        $("input[id*=input-code-individual-onexchange]").toggle();
-
-    });
-
-
-
-    $("button[id*=offexchange]").click(function () {
-
-        $("input[id*=input-code-individual-offexchange]").toggle();
-
-    });
-
-
-    $("button[id*=business-group]").click(function () {
-
-        $("input[id*=input-code-group]").toggle();
-
-    });
-
-
-
-
-
-    /*menu font awesome icon*/
-
-
-
-    $(function () {
-
-        $.contextMenu({
-
-            selector:
-            '.menu',
-
-            callback:
-            function (key,
-                options) {
-
-                var m =
-                    "clicked: " +
-                    key;
-
-                window.console &&
-                    console.log(m) ||
-                    alert(m);
-
-            },
-
-            items: {
-
-                "Notes": {
-                    name:
-                    "Edit", icon:
-                    "fa-edit"
-                },
-
-                "Customizations": {
-                    name:
-                    "Customizations",
-                    icon: "far fa-sliders-h"
-                },
-
-                "Add To-Do": {
-                    name:
-                    "Add To-Do", icon:
-                    "fas fa-clipboard-check"
-                }
-
-            }
-
-        });
-
-
-
-        $('.menu').on('click',
-            function (e) {
-
-                console.log('clicked',
-                    this);
-
-            })
-
-    });
-
-
-
-
-
-
-
-});
-
-
+    

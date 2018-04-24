@@ -1,5 +1,4 @@
 <?php
-
 /*
  * This file is part of Composer.
  *
@@ -9,9 +8,7 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-
 process(is_array($argv) ? $argv : array());
-
 /**
  * processes the installer
  */
@@ -19,12 +16,10 @@ function process($argv)
 {
     // Determine ANSI output from --ansi and --no-ansi flags
     setUseAnsi($argv);
-
     if (in_array('--help', $argv)) {
         displayHelp();
         exit(0);
     }
-
     $check      = in_array('--check', $argv);
     $help       = in_array('--help', $argv);
     $force      = in_array('--force', $argv);
@@ -35,13 +30,10 @@ function process($argv)
     $version    = getOptValue('--version', $argv, false);
     $filename   = getOptValue('--filename', $argv, 'composer.phar');
     $cafile     = getOptValue('--cafile', $argv, false);
-
     if (!checkParams($installDir, $version, $cafile)) {
         exit(1);
     }
-
     $ok = checkPlatform($warnings, $quiet, $disableTls, true);
-
     if ($check) {
         // Only show warnings if we haven't output any errors
         if ($ok) {
@@ -50,7 +42,6 @@ function process($argv)
         }
         exit($ok ? 0 : 1);
     }
-
     if ($ok || $force) {
         $installer = new Installer($quiet, $disableTls, $cafile);
         if ($installer->run($version, $installDir, $filename, $channel)) {
@@ -59,10 +50,8 @@ function process($argv)
             exit(0);
         }
     }
-
     exit(1);
 }
-
 /**
  * displays the help
  */
@@ -85,10 +74,8 @@ Options
 --filename="..."     accepts a target filename (default: composer.phar)
 --disable-tls        disable SSL/TLS security for file downloads
 --cafile="..."       accepts a path to a Certificate Authority (CA) certificate file for SSL/TLS verification
-
 EOF;
 }
-
 /**
  * Sets the USE_ANSI define for colorizing output
  *
@@ -112,7 +99,6 @@ function setUseAnsi($argv)
         );
     }
 }
-
 /**
  * Returns the value of a command-line option
  *
@@ -125,7 +111,6 @@ function setUseAnsi($argv)
 function getOptValue($opt, $argv, $default)
 {
     $optLength = strlen($opt);
-
     foreach ($argv as $key => $value) {
         $next = $key + 1;
         if (0 === strpos($value, $opt)) {
@@ -136,10 +121,8 @@ function getOptValue($opt, $argv, $default)
             }
         }
     }
-
     return $default;
 }
-
 /**
  * Checks that user-supplied params are valid
  *
@@ -152,24 +135,20 @@ function getOptValue($opt, $argv, $default)
 function checkParams($installDir, $version, $cafile)
 {
     $result = true;
-
     if (false !== $installDir && !is_dir($installDir)) {
         out("The defined install dir ({$installDir}) does not exist.", 'info');
         $result = false;
     }
-
     if (false !== $version && 1 !== preg_match('/^\d+\.\d+\.\d+(\-(alpha|beta|RC)\d*)*$/', $version)) {
         out("The defined install version ({$version}) does not match release pattern.", 'info');
         $result = false;
     }
-
     if (false !== $cafile && (!file_exists($cafile) || !is_readable($cafile))) {
         out("The defined Certificate Authority (CA) cert file ({$cafile}) does not exist or is not readable.", 'info');
         $result = false;
     }
     return $result;
 }
-
 /**
  * Checks the platform for possible issues running Composer
  *
@@ -185,26 +164,22 @@ function checkParams($installDir, $version, $cafile)
 function checkPlatform(&$warnings, $quiet, $disableTls, $install)
 {
     getPlatformIssues($errors, $warnings, $install);
-
     // Make openssl warning an error if tls has not been specifically disabled
     if (isset($warnings['openssl']) && !$disableTls) {
         $errors['openssl'] = $warnings['openssl'];
         unset($warnings['openssl']);
     }
-
     if (!empty($errors)) {
         out('Some settings on your machine make Composer unable to work properly.', 'error');
         out('Make sure that you fix the issues listed below and run this script again:', 'error');
         outputIssues($errors);
         return false;
     }
-
     if (empty($warnings) && !$quiet) {
         out('All settings correct for using Composer', 'success');
     }
     return true;
 }
-
 /**
  * Checks platform configuration for common incompatibility issues
  *
@@ -218,14 +193,12 @@ function getPlatformIssues(&$errors, &$warnings, $install)
 {
     $errors = array();
     $warnings = array();
-
     if ($iniPath = php_ini_loaded_file()) {
         $iniMessage = PHP_EOL.'The php.ini used by your command-line PHP is: ' . $iniPath;
     } else {
         $iniMessage = PHP_EOL.'A php.ini file does not exist. You will have to create one.';
     }
     $iniMessage .= PHP_EOL.'If you can not modify the ini file, you can also run `php -d option=value` to modify ini values on the fly. You can use -d multiple times.';
-
     if (ini_get('detect_unicode')) {
         $errors['unicode'] = array(
             'The detect_unicode setting must be disabled.',
@@ -234,7 +207,6 @@ function getPlatformIssues(&$errors, &$warnings, $install)
             $iniMessage
         );
     }
-
     if (extension_loaded('suhosin')) {
         $suhosin = ini_get('suhosin.executor.include.whitelist');
         $suhosinBlacklist = ini_get('suhosin.executor.include.blacklist');
@@ -247,42 +219,36 @@ function getPlatformIssues(&$errors, &$warnings, $install)
             );
         }
     }
-
     if (!function_exists('json_decode')) {
         $errors['json'] = array(
             'The json extension is missing.',
             'Install it or recompile php without --disable-json'
         );
     }
-
     if (!extension_loaded('Phar')) {
         $errors['phar'] = array(
             'The phar extension is missing.',
             'Install it or recompile php without --disable-phar'
         );
     }
-
     if (!extension_loaded('filter')) {
         $errors['filter'] = array(
             'The filter extension is missing.',
             'Install it or recompile php without --disable-filter'
         );
     }
-
     if (!extension_loaded('hash')) {
         $errors['hash'] = array(
             'The hash extension is missing.',
             'Install it or recompile php without --disable-hash'
         );
     }
-
     if (!extension_loaded('iconv') && !extension_loaded('mbstring')) {
         $errors['iconv_mbstring'] = array(
             'The iconv OR mbstring extension is required and both are missing.',
             'Install either of them or recompile php without --disable-iconv'
         );
     }
-
     if (!ini_get('allow_url_fopen')) {
         $errors['allow_url_fopen'] = array(
             'The allow_url_fopen setting is incorrect.',
@@ -291,7 +257,6 @@ function getPlatformIssues(&$errors, &$warnings, $install)
             $iniMessage
         );
     }
-
     if (extension_loaded('ionCube Loader') && ioncube_loader_iversion() < 40009) {
         $ioncube = ioncube_loader_version();
         $errors['ioncube'] = array(
@@ -301,39 +266,33 @@ function getPlatformIssues(&$errors, &$warnings, $install)
             $iniMessage
         );
     }
-
     if (version_compare(PHP_VERSION, '5.3.2', '<')) {
         $errors['php'] = array(
             'Your PHP ('.PHP_VERSION.') is too old, you must upgrade to PHP 5.3.2 or higher.'
         );
     }
-
     if (version_compare(PHP_VERSION, '5.3.4', '<')) {
         $warnings['php'] = array(
             'Your PHP ('.PHP_VERSION.') is quite old, upgrading to PHP 5.3.4 or higher is recommended.',
             'Composer works with 5.3.2+ for most people, but there might be edge case issues.'
         );
     }
-
     if (!extension_loaded('openssl')) {
         $warnings['openssl'] = array(
             'The openssl extension is missing, which means that secure HTTPS transfers are impossible.',
             'If possible you should enable it or recompile php with --with-openssl'
         );
     }
-
     if (extension_loaded('openssl') && OPENSSL_VERSION_NUMBER < 0x1000100f) {
         // Attempt to parse version number out, fallback to whole string value.
         $opensslVersion = trim(strstr(OPENSSL_VERSION_TEXT, ' '));
         $opensslVersion = substr($opensslVersion, 0, strpos($opensslVersion, ' '));
         $opensslVersion = $opensslVersion ? $opensslVersion : OPENSSL_VERSION_TEXT;
-
         $warnings['openssl_version'] = array(
             'The OpenSSL library ('.$opensslVersion.') used by PHP does not support TLSv1.2 or TLSv1.1.',
             'If possible you should upgrade OpenSSL to version 1.0.1 or above.'
         );
     }
-
     if (!defined('HHVM_VERSION') && !extension_loaded('apcu') && ini_get('apc.enable_cli')) {
         $warnings['apc_cli'] = array(
             'The apc.enable_cli setting is incorrect.',
@@ -342,13 +301,11 @@ function getPlatformIssues(&$errors, &$warnings, $install)
             $iniMessage
         );
     }
-
     if (!$install && extension_loaded('xdebug')) {
         $warnings['xdebug_loaded'] = array(
             'The xdebug extension is loaded, this can slow down Composer a little.',
             'Disabling it when using Composer is recommended.'
         );
-
         if (ini_get('xdebug.profiler_enabled')) {
             $warnings['xdebug_profile'] = array(
                 'The xdebug.profiler_enabled setting is enabled, this can slow down Composer a lot.',
@@ -358,7 +315,6 @@ function getPlatformIssues(&$errors, &$warnings, $install)
             );
         }
     }
-
     if (!extension_loaded('zlib')) {
         $warnings['zlib'] = array(
             'The zlib extension is not loaded, this can slow down Composer a lot.',
@@ -366,13 +322,11 @@ function getPlatformIssues(&$errors, &$warnings, $install)
             $iniMessage
         );
     }
-
     ob_start();
     phpinfo(INFO_GENERAL);
     $phpinfo = ob_get_clean();
     if (preg_match('{Configure Command(?: *</td><td class="v">| *=> *)(.*?)(?:</td>|$)}m', $phpinfo, $match)) {
         $configure = $match[1];
-
         if (false !== strpos($configure, '--enable-sigchild')) {
             $warnings['sigchild'] = array(
                 'PHP was compiled with --enable-sigchild which can cause issues on some platforms.',
@@ -380,7 +334,6 @@ function getPlatformIssues(&$errors, &$warnings, $install)
                 '    https://bugs.php.net/bug.php?id=22999'
             );
         }
-
         if (false !== strpos($configure, '--with-curlwrappers')) {
             $warnings['curlwrappers'] = array(
                 'PHP was compiled with --with-curlwrappers which will cause issues with HTTP authentication and GitHub.',
@@ -388,20 +341,15 @@ function getPlatformIssues(&$errors, &$warnings, $install)
             );
         }
     }
-
     // Stringify the message arrays
     foreach ($errors as $key => $value) {
         $errors[$key] = PHP_EOL.implode(PHP_EOL, $value);
     }
-
     foreach ($warnings as $key => $value) {
         $warnings[$key] = PHP_EOL.implode(PHP_EOL, $value);
     }
-
     return !empty($errors) || !empty($warnings);
 }
-
-
 /**
  * Outputs an array of issues
  *
@@ -414,7 +362,6 @@ function outputIssues($issues)
     }
     out('');
 }
-
 /**
  * Outputs any warnings found
  *
@@ -428,7 +375,6 @@ function showWarnings($warnings)
         outputIssues($warnings);
     }
 }
-
 /**
  * Outputs an end of process warning if tls has been bypassed
  *
@@ -441,7 +387,6 @@ function showSecurityWarning($disableTls)
         out('This will leave all downloads during installation vulnerable to Man-In-The-Middle (MITM) attacks', 'info');
     }
 }
-
 /**
  * colorize output
  */
@@ -452,20 +397,15 @@ function out($text, $color = null, $newLine = true)
         'error' => "\033[31;31m%s\033[0m",
         'info' => "\033[33;33m%s\033[0m"
     );
-
     $format = '%s';
-
     if (isset($styles[$color]) && USE_ANSI) {
         $format = $styles[$color];
     }
-
     if ($newLine) {
         $format .= PHP_EOL;
     }
-
     printf($format, $text);
 }
-
 /**
  * Returns the system-dependent Composer home location, which may not exist
  *
@@ -474,15 +414,12 @@ function out($text, $color = null, $newLine = true)
 function getHomeDir()
 {
     $home = getenv('COMPOSER_HOME');
-
     if (!$home) {
         $userDir = getUserDir();
-
         if (defined('PHP_WINDOWS_VERSION_MAJOR')) {
             $home = $userDir.'/Composer';
         } else {
             $home = $userDir.'/.composer';
-
             if (!is_dir($home) && useXdg()) {
                 // XDG Base Directory Specifications
                 if (!($xdgConfig = getenv('XDG_CONFIG_HOME'))) {
@@ -494,7 +431,6 @@ function getHomeDir()
     }
     return $home;
 }
-
 /**
  * Returns the location of the user directory from the environment
  * @throws RuntimeException If the environment value does not exists
@@ -505,14 +441,11 @@ function getUserDir()
 {
     $userEnv = defined('PHP_WINDOWS_VERSION_MAJOR') ? 'APPDATA' : 'HOME';
     $userDir = getenv($userEnv);
-
     if (!$userDir) {
         throw new RuntimeException('The '.$userEnv.' or COMPOSER_HOME environment variable must be set for composer to run correctly');
     }
-
     return rtrim(strtr($userDir, '\\', '/'), '/');
 }
-
 /**
  * @return bool
  */
@@ -525,7 +458,6 @@ function useXdg()
     }
     return false;
 }
-
 function validateCaFile($contents)
 {
     // assume the CA is valid if php is vulnerable to
@@ -537,10 +469,8 @@ function validateCaFile($contents)
     ) {
         return !empty($contents);
     }
-
     return (bool) openssl_x509_parse($contents);
 }
-
 class Installer
 {
     private $quiet;
@@ -555,7 +485,6 @@ class Installer
     private $httpClient;
     private $pubKeys = array();
     private $installs = array();
-
     /**
      * Constructor - must not do anything that throws an exception
      *
@@ -572,7 +501,6 @@ class Installer
         $this->cafile = $caFile;
         $this->errHandler = new ErrorHandler();
     }
-
     /**
      * Runs the installer
      *
@@ -591,7 +519,6 @@ class Installer
             $this->initTls();
             $this->httpClient = new HttpClient($this->disableTls, $this->cafile);
             $result = $this->install($version, $channel);
-
             if ($result && $channel !== 'stable' && !$version && defined('PHP_BINARY')) {
                 $null = (defined('PHP_WINDOWS_VERSION_MAJOR') ? 'NUL' : '/dev/null');
                 @exec(escapeshellarg(PHP_BINARY) .' '.escapeshellarg($this->target).' self-update --'.$channel.' --set-channel-only -q > '.$null.' 2> '.$null, $output);
@@ -599,10 +526,8 @@ class Installer
         } catch (Exception $e) {
             $result = false;
         }
-
         // Always clean up
         $this->cleanUp($result);
-
         if (isset($e)) {
             // Rethrow anything that is not a RuntimeException
             if (!$e instanceof RuntimeException) {
@@ -612,7 +537,6 @@ class Installer
         }
         return $result;
     }
-
     /**
      * Initialization methods to set the required filenames and composer url
      *
@@ -624,18 +548,14 @@ class Installer
     {
         $this->installPath = (is_dir($installDir) ? rtrim($installDir, '/').'/' : '').$filename;
         $installDir = realpath($installDir) ? realpath($installDir) : getcwd();
-
         if (!is_writeable($installDir)) {
             throw new RuntimeException('The installation directory "'.$installDir.'" is not writable');
         }
-
         $this->target = $installDir.DIRECTORY_SEPARATOR.$filename;
         $this->tmpFile = $installDir.DIRECTORY_SEPARATOR.basename($this->target, '.phar').'-temp.phar';
-
         $uriScheme = $this->disableTls ? 'http' : 'https';
         $this->baseUrl = $uriScheme.'://getcomposer.org';
     }
-
     /**
      * A wrapper around methods to check tls and write public keys
      * @throws RuntimeException If SHA384 is not supported
@@ -645,24 +565,19 @@ class Installer
         if ($this->disableTls) {
             return;
         }
-
         if (!in_array('SHA384', openssl_get_md_methods())) {
             throw new RuntimeException('SHA384 is not supported by your openssl extension');
         }
-
         $this->algo = defined('OPENSSL_ALGO_SHA384') ? OPENSSL_ALGO_SHA384 : 'SHA384';
         $home = $this->getComposerHome();
-
         $this->pubKeys = array(
             'dev' => $this->installKey(self::getPKDev(), $home, 'keys.dev.pub'),
             'tags' => $this->installKey(self::getPKTags(), $home, 'keys.tags.pub')
         );
-
         if (empty($this->cafile) && !HttpClient::getSystemCaRootBundlePath()) {
             $this->cafile = $this->installKey(HttpClient::getPackagedCaFile(), $home, 'cacert.pem');
         }
     }
-
     /**
      * Returns the Composer home directory, creating it if required
      * @throws RuntimeException If the directory cannot be created
@@ -672,10 +587,8 @@ class Installer
     protected function getComposerHome()
     {
         $home = getHomeDir();
-
         if (!is_dir($home)) {
             $this->errHandler->start();
-
             if (!mkdir($home, 0777, true)) {
                 throw new RuntimeException(sprintf(
                     'Unable to create Composer home directory "%s": %s',
@@ -688,7 +601,6 @@ class Installer
         }
         return $home;
     }
-
     /**
      * Writes public key data to disc
      *
@@ -702,25 +614,19 @@ class Installer
     protected function installKey($data, $path, $filename)
     {
         $this->errHandler->start();
-
         $target = $path.DIRECTORY_SEPARATOR.$filename;
         $installed = file_exists($target);
         $write = file_put_contents($target, $data, LOCK_EX);
         @chmod($target, 0644);
-
         $this->errHandler->stop();
-
         if (!$write) {
             throw new RuntimeException(sprintf('Unable to write %s to: %s', $filename, $path));
         }
-
         if (!$installed) {
             $this->installs[] = $target;
         }
-
         return $target;
     }
-
     /**
      * The main install function
      *
@@ -735,33 +641,27 @@ class Installer
         $result = false;
         $infoMsg = 'Downloading...';
         $infoType = 'info';
-
         while ($retries--) {
             if (!$this->quiet) {
                 out($infoMsg, $infoType);
                 $infoMsg = 'Retrying...';
                 $infoType = 'error';
             }
-
             if (!$this->getVersion($channel, $version, $url, $error)) {
                 out($error, 'error');
                 continue;
             }
-
             if (!$this->downloadToTmp($url, $signature, $error)) {
                 out($error, 'error');
                 continue;
             }
-
             if (!$this->verifyAndSave($version, $signature, $error)) {
                 out($error, 'error');
                 continue;
             }
-
             $result = true;
             break;
         }
-
         if (!$this->quiet) {
             if ($result) {
                 out(PHP_EOL."Composer (version {$version}) successfully installed to: {$this->target}", 'success');
@@ -773,7 +673,6 @@ class Installer
         }
         return $result;
     }
-
     /**
      * Sets the version url, downloading version data if required
      *
@@ -787,24 +686,19 @@ class Installer
     protected function getVersion($channel, &$version, &$url, &$error)
     {
         $error = '';
-
         if ($version) {
             if (empty($url)) {
                 $url = $this->baseUrl."/download/{$version}/composer.phar";
             }
             return true;
         }
-
         $this->errHandler->start();
-
         if ($this->downloadVersionData($data, $error)) {
             $this->parseVersionData($data, $channel, $version, $url);
         }
-
         $this->errHandler->stop();
         return empty($error);
     }
-
     /**
      * Downloads and json-decodes version data
      *
@@ -817,19 +711,16 @@ class Installer
     {
         $url = $this->baseUrl.'/versions';
         $errFmt = 'The "%s" file could not be %s: %s';
-
         if (!$json = $this->httpClient->get($url)) {
             $error = sprintf($errFmt, $url, 'downloaded', $this->errHandler->message);
             return false;
         }
-
         if (!$data = json_decode($json, true)) {
             $error = sprintf($errFmt, $url, 'json-decoded', $this->getJsonError());
             return false;
         }
         return true;
     }
-
     /**
      * A wrapper around the methods needed to download and save the phar
      *
@@ -845,24 +736,19 @@ class Installer
         $errFmt = 'The "%s" file could not be downloaded: %s';
         $sigUrl = $url.'.sig';
         $this->errHandler->start();
-
         if (!$fh = fopen($this->tmpFile, 'w')) {
             $error = sprintf('Could not create file "%s": %s', $this->tmpFile, $this->errHandler->message);
-
         } elseif (!$this->getSignature($sigUrl, $signature)) {
             $error = sprintf($errFmt, $sigUrl, $this->errHandler->message);
-
         } elseif (!fwrite($fh, $this->httpClient->get($url))) {
             $error = sprintf($errFmt, $url, $this->errHandler->message);
         }
-
         if (is_resource($fh)) {
             fclose($fh);
         }
         $this->errHandler->stop();
         return empty($error);
     }
-
     /**
      * Verifies the downloaded file and saves it to the target location
      *
@@ -875,26 +761,20 @@ class Installer
     protected function verifyAndSave($version, $signature, &$error)
     {
         $error = '';
-
         if (!$this->validatePhar($this->tmpFile, $pharError)) {
             $error = 'The download is corrupt: '.$pharError;
-
         } elseif (!$this->verifySignature($version, $signature, $this->tmpFile)) {
             $error = 'Signature mismatch, could not verify the phar file integrity';
-
         } else {
             $this->errHandler->start();
-
             if (!rename($this->tmpFile, $this->target)) {
                 $error = sprintf('Could not write to file "%s": %s', $this->target, $this->errHandler->message);
             }
             chmod($this->target, 0755);
             $this->errHandler->stop();
         }
-
         return empty($error);
     }
-
     /**
      * Parses an array of version data to match the required channel
      *
@@ -912,7 +792,6 @@ class Installer
                 break;
             }
         }
-
         if (!$version) {
             $error = sprintf(
                 'None of the %d %s version(s) of Composer matches your PHP version (%s / ID: %d)',
@@ -924,7 +803,6 @@ class Installer
             throw new RuntimeException($error);
         }
     }
-
     /**
      * Downloads the digital signature of required phar file
      *
@@ -937,17 +815,14 @@ class Installer
     {
         if (!$result = $this->disableTls) {
             $signature = $this->httpClient->get($url);
-
             if ($signature) {
                 $signature = json_decode($signature, true);
                 $signature = base64_decode($signature['sha384']);
                 $result = true;
             }
         }
-
         return $result;
     }
-
     /**
      * Verifies the signature of the downloaded phar
      *
@@ -962,20 +837,16 @@ class Installer
         if (!$result = $this->disableTls) {
             $path = preg_match('{^[0-9a-f]{40}$}', $version) ? $this->pubKeys['dev'] : $this->pubKeys['tags'];
             $pubkeyid = openssl_pkey_get_public('file://'.$path);
-
             $result = 1 === openssl_verify(
                 file_get_contents($file),
                 $signature,
                 $pubkeyid,
                 $this->algo
             );
-
             openssl_free_key($pubkeyid);
         }
-
         return $result;
     }
-
     /**
      * Validates the downloaded phar file
      *
@@ -989,14 +860,12 @@ class Installer
         if (ini_get('phar.readonly')) {
             return true;
         }
-
         try {
             // Test the phar validity
             $phar = new Phar($pharFile);
             // Free the variable to unlock the file
             unset($phar);
             $result = true;
-
         } catch (Exception $e) {
             if (!$e instanceof UnexpectedValueException && !$e instanceof PharException) {
                 throw $e;
@@ -1006,7 +875,6 @@ class Installer
         }
         return $result;
     }
-
     /**
      * Returns a string representation of the last json error
      *
@@ -1020,7 +888,6 @@ class Installer
             return 'json_last_error = '.json_last_error();
         }
     }
-
     /**
      * Cleans up resources at the end of the installation
      *
@@ -1037,7 +904,6 @@ class Installer
             $this->uninstall();
         }
     }
-
     /**
      * Outputs unique errors when in quiet mode
      *
@@ -1046,7 +912,6 @@ class Installer
     {
         $errors = explode(PHP_EOL, ob_get_clean());
         $shown = array();
-
         foreach ($errors as $error) {
             if ($error && !in_array($error, $shown)) {
                 out($error, 'error');
@@ -1054,7 +919,6 @@ class Installer
             }
         }
     }
-
     /**
      * Uninstalls newly-created files and directories on failure
      *
@@ -1068,12 +932,10 @@ class Installer
                 @rmdir($target);
             }
         }
-
         if (file_exists($this->tmpFile)) {
             @unlink($this->tmpFile);
         }
     }
-
     public static function getPKDev()
     {
         return <<<PKDEV
@@ -1093,7 +955,6 @@ wSEuAuRm+pRqi8BRnQ/GKUcCAwEAAQ==
 -----END PUBLIC KEY-----
 PKDEV;
     }
-
     public static function getPKTags()
     {
         return <<<PKTAGS
@@ -1114,12 +975,10 @@ RGv89BPD+2DLnJysngsvVaUCAwEAAQ==
 PKTAGS;
     }
 }
-
 class ErrorHandler
 {
     public $message;
     protected $active;
-
     /**
      * Handle php errors
      *
@@ -1133,7 +992,6 @@ class ErrorHandler
         }
         $this->message .= preg_replace('{^file_get_contents\(.*?\): }', '', $msg);
     }
-
     /**
      * Starts error-handling if not already active
      *
@@ -1147,7 +1005,6 @@ class ErrorHandler
         }
         $this->message = '';
     }
-
     /**
      * Stops error-handling if active
      *
@@ -1161,12 +1018,9 @@ class ErrorHandler
         }
     }
 }
-
 class HttpClient {
-
     private $options = array('http' => array());
     private $disableTls = false;
-
     public function __construct($disableTls = false, $cafile = false)
     {
         $this->disableTls = $disableTls;
@@ -1180,12 +1034,10 @@ class HttpClient {
             $this->options = array_replace_recursive($this->options, $options);
         }
     }
-
     public function get($url)
     {
         $context = $this->getStreamContext($url);
         $result = file_get_contents($url, false, $context);
-
         if ($result && extension_loaded('zlib')) {
             $decode = false;
             foreach ($http_response_header as $header) {
@@ -1196,7 +1048,6 @@ class HttpClient {
                     $decode = false;
                 }
             }
-
             if ($decode) {
                 if (version_compare(PHP_VERSION, '5.4.0', '>=')) {
                     $result = zlib_decode($result);
@@ -1204,16 +1055,13 @@ class HttpClient {
                     // work around issue with gzuncompress & co that do not work with all gzip checksums
                     $result = file_get_contents('compress.zlib://data:application/octet-stream;base64,'.base64_encode($result));
                 }
-
                 if (!$result) {
                     throw new RuntimeException('Failed to decode zlib stream');
                 }
             }
         }
-
         return $result;
     }
-
     protected function getStreamContext($url)
     {
         if ($this->disableTls === false) {
@@ -1226,7 +1074,6 @@ class HttpClient {
         // Keeping the above mostly isolated from the code copied from Composer.
         return $this->getMergedStreamContext($url);
     }
-
     protected function getTlsStreamContextDefaults($cafile)
     {
         $ciphers = implode(':', array(
@@ -1267,7 +1114,6 @@ class HttpClient {
             '!MD5',
             '!PSK'
         ));
-
         /**
          * CN_match and SNI_server_name are only known once a URL is passed.
          * They will be set in the getOptionsForUrl() method which receives a URL.
@@ -1282,7 +1128,6 @@ class HttpClient {
                 'SNI_enabled' => true,
             )
         );
-
         /**
          * Attempt to find a local cafile or throw an exception.
          * The user may go download one if this occurs.
@@ -1297,17 +1142,14 @@ class HttpClient {
         } else {
             throw new RuntimeException('A valid cafile could not be located automatically.');
         }
-
         /**
          * Disable TLS compression to prevent CRIME attacks where supported.
          */
         if (version_compare(PHP_VERSION, '5.4.13') >= 0) {
             $options['ssl']['disable_compression'] = true;
         }
-
         return $options;
     }
-
     /**
      * function copied from Composer\Util\StreamContextFactory::getContext
      *
@@ -1320,17 +1162,14 @@ class HttpClient {
     protected function getMergedStreamContext($url)
     {
         $options = $this->options;
-
         // Handle system proxy
         if (!empty($_SERVER['HTTP_PROXY']) || !empty($_SERVER['http_proxy'])) {
             // Some systems seem to rely on a lowercased version instead...
             $proxy = parse_url(!empty($_SERVER['http_proxy']) ? $_SERVER['http_proxy'] : $_SERVER['HTTP_PROXY']);
         }
-
         if (!empty($proxy)) {
             $proxyURL = isset($proxy['scheme']) ? $proxy['scheme'] . '://' : '';
             $proxyURL .= isset($proxy['host']) ? $proxy['host'] : '';
-
             if (isset($proxy['port'])) {
                 $proxyURL .= ":" . $proxy['port'];
             } elseif ('http://' == substr($proxyURL, 0, 7)) {
@@ -1338,18 +1177,14 @@ class HttpClient {
             } elseif ('https://' == substr($proxyURL, 0, 8)) {
                 $proxyURL .= ":443";
             }
-
             // http(s):// is not supported in proxy
             $proxyURL = str_replace(array('http://', 'https://'), array('tcp://', 'ssl://'), $proxyURL);
-
             if (0 === strpos($proxyURL, 'ssl:') && !extension_loaded('openssl')) {
                 throw new RuntimeException('You must enable the openssl extension to use a proxy over https');
             }
-
             $options['http'] = array(
                 'proxy'           => $proxyURL,
             );
-
             // enabled request_fulluri unless it is explicitly disabled
             switch (parse_url($url, PHP_URL_SCHEME)) {
                 case 'http': // default request_fulluri to true
@@ -1365,19 +1200,15 @@ class HttpClient {
                     }
                     break;
             }
-
-
             if (isset($proxy['user'])) {
                 $auth = urldecode($proxy['user']);
                 if (isset($proxy['pass'])) {
                     $auth .= ':' . urldecode($proxy['pass']);
                 }
                 $auth = base64_encode($auth);
-
                 $options['http']['header'] = "Proxy-Authorization: Basic {$auth}\r\n";
             }
         }
-
         if (isset($options['http']['header'])) {
             $options['http']['header'] .= "Connection: close\r\n";
         } else {
@@ -1388,10 +1219,8 @@ class HttpClient {
         }
         $options['http']['header'] .= "User-Agent: Composer Installer\r\n";
         $options['http']['protocol_version'] = 1.1;
-
         return stream_context_create($options);
     }
-
     /**
     * This method was adapted from Sslurp.
     * https://github.com/EvanDotPro/Sslurp
@@ -1427,35 +1256,29 @@ class HttpClient {
     public static function getSystemCaRootBundlePath()
     {
         static $caPath = null;
-
         if ($caPath !== null) {
             return $caPath;
         }
-
         // If SSL_CERT_FILE env variable points to a valid certificate/bundle, use that.
         // This mimics how OpenSSL uses the SSL_CERT_FILE env variable.
         $envCertFile = getenv('SSL_CERT_FILE');
         if ($envCertFile && is_readable($envCertFile) && validateCaFile(file_get_contents($envCertFile))) {
             return $caPath = $envCertFile;
         }
-
         // If SSL_CERT_DIR env variable points to a valid certificate/bundle, use that.
         // This mimics how OpenSSL uses the SSL_CERT_FILE env variable.
         $envCertDir = getenv('SSL_CERT_DIR');
         if ($envCertDir && is_dir($envCertDir) && is_readable($envCertDir)) {
             return $caPath = $envCertDir;
         }
-
         $configured = ini_get('openssl.cafile');
         if ($configured && strlen($configured) > 0 && is_readable($configured) && validateCaFile(file_get_contents($configured))) {
             return $caPath = $configured;
         }
-
         $configured = ini_get('openssl.capath');
         if ($configured && is_dir($configured) && is_readable($configured)) {
             return $caPath = $configured;
         }
-
         $caBundlePaths = array(
             '/etc/pki/tls/certs/ca-bundle.crt', // Fedora, RHEL, CentOS (ca-certificates package)
             '/etc/ssl/certs/ca-certificates.crt', // Debian, Ubuntu, Gentoo, Arch Linux (ca-certificates package)
@@ -1468,23 +1291,19 @@ class HttpClient {
             '/etc/ssl/cert.pem', // OpenBSD
             '/usr/local/etc/ssl/cert.pem', // FreeBSD 10.x
         );
-
         foreach ($caBundlePaths as $caBundle) {
             if (@is_readable($caBundle) && validateCaFile(file_get_contents($caBundle))) {
                 return $caPath = $caBundle;
             }
         }
-
         foreach ($caBundlePaths as $caBundle) {
             $caBundle = dirname($caBundle);
             if (is_dir($caBundle) && glob($caBundle.'/*')) {
                 return $caPath = $caBundle;
             }
         }
-
         return $caPath = false;
     }
-
     public static function getPackagedCaFile()
     {
         return <<<CACERT
@@ -1506,8 +1325,6 @@ class HttpClient {
 ## Conversion done with mk-ca-bundle.pl version 1.27.
 ## SHA256: 93753268e1c596aee21893fb1c6975338389132f15c942ed65fc394a904371d7
 ##
-
-
 GlobalSign Root CA
 ==================
 -----BEGIN CERTIFICATE-----
@@ -1528,7 +1345,6 @@ j/8N7yy5Y0b2qvzfvGn9LhJIZJrglfCm7ymPAbEVtQwdpf5pLGkkeB6zpxxxYu7KyJesF12KwvhH
 hm4qxFYxldBniYUr+WymXUadDKqC5JlR3XC321Y9YeRq4VzW9v493kHMB65jUr9TU/Qr6cf9tveC
 X4XSQRjbgbMEHMUfpIBvFSDJ3gyICh3WZlXi/EjJKSZp4A==
 -----END CERTIFICATE-----
-
 GlobalSign Root CA - R2
 =======================
 -----BEGIN CERTIFICATE-----
@@ -1550,7 +1366,6 @@ BgkqhkiG9w0BAQUFAAOCAQEAmYFThxxol4aR7OBKuEQLq4GsJ0/WwbgcQ3izDJr86iw8bmEbTUsp
 9G+dwfCMNYxdAfvDbbnvRG15RjF+Cv6pgsH/76tuIMRQyV+dTZsXjAzlAcmgQWpzU/qlULRuJQ/7
 TBj0/VLZjmmx6BEP3ojY+x1J96relc8geMJgEtslQIxq/H5COEBkEveegeGTLg==
 -----END CERTIFICATE-----
-
 Verisign Class 3 Public Primary Certification Authority - G3
 ============================================================
 -----BEGIN CERTIFICATE-----
@@ -1574,7 +1389,6 @@ j267Cz3qWhMeDGBvtcC1IyIuBwvLqXTLR7sdwdela8wv0kL9Sd2nic9TutoAWii/gt/4uhMdUIaC
 xuKhXFSbplQAz/DxwceYMBo7Nhbbo27q/a2ywtrvAkcTisDxszGtTxzhT5yvDwyd93gN2PQ1VoDa
 t20Xj50egWTh/sVFuq1ruQp6Tk9LhO5L8X3dEQ==
 -----END CERTIFICATE-----
-
 Entrust.net Premium 2048 Secure Server CA
 =========================================
 -----BEGIN CERTIFICATE-----
@@ -1598,7 +1412,6 @@ zX1XEC+bBAlahLVu2B064dae0Wx5XnkcFMXj0EyTO2U87d89vqbllRrDtRnDvV5bu/8j72gZyxKT
 J1wDLW8w0B62GqzeWvfRqqgnpv55gcR5mTNXuhKwqeBCbJPKVt7+bYQLCIt+jerXmCHG8+c8eS9e
 nNFMFY3h7CI3zJpDC5fcgJCNs2ebb0gIFVbPv/ErfF6adulZkMV8gzURZVE=
 -----END CERTIFICATE-----
-
 Baltimore CyberTrust Root
 =========================
 -----BEGIN CERTIFICATE-----
@@ -1619,7 +1432,6 @@ hbgF/X++ZRGjD8ACtPhSNzkE1akxehi/oCr0Epn3o0WC4zxe9Z2etciefC7IpJ5OCBRLbf1wbWsa
 Y71k5h+3zvDyny67G7fyUIhzksLi4xaNmjICq44Y3ekQEe5+NauQrz4wlHrQMz2nZQ/1/I6eYs9H
 RCwBXbsdtTLSR9I4LtD+gdwyah617jzV/OeBHRnDJELqYzmp
 -----END CERTIFICATE-----
-
 AddTrust Low-Value Services Root
 ================================
 -----BEGIN CERTIFICATE-----
@@ -1643,7 +1455,6 @@ eDdXL+gzB2ffHsdrKpV2ro9Xo/D0UrSpUwjP4E/TelOL/bscVjby/rK25Xa71SJlpz/+0WatC7xr
 mYbvP33zGDLKe8bjq2RGlfgmadlVg3sslgf/WSxEo8bl6ancoWOAWiFeIc9TVPC6b4nbqKqVz4vj
 ccweGyBECMB6tkD9xOQ14R0WHNC8K47Wcdk=
 -----END CERTIFICATE-----
-
 AddTrust External Root
 ======================
 -----BEGIN CERTIFICATE-----
@@ -1667,7 +1478,6 @@ j7DYd7usQWxHYINRsPkyPef89iYTx4AWpb9a/IfPeHmJIZriTAcKhjW88t5RxNKWt9x+Tu5w/Rw5
 e6cJDUCrat2PisP29owaQgVR1EX1n6diIWgVIEM8med8vSTYqZEXc4g/VhsxOBi0cQ+azcgOno4u
 G+GMmIPLHzHxREzGBHNJdmAPx/i9F4BrLunMTA5amnkPIAou1Z5jJh5VkpTYghdae9C8x49OhgQ=
 -----END CERTIFICATE-----
-
 AddTrust Public Services Root
 =============================
 -----BEGIN CERTIFICATE-----
@@ -1691,7 +1501,6 @@ GEjwxrzQvzSAlsJKsW2Ox5BF3i9nrEUEo3rcVZLJR2bYGozH7ZxOmuASu7VqTITh4SINhwBk/ox9
 Yjllpu9CtoAlEmEBqCQTcAARJl/6NVDFSMwGR+gn2HCNX2TmoUQmXiLsks3/QppEIW1cxeMiHV9H
 EufOX1362KqxMy3ZdvJOOjMMK7MtkAY=
 -----END CERTIFICATE-----
-
 AddTrust Qualified Certificates Root
 ====================================
 -----BEGIN CERTIFICATE-----
@@ -1715,7 +1524,6 @@ dgWTP5XHAeZpVTh/EGGZyeNfpso+gmNIquIISD6q8rKFYqa0p9m9N5xotS1WfbC3P6CxB9bpT9ze
 RXEwMn8bLgn5v1Kh7sKAPgZcLlVAwRv1cEWw3F369nJad9Jjzc9YiQBCYz95OdBEsIJuQRno3eDB
 iFrRHnGTHyQwdOUeqN48Jzd/g66ed8/wMLH/S5noxqE=
 -----END CERTIFICATE-----
-
 Entrust Root Certification Authority
 ====================================
 -----BEGIN CERTIFICATE-----
@@ -1741,7 +1549,6 @@ v52Vr2ua2J7p8eRDjeIRRDq/r72DQnNSi6q7pynP9WQcCk3RvKqsnyrQ/39/2n3qse0wJcGE2jTS
 W3iDVuycNsMm4hH2Z0kdkquM++v/eu6FSqdQgPCnXEqULl8FmTxSQeDNtGPPAUO6nIPcj2A781q0
 tHuu2guQOHXvgR1m0vdXcDazv/wor3ElhVsT/h5/WrQ8
 -----END CERTIFICATE-----
-
 GeoTrust Global CA
 ==================
 -----BEGIN CERTIFICATE-----
@@ -1762,7 +1569,6 @@ mqUPuLk/IH2uSrW4nOQdtqvmlKXBx4Ot2/Unhw4EbNX/3aBd7YdStysVAq45pmp06drE57xNNB6p
 XE0zX5IJL4hmXXeXxx12E6nV5fEWCRE11azbJHFwLJhWC9kXtNHjUStedejV0NxPNO3CBWaAocvm
 Mw==
 -----END CERTIFICATE-----
-
 GeoTrust Global CA 2
 ====================
 -----BEGIN CERTIFICATE-----
@@ -1783,7 +1589,6 @@ OzRldRtxIR0sFAqwlpW41uryZfspuk/qkZN0abby/+Ea0AzRdoXLiiW9l14sbxWZJue2Kf8i7MkC
 x1YAzUm5s2x7UwQa4qjJqhIFI8LO57sEAszAR6LkxCkvW0VXiVHuPOtSCP8HNR6fNWpHSlaY0VqF
 H4z1Ir+rzoPz4iIprn2DQKi6bA==
 -----END CERTIFICATE-----
-
 GeoTrust Universal CA
 =====================
 -----BEGIN CERTIFICATE-----
@@ -1813,7 +1618,6 @@ xfMnZmaGrGiR/9nmUxwPi1xpZQomyB40w11Re9epnAahNt3ViZS82eQtDF4JbAiXfKM9fJP/P6EU
 p8+1Xevb2xzEdt+Iub1FBZUbrvxGakyvSOPOrg/SfuvmbJxPgWp6ZKy7PtXny3YuxadIwVyQD8vI
 P/rmMuGNG2+k5o7Y+SlIis5z/iw=
 -----END CERTIFICATE-----
-
 GeoTrust Universal CA 2
 =======================
 -----BEGIN CERTIFICATE-----
@@ -1843,7 +1647,6 @@ FGdTbHFcJoRNdVq2fmBWqU2t+5sel/MN2dKXVHfaPRK34B7vCAas+YWH6aLcr34YEoP9VhdBLtUp
 gn2Z9DH2canPLAEnpQW5qrJITirvn5NSUZU8UnOOVkwXQMAJKOSLakhT2+zNVVXxxvjpoixMptEm
 X36vWkzaH6byHCx+rgIW0lbQL1dTR+iS
 -----END CERTIFICATE-----
-
 Visa eCommerce Root
 ===================
 -----BEGIN CERTIFICATE-----
@@ -1865,7 +1668,6 @@ zkWKsKZJ/0x9nXGIxHYdkFsd7v3M9+79YKWxehZx0RbQfBI8bGmX265fOZpwLwU8GUYEmSA20GBu
 YQa7FkKMcPcw++DbZqMAAb3mLNqRX6BGi01qnD093QVG/na/oAo85ADmJ7f/hC3euiInlhBx6yLt
 398znM/jra6O1I7mT1GvFpLgXPYHDw==
 -----END CERTIFICATE-----
-
 Certum Root CA
 ==============
 -----BEGIN CERTIFICATE-----
@@ -1884,7 +1686,6 @@ GrZgFCdsMneMvLJymM/NzD+5yCRCFNZX/OYmQ6kd5YCQzgNUKD73P9P4Te1qCjqTE5s7FCMTY5w/
 0YcneeVMUeMBrYVdGjux1XMQpNPyvG5k9VpWkKjHDkx0Dy5xO/fIR/RpbxXyEV6DHpx8Uq79AtoS
 qFlnGNu8cN2bsWntgM6JQEhqDjXKKWYVIZQs6GAqm4VKQPNriiTsBhYscw==
 -----END CERTIFICATE-----
-
 Comodo AAA Services root
 ========================
 -----BEGIN CERTIFICATE-----
@@ -1908,7 +1709,6 @@ Rt0vxuBqw8M0Ayx9lt1awg6nCpnBBYurDC/zXDrPbDdVCYfeU0BsWO/8tqtlbgT2G9w84FoVxp7Z
 8VlIMCFlA2zs6SFz7JsDoeA3raAVGI/6ugLOpyypEBMs1OUIJqsil2D4kF501KKaU73yqWjgom7C
 12yxow+ev+to51byrvLjKzg6CYG1a4XXvi3tPxq3smPi9WIsgtRqAEFQ8TmDn5XpNpaYbg==
 -----END CERTIFICATE-----
-
 Comodo Secure Services root
 ===========================
 -----BEGIN CERTIFICATE-----
@@ -1933,7 +1733,6 @@ DXE97IMzbtFuMhbsmMcWi1mmNKsFVy2T96oTy9IT4rcuO81rUBcJaD61JlfutuC23bkpgHl9j6Pw
 pCikFcSF9CfUa7/lXORlAnZUtOM3ZiTTGWHIUhDlizeauan5Hb/qmZJhlv8BzaFfDbxxvA6sCx1H
 RR3B7Hzs/Sk=
 -----END CERTIFICATE-----
-
 Comodo Trusted Services root
 ============================
 -----BEGIN CERTIFICATE-----
@@ -1958,7 +1757,6 @@ BHcTuPQV1T84zJQ6VdCsmPW6AF/ghhmBeC8owH7TzEIK9a5QoNE+xqFx7D+gIIxmOom0jtTYsU0l
 R+4viMi14QVFwL4Ucd56/Y57fU0IlqUSc/AtyjcndBInTMu2l+nZrghtWjlA3QVHdWpaIbOjGM9O
 9y5Xt5hwXsjEeLBi
 -----END CERTIFICATE-----
-
 QuoVadis Root CA
 ================
 -----BEGIN CERTIFICATE-----
@@ -1990,7 +1788,6 @@ gI4JVrmcGmD+XcHXetwReNDWXcG31a0ymQM6isxUJTkxgXsTIlG6Rmyhu576BGxJJnSP0nPrzDCi
 5upZIof4l/UO/erMkqQWxFIY6iHOsfHmhIHluqmGKPJDWl0Snawe2ajlCmqnf6CHKc/yiU3U7MXi
 5nrQNiOKSnQ2+Q==
 -----END CERTIFICATE-----
-
 QuoVadis Root CA 2
 ==================
 -----BEGIN CERTIFICATE-----
@@ -2021,7 +1818,6 @@ f6dQlfe6yJvmjqIBxdZmv3lh8zwc4bmCXF2gw+nYSL0ZohEUGW6yhhtoPkg3Goi3XZZenMfvJ2II
 4pEZXNLxId26F0KCl3GBUzGpn/Z9Yr9y4aOTHcyKJloJONDO1w2AFrR4pTqHTI2KpdVGl/IsELm8
 VCLAAVBpQ570su9t+Oza8eOx79+Rj1QqCyXBJhnEUhAFZdWCEOrCMc0u
 -----END CERTIFICATE-----
-
 QuoVadis Root CA 3
 ==================
 -----BEGIN CERTIFICATE-----
@@ -2056,7 +1852,6 @@ g/WwYjnPbFfiTNKRCw51KBuav/0aQ/HKd/s7j2G4aSgWQgRecCocIdiP4b0jWy10QJLZYxkNc91p
 vGJHvOB0K7Lrfb5BG7XARsWhIstfTsEokt4YutUqKLsRixeTmJlglFwjz1onl14LBQaTNx47aTbr
 qZ5hHY8y2o4M1nQ+ewkk2gF3R8Q7zTSMmfXK4SVhM7JZG+Ju1zdXtg2pEto=
 -----END CERTIFICATE-----
-
 Security Communication Root CA
 ==============================
 -----BEGIN CERTIFICATE-----
@@ -2077,7 +1872,6 @@ s58+OmJYxUmtYg5xpTKqL8aJdkNAExNnPaJUJRDL8Try2frbSVa7pv6nQTXD4IhhyYjH3zYQIphZ
 6rBK+1YWc26sTfcioU+tHXotRSflMMFe8toTyyVCUZVHA4xsIcx0Qu1T/zOLjw9XARYvz6buyXAi
 FL39vmwLAw==
 -----END CERTIFICATE-----
-
 Sonera Class 2 Root CA
 ======================
 -----BEGIN CERTIFICATE-----
@@ -2097,7 +1891,6 @@ Oe9r5yF1BgfYErQhIHBCcYHaPJo2vqZbDWpsmh+Re/n570K6Tk6ezAyNlNzZRZxe7EJQY670XcSx
 EtzKO6gunRRaBXW37Ndj4ro1tgQIkejanZz2ZrUYrAqmVCY0M9IbwdR/GjqOC6oybtv8TyWf2TLH
 llpwrN9M
 -----END CERTIFICATE-----
-
 UTN USERFirst Hardware Root CA
 ==============================
 -----BEGIN CERTIFICATE-----
@@ -2123,7 +1916,6 @@ lzvukJDKxA4fFm517zP4029bHpbj4HR3dHuKom4t3XbWOTCC8KucUvIqx69JXn7HaOWCgchqJ/kn
 iCrVWFCVH/A7HFe7fRQ5YiuayZSSKqMiDP+JJn1fIytH1xUdqWqeUQ0qUZ6B+dQ7XnASfxAynB67
 nfhmqA==
 -----END CERTIFICATE-----
-
 Camerfirma Chambers of Commerce Root
 ====================================
 -----BEGIN CERTIFICATE-----
@@ -2150,7 +1942,6 @@ UPf6s+xCX6ndbcj0dc97wXImsQEcXCz9ek60AcUFV7nnPKoF2YjpB0ZBzu9Bga5Y34OirsrXdx/n
 ADydb47kMgkdTXg0eDQ8lJsm7U9xxhl6vSAiSFr+S30Dt+dYvsYyTnQeaN2oaFuzPu5ifdmA6Ap1
 erfutGWaIZDgqtCYvDi1czyL+Nw=
 -----END CERTIFICATE-----
-
 Camerfirma Global Chambersign Root
 ==================================
 -----BEGIN CERTIFICATE-----
@@ -2177,7 +1968,6 @@ PJ7oKXqJ1/6v/2j1pReQvayZzKWGVwlnRtvWFsJG8eSpUPWP0ZIV018+xgBJOm5YstHRJw0lyDL4
 IBHNfTIzSJRUTN3cecQwn+uOuFW114hcxWokPbLTBQNRxgfvzBRydD1ucs4YKIxKoHflCStFREes
 t2d/AYoFWpO+ocH/+OcOZ6RHSXZddZAa9SaP8A==
 -----END CERTIFICATE-----
-
 XRamp Global CA Root
 ====================
 -----BEGIN CERTIFICATE-----
@@ -2201,7 +1991,6 @@ qZ4Bfj8pzgCT3/3JknOJiWSe5yvkHJEs0rnOfc5vMZnT5r7SHpDwCRR5XCOrTdLaIR9NmXmd4c8n
 nxCbHIgNsIpkQTG4DmyQJKSbXHGPurt+HBvbaoAPIbzp26a3QPSyi6mx5O+aGtA9aZnuqCij4Tyz
 8LIRnM98QObd50N9otg6tamN8jSZxNQQ4Qb9CYQQO+7ETPTsJ3xCwnR8gooJybQDJbw=
 -----END CERTIFICATE-----
-
 Go Daddy Class 2 CA
 ===================
 -----BEGIN CERTIFICATE-----
@@ -2225,7 +2014,6 @@ HmyW74cNxA9hi63ugyuV+I6ShHI56yDqg+2DzZduCLzrTia2cyvk0/ZM/iZx4mERdEr/VxqHD3VI
 Ls9RaRegAhJhldXRQLIQTO7ErBBDpqWeCtWVYpoNz4iCxTIM5CufReYNnyicsbkqWletNw+vHX/b
 vZ8=
 -----END CERTIFICATE-----
-
 Starfield Class 2 CA
 ====================
 -----BEGIN CERTIFICATE-----
@@ -2249,7 +2037,6 @@ xy16paq8U4Zt3VekyvggQQto8PT7dL5WXXp59fkdheMtlb71cZBDzI0fmgAKhynpVSJYACPq4xJD
 KVtHCN2MQWplBqjlIapBtJUhlbl90TSrE9atvNziPTnNvT51cKEYWQPJIrSPnNVeKtelttQKbfi3
 QBFGmh95DmK/D5fs4C8fF5Q=
 -----END CERTIFICATE-----
-
 StartCom Certification Authority
 ================================
 -----BEGIN CERTIFICATE-----
@@ -2290,7 +2077,6 @@ yvqCUqDvr0tVk+vBtfAii6w0TiYiBKGHLHVKt+V9E9e4DGTANtLJL4YSjCMJwRuCO3NJo2pXh5Tl
 lwLFCRsI3FU34oH7N4RDYiDK51ZLZer+bMEkkyShNOsF/5oirpt9P/FlUQqmMGqz9IgcgA38coro
 g14=
 -----END CERTIFICATE-----
-
 Taiwan GRCA
 ===========
 -----BEGIN CERTIFICATE-----
@@ -2320,7 +2106,6 @@ Z6MmnD+iMsJKxYEYMRBWqoTvLQr/uB930r+lWKBi5NdLkXWNiYCYfm3LU05er/ayl4WXudpVBrkk
 CZBUkQM8R+XVyWXgt0t97EfTsws+rZ7QdAAO671RrcDeLMDDav7v3Aun+kbfYNucpllQdSNpc5Oy
 +fwC00fmcc4QAu4njIT/rEUNE1yDMuAlpYYsfPQS
 -----END CERTIFICATE-----
-
 Swisscom Root CA 1
 ==================
 -----BEGIN CERTIFICATE-----
@@ -2352,7 +2137,6 @@ nvy5JMWzFYJ+vq6VK+uxwNrjAWALXmmshFZhvnEX/h0TD/7Gh0Xp/jKgGg0TpJRVcaUWi7rKibCy
 x/yP2FS1k2Kdzs9Z+z0YzirLNRWCXf9UIltxUvu3yf5gmwBBZPCqKuy2QkPOiWaByIufOVQDJdMW
 NY6E0F/6MBr1mmz0DlP5OlvRHA==
 -----END CERTIFICATE-----
-
 DigiCert Assured ID Root CA
 ===========================
 -----BEGIN CERTIFICATE-----
@@ -2374,7 +2158,6 @@ SbNd67IJKusm7Xi+fT8r87cmNW1fiQG2SVufAQWbqz0lwcy2f8Lxb4bG+mRo64EtlOtCt/qMHt1i
 8b5QZ7dsvfPxH2sMNgcWfzd8qVttevESRmCD1ycEvkvOl77DZypoEd+A5wwzZr8TDRRu838fYxAe
 +o0bJW1sj6W3YQGx0qMmoRBxna3iw/nDmVG3KwcIzi7mULKn+gpFL6Lw8g==
 -----END CERTIFICATE-----
-
 DigiCert Global Root CA
 =======================
 -----BEGIN CERTIFICATE-----
@@ -2396,7 +2179,6 @@ tep3Sp+dWOIrWcBAI+0tKIJFPnlUkiaY4IBIqDfv8NZ5YBberOgOzW6sRBc4L0na4UU+Krk2U886
 UAb3LujEV0lsYSEY1QSteDwsOoBrp+uvFRTp2InBuThs4pFsiv9kuXclVzDAGySj4dzp30d8tbQk
 CAUw7C29C79Fv1C5qfPrmAESrciIxpg0X40KPMbp1ZWVbd4=
 -----END CERTIFICATE-----
-
 DigiCert High Assurance EV Root CA
 ==================================
 -----BEGIN CERTIFICATE-----
@@ -2418,7 +2200,6 @@ myPInngiK3BD41VHMWEZ71jFhS9OMPagMRYjyOfiZRYzy78aG6A9+MpeizGLYAiJLQwGXFK3xPkK
 mNEVX58Svnw2Yzi9RKR/5CYrCsSXaQ3pjOLAEFe4yHYSkVXySGnYvCoCWw9E1CAx2/S6cCZdkGCe
 vEsXCS+0yx5DaMkHJ8HSXPfqIbloEpw8nL+e/IBcm2PN7EeqJSdnoDfzAIJ9VNep+OkuE6N36B9K
 -----END CERTIFICATE-----
-
 Certplus Class 2 Primary CA
 ===========================
 -----BEGIN CERTIFICATE-----
@@ -2440,7 +2221,6 @@ TtMTZGnkLuPT55sJmabglZvOGtd/vjzOUrMRFcEPF80Du5wlFbqidon8BvEY0JNLDnyCt6X09l/+
 //1IMwrh3KWBkJtN3X3n57LNXMhqlfil9o3EXXgIvnsG1knPGTZQIy4I5p4FTUcY1Rbpsda2ENW7
 l7+ijrRU
 -----END CERTIFICATE-----
-
 DST Root CA X3
 ==============
 -----BEGIN CERTIFICATE-----
@@ -2460,7 +2240,6 @@ GB5YGV8eAlrwDPGxrancWYaLbumR9YbK+rlmM6pZW87ipxZzR8srzJmwN0jP41ZL9c8PDHIyh8bw
 RLtTcm1D9SZImlJnt1ir/md2cXjbDaJWFBM5JDGFoqgCWjBH4d1QB7wCCZAA62RjYJsWvIjJEubS
 fZGL+T0yjWW06XyxV3bqxbYoOb8VZRzI9neWagqNdwvYkQsEjgfbKbYK7p2CNTUQ
 -----END CERTIFICATE-----
-
 DST ACES CA X6
 ==============
 -----BEGIN CERTIFICATE-----
@@ -2484,7 +2263,6 @@ nExaBqXpIK1FZg9p8d2/6eMyi/rgwYZNcjwu2JN4Cir42NInPRmJX1p7ijvMDNpRrscL9yuwNwXs
 vFcj4jjSm2jzVhKIT0J8uDHEtdvkyCE06UgRNe76x5JXxZ805Mf29w4LTJxoeHtxMcfrHuBnQfO3
 oKfN5XozNmr6mis=
 -----END CERTIFICATE-----
-
 SwissSign Gold CA - G2
 ======================
 -----BEGIN CERTIFICATE-----
@@ -2515,7 +2293,6 @@ KzAiSNDVQTglXaTpXZ/GlHXQRf0wl0OPkKsKx4ZzYEppLd6leNcG2mqeSz53OiATIgHQv2ieY2Br
 NU0LbbqhPcCT4H8js1WtciVORvnSFu+wZMEBnunKoGqYDs/YYPIvSbjkQuE4NRb0yG5P94FW6Lqj
 viOvrv1vA+ACOzB2+httQc8Bsem4yWb02ybzOqR08kkkW8mw0FfB+j564ZfJ
 -----END CERTIFICATE-----
-
 SwissSign Silver CA - G2
 ========================
 -----BEGIN CERTIFICATE-----
@@ -2546,7 +2323,6 @@ WxcFyPKNIzFTONItaj+CuY0IavdeQXRuwxF+B6wpYJE/OMpXEA29MC/HpeZBoNquBYeaoKRlbEwJ
 DIm6uNO5wJOKMPqN5ZprFQFOZ6raYlY+hAhm0sQ2fac+EPyI4NSA5QC9qvNOBqN6avlicuMJT+ub
 DgEj8Z+7fNzcbBGXJbLytGMU0gYqZ4yD9c7qB9iaah7s5Aq7KkzrCWA5zspi2C5u
 -----END CERTIFICATE-----
-
 GeoTrust Primary Certification Authority
 ========================================
 -----BEGIN CERTIFICATE-----
@@ -2567,7 +2343,6 @@ NWMziUnWm07Kx+dOCQD32sfvmWKZd7aVIl6KoKv0uHiYyjgZmclynnjNS6yvGaBzEi38wkG6gZHa
 Floxt/m0cYASSJlyc1pZU8FjUjPtp8nSOQJw+uCxQmYpqptR7TBUIhRf2asdweSU8Pj1K/fqynhG
 1riR/aYNKxoUAT6A8EKglQdebc3MS6RFjasS6LPeWuWgfOgPIh1a6Vk=
 -----END CERTIFICATE-----
-
 thawte Primary Root CA
 ======================
 -----BEGIN CERTIFICATE-----
@@ -2591,7 +2366,6 @@ xPcW6cTYcvnIc3zfFi8VqT79aie2oetaupgf1eNNZAqdE8hhuvU5HIe6uL17In/2/qxAeeWsEG89
 jxt5dovEN7MhGITlNgDrYyCZuen+MwS7QcjBAvlEYyCegc5C09Y/LHbTY5xZ3Y+m4Q6gLkH3LpVH
 z7z9M/P2C2F+fpErgUfCJzDupxBdN49cOSvkBPB7jVaMaA==
 -----END CERTIFICATE-----
-
 VeriSign Class 3 Public Primary Certification Authority - G5
 ============================================================
 -----BEGIN CERTIFICATE-----
@@ -2618,7 +2392,6 @@ KQsTb47bDN0lAtukixlE0kF6BWlKWE9gyn6CagsCqiUXObXbf+eEZSqVir2G3l6BFoMtEMze/aiC
 Km0oHw0LxOXnGiYZ4fQRbxC1lfznQgUy286dUV4otp6F01vvpX1FQHKOtw5rDgb7MzVIcbidJ4vE
 ZV8NhnacRHr2lVz2XTIIM6RUthg/aFzyQkqFOFSDX9HoLPKsEdao7WNq
 -----END CERTIFICATE-----
-
 SecureTrust CA
 ==============
 -----BEGIN CERTIFICATE-----
@@ -2640,7 +2413,6 @@ mbx8IVQr5Fiiu1cprp6poxkmD5kuCLDv/WnPmRoJjeOnnyvJNjR7JLN4TJUXpAYmHrZkUjZfYGfZ
 nMUFdAvnZyPSCPyI6a6Lf+Ew9Dd+/cYy2i2eRDAwbO4H3tI0/NL/QPZL9GZGBlSm8jIKYyYwa5vR
 3ItHuuG51WLQoqD0ZwV4KWMabwTW+MZMo5qxN7SN5ShLHZ4swrhovO0C7jE=
 -----END CERTIFICATE-----
-
 Secure Global CA
 ================
 -----BEGIN CERTIFICATE-----
@@ -2662,7 +2434,6 @@ CDpOGR86p1hcF895P4vkp9MmI50mD1hp/Ed+stCNi5O/KU9DaXR2Z0vPB4zmAve14bRDtUstFJ/5
 3CYNv6ZHdAbYiNE6KTCEztI5gGIbqMdXSbxqVVFnFUq+NQfk1XWYN3kwFNspnWzFacxHVaIw98xc
 f8LDmBxrThaA63p4ZUWiABqvDA1VZDRIuJK58bRQKfJPIx/abKwfROHdI3hRW8cW
 -----END CERTIFICATE-----
-
 COMODO Certification Authority
 ==============================
 -----BEGIN CERTIFICATE-----
@@ -2686,7 +2457,6 @@ RxdMosIGlgnW2/4/PEZB31jiVg88O8EckzXZOFKs7sjsLjBOlDW0JB9LeGna8gI4zJVSk/BwJVmc
 IGfE7vmLV2H0knZ9P4SNVbfo5azV8fUZVqZa+5Acr5Pr5RzUZ5ddBA6+C4OmF4O5MBKgxTMVBbkN
 +8cFduPYSo38NBejxiEovjBFMR7HeL5YYTisO+IBZQ==
 -----END CERTIFICATE-----
-
 Network Solutions Certificate Authority
 =======================================
 -----BEGIN CERTIFICATE-----
@@ -2709,7 +2479,6 @@ GGUsyfJj4akH/nxxH2szJGoeBfcFaMBqEssuXmHLrijTfsK0ZpEmXzwuJF/LWA/rKOyvEZbz3Htv
 wKeI8lN3s2Berq4o2jUsbzRF0ybh3uxbTydrFny9RAQYgrOJeRcQcT16ohZO9QHNpGxlaKFJdlxD
 ydi8NmdspZS11My5vWo1ViHe2MPr+8ukYEywVaCge1ey
 -----END CERTIFICATE-----
-
 COMODO ECC Certification Authority
 ==================================
 -----BEGIN CERTIFICATE-----
@@ -2726,7 +2495,6 @@ BAMCAQYwDwYDVR0TAQH/BAUwAwEB/zAKBggqhkjOPQQDAwNoADBlAjEA7wNbeqy3eApyt4jf/7VG
 FAkK+qDmfQjGGoe9GKhzvSbKYAydzpmfz1wPMOG+FDHqAjAU9JM8SaczepBGR7NjfRObTrdvGDeA
 U/7dIOA1mjbRxwG55tzd8/8dLDoWV9mSOdY=
 -----END CERTIFICATE-----
-
 Security Communication EV RootCA1
 =================================
 -----BEGIN CERTIFICATE-----
@@ -2747,7 +2515,6 @@ Av8mjMSIkh1W/hln8lXkgKNrnKt34VFxDSDbEJrbvXZ5B3eZKK2aXtqxT0QsNY6llsf9g/BYxnnW
 mHyojf6GPgcWkuF75x3sM3Z+Qi5KhfmRiWiEA4Glm5q+4zfFVKtWOxgtQaQM+ELbmaDgcm+7XeEW
 T1MKZPlO9L9OVL14bIjqv5wTJMJwaaJ/D8g8rQjJsJhAoyrniIPtd490
 -----END CERTIFICATE-----
-
 OISTE WISeKey Global Root GA CA
 ===============================
 -----BEGIN CERTIFICATE-----
@@ -2770,7 +2537,6 @@ MMkQyh2I+3QZH4VFvbBsUfk2ftv1TDI6QU9bR8/oCy22xBmddMVHxjtqD6wU2zz0c5ypBd8A3HR4
 hNVQA7bihKOmNqoROgHhGEvWRGizPflTdISzRpFGlgC3gCy24eMQ4tui5yiPAZZiFj4A4xylNoEY
 okxSdsARo27mHbrjWr42U8U+dY+GaSlYU7Wcu2+fXMUY7N0v4ZjJ/L7fCg0=
 -----END CERTIFICATE-----
-
 Certigna
 ========
 -----BEGIN CERTIFICATE-----
@@ -2792,7 +2558,6 @@ PBS1xp81HlDQwY9qcEQCYsuuHWhBp6pX6FOqB9IG9tUUBguRA3UsbHK1YZWaDYu5Def131TN3ubY
 1gkIl2PlwS6wt0QmwCbAr1UwnjvVNioZBPRcHv/PLLf/0P2HQBHVESO7SMAhqaQoLf0V+LBOK/Qw
 WyH8EZE0vkHve52Xdf+XlcCWWC/qu0bXu+TZLg==
 -----END CERTIFICATE-----
-
 Deutsche Telekom Root CA 2
 ==========================
 -----BEGIN CERTIFICATE-----
@@ -2814,7 +2579,6 @@ rZ7/gFnkm0W09juwzTkZmDLl6iFhkOQxIY40sfcvNUqFENrnijchvllj4PKFiDFT1FQUhXB59C4G
 dyd1Lx+4ivn+xbrYNuSD7Odlt79jWvNGr4GUN9RBjNYj1h7P9WgbRGOiWrqnNVmh5XAFmw4jV5mU
 Cm26OWMohpLzGITY+9HPBVZkVw==
 -----END CERTIFICATE-----
-
 Cybertrust Global Root
 ======================
 -----BEGIN CERTIFICATE-----
@@ -2836,7 +2600,6 @@ hO0j9n0Hq0V+09+zv+mKts2oomcrUtW3ZfA5TGOgkXmTUg9U3YO7n9GPp1Nzw8v/MOx8BLjYRB+T
 X3EJIrduPuocA06dGiBh+4E37F78CkWr1+cXVdCg6mCbpvbjjFspwgZgFJ0tl0ypkxWdYcQBX0jW
 WL1WMRJOEcgh4LMRkWXbtKaIOM5V
 -----END CERTIFICATE-----
-
 ePKI Root Certification Authority
 =================================
 -----BEGIN CERTIFICATE-----
@@ -2867,7 +2630,6 @@ gMYeNkh0IkFch4LoGHGLQYlE535YW6i4jRPpp2zDR+2zGp1iro2C6pSe3VkQw63d4k3jMdXH7Ojy
 sP6SHhYKGvzZ8/gntsm+HbRsZJB/9OTEW9c3rkIO3aQab3yIVMUWbuF6aC74Or8NpDyJO3inTmOD
 BCEIZ43ygknQW/2xzQ+DhNQ+IIX3Sj0rnP0qCglN6oH4EZw=
 -----END CERTIFICATE-----
-
 T\xc3\x9c\x42\xC4\xB0TAK UEKAE K\xC3\xB6k Sertifika Hizmet Sa\xC4\x9Flay\xc4\xb1\x63\xc4\xb1s\xc4\xb1 - S\xC3\xBCr\xC3\xBCm 3
 =============================================================================================================================
 -----BEGIN CERTIFICATE-----
@@ -2895,7 +2657,6 @@ y9LQQfMmNkqblWwM7uXRQydmwYj3erMgbOqwaSvHIOgMA8RBBZniP+Rr+KCGgceExh/VS4ESshYh
 LBOhgLJeDEoTniDYYkCrkOpkSi+sDQESeUWoL4cZaMjihccwsnX5OD+ywJO0a+IDRM5noN+J1q2M
 dqMTw5RhK2vZbMEHCiIHhWyFJEapvj+LeISCfiQMnf2BN+MlqO02TpUsyZyQ2uypQjyttgI=
 -----END CERTIFICATE-----
-
 certSIGN ROOT CA
 ================
 -----BEGIN CERTIFICATE-----
@@ -2915,7 +2676,6 @@ x2DEW8xXjrJ1/RsCCdtZb3KTafcxQdaIOL+Hsr0Wefmq5L6IJd1hJyMctTEHBDa0GpC9oHRxUIlt
 vBTjD4au8as+x6AJzKNI0eDbZOeStc+vckNwi/nDhDwTqn6Sm1dTk/pwwpEOMfmbZ13pljheX7Nz
 TogVZ96edhBiIL5VaZVDADlN9u6wWk5JRFRYX0KD
 -----END CERTIFICATE-----
-
 CNNIC ROOT
 ==========
 -----BEGIN CERTIFICATE-----
@@ -2936,7 +2696,6 @@ BS9BsZ4QaRuZluBVeftOhpm4lNqGOGqTo+fLbuXf6iFViZx9fX+Y9QCJ7uOEwFyWtcVG6kbghVW2
 G8kS1sHNzYDzAgE8yGnLRUhj2JTQ7IUOO04RZfSCjKY9ri4ilAnIXOo8gV0WKgOXFlUJ24pBgp5m
 mxE=
 -----END CERTIFICATE-----
-
 GeoTrust Primary Certification Authority - G3
 =============================================
 -----BEGIN CERTIFICATE-----
@@ -2959,7 +2718,6 @@ Ap7aDHdlDkQNkv39sxY2+hENHYwOB4lqKVb3cvTdFZx3NWZXqxNT2I7BQMXXExZacse3aQHEerGD
 AWh9jUGhlBjBJVz88P6DAod8DQ3PLghcSkANPuyBYeYk28rgDi0Hsj5W3I31QYUHSJsMC8tJP33s
 t/3LjWeJGqvtux6jAAgIFyqCXDFdRootD4abdNlF+9RAsXqqaC2Gspki4cErx5z481+oghLrGREt
 -----END CERTIFICATE-----
-
 thawte Primary Root CA - G2
 ===========================
 -----BEGIN CERTIFICATE-----
@@ -2976,7 +2734,6 @@ mtgAMADna3+FGO6Lts6KDPgR4bswCgYIKoZIzj0EAwMDaQAwZgIxAN344FdHW6fmCsO99YCKlzUN
 G4k8VIZ3KMqh9HneteY4sPBlcIx/AlTCv//YoT7ZzwIxAMSNlPzcU9LcnXgWHxUzI1NS41oxXZ3K
 rr0TKUQNJ1uo52icEvdYPy5yAlejj6EULg==
 -----END CERTIFICATE-----
-
 thawte Primary Root CA - G3
 ===========================
 -----BEGIN CERTIFICATE-----
@@ -3000,7 +2757,6 @@ t8jLZ8HJnBoYuMTDSQPxYA5QzUbF83d597YV4Djbxy8ooAw/dyZ02SUS2jHaGh7cKUGRIjxpp7sC
 8rZcJwOJ9Abqm+RyguOhCcHpABnTPtRwa7pxpqpYrvS76Wy274fMm7v/OeZWYdMKp8RcTGB7BXcm
 er/YB1IsYvdwY9k5vG8cwnncdimvzsUsZAReiDZuMdRAGmI0Nj81Aa6sY6A=
 -----END CERTIFICATE-----
-
 GeoTrust Primary Certification Authority - G2
 =============================================
 -----BEGIN CERTIFICATE-----
@@ -3018,7 +2774,6 @@ EVXVMAoGCCqGSM49BAMDA2cAMGQCMGSWWaboCd6LuvpaiIjwH5HTRqjySkwCY/tsXzjbLkGTqQ7m
 ndwxHLKgpxgceeHHNgIwOlavmnRs9vuD4DPTCF+hnMJbn0bWtsuRBmOiBuczrD6ogRLQy7rQkgu2
 npaqBA+K
 -----END CERTIFICATE-----
-
 VeriSign Universal Root Certification Authority
 ===============================================
 -----BEGIN CERTIFICATE-----
@@ -3045,7 +2800,6 @@ P/jgdFcrGJ2BtMQo2pSXpXDrrB2+BxHw1dvd5Yzw1TKwg+ZX4o+/vqGqvz0dtdQ46tewXDpPaj+P
 wGZsY6rp2aQW9IHRlRQOfc2VNNnSj3BzgXucfr2YYdhFh5iQxeuGMMY1v/D/w1WIg0vvBZIGcfK4
 mJO37M2CYfE45k+XmCpajQ==
 -----END CERTIFICATE-----
-
 VeriSign Class 3 Public Primary Certification Authority - G4
 ============================================================
 -----BEGIN CERTIFICATE-----
@@ -3066,7 +2820,6 @@ Y29tL3ZzbG9nby5naWYwHQYDVR0OBBYEFLMWkf3upm7ktS5Jj4d4gYDs5bG1MAoGCCqGSM49BAMD
 A2gAMGUCMGYhDBgmYFo4e1ZC4Kf8NoRRkSAsdk1DPcQdhCPQrNZ8NQbOzWm9kA3bbEhCHQ6qQgIx
 AJw9SDkjOVgaFRJZap7v1VmyHVIsmXHNxynfGyphe3HR3vPA5Q06Sqotp9iGKt0uEA==
 -----END CERTIFICATE-----
-
 NetLock Arany (Class Gold) Főtanúsítvány
 ========================================
 -----BEGIN CERTIFICATE-----
@@ -3090,7 +2843,6 @@ bLBQWV2QWzuoDTDPv31/zvGdg73JRm4gpvlhUbohL3u+pRVjodSVh/GeufOJ8z2FuLjbvrW5Kfna
 NwUASZQDhETnv0Mxz3WLJdH0pmT1kvarBes96aULNmLazAZfNou2XjG4Kvte9nHfRCaexOYNkbQu
 dZWAUWpLMKawYqGT8ZvYzsRjdT9ZR7E=
 -----END CERTIFICATE-----
-
 Staat der Nederlanden Root CA - G2
 ==================================
 -----BEGIN CERTIFICATE-----
@@ -3122,7 +2874,6 @@ oKOKwJCcaNpQ5kUQR3i2TtJlycM33+FCY7BXN0Ute4qcvwXqZVUz9zkQxSgqIXobisQk+T8VyJoV
 IPVVYpbtbZNQvOSqeK3Zywplh6ZmwcSBo3c6WB4L7oOLnR7SUqTMHW+wmG2UMbX4cQrcufx9MmDm
 66+KAQ==
 -----END CERTIFICATE-----
-
 Hongkong Post Root CA 1
 =======================
 -----BEGIN CERTIFICATE-----
@@ -3142,7 +2893,6 @@ IAQ32pwL0xch4I+XeTRvhEgCIDMb5jREn5Fw9IBehEPCKdJsEhTkYY2sEJCehFC78JZvRZ+K88ps
 T/oROhUVRsPNH4NbLUES7VBnQRM9IauUiqpOfMGx+6fWtScvl6tu4B3i0RwsH0Ti/L6RoZz71ilT
 c4afU9hDDl3WY4JxHYB0yvbiAmvZWg==
 -----END CERTIFICATE-----
-
 SecureSign RootCA11
 ===================
 -----BEGIN CERTIFICATE-----
@@ -3163,7 +2913,6 @@ Oh29Dbx7VFALuUKvVaAYga1lme++5Jy/xIWrQbJUb9wlze144o4MjQlJ3WN7WmmWAiGovVJZ6X01
 y8hSyn+B/tlr0/cR7SXf+Of5pPpyl4RTDaXQMhhRdlkUbA/r7F+AjHVDg8OFmP9Mni0N5HeDk061
 lgeLKBObjBmNQSdJQO7e5iNEOdyhIta6A/I=
 -----END CERTIFICATE-----
-
 ACEDICOM Root
 =============
 -----BEGIN CERTIFICATE-----
@@ -3194,7 +2943,6 @@ I2bw/FWAp/tmGYI1Z2JwOV5vx+qQQEQIHriy1tvuWacNGHk0vFQYXlPKNFHtRQrmjseCNj6nOGOp
 MCwXEGCSn1WHElkQwg9naRHMTh5+Spqtr0CodaxWkHS4oJyleW/c6RrIaQXpuvoDs3zk4E7Czp3o
 tkYNbn5XOmeUwssfnHdKZ05phkOTOPu220+DkdRgfks+KzgHVZhepA==
 -----END CERTIFICATE-----
-
 Microsec e-Szigno Root CA 2009
 ==============================
 -----BEGIN CERTIFICATE-----
@@ -3218,7 +2966,6 @@ tyERzAMBVnCnEJIeGzSBHq2cGsMEPO0CYdYeBvNfOofyK/FFh+U9rNHHV4S9a67c2Pm2G2JwCz02
 yULyMtd6YebS2z3PyKnJm9zbWETXbzivf3jTo60adbocwTZ8jx5tHMN1Rq41Bab2XD0h7lbwyYIi
 LXpUq3DDfSJlgnCW
 -----END CERTIFICATE-----
-
 GlobalSign Root CA - R3
 =======================
 -----BEGIN CERTIFICATE-----
@@ -3239,7 +2986,6 @@ bddTKJd+82cEHhXXipa0095MJ6RMG3NzdvQXmcIfeg7jLQitChws/zyrVQ4PkX4268NXSb7hLi18
 YIvDQVETI53O9zJrlAGomecsMx86OyXShkDOOyyGeMlhLxS67ttVb9+E7gUJTb0o2HLO02JQZR7r
 kpeDMdmztcpHWD9f
 -----END CERTIFICATE-----
-
 Autoridad de Certificacion Firmaprofesional CIF A62634068
 =========================================================
 -----BEGIN CERTIFICATE-----
@@ -3272,7 +3018,6 @@ saS8I8nkvof/uZS2+F0gStRf571oe2XyFR7SOqkt6dhrJKyXWERHrVkY8SFlcN7ONGCoQPHzPKTD
 KCOM/iczQ0CgFzzr6juwcqajuUpLXhZI9LK8yIySxZ2frHI2vDSANGupi5LAuBft7HZT9SQBjLMi
 6Et8Vcad+qMUu2WFbm5PEn4KPJ2V
 -----END CERTIFICATE-----
-
 Izenpe.com
 ==========
 -----BEGIN CERTIFICATE-----
@@ -3304,7 +3049,6 @@ ClguGYEQyVB1/OpaFs4R1+7vUIgtYf8/QnMFlEPVjjxOAToZpR9GTnfQXeWBIiGH/pR9hNiTrdZo
 Q0iy2+tzJOeRf1SktoA+naM8THLCV8Sg1Mw4J87VBp6iSNnpn86CcDaTmjvfliHjWbcM2pE38P1Z
 WrOZyGlsQyYBNWNgVYkDOnXYukrZVP/u3oDYLdE41V4tC5h9Pmzb/CaIxw==
 -----END CERTIFICATE-----
-
 Chambers of Commerce Root - 2008
 ================================
 -----BEGIN CERTIFICATE-----
@@ -3342,7 +3086,6 @@ zBIKinmwPQN/aUv0NCB9szTqjktk9T79syNnFQ0EuPAtwQlRPLJsFfClI9eDdOTlLsn+mCdCxqvG
 nrDQWzilm1DefhiYtUU79nm06PcaewaD+9CL2rvHvRirCG88gGtAPxkZumWK5r7VXNM21+9AUiRg
 OGcEMeyP84LG3rlV8zsxkVrctQgVrXYlCg17LofiDKYGvCYQbTed7N14jHyAxfDZd0jQ
 -----END CERTIFICATE-----
-
 Global Chambersign Root - 2008
 ==============================
 -----BEGIN CERTIFICATE-----
@@ -3380,7 +3123,6 @@ P3iZ8ntxPjzxmKfFGBI/5rsoM0LpRQp8bfKGeS/Fghl9CYl8slR2iK7ewfPM4W7bMdaTrpmg7yVq
 c5iJWzouE4gev8CSlDQb4ye3ix5vQv/n6TebUB0tovkC7stYWDpxvGjjqsGvHCgfotwjZT+B6q6Z
 09gwzxMNTxXJhLynSC34MCN32EZLeW32jO06f2ARePTpm67VVMB0gNELQp/B
 -----END CERTIFICATE-----
-
 Go Daddy Root Certificate Authority - G2
 ========================================
 -----BEGIN CERTIFICATE-----
@@ -3402,7 +3144,6 @@ vNjpL9DbWu7PdIxztDhC2gV7+AJ1uP2lsdeu9tfeE8tTEH6KRtGX+rcuKxGrkLAngPnon1rpN5+r
 N8Gb5DKj7Tjo2GTzLH4U/ALqn83/B2gX2yKQOC16jdFU8WnjXzPKej17CuPKf1855eJ1usV2GDPO
 LPAvTK33sefOT6jEm0pUBsV/fdUID+Ic/n4XuKxe9tQWskMJDE32p2u0mYRlynqI4uJEvlz36hz1
 -----END CERTIFICATE-----
-
 Starfield Root Certificate Authority - G2
 =========================================
 -----BEGIN CERTIFICATE-----
@@ -3425,7 +3166,6 @@ F5okxBDgBPfg8n/Uqgr/Qh037ZTlZFkSIHc40zI+OIF1lnP6aI+xy84fxez6nH7PfrHxBy22/L/K
 pL/QlwVKvOoYKAKQvVR4CSFx09F9HdkWsKlhPdAKACL8x3vLCWRFCztAgfd9fDL1mMpYjn0q7pBZ
 c2T5NnReJaH1ZgUufzkVqSr7UIuOhWn0
 -----END CERTIFICATE-----
-
 Starfield Services Root Certificate Authority - G2
 ==================================================
 -----BEGIN CERTIFICATE-----
@@ -3448,7 +3188,6 @@ xQGjhdByPq1zqwubdQxtRbeOlKyWN7Wg0I8VRw7j6IPdj/3vQQF3zCepYoUz8jcI73HPdwbeyBkd
 iEDPfUYd/x7H4c7/I9vG+o1VTqkC50cRRj70/b17KSa7qWFiNyi2LSr2EIZkyXCn0q23KXB56jza
 YyWf/Wi3MOxw+3WKt21gZ7IeyLnp2KhvAotnDU0mV3HaIPzBSlCNsSi6
 -----END CERTIFICATE-----
-
 AffirmTrust Commercial
 ======================
 -----BEGIN CERTIFICATE-----
@@ -3468,7 +3207,6 @@ qX0GJX0nof5v7LMeJNrjS1UaADs1tDvZ110w/YETifLCBivtZ8SOyUOyXGsViQK8YvxO8rUzqrJv
 0wqiUOP2O+guRMLbZjipM1ZI8W0bM40NjD9gN53Tym1+NH4Nn3J2ixufcv1SNUFFApYvHLKac0kh
 sUlHRUe072o0EclNmsxZt9YCnlpOZbWUrhvfKbAW8b8Angc6F2S1BLUjIZkKlTuXfO8=
 -----END CERTIFICATE-----
-
 AffirmTrust Networking
 ======================
 -----BEGIN CERTIFICATE-----
@@ -3488,7 +3226,6 @@ UFUaNU52Q3Eg75N3ThVwLofDwR1t3Mu1J9QsVtFSUzpE0nPIxBsFZVpikpzuQY0x2+c06lkh1QF6
 WJZa3W3SAKD0m0i+wzekujbgfIeFlxoVot4uolu9rxj5kFDNcFn4J2dHy8egBzp90SxdbBk6ZrV9
 /ZFvgrG+CJPbFEfxojfHRZ48x3evZKiT3/Zpg4Jg8klCNO1aAFSFHBY2kgxc+qatv9s=
 -----END CERTIFICATE-----
-
 AffirmTrust Premium
 ===================
 -----BEGIN CERTIFICATE-----
@@ -3517,7 +3254,6 @@ IxpHYoWlzBk0gG+zrBrjn/B7SK3VAdlntqlyk+otZrWyuOQ9PLLvTIzq6we/qzWaVYa8GKa1qF60
 g2xraUDTn9zxw2lrueFtCfTxqlB2Cnp9ehehVZZCmTEJ3WARjQUwfuaORtGdFNrHF+QFlozEJLUb
 zxQHskD4o55BhrwE0GuWyCqANP2/7waj3VjFhT0+j/6eKeC2uAloGRwYQw==
 -----END CERTIFICATE-----
-
 AffirmTrust Premium ECC
 =======================
 -----BEGIN CERTIFICATE-----
@@ -3532,7 +3268,6 @@ BggqhkjOPQQDAwNnADBkAjAXCfOHiFBar8jAQr9HX/VsaobgxCd05DhT1wV/GzTjxi+zygk8N53X
 57hG8f2h4nECMEJZh0PUUd+60wkyWs6Iflc9nF9Ca/UHLbXwgpP5WW+uZPpY5Yse42O+tYHNbwKM
 eQ==
 -----END CERTIFICATE-----
-
 Certum Trusted Network CA
 =========================
 -----BEGIN CERTIFICATE-----
@@ -3554,7 +3289,6 @@ mS1FhIrlQgnXdAIv94nYmem8J9RHjboNRhx3zxSkHLmkMcScKHQDNP8zGSal6Q10tz6XxnboJ5aj
 Zt3hrvJBW8qYVoNzcOSGGtIxQbovvi0TWnZvTuhOgQ4/WwMioBK+ZlgRSssDxLQqKi2WF+A5VLxI
 03YnnZotBqbJ7DnSq9ufmgsnAjUpsUCV5/nonFWIGUbWtzT1fs45mtk48VH3Tyw=
 -----END CERTIFICATE-----
-
 Certinomis - Autorité Racine
 ============================
 -----BEGIN CERTIFICATE-----
@@ -3585,7 +3319,6 @@ WfVEm/vXd3wfAXBioSAaosUaKPQhA+4u2cGA6rnZgtZbdsLLO7XSAPCjDuGtbkD326C00EauFddE
 wk01+dIL8hf2rGbVJLJP0RyZwG71fet0BLj5TXcJ17TPBzAJ8bgAVtkXFhYKK4bfjwEZGuW7gmP/
 vgt2Fl43N+bYdJeimUV5
 -----END CERTIFICATE-----
-
 TWCA Root Certification Authority
 =================================
 -----BEGIN CERTIFICATE-----
@@ -3606,7 +3339,6 @@ QtNoURi+VJq/REG6Sb4gumlc7rh3zc5sH62Dlhh9DrUUOYTxKOkto557HnpyWoOzeW/vtPzQCqVY
 T0bf+215WfKEIlKuD8z7fDvnaspHYcN6+NOSBB+4IIThNlQWx0DeO4pz3N/GCUzf7Nr/1FNCocny
 Yh0igzyXxfkZYiesZSLX0zzG5Y6yU8xJzrww/nsOM5D77dIUkR8Hrw==
 -----END CERTIFICATE-----
-
 Security Communication RootCA2
 ==============================
 -----BEGIN CERTIFICATE-----
@@ -3627,7 +3359,6 @@ u/Ykn8sX/oymzsLS28yN/HH8AynBbF0zX2S2ZTuJbxh2ePXcokgfGT+Ok+vx+hfuzU7jBBJV1uXk
 tnRGEmyR7jTV7JqR50S+kDFy1UkC9gLl9B/rfNmWVan/7Ir5mUf/NVoCqgTLiluHcSmRvaS0eg29
 mvVXIwAHIRc/SjnRBUkLp7Y3gaVdjKozXoEofKd9J+sAro03
 -----END CERTIFICATE-----
-
 EC-ACC
 ======
 -----BEGIN CERTIFICATE-----
@@ -3657,7 +3388,6 @@ l+axofjk70YllJyJ22k4vuxcDlbHZVHlUIiIv0LVKz3l+bqeLrPK9HOSAgu+TGbrIP65y7WZf+a2
 E/rKS03Z7lNGBjvGTq2TWoF+bCpLagVFjPIhpDGQh2xlnJ2lYJU6Un/10asIbvPuW/mIPX64b24D
 5EI=
 -----END CERTIFICATE-----
-
 Hellenic Academic and Research Institutions RootCA 2011
 =======================================================
 -----BEGIN CERTIFICATE-----
@@ -3681,7 +3411,6 @@ TqBTnbI6nOulnJEWtk2C4AwFSKls9cz4y51JtPACpf1wA+2KIaWuE4ZJwzNzvoc7dIsXRSZMFpGD
 /md9zU1jZ/rzAxKWeAaNsWftjj++n08C9bMJL/NMh98qy5V8AcysNnq/onN694/BtZqhFLKPM58N
 7yLcZnuEvUUXBj08yrl3NI/K6s8/MT7jiOOASSXIl7WdmplNsDz4SgCbZN2fOUvRJ9e4
 -----END CERTIFICATE-----
-
 Actalis Authentication Root CA
 ==============================
 -----BEGIN CERTIFICATE-----
@@ -3712,7 +3441,6 @@ lefut8cl8ABMALJ+tguLHPPAUJ4lueAI3jZm/zel0btUZCzJJ7VLkn5l/9Mt4blOvH+kQSGQQXem
 OR/qnuOf0GZvBeyqdn6/axag67XH/JJULysRJyU3eExRarDzzFhdFPFqSBX/wge2sY0PjlxQRrM9
 vwGYT7JZVEc+NHt4bVaTLnPqZih4zR0Uv6CPLy64Lo7yFIrM6bV8+2ydDKXhlg==
 -----END CERTIFICATE-----
-
 Trustis FPS Root CA
 ===================
 -----BEGIN CERTIFICATE-----
@@ -3733,7 +3461,6 @@ yinpXj9WV4s4NvdFGkwozZ5BuO1WTISkQMi4sKUraXAEasP41BIy+Q7DsdwyhEQsb8tGD+pmQQ9P
 l/9D7S3B2l0pKoU/rGXuhg8FjZBf3+6f9L/uHfuY5H+QK4R4EA5sSVPvFVtlRkpdr7r7OnIdzfYl
 iB6XzCGcKQENZetX2fNXlrtIzYE=
 -----END CERTIFICATE-----
-
 StartCom Certification Authority
 ================================
 -----BEGIN CERTIFICATE-----
@@ -3772,7 +3499,6 @@ HvUwyKMQ5bLmKhQxw4UtjJixhlpPiVktucf3HMiKf8CdBUrmQk9io20ppB+Fq9vlgcitKj1MXVuE
 JnHEhV5xJMqlG2zYYdMa4FTbzrqpMrUi9nNBCV24F10OD5mQ1kfabwo6YigUZ4LZ8dCAWZvLMdib
 D4x3TrVoivJs9iQOLWxwxXPR3hTQcY+203sC9uO41Alua551hDnmfyWl8kgAwKQB2j8=
 -----END CERTIFICATE-----
-
 StartCom Certification Authority G2
 ===================================
 -----BEGIN CERTIFICATE-----
@@ -3802,7 +3528,6 @@ l85bBu4M4ru8H0ST9tg4RQUh7eStqxK2A6RCLi3ECToDZ2mEmuFZkIoohdVddLHRDiBYmxOlsGOm
 7XtH/UVVMKTumtTm4ofvmMkyghEpIrwACjFeLQ/Ajulrso8uBtjRkcfGEvRM/TAXw8HaOFvjqerm
 obp573PYtlNXLfbQ4ddI
 -----END CERTIFICATE-----
-
 Buypass Class 2 Root CA
 =======================
 -----BEGIN CERTIFICATE-----
@@ -3832,7 +3557,6 @@ wWg5TbSYWGZizEqQXsP6JwSxeRV0mcy+rSDeJmAc61ZRpqPq5KM/p/9h3PFaTWwyI0PurKju7koS
 CTxdccK+efrCh2gdC/1cacwG0Jp9VJkqyTkaGa9LKkPzY11aWOIv4x3kqdbQCtCev9eBCfHJxyYN
 rJgWVqA=
 -----END CERTIFICATE-----
-
 Buypass Class 3 Root CA
 =======================
 -----BEGIN CERTIFICATE-----
@@ -3862,7 +3586,6 @@ UZTLfhbrES+jkkXITHHZvMmZUldGL1DPvTVp9D0VzgalLA8+9oG6lLvDu79leNKGef9JOxqDDPDe
 eOzI8k1MGt6CKfjBWtrt7uYnXuhF0J0cUahoq0Tj0Itq4/g7u9xN12TyUb7mqqta6THuBrxzvxNi
 Cp/HuZc=
 -----END CERTIFICATE-----
-
 T-TeleSec GlobalRoot Class 3
 ============================
 -----BEGIN CERTIFICATE-----
@@ -3884,7 +3607,6 @@ ucpH9sry9uetuUg/vBa3wW306gmv7PO15wWeph6KU1HWk4HMdJP2udqmJQV0eVp+QD6CSyYRMG7h
 P0HHRwA11fXT91Q+gT3aSWqas+8QPebrb9HIIkfLzM8BMZLZGOMivgkeGj5asuRrDFR6fUNOuIml
 e9eiPZaGzPImNC1qkp2aGtAw4l1OBLBfiyB+d8E9lYLRRpo7PHi4b6HQDWSieB4pTpPDpFQUWw==
 -----END CERTIFICATE-----
-
 EE Certification Centre Root CA
 ===============================
 -----BEGIN CERTIFICATE-----
@@ -3908,7 +3630,6 @@ uSlNDUmJEYcyW+ZLBMjkXOZ0c5RdFpgTlf7727FE5TpwrDdr5rMzcijJs1eg9gIWiAYLtqZLICjU
 3j2LrTcFU3T+bsy8QxdxXvnFzBqpYe73dgzzcvRyrc9yAjYHR8/vGVCJYMzpJJUPwssd8m92kMfM
 dcGWxZ0=
 -----END CERTIFICATE-----
-
 TURKTRUST Certificate Services Provider Root 2007
 =================================================
 -----BEGIN CERTIFICATE-----
@@ -3933,7 +3654,6 @@ Xl0XrRWV2N2y1RVuAE6zS89mlOTgzbUF2mNXi+WzqtvALhyQRNsaXRik7r4EW5nVcV9VZWRi1aKb
 BFmGyGJ353yCRWo9F7/snXUMrqNvWtMvmDb08PUZqxFdyKbjKlhqQgnDvZImZjINXQhVdP+MmNAK
 poRq0Tl9
 -----END CERTIFICATE-----
-
 D-TRUST Root Class 3 CA 2 2009
 ==============================
 -----BEGIN CERTIFICATE-----
@@ -3957,7 +3677,6 @@ o3/U37CYAqxva2ssJSRyoWXuJVrl5jLn8t+rSfrzkGkj2wTZ51xY/GXUl77M/C4KzCUqNQT4YJEV
 dT1B/yMfGchs64JTBKbkTCJNjYy6zltz7GRUUG3RnFX7acM2w4y8PIWmawomDeCTmGCufsYkl4ph
 X5GOZpIJhzbNi5stPvZR1FDUWSi9g/LMKHtThm3YJohw1+qRzT65ysCQblrGXnRl11z+o+I=
 -----END CERTIFICATE-----
-
 D-TRUST Root Class 3 CA 2 EV 2009
 =================================
 -----BEGIN CERTIFICATE-----
@@ -3982,7 +3701,6 @@ ANtu2KZyIktQ1HWYVt+3GP9DQ1CuekR78HlR10M9p9OB0/DJT7naxpeG0ILD5EJt/rDiZE4OJudA
 NCa1CInXCGNjOCd1HjPqbqjdn5lPdE2BiYBL3ZqXKVwvvoFBuYz/6n1gBp7N1z3TLqMVvKjmJuVv
 w9y4AyHqnxbxLFS1
 -----END CERTIFICATE-----
-
 PSCProcert
 ==========
 -----BEGIN CERTIFICATE-----
@@ -4030,7 +3748,6 @@ FFAFTKQAVzAswbVhltw+HoSvOULP5dAssSS830DD7X9jSr3hTxJkhpXzsOfIt+FTvZLm8wyWuevo
 poLWccret9W6aAjtmcz9opLLabid+Qqkpj5PkygqYWwHJgD/ll9ohri4zspV4KuxPX+Y1zMOWj3Y
 eMLEYC/HYvBhkdI4sPaeVdtAgAUSM84dkpvRabP/v/GSCmE1P93+hvS84Bpxs2Km
 -----END CERTIFICATE-----
-
 China Internet Network Information Center EV Certificates Root
 ==============================================================
 -----BEGIN CERTIFICATE-----
@@ -4053,7 +3770,6 @@ glkwDQYJKoZIhvcNAQEFBQADggEBACrDx0M3j92tpLIM7twUbY8opJhJywyA6vPtI2Z1fcXTIWd5
 ZkJHwlgkmeHlPuV1LI5D1l08eB6olYIpUNHRFrrvwb562bTYzB5MRuF3sTGrvSrIzo9uoV1/A3U0
 5K2JRVRevq4opbs/eHnrc7MKDf2+yfdWrPa37S+bISnHOLaVxATywy39FCqQmbkHzJ8=
 -----END CERTIFICATE-----
-
 Swisscom Root CA 2
 ==================
 -----BEGIN CERTIFICATE-----
@@ -4085,7 +3801,6 @@ mA9LSHokMnWRn6z3aOkquVVlzl1h0ydw2Df+n7mvoC5Wt6NlUe07qxS/TFED6F+KBZvuim6c779o
 rvJcwhbtkj6EPnNgiLx29CzP0H1907he0ZESEOnN3col49XtmS++dYFLJPlFRpTJKSFTnCZFqhMX
 5OfNeOI5wSsSnqaeG8XmDtkx2Q==
 -----END CERTIFICATE-----
-
 Swisscom Root EV CA 2
 =====================
 -----BEGIN CERTIFICATE-----
@@ -4117,7 +3832,6 @@ HmBR3NdUIR7KYndP+tiPsys6DXhyyWhBWkdKwqPrGtcKqzwyVcgKEZzfdNbwQBUdyLmPtTbFr/gi
 uMod89a2GQ+fYWVq6nTIfI/DT11lgh/ZDYnadXL77/FHZxOzyNEZiCcmmpl5fx7kLD977vHeTYuW
 l8PVP3wbI+2ksx0WckNLIOFZfsLorSa/ovc=
 -----END CERTIFICATE-----
-
 CA Disig Root R1
 ================
 -----BEGIN CERTIFICATE-----
@@ -4147,7 +3861,6 @@ lAxYjOBVqjtjbZqJYLhkKpLGN/R+Q0O3c+gB53+XD9fyexn9GtePyfqFa3qdnom2piiZk4hA9z7N
 UaPK6u95RyG1/jLix8NRb76AdPCkwzryT+lf3xkK8jsTQ6wxpLPn6/wY1gGp8yqPNg7rtLG8t0zJ
 a7+h89n07eLw4+1knj0vllJPgFOL
 -----END CERTIFICATE-----
-
 CA Disig Root R2
 ================
 -----BEGIN CERTIFICATE-----
@@ -4177,7 +3890,6 @@ sorMwIUY6256s/daoQe/qUKS82Ail+QUoQebTnbAjn39pCXHR+3/H3OszMOl6W8KjptlwlCFtaOg
 UxLMVYdh84GuEEZhvUQhuMI9dM9+JDX6HAcOmz0iyu8xL4ysEr3vQCj8KWefshNPZiTEUxnpHikV
 7+ZtsH8tZ/3zbBt1RqPlShfppNcL
 -----END CERTIFICATE-----
-
 ACCVRAIZ1
 =========
 -----BEGIN CERTIFICATE-----
@@ -4218,7 +3930,6 @@ Nce4hL60Xc16gwFy7ofmXx2utYXGJt/mwZrpHgJHnyqobalbz+xFd3+YJ5oyXSrjhO7FmGYvliAd
 3djDJ9ew+f7Zfc3Qn48LFFhRny+Lwzgt3uiP1o2HpPVWQxaZLPSkVrQ0uGE3ycJYgBugl6H8WY3p
 EfbRD0tVNEYqi4Y7
 -----END CERTIFICATE-----
-
 TWCA Global Root CA
 ===================
 -----BEGIN CERTIFICATE-----
@@ -4247,7 +3958,6 @@ i4TWnsLrgxifarsbJGAzcMzs9zLzXNl5fe+epP7JI8Mk7hWSsT2RTyaGvWZzJBPqpK5jwa19hAM8
 EHiGG3njxPPyBJUgriOCxLM6AGK/5jYk4Ve6xx6QddVfP5VhK8E7zeWzaGHQRiapIVJpLesux+t3
 zqY6tQMzT3bR51xUAV3LePTJDL/PEo4XLSNolOer/qmyKwbQBM0=
 -----END CERTIFICATE-----
-
 TeliaSonera Root CA v1
 ======================
 -----BEGIN CERTIFICATE-----
@@ -4276,7 +3986,6 @@ qReWt88NkvuOGKmYSdGe/mBEciG5Ge3C9THxOUiIkCR1VBatzvT4aRRkOfujuLpwQMcnHL/EVlP6
 Y2XQ8xwOFvVrhlhNGNTkDY6lnVuR3HYkUD/GKvvZt5y11ubQ2egZixVxSK236thZiNSQvxaz2ems
 WWFUyBy6ysHK4bkgTI86k4mloMy/0/Z1pHWWbVY=
 -----END CERTIFICATE-----
-
 E-Tugra Certification Authority
 ===============================
 -----BEGIN CERTIFICATE-----
@@ -4310,7 +4019,6 @@ Dx4JnW2PAJ8C2sH6H3p6CcRK5ogql5+Ji/03X186zjhZhkuvcQu02PJwT58yE+Owp1fl2tpDy4Q0
 8ijE6m30Ku/Ba3ba+367hTzSU8JNvnHhRdH9I2cNE3X7z2VnIp2usAnRCf8dNL/+I5c30jn6PQ0G
 C7TbO6Orb1wdtn7os4I07QZcJA==
 -----END CERTIFICATE-----
-
 T-TeleSec GlobalRoot Class 2
 ============================
 -----BEGIN CERTIFICATE-----
@@ -4332,7 +4040,6 @@ vNoBYimipidx5joifsFvHZVwIEoHNN/q/xWA5brXethbdXwFeilHfkCoMRN3zUA7tFFHei4R40cR
 3p1m0IvVVGb6g1XqfMIpiRvpb7PO4gWEyS8+eIVibslfwXhjdFjASBgMmTnrpMwatXlajRWc2BQN
 9noHV8cigwUtPJslJj0Ys6lDfMjIq2SPDqO/nBudMNva0Bkuqjzx+zOAduTNrRlPBSeOE6Fuwg==
 -----END CERTIFICATE-----
-
 Atos TrustedRoot 2011
 =====================
 -----BEGIN CERTIFICATE-----
@@ -4353,7 +4060,6 @@ TZVHO8mvbaG0weyJ9rQPOLXiZNwlz6bb65pcmaHFCN795trV1lpFDMS3wrUU77QR/w4VtfX128a9
 61qn8FYiqTxlVMYVqL2Gns2Dlmh6cYGJ4Qvh6hEbaAjMaZ7snkGeRDImeuKHCnE96+RapNLbxc3G
 3mB/ufNPRJLvKrcYPqcZ2Qt9sTdBQrC6YB3y/gkRsPCHe6ed
 -----END CERTIFICATE-----
-
 QuoVadis Root CA 1 G3
 =====================
 -----BEGIN CERTIFICATE-----
@@ -4383,7 +4089,6 @@ O0ec7AAmTPWIUb+oI38YB7AL7YsmoWTTYUrrXJ/es69nA7Mf3W1daWhpq1467HxpvMc7hU6eFbm0
 FU/DlXpY18ls6Wy58yljXrQs8C097Vpl4KlbQMJImYFtnh8GKjwStIsPm6Ik8KaN1nrgS7ZklmOV
 hMJKzRwuJIczYOXD
 -----END CERTIFICATE-----
-
 QuoVadis Root CA 2 G3
 =====================
 -----BEGIN CERTIFICATE-----
@@ -4413,7 +4118,6 @@ zYWm3S8P52dSbrsvhXz1SnPnxT7AvSESBT/8twNJAlvIJebiVDj1eYeMHVOyToV7BjjHLPj4sHKN
 JeV3UvQDHEimUF+IIDBu8oJDqz2XhOdT+yHBTw8imoa4WSr2Rz0ZiC3oheGe7IUIarFsNMkd7Egr
 O3jtZsSOeWmD3n+M
 -----END CERTIFICATE-----
-
 QuoVadis Root CA 3 G3
 =====================
 -----BEGIN CERTIFICATE-----
@@ -4443,7 +4147,6 @@ hPbl8MFREsALHgQjDFSlTC9JxUrRtm5gDWv8a4uFJGS3iQ6rJUdbPM9+Sb3H6QrG2vd+DhcI00iX
 dSHBd575euFgndOtBBj0fOtek49TSiIp+EgrPk2GrFt/ywaZWWDYWGWVjUTR939+J399roD1B0y2
 PpxxVJkES/1Y+Zj0
 -----END CERTIFICATE-----
-
 DigiCert Assured ID Root G2
 ===========================
 -----BEGIN CERTIFICATE-----
@@ -4465,7 +4168,6 @@ hsI6yLETcDbYz+70CjTVW0z9B5yiutkBclzzTcHdDrEcDcRjvq30FPuJ7KJBDkzMyFdA0G4Dqs0M
 jomZmWzwPDCvON9vvKO+KSAnq3T/EyJ43pdSVR6DtVQgA+6uwE9W3jfMw3+qBCe703e4YtsXfJwo
 IhNzbM8m9Yop5w==
 -----END CERTIFICATE-----
-
 DigiCert Assured ID Root G3
 ===========================
 -----BEGIN CERTIFICATE-----
@@ -4481,7 +4183,6 @@ UaFNN6KDec6NHSrkhDAKBggqhkjOPQQDAwNnADBkAjAlpIFFAmsSS3V0T8gj43DydXLefInwz5Fy
 YZ5eEJJZVrmDxxDnOOlYJjZ91eQ0hjkCMHw2U/Aw5WJjOpnitqM7mzT6HtoQknFekROn3aRukswy
 1vUhZscv6pZjamVFkpUBtA==
 -----END CERTIFICATE-----
-
 DigiCert Global Root G2
 =======================
 -----BEGIN CERTIFICATE-----
@@ -4503,7 +4204,6 @@ QRFXGU7Aj64GxJUTFy8bJZ918rGOmaFvE7FBcf6IKshPECBV1/MUReXgRPTqh5Uykw7+U0b6LJ3/
 iyK5S9kJRaTepLiaWN0bfVKfjllDiIGknibVb63dDcY3fe0Dkhvld1927jyNxF1WW6LZZm6zNTfl
 MrY=
 -----END CERTIFICATE-----
-
 DigiCert Global Root G3
 =======================
 -----BEGIN CERTIFICATE-----
@@ -4519,7 +4219,6 @@ Yim8S8YwCgYIKoZIzj0EAwMDaAAwZQIxAK288mw/EkrRLTnDCgmXc/SINoyIJ7vmiI1Qhadj+Z4y
 3maTD/HMsQmP3Wyr+mt/oAIwOWZbwmSNuJ5Q3KjVSaLtx9zRSX8XAbjIho9OjIgrqJqpisXRAL34
 VOKa5Vt8sycX
 -----END CERTIFICATE-----
-
 DigiCert Trusted Root G4
 ========================
 -----BEGIN CERTIFICATE-----
@@ -4550,7 +4249,6 @@ ixTXTBmyUEFxPT9NcCOGDErcgdLMMpSEDQgJlxxPwO5rIHQw0uA5NBCFIRUBCOhVMt5xSdkoF1BN
 G48BtieVU+i2iW1bvGjUI+iLUaJW+fCmgKDWHrO8Dw9TdSmq6hN35N6MgSGtBxBHEa2HPQfRdbzP
 82Z+
 -----END CERTIFICATE-----
-
 WoSign
 ======
 -----BEGIN CERTIFICATE-----
@@ -4580,7 +4278,6 @@ mVd8upUPYUk6ynW8yQqTP2cOEvIo4jEbwFcW3wh8GcF+Dx+FHgo2fFt+J7x6v+Db9NpSvd4MVHAx
 kUOVyLzwPt0JfjBkUO1/AaQzZ01oT74V77D2AhGiGxMlOtzCWfHjXEa7ZywCRuoeSKbmW9m1vFGi
 kpbbqsY3Iqb+zCB0oy2pLmvLwIIRIbWTee5Ehr7XHuQe+w==
 -----END CERTIFICATE-----
-
 WoSign China
 ============
 -----BEGIN CERTIFICATE-----
@@ -4610,7 +4307,6 @@ ONFLAzkopR6RctR9q5czxNM+4Gm2KHmgCY0c0f9BckgG/Jou5yD5m6Leie2uPAmvylezkolwQOQv
 T8Jwg0DXJCxr5wkf09XHwQj02w47HAcLQxGEIYbpgNR12KvxAmLBsX5VYc8T1yaw15zLKYs4SgsO
 kI26oQ==
 -----END CERTIFICATE-----
-
 COMODO RSA Certification Authority
 ==================================
 -----BEGIN CERTIFICATE-----
@@ -4642,7 +4338,6 @@ ZJx64SIDqZxubw5lT2yHh17zbqD5daWbQOhTsiedSrnAdyGN/4fy3ryM7xfft0kL0fJuMAsaDk52
 7RH89elWsn2/x20Kk4yl0MC2Hb46TpSi125sC8KKfPog88Tk5c0NqMuRkrF8hey1FGlmDoLnzc7I
 LaZRfyHBNVOFBkpdn627G190
 -----END CERTIFICATE-----
-
 USERTrust RSA Certification Authority
 =====================================
 -----BEGIN CERTIFICATE-----
@@ -4674,7 +4369,6 @@ J2vhsE/zB+4ALtRZh8tSQZXq9EfX7mRBVXyNWQKV3WKdwrnuWih0hKWbt5DHDAff9Yk2dDLWKMGw
 sAvgnEzDHNb842m1R0aBL6KCq9NjRHDEjf8tM7qtj3u1cIiuPhnPQCjY/MiQu12ZIvVS5ljFH4gx
 Q+6IHdfGjjxDah2nGN59PRbxYvnKkKj9
 -----END CERTIFICATE-----
-
 USERTrust ECC Certification Authority
 =====================================
 -----BEGIN CERTIFICATE-----
@@ -4691,7 +4385,6 @@ HQ8BAf8EBAMCAQYwDwYDVR0TAQH/BAUwAwEB/zAKBggqhkjOPQQDAwNoADBlAjA2Z6EWCNzklwBB
 HU6+4WMBzzuqQhFkoJ2UOQIReVx7Hfpkue4WQrO/isIJxOzksU0CMQDpKmFHjFJKS04YcPbWRNZu
 9YO6bVi9JNlWSOrvxKJGgYhqOkbRqZtNyWHa0V1Xahg=
 -----END CERTIFICATE-----
-
 GlobalSign ECC Root CA - R4
 ===========================
 -----BEGIN CERTIFICATE-----
@@ -4705,7 +4398,6 @@ AQH/BAQDAgEGMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0OBBYEFFSwe61FuOJAf/sKbvu+M8k8o4TV
 MAoGCCqGSM49BAMCA0gAMEUCIQDckqGgE6bPA7DmxCGXkPoUVy0D7O48027KqGx2vKLeuwIgJ6iF
 JzWbVsaj8kfSt24bAgAXqmemFZHe+pTsewv4n4Q=
 -----END CERTIFICATE-----
-
 GlobalSign ECC Root CA - R5
 ===========================
 -----BEGIN CERTIFICATE-----
@@ -4720,7 +4412,6 @@ BgNVHQ4EFgQUPeYpSJvqB8ohREom3m7e0oPQn1kwCgYIKoZIzj0EAwMDaAAwZQIxAOVpEslu28Yx
 uglB4Zf4+/2a4n0Sye18ZNPLBSWLVtmg515dTguDnFt2KaAJJiFqYgIwcdK1j1zqO+F4CYWodZI7
 yFz9SO8NdCKoCOJuxUnOxwy8p2Fp8fc74SrL+SvzZpA3
 -----END CERTIFICATE-----
-
 Staat der Nederlanden Root CA - G3
 ==================================
 -----BEGIN CERTIFICATE-----
@@ -4750,7 +4441,6 @@ mj1AfsbAddJu+2gw7OyLnflJNZoaLNmzlTnVHpL3prllL+U9bTpITAjc5CgSKL59NVzq4BZ+Extq
 JG9gkaSChVtWQbzQRKtqE77RLFi3EjNYsjdj3BP1lB0/QFH1T/U67cjF68IeHRaVesd+QnGTbksV
 tzDfqu1XhUisHWrdOWnk4Xl4vs4Fv6EM94B7IWcnMFk=
 -----END CERTIFICATE-----
-
 Staat der Nederlanden EV Root CA
 ================================
 -----BEGIN CERTIFICATE-----
@@ -4780,7 +4470,6 @@ WeKDRikL40Rc4ZW2aZCaFG+XroHPaO+Zmr615+F/+PoTRxZMzG0IQOeLeG9QgkRQP2YGiqtDhFZK
 DyAthg710tvSeopLzaXoTvFeJiUBWSOgftL2fiFX1ye8FVdMpEbB4IMeDExNH08GGeL5qPQ6gqGy
 eUN51q1veieQA6TqJIc/2b3Z6fJfUEkc7uzXLg==
 -----END CERTIFICATE-----
-
 IdenTrust Commercial Root CA 1
 ==============================
 -----BEGIN CERTIFICATE-----
@@ -4810,7 +4499,6 @@ kTLql1gEIt44w8y8bckzOmoKaT+gyOpyj4xjhiO9bTyWnpXgSUyqorkqG5w2gXjtw+hG4iZZRHUe
 Z2s8EIPGrd6ozRaOjfAHN3Gf8qv8QfXBi+wAN10J5U6A7/qxXDgGpRtK4dw4LTzcqx+QGtVKnO7R
 cGzM7vRX+Bi6hG6H
 -----END CERTIFICATE-----
-
 IdenTrust Public Sector Root CA 1
 =================================
 -----BEGIN CERTIFICATE-----
@@ -4840,7 +4528,6 @@ ajjDbp7hNxbqBWJMWxJH7ae0s1hWx0nzfxJoCTFx8G34Tkf71oXuxVhAGaQdp/lLQzfcaFpPz+vC
 ZHTetBXZ9FRUGi8c15dxVJCO2SCdUyt/q4/i6jC8UDfv8Ue1fXwsBOxonbRJRBD0ckscZOf85muQ
 3Wl9af0AVqW3rLatt8o+Ae+c
 -----END CERTIFICATE-----
-
 Entrust Root Certification Authority - G2
 =========================================
 -----BEGIN CERTIFICATE-----
@@ -4865,7 +4552,6 @@ nWyTmsQ9v4IbZT+mD12q/OWyFcq1rca8PdCE6OoGcrBNOTJ4vz4RnAuknZoh8/CbCzB428Hch0P+
 vGOaysXCHMnHjf87ElgI5rY97HosTvuDls4MPGmHVHOkc8KT/1EQrBVUAdj8BbGJoX90g5pJ19xO
 e4pIb4tF9g==
 -----END CERTIFICATE-----
-
 Entrust Root Certification Authority - EC1
 ==========================================
 -----BEGIN CERTIFICATE-----
@@ -4884,7 +4570,6 @@ FLdj5xrdjekIplWDpOBqUEFlEUJJMAoGCCqGSM49BAMDA2cAMGQCMGF52OVCR98crlOZF7ZvHH3h
 vxGU0QOIdeSNiaSKd0bebWHvAvX7td/M/k7//qnmpwIwW5nXhTcGtXsI/esni0qU+eH6p44mCOh8
 kmhtc9hvJqwhAriZtyZBWyVgrtBIGu4G
 -----END CERTIFICATE-----
-
 CFCA EV ROOT
 ============
 -----BEGIN CERTIFICATE-----
@@ -4914,7 +4599,6 @@ PDCBBpEi6lmt2hkuIsKNuYyH4Ga8cyNfIWRjgEj1oDwYPZTISEEdQLpe/v5WOaHIz16eGWRGENoX
 kbcFgKyLmZJ956LYBws2J+dIeWCKw9cTXPhyQN9Ky8+ZAAoACxGV2lZFA4gKn2fQ1XmxqI1AbQ3C
 ekD6819kR5LLU7m7Wc5P/dAVUwHY3+vZ5nbv0CO7O6l5s9UCKc2Jo5YPSjXnTkLAdc0Hz+Ys63su
 -----END CERTIFICATE-----
-
 TÜRKTRUST Elektronik Sertifika Hizmet Sağlayıcısı H5
 ====================================================
 -----BEGIN CERTIFICATE-----
@@ -4938,7 +4622,6 @@ URawXs3qZwQcWDD1YIq9pr1N5Za0/EKJAWv2cMhQOQwt1WbZyNKzMrcbGW3LM/nfpeYVhDfwwvJl
 lpKQd/Ct9JDpEXjXk4nAPQu6KfTomZ1yju2dL+6SfaHx/126M2CFYv4HAqGEVka+lgqaE9chTLd8
 B59OTj+RdPsnnRHM3eaxynFNExc5JsUpISuTKWqW+qtB4Uu2NQvAmxU=
 -----END CERTIFICATE-----
-
 Certinomis - Root CA
 ====================
 -----BEGIN CERTIFICATE-----
@@ -4969,7 +4652,6 @@ I0ZSKS3io0EHVmmY0gUJvGnHWmHNj4FgFU2A3ZDifcRQ8ow7bkrHxuaAKzyBvBGAFhAn1/DNP3nM
 cyrDflOR1m749fPH0FFNjkulW+YZFzvWgQncItzujrnEj1PhZ7szuIgVRs/taTX/dQ1G885x4cVr
 hkIGuUE=
 -----END CERTIFICATE-----
-
 OISTE WISeKey Global Root GB CA
 ===============================
 -----BEGIN CERTIFICATE-----
@@ -4991,7 +4673,6 @@ VQreUGdNZtGn//3ZwLWoo4rOZvUPQ82nK1d7Y0Zqqi5S2PTt4W2tKZB4SLrhI6qjiey1q5bAtEui
 HZeeevJuQHHfaPFlTc58Bd9TZaml8LGXBHAVRgOY1NK/VLSgWH1Sb9pWJmLU2NuJMW8c8CLC02Ic
 Nc1MaRVUGpCY3useX8p3x8uOPUNpnJpY0CQ73xtAln41rYHHTnG6iBM=
 -----END CERTIFICATE-----
-
 Certification Authority of WoSign G2
 ====================================
 -----BEGIN CERTIFICATE-----
@@ -5012,7 +4693,6 @@ TgvMWvchNSiDbGAtROtSjFA9tWwS1/oJu2yySrHFieT801LYYRf+epSEj3m2M1m6D8QL4nCgS3gu
 +sif/a+RZQp4OBXllxcU3fngLDT4ONCEIgDAFFEYKwLcMFrw6AF8NTojrwjkr6qOKEJJLvD1mTS+
 7Q9LGOHSJDy7XUe3IfKN0QqZjuNuPq1w4I+5ysxugTH2e5x6eeRncRg=
 -----END CERTIFICATE-----
-
 CA WoSign ECC Root
 ==================
 -----BEGIN CERTIFICATE-----
@@ -5027,7 +4707,6 @@ MluARZPzA7gwCgYIKoZIzj0EAwMDaAAwZQIxAOSkhLCB1T2wdKyUpOgOPQB0TKGXa/kNUTyh2Tv0
 Daupn75OcsqF1NnstTJFGG+rrQIwfcf3aWMvoeGY7xMQ0Xk/0f7qO3/eVvSQsRUR2LIiFdAvwyYu
 a/GRspBl9JrmkO5K
 -----END CERTIFICATE-----
-
 SZAFIR ROOT CA2
 ===============
 -----BEGIN CERTIFICATE-----
@@ -5048,7 +4727,6 @@ oPwglV9PJi8RI4NOdQcPv5vRtB3pEAT+ymCPoky4rc/hkA/NrgrHXXu3UNLUYfrVFdvXn4dRVOul
 4+vJhaAlIDf7js4MNIThPIGyd05DpYhfhmehPea0XGG2Ptv+tyjFogeutcrKjSoS75ftwjCkySp6
 +/NNIxuZMzSgLvWpCz/UXeHPhJ/iGcJfitYgHuNztw==
 -----END CERTIFICATE-----
-
 Certum Trusted Network CA 2
 ===========================
 -----BEGIN CERTIFICATE-----
@@ -5080,7 +4758,6 @@ ypnTycUm/Q1oBEauttmbjL4ZvrHG8hnjXALKLNhvSgfZyTXaQHXyxKcZb55CEJh15pWLYLztxRLX
 is7VmFxWlgPF7ncGNf/P5O4/E2Hu29othfDNrp2yGAlFw5Khchf8R7agCyzxxN5DaAhqXzvwdmP7
 zAYspsbiDrW5viSP
 -----END CERTIFICATE-----
-
 Hellenic Academic and Research Institutions RootCA 2015
 =======================================================
 -----BEGIN CERTIFICATE-----
@@ -5113,7 +4790,6 @@ J94Cj8rDtSvK6evIIVM4pcw72Hc3MKJP2W/R8kCtQXoXxdZKNYm3QdV8hn9VTYNKpXMgwDqvkPGa
 JI7ZjnHKe7iG2rKPmT4dEw0SEe7Uq/DpFXYC5ODfqiAeW2GFZECpkJcNrVPSWh2HagCXZWK0vm9q
 p/UsQu0yrbYhnr68
 -----END CERTIFICATE-----
-
 Hellenic Academic and Research Institutions ECC RootCA 2015
 ===========================================================
 -----BEGIN CERTIFICATE-----
@@ -5131,7 +4807,6 @@ BBYEFLQiC4KZJAEOnLvkDv2/+5cgk5kqMAoGCCqGSM49BAMCA2cAMGQCMGfOFmI4oqxiRaeplSTA
 GiecMjvAwNW6qef4BENThe5SId6d9SWDPp5YSy/XZxMOIQIwBeF1Ad5o7SofTUwJCA3sS61kFyjn
 dc5FZXIhF8siQQ6ME5g4mlRtm8rifOoCWCKR
 -----END CERTIFICATE-----
-
 Certplus Root CA G1
 ===================
 -----BEGIN CERTIFICATE-----
@@ -5161,7 +4836,6 @@ VRHc6qnNSlSsKWNEz0pAoNZoWRsz+e86i9sgktxChL8Bq4fA1SCC28a5g4VCXA9DO2pJNdWY9BW/
 +mGBDAkgGNLQFwzLSABQ6XaCjGTXOqAHVcweMcDvOrRl++O/QmueD6i9a5jc2NvLi6Td11n0bt3+
 qsOR0C5CB8AMTVPNJLFMWx5R9N/pkvo=
 -----END CERTIFICATE-----
-
 Certplus Root CA G2
 ===================
 -----BEGIN CERTIFICATE-----
@@ -5176,7 +4850,6 @@ IwQYMBaAFNqDYwJ5jtpMxjwjFNiPwyCrKGBZMAoGCCqGSM49BAMDA2gAMGUCMHD+sAvZ94OX7PNV
 HdTcswYO/jOYnYs5kGuUIe22113WTNchp+e/IQ8rzfcq3IUHnQIxAIYUFuXcsGXCwI4Un78kFmjl
 vPl5adytRSv3tjFzzAalU5ORGpOucGpnutee5WEaXw==
 -----END CERTIFICATE-----
-
 OpenTrust Root CA G1
 ====================
 -----BEGIN CERTIFICATE-----
@@ -5206,7 +4879,6 @@ bw4cHjdx5RiHdRk/ULlepEU0rbDK5uUTdg8xFKmOLZTW1YVNcxVPS/KyPu1svf0OnWZzsD2097+o
 4BGkxK51CUpjAEggpsadCwmKtODmzj7HPiY46SvepghJAwSQiumPv+i2tCqjI40cHLI5kqiPAlxA
 OXXUc0ECd97N4EOH1uS6SsNsEn/+KuYj1oxx
 -----END CERTIFICATE-----
-
 OpenTrust Root CA G2
 ====================
 -----BEGIN CERTIFICATE-----
@@ -5236,7 +4908,6 @@ SmVGFvyqv1ROTVu+OEO3KMqLM6oaJbolXCkvW0pujOotnCr2BXbgd5eAiN1nE28daCSLT7d0geX0
 YJ96Vdc+N9oWaz53rK4YcJUIeSkDiv7BO7M/Gg+kO14fWKGVyasvc0rQLW6aWQ9VGHgtPFGml4vm
 u7JwqkwR3v98KzfUetF3NI/n+UL3PIEMS1IK
 -----END CERTIFICATE-----
-
 OpenTrust Root CA G3
 ====================
 -----BEGIN CERTIFICATE-----
@@ -5251,7 +4922,6 @@ BgNVHSMEGDAWgBRHd8MUi2I5DMlv4VBN0BBY3JWIbTAKBggqhkjOPQQDAwNpADBmAjEAj6jcnboM
 BBf6Fek9LykBl7+BFjNAk2z8+e2AcG+qj9uEwov1NcoG3GRvaBbhj5G5AjEA2Euly8LQCGzpGPta
 3U1fJAuwACEl74+nBCZx4nxp5V2a+EEfOzmTk51V6s2N8fvB
 -----END CERTIFICATE-----
-
 ISRG Root X1
 ============
 -----BEGIN CERTIFICATE-----
@@ -5281,7 +4951,6 @@ YVvTH9w7jXbyLeiNdd8XM2w9U/t7y0Ff/9yi0GE44Za4rF2LN9d11TPAmRGunUHBcnWEvgJBQl9n
 JEiU0Zsnvgc/ubhPgXRR4Xq37Z0j4r7g1SgEEzwxA57demyPxgcYxn/eR44/KJ4EBs+lVDR3veyJ
 m+kXQ99b21/+jh5Xos1AnX5iItreGCc=
 -----END CERTIFICATE-----
-
 AC RAIZ FNMT-RCM
 ================
 -----BEGIN CERTIFICATE-----
@@ -5311,7 +4980,6 @@ Ixjp6o7RTUaN8Tvkasq6+yO3m/qZASlaWFot4/nUbQ4mrcFuNLwy+AwF+mWj2zs3gyLp1txyM/1d
 5mqwujGSQkBqvjrTcuFqN1W8rB2Vt2lh8kORdOag0wokRqEIr9baRRmW1FMdW4R58MD3R++Lj8UG
 rp1MYp3/RgT408m2ECVAdf4WqslKYIYvuu8wd+RU4riEmViAqhOLUTpPSPaLtrM=
 -----END CERTIFICATE-----
-
 Amazon Root CA 1
 ================
 -----BEGIN CERTIFICATE-----
@@ -5331,7 +4999,6 @@ CCjjmCXPI6T53iHTfIUJrU6adTrCC2qJeHZERxhlbI1Bjjt/msv0tadQ1wUsN+gDS63pYaACbvXy
 2XV4cdFyQzR1bldZwgJcJmApzyMZFo6IQ6XU5MsI+yMRQ+hDKXJioaldXgjUkK642M4UwtBV8ob2
 xJNDd2ZhwLnoQdeXeGADbkpyrqXRfboQnoZsG4q5WTP468SQvvG5
 -----END CERTIFICATE-----
-
 Amazon Root CA 2
 ================
 -----BEGIN CERTIFICATE-----
@@ -5360,7 +5027,6 @@ Yh63n749sSmvZ6ES8lgQGVMDMBu4Gon2nL2XA46jCfMdiyHxtN/kHNGfZQIG6lzWE7OE76KlXIx3
 KadowGuuQNKotOrN8I1LOJwZmhsoVLiJkO/KdYE+HvJkJMcYr07/R54H9jVlpNMKVv/1F2Rs76gi
 JUmTtt8AF9pYfl3uxRuw0dFfIRDH+fO6AgonB8Xx1sfT4PsJYGw=
 -----END CERTIFICATE-----
-
 Amazon Root CA 3
 ================
 -----BEGIN CERTIFICATE-----
@@ -5373,7 +5039,6 @@ Zt6jQjBAMA8GA1UdEwEB/wQFMAMBAf8wDgYDVR0PAQH/BAQDAgGGMB0GA1UdDgQWBBSrttvXBp43
 rDCGB5Fwx5zEGbF4wDAKBggqhkjOPQQDAgNJADBGAiEA4IWSoxe3jfkrBqWTrBqYaGFy+uGh0Psc
 eGCmQ5nFuMQCIQCcAu/xlJyzlvnrxir4tiz+OpAUFteMYyRIHN8wfdVoOw==
 -----END CERTIFICATE-----
-
 Amazon Root CA 4
 ================
 -----BEGIN CERTIFICATE-----
@@ -5387,7 +5052,6 @@ HQ8BAf8EBAMCAYYwHQYDVR0OBBYEFNPsxzplbszh2naaVvuc84ZtV+WBMAoGCCqGSM49BAMDA2gA
 MGUCMDqLIfG9fhGt0O9Yli/W651+kI0rz2ZVwyzjKKlwCkcO8DdZEv8tmZQoTipPNU0zWgIxAOp1
 AE47xDqUEpHJWEadIRNyp4iciuRMStuW1KyLa2tJElMzrdfkviT8tQp21KW8EA==
 -----END CERTIFICATE-----
-
 LuxTrust Global Root 2
 ======================
 -----BEGIN CERTIFICATE-----
@@ -5418,7 +5082,6 @@ TxgKqpAd60Ae36EeRJIQmvKN4dFLRp7oRUKX6kWZ8+xm1QL68qZKJKrezrnK+T+Tb/mjuuqlPpmt
 7kGUnF4ZLvhFSZl0kbAEb+MEWrGrKqv+x9CWttrhSmQGbmBNvUJO/3jaJMobtNeWOWyu8Q6qp31I
 iyBMz2TWuJdGsE7RKlY6oJO9r4Ak4Ap+58rVyuiFVdw2KuGUaJPHZnJED4AhMmwlxyOAgwrr
 -----END CERTIFICATE-----
-
 TUBITAK Kamu SM SSL Kok Sertifikasi - Surum 1
 =============================================
 -----BEGIN CERTIFICATE-----
@@ -5445,5 +5108,4 @@ q5Rm+K37DwhuJi1/FwcJsoz7UMCflo3Ptv0AnVoUmr8CRPXBwp8iXqIPoeM=
 -----END CERTIFICATE-----
 CACERT;
     }
-
 }
