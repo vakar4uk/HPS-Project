@@ -469,6 +469,8 @@ input#logo-input {
 /* DASHBOARD STYLING */
 /* ================= */
 
+
+
 div.modal-body {
     padding-bottom: 0px;
 }
@@ -569,7 +571,7 @@ div.carrier {
 }
 
 .thumbnail.onboarded img {
-    padding: 30px;
+    padding: 50px;
     height: 100%;;
 }
 
