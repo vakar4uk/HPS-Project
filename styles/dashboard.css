@@ -593,7 +593,7 @@ div.carrier div.carrier-info {
 }
 
 div.carrier div.carrier-info > h4{
-    color: rgba(29, 77, 139, 0.98); ;
+    color: rgba(29, 77, 139, 0.98); 
 }
 
 div.carrier-info {
@@ -825,3 +825,31 @@ div.carrier-info {
     color: rgba(110, 110, 110, 0.77);
 }
 
+#CancelNoteBtn {
+    float: right;
+    color: rgba(110, 110, 110, 0.77);
+    background-color: white;
+}
+
+#AddNoteBtn {
+    float: right;
+    background-color:#39DBDB;
+    color: white;
+}
+
+.modal-content  {
+    color: white;
+    background-color: rgba(29, 77, 139, 0.98); 
+}
+
+
+#textarea{ 
+    resize:none;
+}
+
+#title{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: rgba(29, 77, 139, 0.98);
+
+}
