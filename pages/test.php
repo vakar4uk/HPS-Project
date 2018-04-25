@@ -58,8 +58,7 @@
                                     <button id="business-group" class="btn btn-md" type="button">Group</button>
                             </div>
                             </div>
-                          
-                               
+                        
                                                 
                             <div class="form-group row">
                             <div class="col-md-3">
@@ -73,7 +72,6 @@
                             </div>
                             </div>
                          
-                        
 
                             <div class="form-group row">
                             <div class="col-md-3">
@@ -85,28 +83,32 @@
                             </div>
 
 
+
+                       
+                          
                             <div class="modal" id="notes">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title"></h5>
-                                            <button class="close" data-dismiss="modal">&times;</button>
-                                        </div>
-                                <div class="modal-body">
-                                    <div class="list-group">
-                                        <div class="d-flex w-100 justify-content-between">
-                                            <h6>NOTES</h6>
-                                            dhkjskjhfksjhfksj
-
-                                        </div>
-                                    </div>
-                                <div class="modal-footer">
-                                    <button class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    </div>
+                              <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <button class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Notes</h4>
+                                  </div>
+                                  <div class="container"></div>
+                                  <div class="modal-body">
+                                    <input class="form-control form-control-lg no-border" id="title" type="text" placeholder="Title goes here...">
+                                    <textarea class="form-control" id="textarea" rows="10" placeholder="Text goes here..."></textarea>   
+                                    <a id= "CancelNoteBtn" class="btn btn-primary">Cancel</a>
+                                    <a id= "AddNoteBtn" class="btn btn-primary">+ Add Note</a>
+                                    <br><br><br>
+                                  </div>
+                                  <div class="modal-footer">
+                                  </div>
                                 </div>
-                                </div>
+                              </div>
                             </div>
-
+                          
+                            
+                           
 
 
 
