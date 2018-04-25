@@ -3,7 +3,7 @@
     include('navbars_footers/top-navbar.php');
 ?>
 
-<div class="col-lg-12">
+
 <div id="carierdetails-container" class="container">    
         <div class="carrier-details">
             <!-- Header text -->             
@@ -23,24 +23,28 @@
                             <p>Business Type</p>
                                 <span id="icons">
                                    
-                    <div class="collapse navbar-collapse" id="myNavbar">
-                        <ul class="nav navbar-nav">
-
-                        
-                        <li><a href=""><i class="far fa-file-alt" style="color:rgba(60, 222, 204, 0.91);"></i></a></li>
                     
-                        <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fas fa-ellipsis-v" style="color:rgba(60, 222, 204, 0.91);"></i></a>
-                        <ul class="dropdown-menu">
 
-                            <li><a href=""><i id= "notes" class="far fa-file-alt"></i>Notes</a></li>
-                            <li><a href=""><i id= "custom" class="fas fa-sliders-h"></i>Customizations</a></li>
-                            <li><a href=""><i id= "todo" class="fas fa-clipboard-check"></i>Add To-Do</a></li>
-                        </ul>
-                        </li>
-                        </ul>
 
-                    </div>  
+
+
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href=""><i class="far fa-file-alt" style="color:rgba(60, 222, 204, 0.91);"></i></a>
+                                </li>
+                               
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fas fa-ellipsis-v" style="color:rgba(60, 222, 204, 0.91);"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#" data-toggle="modal" data-target="#notes"><i class="far fa-file-alt" style="color:rgba(60, 222, 204, 0.91); margin-right: 13px;"></i>Notes</a></li>
+                                        <li><a href=""><i class= "fas fa-sliders-h" style="color:rgba(60, 222, 204, 0.91); margin-right: 8px;"></i>Customizations</a></li>
+                                        <li><a href=""><i class="fas fa-clipboard-check" style="color:rgba(60, 222, 204, 0.91); margin-right: 13px;"></i>Add To-Do</a></li>
+                                    </ul>
+                                    </li>
+                            </ul>
+
+
+
+
           
                             </span>
                             <hr id="hr">
@@ -54,8 +58,7 @@
                                     <button id="business-group" class="btn btn-md" type="button">Group</button>
                             </div>
                             </div>
-                          
-                               
+                        
                                                 
                             <div class="form-group row">
                             <div class="col-md-3">
@@ -69,7 +72,6 @@
                             </div>
                             </div>
                          
-                        
 
                             <div class="form-group row">
                             <div class="col-md-3">
@@ -79,6 +81,34 @@
                                     <input class="form-control" id="input-code-individual-offexchange" type="text" placeholder="Offexchange Carrier Code">
                             </div>
                             </div>
+
+
+
+                       
+                          
+                            <div class="modal" id="notes">
+                              <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <button class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Notes</h4>
+                                  </div>
+                                  <div class="container"></div>
+                                  <div class="modal-body">
+                                    <input class="form-control form-control-lg no-border" id="title" type="text" placeholder="Title goes here...">
+                                    <textarea class="form-control" id="textarea" rows="10" placeholder="Text goes here..."></textarea>   
+                                    <a id= "CancelNoteBtn" class="btn btn-primary">Cancel</a>
+                                    <a id= "AddNoteBtn" class="btn btn-primary">+ Add Note</a>
+                                    <br><br><br>
+                                  </div>
+                                  <div class="modal-footer">
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          
+                            
+                           
 
 
 
