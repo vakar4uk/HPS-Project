@@ -307,7 +307,7 @@ div#carrier-logo {
 #user-logo {
     position: absolute;
     left: 47%;
-    bottom: 12%;
+    bottom: 14%;
     width: 150px;
     height: 150px;
     display: none;
@@ -344,7 +344,7 @@ div#carrier-logo {
     width: 97%;
     margin: 0px;
     display: inline-block;
-    border: 0.5px solid #FFFFFF;
+    border: 0.5px solid #CDC9C9;
 }
 
 #icons {
@@ -485,6 +485,11 @@ input#logo-input {
 
 div.modal-body {
     padding-bottom: 0px;
+}
+
+#dashboard-modal {
+    background: white;
+    color: gray;
 }
 
 #modal-logo {

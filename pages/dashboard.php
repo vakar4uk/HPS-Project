@@ -159,7 +159,7 @@
     <!-- Modal -->
     <div class="modal fade bs-example-modal-lg" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
-            <div class="modal-content">
+            <div id="dashboard-modal" class="modal-content">
                 <div class="modal-header">
                     <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
                     <h4 id="modal-logo" class="modal-title thumbnail" id="myModalLabel"><img src="../images/logos/<?php echo $carrier['logo']; ?>.png" alt=""></h4>
