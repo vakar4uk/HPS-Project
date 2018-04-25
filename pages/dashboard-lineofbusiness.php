@@ -39,25 +39,17 @@
 							                    
                     			               
                             		<div id="business-type" class="col-lg-4 col-md-4">                            
-                                		<button id="lineofbusiness1" class="btn btn-default btn-lg selected-business">Individual On Exchange</button>                    
+                                		<button id="on" class="btn btn-default btn-lg ">Individual On Exchange</button>                    
                                     </div>  
                                     <div id="business-type" class="col-lg-4 col-md-4">                            
-                                		<button id="off" class="btn btn-default btn-lg selected-business">Individual Off Exchange</button>                    
+                                		<button id="off" class="btn btn-default btn-lg ">Individual Off Exchange</button>                    
                             		</div>  <div id="business-type" class="col-lg-4 col-md-4">                            
-                                		<button id="group" class="btn btn-default btn-lg selected-business">Group</button>                    
+                                		<button id="group" class="btn btn-default btn-lg ">Group</button>                    
                             		</div>            
           			            
 							
 						</div>
-					</div>
-					<div class="row">
-                        <!-- <div class="col-lg-6 col-md-6">
-                            <button class="btn btn-lg btn-default">Copy from off exchange for individual</button>
-                        </div> -->
-
-                       
-                    </div>
-                    
+					</div>              
                     
                 </div>
             </div>
@@ -92,18 +84,15 @@
 							                    
                     			<?php foreach ($lineOfBusiness as $line) { ?>                        
                             		<div id="business-type" class="col-lg-3 col-md-3">                            
-                                    
-                                    <button id="lineofbusiness"  class="btn btn-info btn-block btn-lg selected-business"><?php echo $line["name"]; ?></button>                    
+                                        <button id="on"  class="btn btn-default btn-block btn-lg selected-business"><?php echo $line["name"]; ?></button>                    
                             		</div>            
           			            <?php } ?>
 							
 						</div>
 					</div>
-					<div class="row">
-               
-                        <div id="business-type" class="col-lg-12 col-md-12">   
-                            
-                            <button id="clear-business-btn" class="btn btn-lg btn-danger pull-right">Clear All</button>
+					<div class="row">               
+                        <div id="business-type" class="col-lg-12 col-md-12">                         
+                            <button id="clear-business-btn" class="btn btn-lg btn-danger clear-business-btn pull-right">Clear All</button>
                         </div>
                     </div>
                     
@@ -135,20 +124,15 @@
 							                    
                     			<?php foreach ($lineOfBusiness as $line) { ?>                        
                             		<div id="business-type" class="col-lg-3 col-md-3">                            
-                                		<button id="selected-business-type" class="btn btn-info btn-block btn-lg selected-business"><?php echo $line["name"]; ?></button>                    
+                                		<button class="btn btn-default btn-block btn-lg selected-business"><?php echo $line["name"]; ?></button>                    
                             		</div>            
           			            <?php } ?>
 							
 						</div>
 					</div>
-					<div class="row">
-                        <!-- <div class="col-lg-6 col-md-6">
-                            <button class="btn btn-lg btn-default">Copy from off exchange for individual</button>
-                        </div> -->
-
-                        <div id="business-clear" class="col-lg-12 col-md-12">   
-                            
-                            <button id="clear-business-btn" class="btn btn-lg btn-danger pull-right">Clear All</button>
+					<div class="row">               
+                        <div id="business-type" class="col-lg-12 col-md-12">                         
+                            <button id="clear-business-btn" class="btn btn-lg btn-danger clear-business-btn pull-right">Clear All</button>
                         </div>
                     </div>
                     
@@ -178,21 +162,17 @@
 							                    
                     			<?php foreach ($lineOfBusiness as $line) { ?>                        
                             		<div id="business-type" class="col-lg-3 col-md-3">                            
-                                		<button id="selected-business-type" class="btn btn-info btn-lg selected-business"><?php echo $line["name"]; ?></button>                    
+                                		<button id="selected-business-type" class="btn btn-default btn-lg selected-business"><?php echo $line["name"]; ?></button>                    
                             		</div>            
           			            <?php } ?>
 							
 						</div>
 					</div>
-					<div class="row">
-                        <!-- <div class="col-lg-6 col-md-6">
-                            <button class="btn btn-lg btn-default">Copy from off exchange for individual</button>
-                        </div> -->
-
-                        <div  class="col-lg-12 col-md-12">   
-                            
+					<div class="row">               
+                        <div id="business-type" class="col-lg-12 col-md-12">                         
                             <button id="clear-business-btn" class="btn btn-lg btn-danger clear-business-btn pull-right">Clear All</button>
                         </div>
+                    
                     </div>
                     
                     

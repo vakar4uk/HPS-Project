@@ -31,19 +31,22 @@ $(document).ready(function () {
     // logo upload
 
     // Line of business option selection
-    $('#lineofbusiness1').click(function () {
+    $('#on').click(function () {
+        $(this).toggleClass('btn-info');
         $('#Group1').fadeOut();
         $('#OffExchange').fadeOut();
         $('#OnExchange').fadeIn();
     });
 
     $('#off').click(function () {
+        $(this).toggleClass('btn-info');
         $('#OnExchange').fadeOut();
         $('#Group1').fadeOut();
         $('#OffExchange').fadeIn();
     });
 
     $('#group').click(function () {
+        $(this).toggleClass('btn-info');
         $('#OnExchange').fadeOut();
         $('#OffExchange').fadeOut();
         $('#Group1').fadeIn();
@@ -65,14 +68,14 @@ $(document).ready(function () {
 
     // select business type
     $('.selected-business').click(function() {
-        $('.selected-business').last().addClass('btn-info');
         $(this).toggleClass('btn-info');
     });
     // select business type
 
     // clear business
-    $('.clear-business-btn').click(function() {        
-        $('.selected-business').addClass('btn-info');
+    $('.clear-business-btn').click(function() {    
+        $('.selected-business').removeClass('btn-info');
+        $('.selected-business').addClass('btn-default');
     });
     // clear business
 
