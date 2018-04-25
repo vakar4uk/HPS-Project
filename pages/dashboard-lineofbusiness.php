@@ -187,9 +187,9 @@
             <!-- ####################GROUP################# -->
 
             <div class="row">
-            <div id="business-type"  class="col-lg-12 col-md-12">   
+            <div class="col-lg-12 col-md-12">   
                     
-					<a class="btn btn-lg btn-success pull-right" href="dashboard-legalentity.php">Next</a>
+					<a class="btn btn-lg btn-primary pull-right" href="dashboard-legalentity.php">Next</a>
 				</div>
 		</div>
         </div>
