@@ -307,7 +307,7 @@ div#carrier-logo {
 #user-logo {
     position: absolute;
     left: 47%;
-    bottom: 12%;
+    bottom: 14%;
     width: 150px;
     height: 150px;
     display: none;
@@ -344,7 +344,7 @@ div#carrier-logo {
     width: 97%;
     margin: 0px;
     display: inline-block;
-    border: 0.5px solid #FFFFFF;
+    border: 0.5px solid #CDC9C9;
 }
 
 #icons {
@@ -485,6 +485,11 @@ input#logo-input {
 
 div.modal-body {
     padding-bottom: 0px;
+}
+
+#dashboard-modal {
+    background: white;
+    color: gray;
 }
 
 #modal-logo {
@@ -835,51 +840,6 @@ div.carrier-info {
     color: rgba(110, 110, 110, 0.77);
 }
 
-<<<<<<< HEAD
-
-
-
-/* Line of Business  */
-
-
-#lineofbusiness1{
-    /* background-color:rgba(215, 212, 212, 0.77);
-    color: rgba(110, 110, 110, 0.77);
-    margin-top: 35px;
-    margin-bottom: 25px;
-    padding-left: 80px;
-    padding-right: 80px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-     */
-}
-
-#lineofbusiness1{
-    /* background-color:rgba(215, 212, 212, 0.77); */
-    /* color: rgba(110, 110, 110, 0.77); */
-    /* margin-top: 35px;
-    margin-bottom: 25px;
-    margin-left: 15px;
-    padding-left: 173px;
-    padding-right: 173px;
-    padding-top: 10px;
-    padding-bottom: 10px; */
-    
-}
-
-
-#lineofbusiness1.testing{
-    color:#39DBDB;
-    Background-color: white;
-}
-
-
-#lineofbusiness1:hover {
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-}
-
-/* Line of Business  */
-=======
 #CancelNoteBtn {
     float: right;
     color: rgba(110, 110, 110, 0.77);
@@ -908,4 +868,3 @@ div.carrier-info {
     color: rgba(29, 77, 139, 0.98);
 
 }
->>>>>>> Combining
