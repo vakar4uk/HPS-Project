@@ -276,6 +276,16 @@ input#logo-upload {
     border: none;
 }
 
+/* required field customization */
+.highlight {
+    border: 1px solid #C23232;   
+}
+
+form .error {
+    color: #C23232;
+}
+/* required field customization */
+
 .jumbotron p.description {
     padding-top: 15px;
     padding-bottom: 17px;
@@ -323,6 +333,14 @@ div#carrier-logo {
     width: 500px;
     height: 400px;
 }
+
+#user-logo {
+    animation-delay: 0s;
+    animation-duration: 3s;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-delay: 0s;
+    /* -webkit-animation-iteration-count: infinite; */
+  }
 
 .carrier-name  p {
     float: left;
