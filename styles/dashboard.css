@@ -201,7 +201,10 @@ nav.navbar.navbar-inverse {
     height: 150px;
     text-align: center;
     margin-top: 10px;
+    
 }
+
+
 
 #carrier-name {
     color: white;
@@ -314,12 +317,21 @@ div#carrier-logo {
     padding-bottom: 80px;
 }
 
+#drag-drop-container {
+    height: 200px;
+    width: 350px;
+    margin-top: 50px;
+    margin-left: 1%;
+    padding-bottom: 20px;
+    border: 2px dotted #A8A0A0;
+}
+
 #user-logo {
     position: absolute;
-    left: 47%;
-    bottom: 14%;
-    width: 150px;
-    height: 150px;
+    left: 50%;
+    bottom: 11%;
+    width: 400px;
+    height: 300px;
     display: none;
 }
 
@@ -446,15 +458,17 @@ input[type=number]::-webkit-outer-spin-button {
 
 input[type="file"] {
     position: absolute;
-    bottom: 7%;
-    size: 500;
-    left: 18%;
+    /* background: red; */
+    top: 61%;    
+    left: 17%;
     opacity: .01;
 }
 
 input#logo-input {
+    margin-bottom: 8%;
+    margin-left: 1%;
     height: 210px;
-    width:150px;
+    width:330px;
 }
 
 #image-upload {
@@ -462,6 +476,10 @@ input#logo-input {
     margin-top: 50px;
     width: 150px;
     height: 80px;
+}
+
+#logo-drop-area {
+    margin-left: 15%;
 }
 
 #logo-drop-area:hover {
@@ -473,9 +491,19 @@ input#logo-input {
     color: rgba(173, 176, 181, 0.98);
 }
 
+#img-upload-icon {
+    position: relative;
+    margin-left: 75%;
+}
+
 #img-upload-icon:hover {
     cursor: pointer;
     color: #7272C8;
+}
+
+p.file-name {
+    font-size: 0.9em;
+    width: 300px;
 }
 
 /* Line of Business Antony */

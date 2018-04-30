@@ -31,14 +31,16 @@
                     <div id="carrier-logo" class="carrier-name">
                         <p>Carrier Logo</p><span id="icons"><i class="far fa-envelope fa-1x"></i><i class="fas fa-ellipsis-v fa-1x"></i></span>
                         <hr id="hr">
-                        <div id="image-upload">
-                            <label id="logo-drop-area">
-                                <label class="logo-upload" for="logo-input"></label>
-                                <input type="file" id="logo-input" size="400"><i id="img-upload-icon" class="fas fa-upload fa-5x"></i>
-                                <p class="file-name">Please select a file.</p>                                
-                            </label> 
-                            <img class="text-center" id="user-logo" src="#" alt="Carrier logo" data-toggle="modal" data-target="#logo-preview"/>
-                        </div>                 
+                        <div id="drag-drop-container">
+                            <div id="image-upload">
+                                <label id="logo-drop-area">
+                                    <label class="logo-upload" for="logo-input"></label>
+                                    <input type="file" id="logo-input" size="400"><i id="img-upload-icon" class="fas fa-upload fa-5x"></i>
+                                    <p class="file-name">Try dropping some files here, or click so select files to upload.</p>                                
+                                </label> 
+                                <img class="text-center" id="user-logo" src="#" alt="Carrier logo" data-toggle="modal" data-target="#logo-preview"/>
+                            </div>   
+                        </div>                                      
                     </div>
                 </div>
                 <a id="save-next-btn"  href="dashboard-businessdetails.php" class="btn btn-lg btn-primary pull-right">Next</a>
