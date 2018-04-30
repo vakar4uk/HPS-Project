@@ -50,9 +50,12 @@
 
 <!-- Modal -->
 <div class="modal fade" id="logo-preview" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">      
-        <img class="text-center thumbnail" id="user-logo-preview" src="#" alt="Carrier logo"/>   
-    </div>
+    <div class="modal-dialog" role="document">
+        <div id="image-preview-modal" class="modal-content">
+            <img class="text-center thumbnail" id="user-logo-preview" src="#" alt="Carrier logo"/>
+            <div class="modal-footer"><button type="button" class="btn btn-default float-right" data-dismiss="modal">Close</button></div>          
+        </div>
+    </div>    
 </div>
 <!-- Modal -->
 

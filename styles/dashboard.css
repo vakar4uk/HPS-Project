@@ -341,9 +341,9 @@ div#carrier-logo {
 }
 
 #user-logo-preview {
-    margin: 200px auto;
+    margin: 100px auto;
     width: 500px;
-    height: 400px;
+    height: 300px;
 }
 
 #user-logo {
@@ -353,6 +353,10 @@ div#carrier-logo {
     -webkit-animation-delay: 0s;
     /* -webkit-animation-iteration-count: infinite; */
   }
+
+#image-preview-modal {
+    background: white;
+}
 
 .carrier-name  p {
     float: left;
