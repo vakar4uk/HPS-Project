@@ -759,139 +759,74 @@ div.carrier-info {
 
 
 
-/*Deanna's Testing Code
+/*Deanna's Testing Code*/
 
-.carrier-name  p {
-    float: left;
-    margin-left: 40px;
-    vertical-align: middle;
-    color: #7272C8;
-    font-size: 1.2em;
-    font-weight: 500;    
-}
 
-.carrier-name  h3 {
-    float: left;
-    margin-left: 10px;
-    vertical-align: middle;
-    color: #7272C8;
-    font-size: 1.2em;
-    font-weight: 500;    
-}*/
-
-#business-individual{
+#individual-onexchange{
     background-color:rgba(215, 212, 212, 0.77);
     color: rgba(110, 110, 110, 0.77);
-    margin-top: 35px;
-    margin-bottom: 25px;
-    margin-left: 15px;
-    padding-left: 173px;
-    padding-right: 173px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    
+    margin-top: 25px;
+    margin-left: 80px;
+    width: 110%;
 }
 
-#business-individual.testing{
+#individual-onexchange.testing{
     background-color:#39DBDB;
     color: white;
 }
 
-#business-individual:hover {
+#individual-onexchange:hover {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
-#business-group{
+#individual-offexchange{
     background-color:rgba(215, 212, 212, 0.77);
     color: rgba(110, 110, 110, 0.77);
-    margin-top: 35px;
-    margin-bottom: 25px;
-    padding-left: 173px;
-    padding-right: 173px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    
+    margin-top: 25px;
+    margin-left: 100px;
+    width: 110%;
+
 }
 
-#business-group.testing{
+#individual-offexchange.testing{
     background-color:#39DBDB;
     color: white;
 }
 
-
-#business-group:hover {
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-}
-/* 
-#onexchange {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 20px;
-    padding-left: 57px;
-    padding-right: 57px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    
-}
-
-#onexchange.testing{
-    background-color:#39DBDB;
-    color: white;
-}
-
-#onexchange:hover {
+#individual-offexchange:hover {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
-#offexchange {
+#group{
     background-color:rgba(215, 212, 212, 0.77);
     color: rgba(110, 110, 110, 0.77);
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding-left: 57px;
-    padding-right: 57px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    
+    margin-top: 25px;
+    margin-left: 120px;
+    width: 110%;
 }
 
-#offexchange.testing{
+#group.testing{
     background-color:#39DBDB;
     color: white;
 }
 
-#offexchange:hover {
-        box-shadow: 0 12pcx 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-} */
-
-#input-code-individual-onexchange {
-    margin-left: 20px;
-    margin-top: 10px;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    color: rgba(110, 110, 110, 0.77);
+#group:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
-#input-code-individual-offexchange {
-    margin-top: 10px;
-    margin-bottom: 40px;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    color: rgba(110, 110, 110, 0.77);
+#onexchange-code{
+    margin-left: 70px;
+    width: 110%;
 }
 
-#input-code-group {
-    margin-top: 15px;
-    margin-left: 25px;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    color: rgba(110, 110, 110, 0.77);
+#offexchange-code{
+    margin-left: 90px;
+    width: 110%;
+}
+
+#group-code{
+    margin-left: 110px;
+    width: 110%;
 }
 
 #CancelNoteBtn {

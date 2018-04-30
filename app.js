@@ -82,152 +82,50 @@ $(document).ready(function () {
 
 
 
-    //Business Details Toggle//
+/*Business Details Toggle*/
 
+    
+    $("input[id*=onexchange-code], input[id*=offexchange-code], input[id*=group-code]").hide();
+    
+    
+        $("button[id*=individual-onexchange]").click(function () {
+            $("input[id*=onexchange-code]").toggle();
+        });
+        
+        $("button[id*=individual-offexchange]").click(function () {
+            $("input[id*=offexchange-code]").toggle();
+        });
 
-    $("button[id*=onexchange], button[id*=offexchange], input[id*=input-code-individual-onexchange], input[id*=input-code-individual-offexchange], input[id*=input-code-group]").hide();
+        $("button[id*=group]").click(function () {
+            $("input[id*=group-code]").toggle();
+        });
 
-
-    $("button[id*=business-individual]").click(function () {
-        $("button[id*=onexchange], button[id*=offexchange]").toggle();
-    });
-
-    $("button[id*=business-individual], button[id*=business-group], button[id*=onexchange], button[id*=offexchange]").click(function () {
-        $(this).toggleClass("testing");
-    });
-
-    $("button[id*=business-individual]").click(function () {
-        $("input[id*=input-code-individual-onexchange], input[id*=input-code-individual-offexchange]").hide();
-    });
-
-    $("button[id*=onexchange]").click(function () {
-        $("input[id*=input-code-individual-onexchange]").toggle();
-    });
-
-    $("button[id*=offexchange]").click(function () {
-        $("input[id*=input-code-individual-offexchange]").toggle();
-    });
-
-    $("button[id*=business-group]").click(function () {
-        $("input[id*=input-code-group]").toggle();
-
-    });
-
+        $("button[id*=individual-onexchange], button[id*=individual-offexchange], button[id*=group]").click(function() {
+            $(this).toggleClass( "testing" );
+        });
+    
+        
+    
 });
 
-// From input validation
-// $("#entity-address").submit(function(){
-//     var isFormValid = true;
+function GetValue()
+{
+    var myarray= new Array("X7","A1","B2","C4","Y6","Q9");
+    var random = myarray[Math.floor(Math.random() * myarray.length)];
+    document.getElementById("onexchange-code").innerHTML=random;
+}
+    
+function GetValue1()
+{
+    var myarray= new Array("X7","A1","B2","C4","Y6","Q9");
+    var random = myarray[Math.floor(Math.random() * myarray.length)];
+    document.getElementById("offexchange-code").innerHTML=random;
+}
 
-//     $(":input[required]").each(function(){
-//         if ($.trim($(this).val()).length == 0){
-//             $(this).addClass("highlight");
-//             isFormValid = false;
-//         }
-//         else{
-//             $(this).removeClass("highlight");
-//         }
-//     });
-
-//     if (!isFormValid) alert("Please fill in all the required fields (indicated by *)");
-
-//     return isFormValid;
-// });
-
-$('#legalentity-submit-btn').click(function () {
-    if ($('input[required]').val() == 0 || $('select[required]').val() == 0) {
-        $('input[required]').addClass('highlight');
-        $('select[required]').addClass('highlight');
-        // $('input[required]').focus();        
-    }
-});
-
-$(function () {
-    // Initialize form validation on the registration form.
-    // It has the name attribute "registration"
-    $("form[name='entity-address']").validate({
-        // Specify validation rules
-        rules: {
-            // The key name on the left side is the name attribute
-            // of an input field. Validation rules are defined
-            // on the right side
-            carriername: "required",
-            "address-type": {
-                required: true
-            },
-            addressLine1: "required",
-            city: "required",
-            state: "required",
-            zipcode: {
-                required: true,
-                minlength: 5,
-                maxlength: 5
-            },
-            "phone-type": {
-                required: true
-            },
-            phone: {
-                required: true,
-                minlength: 10,
-                maxlength: 10
-            },
-            email: {
-                required: true,
-                // Specify that email should be validated
-                // by the built-in "email" rule
-                email: true
-            },
-            "account-number": "required",
-            "bank-num-code": "required",
-            "batch-code-number": "required",
-            "site-code": "required",
-            "batch-description": "required",
-            "additional-batch-info": "required",
-            "batch-group-code": "required",
-            "bank-name": "required",
-            "merchant-id": "required",
-            "security-key": "required",
-            "security-expiration-date": "required"
-
-
-
-        },
-        // Specify validation error messages
-        messages: {
-            carriername: "Please enter name and code of legal entity",
-            "address-type": "Please select an address type",
-            addressLine1: "Please enter your address",
-            city: "Please enter a city",
-            state: "Please select state",
-            zipcode: {
-                required: "Please enter zipcode",
-                minlength: "Please provide valid zipcode",
-                maxlength: "Please provide valid zipcode"
-            },
-            "phone-type": "Please select phone type",
-            phone: "Please enter a 10-digit phone number",
-            email: "Please enter a valid email address",
-            "account-number": "Please enter account number",
-            "bank-num-code": "Please enter bank num code",
-            "batch-code-number": "Please enter batch code number",
-            "site-code": "Please enter site code",
-            "batch-description": "Please provide batch description",
-            "additional-batch-info": "Please provide additional batch info",
-            "batch-group-code": "Please enter batch group code",
-            "bank-name": "Please enter bank name",
-            "merchant-id": "Please enter Merchant ID",
-            "security-key": "Please enter security key",
-            "security-expiration-date": "Please provide security expiration date"
-        },
-
-
-
-
-
-        // Make sure the form is submitted to the destination defined
-        // in the "action" attribute of the form when valid
-        //   submitHandler: function(form) {
-        //     form.submit();
-        //   }
-    });
-});
+function GetValue2()
+{
+    var myarray= new Array("X7","A1","B2","C4","Y6","Q9");
+    var random = myarray[Math.floor(Math.random() * myarray.length)];
+    document.getElementById("group-code").innerHTML=random;
+}
+    

@@ -51,37 +51,30 @@
                             <br>
                             
                             <div class="form-group row">
-                            <div class="col-md-6">
-                                    <button id="business-individual" class="btn btn-md" type="button">Individual</button>
+                            <div class="col-md-3 col-lg-3">
+                                    <button id="individual-onexchange" class="btn btn-lg" type="button" onclick="GetValue();">Individual Onexchange</button>
                             </div>     
-                            <div class="col-md-6">        
-                                    <button id="business-group" class="btn btn-md" type="button">Group</button>
+                            <div class="col-md-3 col-lg-3">
+                                    <button id="individual-offexchange" class="btn btn-lg" type="button" onclick="GetValue1();">Individual Offexchange</button>
+                            </div>    
+                            <div class="col-md-3 col-lg-3">        
+                                    <button id="group" class="btn btn-lg" type="button" onclick="GetValue2();">Group</button>
                             </div>
+                            </div>
+
+                            <div class="form-group row">
+                            <div class="col-md-3 col-lg-3">
+                                    <p id="onexchange-code" ></p>
+                            </div>     
+                            <div class="col-md-3 col-lg-3">
+                                    <p id="offexchange-code" ></p>
+                            </div>    
+                            <div class="col-md-3 col-lg-3">
+                                    <p id="group-code" ></p>
+                            </div>  
                             </div>
                         
-                                                
-                            <div class="form-group row">
-                            <div class="col-md-3">
-                                    <button id="onexchange" class="btn btn-md" type="button">On Exchange</button>
-                            </div>  
-                            <div class="col-md-3"> 
-                                   <button id="offexchange" class="btn btn-md" type="button">Off Exchange</button>                                   
-                            </div>
-                            <div class="col-md-3">
-                                    <input class="form-control" id="input-code-group" type="text" placeholder="Group Carrier Code">
-                            </div>
-                            </div>
-                         
-
-                            <div class="form-group row">
-                            <div class="col-md-3">
-                                    <input class="form-control" id="input-code-individual-onexchange" type="text" placeholder="Onexchange Carrier Code">
-                            </div>
-                            <div class="col-md-3">
-                                    <input class="form-control" id="input-code-individual-offexchange" type="text" placeholder="Offexchange Carrier Code">
-                            </div>
-                            </div>
-
+                                    
 
 
                        
@@ -96,6 +89,7 @@
                                   <div class="container"></div>
                                   <div class="modal-body">
                                     <input class="form-control form-control-lg no-border" id="title" type="text" placeholder="Title goes here...">
+                                    <br>
                                     <textarea class="form-control" id="textarea" rows="10" placeholder="Text goes here..."></textarea>   
                                     <a id= "CancelNoteBtn" class="btn btn-primary">Cancel</a>
                                     <a id= "AddNoteBtn" class="btn btn-primary">+ Add Note</a>
