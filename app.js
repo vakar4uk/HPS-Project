@@ -78,38 +78,50 @@ $(document).ready(function () {
 
 
 
-//Business Details Toggle//
+/*Business Details Toggle*/
 
     
-    $("button[id*=onexchange], button[id*=offexchange], input[id*=input-code-individual-onexchange], input[id*=input-code-individual-offexchange], input[id*=input-code-group]").hide();
+    $("input[id*=onexchange-code], input[id*=offexchange-code], input[id*=group-code]").hide();
     
     
-        $("button[id*=business-individual]").click(function () {
-            $("button[id*=onexchange], button[id*=offexchange]").toggle();
+        $("button[id*=individual-onexchange]").click(function () {
+            $("input[id*=onexchange-code]").toggle();
         });
-    
-        $("button[id*=business-individual], button[id*=business-group], button[id*=onexchange], button[id*=offexchange]").click(function() {
+        
+        $("button[id*=individual-offexchange]").click(function () {
+            $("input[id*=offexchange-code]").toggle();
+        });
+
+        $("button[id*=group]").click(function () {
+            $("input[id*=group-code]").toggle();
+        });
+
+        $("button[id*=individual-onexchange], button[id*=individual-offexchange], button[id*=group]").click(function() {
             $(this).toggleClass( "testing" );
         });
     
-        $("button[id*=business-individual]").click(function () {
-            $("input[id*=input-code-individual-onexchange], input[id*=input-code-individual-offexchange]").hide();
-        });
-    
-        $("button[id*=onexchange]").click(function () {
-            $("input[id*=input-code-individual-onexchange]").toggle();
-        });
-    
-        $("button[id*=offexchange]").click(function () {
-            $("input[id*=input-code-individual-offexchange]").toggle();
-        });
-    
-        $("button[id*=business-group]").click(function () {
-            $("input[id*=input-code-group]").toggle();
-    
-        });
+        
     
 });
-    
 
+function GetValue()
+{
+    var myarray= new Array("X7","A1","B2","C4","Y6","Q9");
+    var random = myarray[Math.floor(Math.random() * myarray.length)];
+    document.getElementById("onexchange-code").innerHTML=random;
+}
+    
+function GetValue1()
+{
+    var myarray= new Array("X7","A1","B2","C4","Y6","Q9");
+    var random = myarray[Math.floor(Math.random() * myarray.length)];
+    document.getElementById("offexchange-code").innerHTML=random;
+}
+
+function GetValue2()
+{
+    var myarray= new Array("X7","A1","B2","C4","Y6","Q9");
+    var random = myarray[Math.floor(Math.random() * myarray.length)];
+    document.getElementById("group-code").innerHTML=random;
+}
     
