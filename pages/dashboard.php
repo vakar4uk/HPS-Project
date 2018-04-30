@@ -7,19 +7,19 @@
         <div class="dashboard-header">
             <div class="row">
                 <div class="col-lg-4 icons">
-                    <a class="navbar-brand float-left" href="landing.php">
-                    <i class="fas fa-th-large"></i>
-                </a>
+                    <a class="navbar-brand float-left" data-toggle="tooltip" data-placement="bottom" title="Landing" href="landing.php">
+                        <i class="fas fa-th-large fa-2x"></i>
+                    </a>
                 </div>
                 <div class="col-lg-4">
                     <h1 class="text-center">HPS Configurator</h1>
                 </div>
                 <div class="col-lg-4 icons">
                     <a class="navbar-brand navbar-right float-right" href="#">
-                    <span><i class="fas fa-cog"></i></span>                     
+                    <span><i class="fas fa-cog fa-2x"></i></span>                     
                 </a>
                     <a class="navbar-brand navbar-right float-right" href="#">
-                    <i class="fas fa-ellipsis-h"></i>
+                    <i class="fas fa-ellipsis-h fa-2x"></i>
                 </a>
                 </div>
             </div>
