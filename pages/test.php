@@ -51,29 +51,29 @@
                             <br>
                             
                             <div class="form-group row">
-                            <div class="col-md-3 col-lg-3">
+                            <div class="col-sm-2 col-md-2">
                                     <button id="individual-onexchange" class="btn btn-lg" type="button" onclick="GetValue();">Individual Onexchange</button>
-                            </div>     
-                            <div class="col-md-3 col-lg-3">
+                            </div>  
+                            <div class="col-sm-2 col-md-2">  
+                                    <p id="onexchange-code" ></p> 
+                            </div>
+                            <div class="col-sm-2 col-md-2">
                                     <button id="individual-offexchange" class="btn btn-lg" type="button" onclick="GetValue1();">Individual Offexchange</button>
-                            </div>    
-                            <div class="col-md-3 col-lg-3">        
+                            </div>   
+                            <div class="col-sm-2 col-md-2" id="test1">  
+                                    <p id="offexchange-code" ></p> 
+                            </div> 
+                            <div class="col-sm-2 col-md-2">        
                                     <button id="group" class="btn btn-lg" type="button" onclick="GetValue2();">Group</button>
                             </div>
+                            <div class="col-sm-2 col-md-2">  
+                                    <p id="group-code" ></p> 
                             </div>
 
-                            <div class="form-group row">
-                            <div class="col-md-3 col-lg-3">
-                                    <p id="onexchange-code" ></p>
-                            </div>     
-                            <div class="col-md-3 col-lg-3">
-                                    <p id="offexchange-code" ></p>
-                            </div>    
-                            <div class="col-md-3 col-lg-3">
-                                    <p id="group-code" ></p>
-                            </div>  
+                            <div class="col-sm-2 col-md-2">
+                            <button id="clear-carriercode" class="btn btn-lg btn-danger">Clear All</button>
                             </div>
-                        
+                            </div>
                                     
 
 
