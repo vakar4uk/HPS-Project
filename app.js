@@ -82,50 +82,59 @@ $(document).ready(function () {
 
 
 
-/*Business Details Toggle*/
+/*Business Details: Buttons Toggle*/
 
     
-    $("input[id*=onexchange-code], input[id*=offexchange-code], input[id*=group-code]").hide();
+    $("#onexchange-code, #offexchange-code, #group-code").hide();
     
     
-        $("button[id*=individual-onexchange]").click(function () {
-            $("input[id*=onexchange-code]").toggle();
+        $("#individual-onexchange").click(function () {
+            $("#onexchange-code").toggle();
+            $(this).toggleClass("colortoggle");
         });
         
-        $("button[id*=individual-offexchange]").click(function () {
-            $("input[id*=offexchange-code]").toggle();
+        $("#individual-offexchange").click(function () {
+            $("#offexchange-code").toggle();
+            $(this).toggleClass("colortoggle");
+           
         });
 
-        $("button[id*=group]").click(function () {
-            $("input[id*=group-code]").toggle();
+        $("#group").click(function () {
+            $("#group-code").toggle();
+            $(this).toggleClass("colortoggle");
         });
 
-        $("button[id*=individual-onexchange], button[id*=individual-offexchange], button[id*=group]").click(function() {
-            $(this).toggleClass( "testing" );
-        });
     
         
     
 });
 
+
+/*Business Details: Carrier Code*/
+
 function GetValue()
 {
-    var myarray= new Array("X7","A1","B2","C4","Y6","Q9");
+    var myarray= new Array(":X7",":A1",":B2",":C4",":Y6",":Q9");
     var random = myarray[Math.floor(Math.random() * myarray.length)];
     document.getElementById("onexchange-code").innerHTML=random;
 }
     
 function GetValue1()
 {
-    var myarray= new Array("X7","A1","B2","C4","Y6","Q9");
+    var myarray= new Array(":X7",":A1",":B2",":C4",":Y6",":Q9");
     var random = myarray[Math.floor(Math.random() * myarray.length)];
     document.getElementById("offexchange-code").innerHTML=random;
 }
 
 function GetValue2()
 {
-    var myarray= new Array("X7","A1","B2","C4","Y6","Q9");
+    var myarray= new Array(":X7",":A1",":B2",":C4",":Y6",":Q9");
     var random = myarray[Math.floor(Math.random() * myarray.length)];
     document.getElementById("group-code").innerHTML=random;
 }
     
+/*Business Details: Clear Carrier Code*/
+
+$("button[id*=clear-carriercode").click(function() {
+    $("button[id*=individual-onexchange], button[id*=individual-offexchange], button[id*=group]").val([]);
+});

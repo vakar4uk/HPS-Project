@@ -766,13 +766,13 @@ div.carrier-info {
     background-color:rgba(215, 212, 212, 0.77);
     color: rgba(110, 110, 110, 0.77);
     margin-top: 25px;
-    margin-left: 80px;
-    width: 110%;
+    margin-left: 40px;
+    width: 170%;
 }
 
-#individual-onexchange.testing{
-    background-color:#39DBDB;
-    color: white;
+
+#individual-onexchange.colortoggle, #individual-offexchange.colortoggle, #group.colortoggle { 
+    background-color: #57D4E7; 
 }
 
 #individual-onexchange:hover {
@@ -783,15 +783,11 @@ div.carrier-info {
     background-color:rgba(215, 212, 212, 0.77);
     color: rgba(110, 110, 110, 0.77);
     margin-top: 25px;
-    margin-left: 100px;
-    width: 110%;
+    margin-left: 30px;
+    width: 170%;
 
 }
 
-#individual-offexchange.testing{
-    background-color:#39DBDB;
-    color: white;
-}
 
 #individual-offexchange:hover {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
@@ -801,33 +797,39 @@ div.carrier-info {
     background-color:rgba(215, 212, 212, 0.77);
     color: rgba(110, 110, 110, 0.77);
     margin-top: 25px;
-    margin-left: 120px;
-    width: 110%;
+    margin-left: 20px;
+    width: 170%;
 }
 
-#group.testing{
-    background-color:#39DBDB;
-    color: white;
-}
+
 
 #group:hover {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
-#onexchange-code{
-    margin-left: 70px;
-    width: 110%;
+#onexchange-code {
+    margin-top: 35px;
+    margin-left: 90px;
+    
 }
 
 #offexchange-code{
-    margin-left: 90px;
-    width: 110%;
+    margin-top: 35px;
+    margin-left: 80px;
 }
 
-#group-code{
-    margin-left: 110px;
-    width: 110%;
+#group-code {
+    margin-top: 35px;
+    margin-left: 70px;
 }
+
+#clear-carriercode {
+    margin-top: 150px;
+    margin-right: 30px;
+
+
+}
+
 
 #CancelNoteBtn {
     float: right;
