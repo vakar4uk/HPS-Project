@@ -138,3 +138,102 @@ function GetValue2()
 $("button[id*=clear-carriercode").click(function() {
     $("button[id*=individual-onexchange], button[id*=individual-offexchange], button[id*=group]").val([]);
 });
+
+// Legal Entity From Validation
+$('#legalentity-submit-btn').click(function () {
+    if ($('input[required]').val() == 0 || $('select[required]').val() == 0) {
+        $('input[required]').addClass('highlight');
+        $('select[required]').addClass('highlight');
+        // $('input[required]').focus();        
+    }
+});
+
+$(function () {
+    // Initialize form validation on the registration form.
+    // It has the name attribute "registration"
+    $("form[name='entity-address']").validate({
+        // Specify validation rules
+        rules: {
+            // The key name on the left side is the name attribute
+            // of an input field. Validation rules are defined
+            // on the right side
+            carriername: "required",
+            "address-type": {
+                required: true
+            },
+            addressLine1: "required",
+            city: "required",
+            state: "required",
+            zipcode: {
+                required: true,
+                minlength: 5,
+                maxlength: 5
+            },
+            "phone-type": {
+                required: true
+            },
+            phone: {
+                required: true,
+                minlength: 10,
+                maxlength: 10
+            },
+            email: {
+                required: true,
+                // Specify that email should be validated
+                // by the built-in "email" rule
+                email: true
+            },
+            "account-number": "required",
+            "bank-num-code": "required",
+            "batch-code-number": "required",
+            "site-code": "required",
+            "batch-description": "required",
+            "additional-batch-info": "required",
+            "batch-group-code": "required",
+            "bank-name": "required",
+            "merchant-id": "required",
+            "security-key": "required",
+            "security-expiration-date": "required"
+
+
+
+        },
+        // Specify validation error messages
+        messages: {
+            carriername: "Please enter name and code of legal entity",
+            "address-type": "Please select an address type",
+            addressLine1: "Please enter your address",
+            city: "Please enter a city",
+            state: "Please select state",
+            zipcode: {
+                required: "Please enter zipcode",
+                minlength: "Please provide valid zipcode",
+                maxlength: "Please provide valid zipcode"
+            },
+            "phone-type": "Please select phone type",
+            phone: "Please enter a 10-digit phone number",
+            email: "Please enter a valid email address",
+            "account-number": "Please enter account number",
+            "bank-num-code": "Please enter bank num code",
+            "batch-code-number": "Please enter batch code number",
+            "site-code": "Please enter site code",
+            "batch-description": "Please provide batch description",
+            "additional-batch-info": "Please provide additional batch info",
+            "batch-group-code": "Please enter batch group code",
+            "bank-name": "Please enter bank name",
+            "merchant-id": "Please enter Merchant ID",
+            "security-key": "Please enter security key",
+            "security-expiration-date": "Please provide security expiration date"
+        },
+
+
+
+
+
+        // Make sure the form is submitted to the destination defined
+        // in the "action" attribute of the form when valid
+        //   submitHandler: function(form) {
+        //     form.submit();
+        //   }
+    });
+});
