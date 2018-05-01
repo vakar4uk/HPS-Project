@@ -18,7 +18,7 @@ $(document).ready(function () {
                 $('#user-logo').attr('src', e.target.result);
                 $('#user-logo-preview').attr('src', e.target.result);
                 $('#user-logo').css("display", "block");
-                $('#user-logo').addClass("animated fadeInLeft");
+                $('#user-logo').addClass("animated fadeIn");
             }
 
             reader.readAsDataURL(input.files[0]);

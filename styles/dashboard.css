@@ -347,8 +347,6 @@ div#carrier-logo {
 }
 
 #user-logo {
-    animation-delay: 0s;
-    animation-duration: 3s;
     -webkit-animation-duration: 3s;
     -webkit-animation-delay: 0s;
     /* -webkit-animation-iteration-count: infinite; */
