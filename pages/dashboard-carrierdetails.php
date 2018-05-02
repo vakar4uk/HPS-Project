@@ -45,7 +45,12 @@
                 </div>
                 <a id="save-next-btn"  href="dashboard-businessdetails.php" class="btn btn-lg btn-primary pull-right">Next</a>
             </div>
+
+            <button type="submit" id="generate">Generate</button>
+            <input id="show" type="number" value="5" style="display: none;">
         </div>   
+
+        
 </div>
 
 <!-- Modal -->
@@ -58,6 +63,13 @@
     </div>    
 </div>
 <!-- Modal -->
+
+<script>
+    $('#generate').click(function() {
+        $('#show').val("10");
+        $('#show').css("display", "inline");
+    });
+</script>
 
 <?php
     include('navbars_footers/footer.php');

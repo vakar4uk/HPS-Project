@@ -209,7 +209,6 @@ nav.navbar.navbar-inverse {
 
 #carrier-name {
     color: white;
-    margin-bottom: 5px;
 }
 
 div.thumbnail {
@@ -310,7 +309,7 @@ form .error {
 
 .carrier-name {   
     padding-top: 40px;
-    padding-bottom: 30px;
+    padding-bottom: 15px;
     margin-bottom: 15px;
 }
 
@@ -510,15 +509,63 @@ p.file-name {
 }
 
 /* Line of Business Antony */
-#OnExchange{
-    display: none;
+.lineofbusiness-wrapper .my-container {
+    height: 550px;
 }
 
-#OffExchange{
-    display: none;
+.lineofbusiness-options div.row {
+    height: 30%;
+    margin: 10px 5px;
+    padding: 10px;
 }
-#Group1{
-    display: none;
+
+.lineofbusiness-options div.row  div{
+    margin: 5% 0;
+
+}
+
+
+.lineofbusiness-types div.row {
+    height: 10%;
+    margin: 0 1%;
+}
+
+.lineofbusiness-types div.row  div{
+    margin: 5% 0;
+
+}
+
+.lineofbusiness-types #clear-business-btn {
+    position: relative;
+   
+    right: 3%;
+}
+
+.lineofbusiness-states div {
+    height: 27.2%;
+    margin: 10px 0px;
+    /* padding: 5px; */
+}
+
+.lineofbusiness-states div.row div {
+   margin: 15px 5px;
+}
+
+.lineofbusiness-states div button.selected-states {
+   width: 45px;
+}
+
+.lineofbusiness-states #selected-states {
+    padding: 5px;
+    margin: 0;
+}
+
+
+
+.lineofbusiness-states #clear-states-btn {
+    position: relative;
+    top: 44%;
+    right: 2%;
 }
 
 #business-clear > button {
