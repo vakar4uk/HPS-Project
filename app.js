@@ -18,7 +18,7 @@ $(document).ready(function () {
                 $('#user-logo').attr('src', e.target.result);
                 $('#user-logo-preview').attr('src', e.target.result);
                 $('#user-logo').css("display", "block");
-                $('#user-logo').addClass("animated fadeInLeft");
+                $('#user-logo').addClass("animated fadeIn");
             }
 
             reader.readAsDataURL(input.files[0]);
@@ -32,38 +32,45 @@ $(document).ready(function () {
     // logo upload
 
     // Line of business option selection
-    $('#on').click(function () {
+    $('#on-exchange').click(function () {
         $(this).toggleClass('btn-info');
         $('#Group1').fadeOut();
         $('#OffExchange').fadeOut();
         $('#OnExchange').fadeIn();
     });
 
-    $('#off').click(function () {
+    $('#off-exchange').click(function () {
         $(this).toggleClass('btn-info');
         $('#OnExchange').fadeOut();
         $('#Group1').fadeOut();
         $('#OffExchange').fadeIn();
     });
 
-    $('#group').click(function () {
+    $('#group-exchange').click(function () {
         $(this).toggleClass('btn-info');
         $('#OnExchange').fadeOut();
         $('#OffExchange').fadeOut();
         $('#Group1').fadeIn();
 
     });
+
+    // clear business
+    $('#clear-business-btn').click(function () {
+        $('.selected-business').removeClass('btn-info');
+    });
+    // clear business
+
     // Line of business option selection
 
     // select states
     $('.selected-states').click(function () {
-        $(this).toggleClass('btn-info');
+        $(this).addClass('btn-info');
     });
     // select states
 
     // clear states
     $('#clear-states-btn').click(function () {
-        $('.selected-states').addClass('btn-info');
+        $('.selected-states').removeClass('btn-info');
     });
     // clear states
 
@@ -76,7 +83,7 @@ $(document).ready(function () {
     // clear business
     $('.clear-business-btn').click(function () {
         $('.selected-business').removeClass('btn-info');
-        $('.selected-business').addClass('btn-default');
+      
     });
     // clear business
 
