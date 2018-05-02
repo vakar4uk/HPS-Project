@@ -109,30 +109,6 @@ $(document).ready(function () {
     
 });
 
-
-/*Business Details: Carrier Code*/
-
-function GetValue()
-{
-    var myarray= new Array(":X7",":A1",":B2",":C4",":Y6",":Q9");
-    var random = myarray[Math.floor(Math.random() * myarray.length)];
-    document.getElementById("onexchange-code").innerHTML=random;
-}
-    
-function GetValue1()
-{
-    var myarray= new Array(":X7",":A1",":B2",":C4",":Y6",":Q9");
-    var random = myarray[Math.floor(Math.random() * myarray.length)];
-    document.getElementById("offexchange-code").innerHTML=random;
-}
-
-function GetValue2()
-{
-    var myarray= new Array(":X7",":A1",":B2",":C4",":Y6",":Q9");
-    var random = myarray[Math.floor(Math.random() * myarray.length)];
-    document.getElementById("group-code").innerHTML=random;
-}
-    
 /*Business Details: Clear Carrier Code*/
 
 $("button[id*=clear-carriercode").click(function() {
@@ -237,3 +213,7 @@ $(function () {
         //   }
     });
 });
+
+
+
+
