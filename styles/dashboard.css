@@ -563,9 +563,15 @@ p.file-name {
 
 
 .lineofbusiness-states #clear-states-btn {
-    position: relative;
-    top: 44%;
-    right: 2%;
+    position: absolute;
+    top: 92%;
+    left: 80%;
+}
+
+.lineofbusiness-states #select-allstates-btn {
+    position: absolute;
+    top: 92%;
+    left: 5%;
 }
 
 #business-clear > button {

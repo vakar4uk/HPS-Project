@@ -64,7 +64,7 @@ $(document).ready(function () {
 
     // select states
     $('.selected-states').click(function () {
-        $(this).addClass('btn-info');
+        $(this).toggleClass('btn-info');
     });
     // select states
 
@@ -73,6 +73,12 @@ $(document).ready(function () {
         $('.selected-states').removeClass('btn-info');
     });
     // clear states
+
+    // select all states
+    $('#select-allstates-btn').click(function () {
+        $('.selected-states').addClass('btn-info');
+    });
+    // select all states
 
     // select business type
     $('.selected-business').click(function () {

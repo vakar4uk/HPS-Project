@@ -63,6 +63,7 @@
                                             <button class="btn btn-default btn-block selected-states"><?php echo $shortName; ?></button>                    
                                         </div>            
                                         <?php } ?>
+                                        <button id="select-allstates-btn" class="pull-right btn btn-warning">Select All</button> 
                                         <button id="clear-states-btn" class="pull-right btn btn-danger">Clear All</button>                                         
                                     </div>                
                                 </div>                         
