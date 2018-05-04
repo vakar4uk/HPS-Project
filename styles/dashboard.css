@@ -536,9 +536,9 @@ p.file-name {
 }
 
 .lineofbusiness-types #clear-business-btn {
-    position: relative;
-   
-    right: 3%;
+    position: absolute;
+    top: 92%;
+    left: 60%;
 }
 
 .lineofbusiness-states div {
@@ -574,11 +574,11 @@ p.file-name {
     left: 5%;
 }
 
-#business-clear > button {
+/* #business-clear > button {
     width:220px;
     margin-right: 150px;
     
-}
+} */
 /* #business-clear> button{
     margin-bottom: 20px;
      margin-right: 15px;
