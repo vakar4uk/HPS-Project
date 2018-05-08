@@ -263,7 +263,7 @@
 
     </div>
         <!-- Submit Button -->
-        <input id="legalentity-submit-btn" type="submit" class="btn btn-lg btn-success btn-block" placeholder="Save" value="Submit">  
+        <input id="legalentity-submit-btn" type="submit" class="btn btn-lg btn-primary pull-right" placeholder="Save" value="Submit">  
 </form>  
 
     <!-- <div class="row">
@@ -276,7 +276,8 @@
 
         <!-- Submit Button -->
 </div>
-
+<br>
+<br>
 
 <?php
     include('navbars_footers/footer.php');
