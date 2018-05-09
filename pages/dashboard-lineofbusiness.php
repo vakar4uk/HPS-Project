@@ -19,53 +19,76 @@
                 <!-- Header text -->
                 <div class="lineofbusiness-wrapper">
                     <div class="row">
-                        <div class="col-lg-3 col-md-3">
+                        <div class="col-lg-3 col-md-4">
                             <div class="my-container">
                                 <div class="carrier-name">
-                                    <p>Pick an option</p><span id="icons"><i class="far fa-envelope fa-1x"></i><i class="fas fa-ellipsis-v fa-1x"></i></span>
+                                    <p>Pick options</p><span id="icons"><i class="far fa-envelope fa-1x"></i><i class="fas fa-ellipsis-v fa-1x"></i></span>
                                     <br><hr id="hr">   
                                 </div>
-                                <div class="lineofbusiness-options">
-                                    <div class="row"><button id="on-exchange" class="btn btn-default btn-lg btn-block align-top">Individual On Exchange</button></div>
-                                    <div class="row"><button id="off-exchange" class="btn btn-default btn-lg btn-block align-middle">Individual Off Exchange</button></div>
-                                    <div class="row"><button id="group-exchange" class="btn btn-default btn-lg btn-block align-bottom">Group</button></div>                                
+                                <div id="business-selection-btn" class="lineofbusiness-options">
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12">
+                                            <button id="on-exchange" class="btn btn-default btn-lg btn-block">Individual On Exchange</button>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12">
+                                            <button id="off-exchange" class="btn btn-default btn-lg btn-block">Individual Off Exchange</button>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12">
+                                            <button id="group-exchange" class="btn btn-default btn-lg btn-block">Group</button>
+                                        </div>
+                                    </div>                      
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-3">
                             <div class="my-container">
                                 <div class="carrier-name">
-                                    <p>Line of business</p><span id="icons"><i class="far fa-envelope fa-1x"></i><i class="fas fa-ellipsis-v fa-1x"></i></span>
+                                    <p>Pick lines</p><span id="icons"><i class="far fa-envelope fa-1x"></i><i class="fas fa-ellipsis-v fa-1x"></i></span>
                                     <hr id="hr">   
                                 </div>
-                                <div class="lineofbusiness-types">
+                                <div id="lineofbusiness-selection-btn" class="lineofbusiness-types">
                                     <div class="row">
                                         <?php foreach($lineOfBusiness as $line) { ?>
                                         <div class="col-lg-12 col-md-12">
                                             <button class="btn btn-default btn-lg btn-block selected-business"><?php echo $line['name']; ?></button>
                                         </div>
-                                        <?php } ?>
-                                        <button id="clear-business-btn" class="pull-right btn btn-danger">Clear All</button>
+                                        <?php } ?>                                                                        
                                     </div>
+                                    <div id="select-clear-container" class="row">
+                                        <div class="col-lg-6 pull-right">
+                                            <button id="clear-business-btn" class="btn btn-danger btn-lg">Clear All</button>
+                                        </div>    
+                                    </div>                                       
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-md-6">
+                        <div class="col-lg-6 col-md-5">
                             <div class="my-container">                       
                                 <div class="carrier-name">
                                     <p>Pick states</p><span id="icons"><i class="far fa-envelope fa-1x"></i><i class="fas fa-ellipsis-v fa-1x"></i></span>
                                     <hr id="hr">   
                                 </div>
-                                <div class="lineofbusiness-states">
+                                <div id="states-selection-btn" class="lineofbusiness-states">
                                     <div class="row">
                                         <?php foreach ($allStates as $shortName => $name) { ?>                        
-                                        <div class="col-lg-1 col-md-1">                            
-                                            <button class="btn btn-default btn-block selected-states"><?php echo $shortName; ?></button>                    
+                                        <div class="col-lg-3 col-md-3">                            
+                                            <button class="btn btn-default btn-sm selected-states"><?php echo $shortName; ?></button>                    
                                         </div>            
                                         <?php } ?>
-                                        <button id="select-allstates-btn" class="pull-right btn btn-warning">Select All</button> 
-                                        <button id="clear-states-btn" class="pull-right btn btn-danger">Clear All</button>                                         
-                                    </div>                
+                                                                                                              
+                                    </div>
+                                    <div id="select-clear-container" class="row">
+                                        <div class="col-lg-6 col-md-6 pull-left">
+                                            <button id="select-allstates-btn" class="btn btn-warning btn-lg">Select All</button>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 pull-right">
+                                            <button id="clear-states-btn" class="btn btn-danger btn-lg">Clear All</button>     
+                                        </div>                                        
+                                    </div>                      
                                 </div>                         
                             </div>
                         </div>

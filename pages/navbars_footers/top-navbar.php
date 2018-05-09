@@ -27,7 +27,7 @@
         <ul class="nav nav-pills navbar-nav core-nav">
           <li <?php if($currentLocation=='dashboard-carrierdetails.php' ) {echo 'class="active"';} ?>><a href="dashboard-carrierdetails.php">Carrier Details</a></li>
           <li <?php if($currentLocation=='dashboard-businessdetails.php' ) {echo 'class="active"';} ?>><a href="dashboard-businessdetails.php">Business Details</a></li>
-          <li <?php if($currentLocation=='dashboard-states.php' ) {echo 'class="active"';} ?>><a href="dashboard-states.php">States</a></li>
+          <!-- <li <?php if($currentLocation=='dashboard-states.php' ) {echo 'class="active"';} ?>><a href="dashboard-states.php">States</a></li> -->
           <li <?php if($currentLocation=='dashboard-lineofbusiness.php' ) {echo 'class="active"';} ?>><a href="dashboard-lineofbusiness.php">Line of Business</a></li>
           <li <?php if($currentLocation=='dashboard-legalentity.php' ) {echo 'class="active"';} ?>><a href="dashboard-legalentity.php">Legal Entity</a></li>
         </ul>

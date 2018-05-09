@@ -118,7 +118,7 @@ include('navbars_footers/top-navbar.php');
                 </div>
             </div>
         </div>
-        <a id="save-next-btn"  href="dashboard-states.php" class="btn btn-lg btn-primary pull-right">Next</a>
+        <a id="save-next-btn"  href="dashboard-lineofbusiness.php" class="btn btn-lg btn-primary pull-right">Next</a>
     </div>        
 </div>    
 <?php

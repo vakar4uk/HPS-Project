@@ -510,80 +510,50 @@ p.file-name {
 
 /* Line of Business Antony */
 .lineofbusiness-wrapper .my-container {
-    height: 550px;
+    height: 700px;
 }
 
-.lineofbusiness-options div.row {
-    height: 30%;
-    margin: 10px 5px;
+#business-selection-btn  button.btn {
+    margin: 34% auto;
     padding: 10px;
+    width: 90%;
+    font-size: 1.0em;    
 }
 
-.lineofbusiness-options div.row  div{
-    margin: 5% 0;
-
+#lineofbusiness-selection-btn button.btn {
+    margin: 14% auto;
+    margin-bottom: 5%;
+    padding: 10px;
+    width: 90%;
+    font-size: 1.0em;  
 }
 
-
-.lineofbusiness-types div.row {
-    height: 10%;
-    margin: 0 1%;
+#states-selection-btn  button.btn {
+    margin: 4% auto;
+    padding: auto;
+    width: 60%;
+    font-size: 1.0em;    
 }
 
-.lineofbusiness-types div.row  div{
-    margin: 5% 0;
-
-}
-
-.lineofbusiness-types #clear-business-btn {
+/* States slection-diselection container */
+#select-clear-container {
     position: absolute;
-    top: 92%;
-    left: 60%;
+    top: 90%;
+    bottom: 2%;
+    width: 100%;
+    /* margin-top: 2%;
+    margin-bottom: 10%;  */
 }
 
-.lineofbusiness-states div {
-    height: 27.2%;
-    margin: 10px 0px;
-    /* padding: 5px; */
+#states-select-clear button.btn {
+    margin: auto auto;    
 }
 
-.lineofbusiness-states div.row div {
-   margin: 15px 5px;
+button#select-allstates-btn {
+    /* margin-left: 22222px;
+    margin-right: 5%; */
 }
 
-.lineofbusiness-states div button.selected-states {
-   width: 45px;
-}
-
-.lineofbusiness-states #selected-states {
-    padding: 5px;
-    margin: 0;
-}
-
-
-
-.lineofbusiness-states #clear-states-btn {
-    position: absolute;
-    top: 92%;
-    left: 80%;
-}
-
-.lineofbusiness-states #select-allstates-btn {
-    position: absolute;
-    top: 92%;
-    left: 5%;
-}
-
-/* #business-clear > button {
-    width:220px;
-    margin-right: 150px;
-    
-} */
-/* #business-clear> button{
-    margin-bottom: 20px;
-     margin-right: 15px;
-
-} */
 /* DASHBOARD STYLING */
 /* ================= */
 

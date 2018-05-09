@@ -214,16 +214,6 @@ $(function () {
             "security-key": "Please enter security key",
             "security-expiration-date": "Please provide security expiration date"
         },
-
-
-
-
-
-        // Make sure the form is submitted to the destination defined
-        // in the "action" attribute of the form when valid
-        //   submitHandler: function(form) {
-        //     form.submit();
-        //   }
     });
 });
 
