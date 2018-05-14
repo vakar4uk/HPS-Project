@@ -8,8 +8,8 @@
           </div>
           <ul class="nav nav-pills navbar-nav">
             <li><a class="lead" href="#">DYNAMIC NAME</a></li>
-            <li class="active"><a href="#">CORE</a></li>
-            <li><a href="dashboard-ppr.php">PPR</a></li>
+            <li><a href="dashboard-carrierdetails.php">CORE</a></li>
+            <li class="active"><a href="plan-info.php">PPR</a></li>
             <li><a href="#">EXCHANGELINK</a></li>
             <li><a href="#">SLP</a></li>
             <li><a href="#">SALESLINK</a></li>
@@ -25,11 +25,10 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div id="text" class="container-fluid">
         <ul class="nav nav-pills navbar-nav core-nav">
-          <li <?php if($currentLocation=='dashboard-carrierdetails.php' ) {echo 'class="active"';} ?>><a href="dashboard-carrierdetails.php">Carrier Details</a></li>
-          <li <?php if($currentLocation=='dashboard-businessdetails.php' ) {echo 'class="active"';} ?>><a href="dashboard-businessdetails.php">Business Details</a></li>
-          <li <?php if($currentLocation=='dashboard-states.php' ) {echo 'class="active"';} ?>><a href="dashboard-states.php">States</a></li>
-          <li <?php if($currentLocation=='dashboard-lineofbusiness.php' ) {echo 'class="active"';} ?>><a href="dashboard-lineofbusiness.php">Line of Business</a></li>
-          <li <?php if($currentLocation=='dashboard-legalentity.php' ) {echo 'class="active"';} ?>><a href="dashboard-legalentity.php">Legal Entity</a></li>
+          <li <?php if($currentLocation=='plan-info.php' ) {echo 'class="active"';} ?>><a href="#">Plans Information</a></li>
+          <li><a href="#">Benefits and CSR</a></li>
+          <li><a href="#">Rates</a></li>
+          <li><a href="#">Plan Coverage</a></li>
         </ul>
       </div>
     </nav>
