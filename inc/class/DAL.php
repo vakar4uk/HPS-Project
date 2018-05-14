@@ -45,7 +45,7 @@ class DAL {
     
     // Create query to take username and password from database
     function getLoginCredentials($userName, $userPassword, $db) {
-       $sql = "SELECT * FROM user_login WHERE user_name='$userName' AND user_password='$userPassword'";
+       $sql = "SELECT * FROM login WHERE username='$userName' AND user_password='$userPassword'";
        $result = mysqli_query($db, $sql);
        if (!$result) {
             return mysqli_connect_error();        
@@ -60,7 +60,7 @@ class DAL {
         $isValid = true;
         $count = mysqli_num_rows($query);
         if($count == 0) {          
-           header('Location: pages/dashboard.php'); /* Redirect browser */
+           header('Location: pages/landing.php'); /* Redirect browser */
            return $isValid;
         } else {
             /* Redirect browser */

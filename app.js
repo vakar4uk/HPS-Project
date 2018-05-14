@@ -1,51 +1,180 @@
-// Select type of business
-var individualBusBtn = document.getElementById("business-individual");
-var groupBusBtn = document.getElementById("business-group");
-var individualBusiness = document.getElementById("individual-business-display");
-var groupBusiness = document.getElementById("group-business-display");
+// All jQuery code should go inside $(document).ready(function() {    
+$(document).ready(function () {
 
-var exchangeTypeBtn = document.getElementsByClassName("exchange-type-btn");
-
-var carrierCodeIndividual = document.getElementById("carrier-code-individual");
-var carrierCodeGroup = document.getElementById("carrier-code-group");
-
-var submitIndividual = document.getElementById("submit-individual");
-var submitGroup = document.getElementById("submit-group");
-
-var inputCodeIndividual = document.getElementById("input-code-individual");
-var inputCodeGroup = document.getElementById("input-code-group");
-
-
-individualBusBtn.addEventListener("click", function() {
-    individualBusBtn.classList.toggle("btn-info");
-    groupBusBtn.classList.add("btn-info");
-
-    individualBusiness.style.display = "block";
-    groupBusiness.style.display = "none";   
-
-});
-
-groupBusBtn.addEventListener("click", function() {
-    groupBusBtn.classList.toggle("btn-info");
-    individualBusBtn.classList.add("btn-info");
-
-    groupBusiness.style.display = "block";
-    individualBusiness.style.display = "none";
-});
-
-for (var i = 0; i < exchangeTypeBtn.length; i++) {
-    exchangeTypeBtn[i].addEventListener("click", function() {
-        carrierCodeIndividual.style.display = "block";
-        carrierCodeGroup.style.display = "block";        
+    // HIDE/SHOW functionality of the notification message
+    $('#hide-btn').click(function () {
+        $('#toggle-notification').slideToggle();
+        $('.show-hide').toggleClass('fa-chevron-up fa-chevron-down');
     });
-}
+    // HIDE/SHOW functionality of the notification message
 
-inputCodeIndividual.addEventListener("keydown", function() {
-    submitIndividual.style.display = "block";
+    // Line of business option selection
+    $('#on').click(function () {
+        $('#Group1').fadeOut();
+        $('#OffExchange').fadeOut();
+        $('#OnExchange').fadeIn();
+    });
+
+    $('#off').click(function () {
+        $('#OnExchange').fadeOut();
+        $('#Group1').fadeOut();
+        $('#OffExchange').fadeIn();
+    });
+
+    $('#group').click(function () {
+        $('#OnExchange').fadeOut();
+        $('#OffExchange').fadeOut();
+        $('#Group1').fadeIn();
+        
+    });
+    // Line of business option selection
+
+    // select states
+    $('.selected-states').click(function() {
+        $(this).toggleClass('btn-info');
+    });
+    // select states
+
+    // clear states
+    $('#clear-states-btn').click(function() {       
+        $('.selected-states').addClass('btn-info');
+    });
+    // clear states
+
+    // select business type
+    $('.selected-business').click(function() {
+        $('.selected-business').last().addClass('btn-info');
+        $(this).toggleClass('btn-info');
+    });
+    // select business type
+
+    // clear business
+    $('.clear-business-btn').click(function() {        
+        $('.selected-business').addClass('btn-info');
+    });
+    // clear business
+    
+
+
+    //Line of business toggle
+
+    /*buttons toggle*/
+
+
+
+    $("button[id*=onexchange], button[id*=offexchange], input[id*=input-code-individual-onexchange], input[id*=input-code-individual-offexchange], input[id*=input-code-group]").hide();
+
+
+
+
+    $("button[id*=business-individual]").click(function () {
+
+        $("button[id*=onexchange], button[id*=offexchange]").toggle();
+
+    });
+
+
+
+    $("button[id*=business-individual]").click(function () {
+
+        $("input[id*=input-code-individual-onexchange], input[id*=input-code-individual-offexchange]").hide();
+
+    });
+
+
+
+    $("button[id*=onexchange]").click(function () {
+
+        $("input[id*=input-code-individual-onexchange]").toggle();
+
+    });
+
+
+
+    $("button[id*=offexchange]").click(function () {
+
+        $("input[id*=input-code-individual-offexchange]").toggle();
+
+    });
+
+
+    $("button[id*=business-group]").click(function () {
+
+        $("input[id*=input-code-group]").toggle();
+
+    });
+
+
+
+
+
+    /*menu font awesome icon*/
+
+
+
+    $(function () {
+
+        $.contextMenu({
+
+            selector:
+            '.menu',
+
+            callback:
+            function (key,
+                options) {
+
+                var m =
+                    "clicked: " +
+                    key;
+
+                window.console &&
+                    console.log(m) ||
+                    alert(m);
+
+            },
+
+            items: {
+
+                "Notes": {
+                    name:
+                    "Edit", icon:
+                    "fa-edit"
+                },
+
+                "Customizations": {
+                    name:
+                    "Customizations",
+                    icon: "far fa-sliders-h"
+                },
+
+                "Add To-Do": {
+                    name:
+                    "Add To-Do", icon:
+                    "fas fa-clipboard-check"
+                }
+
+            }
+
+        });
+
+
+
+        $('.menu').on('click',
+            function (e) {
+
+                console.log('clicked',
+                    this);
+
+            })
+
+    });
+
+
+
+
+
+
+
 });
 
-inputCodeGroup.addEventListener("keydown", function() {
-    submitGroup.style.display = "block";
-});
 
-var clearSt = document.getElementById('clear-states-btn');
