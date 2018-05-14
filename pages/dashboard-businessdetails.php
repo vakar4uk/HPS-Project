@@ -71,7 +71,7 @@ include('navbars_footers/top-navbar.php');
 
                         <div class="form-group row">
                         <div class="col-md-3 col-md-offset-4">        
-                                <button id="group" class="btn btn-lg" type="button" onclick="GetValue2();">Group</button>
+                                <button id="group" class="btn btn-lg" type="button" onclick="GetValue2();">Group Offexchange</button>
                         </div>
                         <div class="col-sm-1 col-md-1">
                                 <input class="form-control" id="group-code" value="A1"> 
