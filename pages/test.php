@@ -101,17 +101,30 @@ include('navbars_footers/top-navbar.php');
                                 <br>
                                 <textarea class="form-control" id="textarea" rows="10" placeholder="Text goes here..."></textarea>   
                                 <a id= "CancelNoteBtn" class="btn btn-primary">Cancel</a>
-                                <a id= "AddNoteBtn" class="btn btn-primary">+ Add Note</a>
-                                <br><br><br>
+                                <a id= "AddNoteBtn" class="btn btn-primary">+ Add Note</a></span>
+                                <br><br><br><br><br>
                               </div>
+
+                          
+                             <div class="modal-body1">
+                             
+                                
+                                
+                            </div>
+
+
+
+
+                             
                               <div class="modal-footer">
                               </div>
                             </div>
                           </div>
                         </div>
-                      
-                        
-                       
+
+
+
+
 
 
 
