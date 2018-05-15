@@ -129,13 +129,13 @@ $("button[id*=clear-carriercode").click(function() {
 });
 
 // Legal Entity From Validation
-$('#legalentity-submit-btn').click(function () {
-    if ($('input[required]').val() == 0 || $('select[required]').val() == 0) {
-        $('input[required]').addClass('highlight');
-        $('select[required]').addClass('highlight');
-        // $('input[required]').focus();        
-    }
-});
+// $('#legalentity-submit-btn').click(function () {
+//     if ($('input[required]').val() == 0 || $('select[required]').val() == 0) {
+//         $('input[required]').addClass('highlight');
+//         $('select[required]').addClass('highlight');
+//         // $('input[required]').focus();        
+//     }
+// });
 
 $(function () {
     // Initialize form validation on the registration form.
@@ -214,6 +214,8 @@ $(function () {
             "security-key": "Please enter security key",
             "security-expiration-date": "Please provide security expiration date"
         },
+
+        errorClass:'highlight'
     });
 });
 

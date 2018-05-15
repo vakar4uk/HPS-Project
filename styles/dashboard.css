@@ -281,7 +281,8 @@ input#logo-upload {
 
 /* required field customization */
 .highlight {
-    border: 1px solid #C23232;   
+    color: red;
+    /* border: 1px solid #C23232;    */
 }
 
 form .error {
