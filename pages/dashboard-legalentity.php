@@ -42,7 +42,7 @@
                             <br>
                                 <div class="container-fluid">
                                     <div class="col-lg-4">
-                                        <select class="selectpicker form-group required" name="address-type" data-style="btn-default"data-width=290px required>                                        
+                                        <select class="selectpicker form-group required" name="address-type" data-style="btn-default"data-width=290px>                                        
                                             <option value="">Select address type...</option>
                                             <option value="business-address">Business</option>
                                             <option value="home-address">Home</option>
