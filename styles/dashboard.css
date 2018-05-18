@@ -43,7 +43,12 @@ body .main-landing {
 div.dashboard-table {
     border-radius: 10px;
     color: rgba(29, 77, 139, 0.98);
+<<<<<<< HEAD
     margin-top: 100px;
+=======
+    margin-top: 50px;
+    /* margin-bottom: 50px; */
+>>>>>>> Combining
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 30px;
@@ -201,6 +206,13 @@ nav.navbar.navbar-inverse {
     height: 150px;
     text-align: center;
     margin-top: 10px;
+    
+}
+
+
+
+#carrier-name {
+    color: white;
 }
 
 #carrier-name {
@@ -213,6 +225,18 @@ div.thumbnail {
     height: 200px;
 }
 
+/* ========================= */
+/* ALL CORE TABS */
+/* ========================= */
+
+#save-next-btn {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+/* ========================= */
+/* ALL CORE TABS */
+/* ========================= */
 
 /* ************************* */
 /* Dashboard-carrierdetails */
@@ -234,7 +258,7 @@ div.thumbnail {
 .carrier-details {
     margin-top: 150px;    
     text-align: center;
-    padding-bottom: 30px;   
+    padding-bottom: 10px;   
 }
 
 .carrier-details > .jumbotron {
@@ -264,6 +288,20 @@ input#logo-upload {
     border: none;
 }
 
+<<<<<<< HEAD
+=======
+/* required field customization */
+.highlight {
+    color: red;
+    /* border: 1px solid #C23232;    */
+}
+
+form .error {
+    color: #C23232;
+}
+/* required field customization */
+
+>>>>>>> Combining
 .jumbotron p.description {
     padding-top: 15px;
     padding-bottom: 17px;
@@ -284,8 +322,51 @@ input#logo-upload {
 
 .carrier-name {   
     padding-top: 40px;
-    padding-bottom: 30px;
+    padding-bottom: 15px;
     margin-bottom: 15px;
+}
+
+div#carrier-logo {
+    padding-bottom: 80px;
+}
+
+#drag-drop-container {
+    height: 200px;
+    width: 350px;
+    margin-top: 50px;
+    margin-left: 1%;
+    padding-bottom: 20px;
+    border: 1.5px dashed #A8A0A0;
+}
+
+#user-logo {
+    position: absolute;
+    left: 50%;
+    bottom: 11%;
+    width: 400px;
+    height: 300px;
+    display: none;
+}
+
+#user-logo:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+#user-logo-preview {
+    margin: 100px auto;
+    width: 500px;
+    height: 300px;
+}
+
+#user-logo {
+    -webkit-animation-duration: 3s;
+    -webkit-animation-delay: 0s;
+    /* -webkit-animation-iteration-count: infinite; */
+  }
+
+#image-preview-modal {
+    background: white;
 }
 
 .carrier-name  p {
@@ -308,7 +389,7 @@ input#logo-upload {
     width: 97%;
     margin: 0px;
     display: inline-block;
-    border: 0.5px solid #BEBCBC;
+    border: 0.5px solid #CDC9C9;
 }
 
 #icons {
@@ -317,6 +398,13 @@ input#logo-upload {
     color: #57D4E7;
 }
 
+<<<<<<< HEAD
+=======
+.icons a:hover {
+    opacity: 0.7;
+}   
+
+>>>>>>> Combining
 /* div.carrier-details > div#show-btn.pull-right {
     display: none;
     position: relative;
@@ -354,6 +442,7 @@ input#logo-upload {
     margin-right: 15px;
 
     width: 210px;
+<<<<<<< HEAD
 }
 
 #business-type > a {
@@ -364,6 +453,19 @@ input#logo-upload {
 
 #selected-business-type {
     /* width: 200px; */
+=======
+}
+
+#business-type > a {
+    width:220px;
+    margin-right: 15px;
+    
+}
+
+#selected-business-type {
+    /* width: 200px; */
+    
+>>>>>>> Combining
 }
 
 #state-list > button {
@@ -385,6 +487,7 @@ input[type=number]::-webkit-outer-spin-button {
     margin: 0; 
 }
 
+<<<<<<< HEAD
 /* Line of Business Antony */
 #OnExchange{
     display: none;
@@ -410,6 +513,172 @@ input[type=number]::-webkit-outer-spin-button {
 /* DASHBOARD STYLING */
 /* ================= */
 
+=======
+input[type="file"] {
+    position: absolute;
+    /* background: red; */
+    top: 61%;    
+    left: 17%;
+    opacity: .01;
+}
+
+input#logo-input {
+    margin-bottom: 8%;
+    margin-left: 1%;
+    height: 210px;
+    width:330px;
+}
+
+#image-upload {
+    /* border: dotted 1px grey; */
+    margin-top: 50px;
+    width: 150px;
+    height: 80px;
+}
+
+#logo-drop-area {
+    margin-left: 15%;
+}
+
+#logo-drop-area:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+#img-upload-icon {
+    color: rgba(173, 176, 181, 0.98);
+}
+
+#img-upload-icon {
+    position: relative;
+    margin-left: 75%;
+}
+
+#img-upload-icon:hover {
+    cursor: pointer;
+    color: #7272C8;
+}
+
+p.file-name {
+    font-size: 0.9em;
+    width: 300px;
+}
+
+/* Line of Business Antony */
+.lineofbusiness-wrapper .my-container {
+    height: 700px;
+}
+
+#business-selection-btn  button.btn {
+    margin: 34% auto;
+    padding: 10px;
+    width: 90%;
+    font-size: 1.0em;    
+}
+
+#lineofbusiness-selection-btn button.btn {
+    margin: 14% auto;
+    margin-bottom: 5%;
+    padding: 10px;
+    width: 90%;
+    font-size: 1.0em;  
+}
+
+#states-selection-btn  button.btn {
+    margin: 4% auto;
+    padding: auto;
+    width: 60%;
+    font-size: 1.0em;    
+}
+
+/* States slection-diselection container */
+#select-clear-container {
+    position: absolute;
+    top: 90%;
+    bottom: 2%;
+    width: 100%;
+    /* margin-top: 2%;
+    margin-bottom: 10%;  */
+}
+
+#states-select-clear button.btn {
+    margin: auto auto;    
+}
+
+button#select-allstates-btn {
+    /* margin-left: 22222px;
+    margin-right: 5%; */
+}
+
+/* DASHBOARD STYLING */
+/* ================= */
+
+
+
+div.modal-body {
+    padding-bottom: 0px;
+}
+
+#dashboard-modal {
+    background: white;
+    color: gray;
+}
+
+#modal-logo {
+    width: 100px;
+    height: 75px;    
+}
+
+#modal-logo img {
+    padding: 15px;
+}
+
+#modal-carrier-info {
+   position: absolute;
+   right: 10%;
+   top: 5%;
+}
+
+#modal-table {
+    width: 100%;
+    height: 60%;
+    empty-cells: hide;
+}
+
+#modal-table .active {
+    font-weight: 600;
+    color: rgba(29, 77, 139, 0.98);
+}
+
+#modal-table .success {
+    background: #46B546;
+}
+
+#modal-table .warning {
+    background: #E9E92E;
+}
+
+#modal-table .danger {
+    background: #DE4242;
+}
+
+#modal-table a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #302E2E;
+    font-weight: 500;
+}
+
+#modal-table tr td {
+    padding: auto;
+    vertical-align: middle;
+}
+
+#modal-table a:hover {
+    color: #FFFFFF;
+}
+
+>>>>>>> Combining
 .dashboard-header {
     margin-bottom: 50px;
     padding-top: 10px;
@@ -446,8 +715,18 @@ div.carrier {
     background: yellow;
 }
 
+<<<<<<< HEAD
 .thumbnail.onboarded img {
     padding: 30px;
+=======
+.color-coding:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.thumbnail.onboarded img {
+    padding: 50px;
+>>>>>>> Combining
     height: 100%;;
 }
 
@@ -469,7 +748,11 @@ div.carrier div.carrier-info {
 }
 
 div.carrier div.carrier-info > h4{
+<<<<<<< HEAD
     color: rgba(29, 77, 139, 0.98); ;
+=======
+    color: rgba(29, 77, 139, 0.98); 
+>>>>>>> Combining
 }
 
 div.carrier-info {
@@ -486,11 +769,28 @@ div.carrier-info {
     /* margin: 5px; */
 }
 
+<<<<<<< HEAD
 .carrier-status .btn {
     padding: 10px;
     /* margin: 5px; */
 }
 
+=======
+.carrier-status a.btn {
+    padding: 10px;
+    padding-left: -2px;
+    margin-left: -5px;
+    margin-right: 8px;
+    /* width: 60px; */
+    /* margin: 5px; */
+}
+
+#prod-btn {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+>>>>>>> Combining
 .current-onboarding {
     position: relative;
 }
@@ -551,3 +851,97 @@ div.carrier-info {
 
 /* ================= */
 /* DASHBOARD STYLING */
+<<<<<<< HEAD
+=======
+
+
+
+
+/*Deanna's Testing Code*/
+
+
+#individual-onexchange{
+    float: center;
+    background-color:rgba(215, 212, 212, 0.77);
+    color: rgba(110, 110, 110, 0.77);
+    margin-top: 25px;
+}
+
+
+#individual-onexchange.colortoggle, #individual-offexchange.colortoggle, #group.colortoggle { 
+    background-color: #57D4E7; 
+    color: white;
+}
+
+#individual-onexchange:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#individual-offexchange{
+    background-color:rgba(215, 212, 212, 0.77);
+    color: rgba(110, 110, 110, 0.77);
+    margin-top: 25px;
+
+}
+
+
+#individual-offexchange:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#group{
+    background-color:rgba(215, 212, 212, 0.77);
+    color: rgba(110, 110, 110, 0.77);
+    margin-top: 25px;
+    padding-left: 23px;
+    padding-right: 34px;
+
+}
+
+
+
+#group:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#onexchange-code, #offexchange-code, #group-code {
+    margin-top: 30px;
+    
+}
+
+#clear-carriercode {
+    margin-top: 50px;
+}
+
+
+#CancelNoteBtn {
+    float: right;
+    color: rgba(110, 110, 110, 0.77);
+    background-color: white;
+}
+
+#AddNoteBtn {
+    float: right;
+    background-color:#39DBDB;
+    color: white;
+}
+
+.modal-content  {
+    color: white;
+    background-color: rgba(29, 77, 139, 0.98); 
+}
+
+
+#textarea{ 
+    resize:none;
+}
+
+#title{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: rgba(29, 77, 139, 0.98);
+
+}
+
+
+>>>>>>> Combining

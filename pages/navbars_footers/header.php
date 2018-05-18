@@ -24,11 +24,20 @@
     <link rel="stylesheet" href="../styles/bootstrap-3.3.7-dist/css/bootstrap.css">
     <link rel="stylesheet" href="../styles/dashboard.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+<<<<<<< HEAD
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 
 
     <link rel="icon" href="../images/icon.png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+=======
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+    <link rel="icon" href="../images/icon.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
+>>>>>>> Combining
     <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.2.20171210/classList.min.js"></script>
     <title>Should be a Dynamic Title Here</title>
   </head>

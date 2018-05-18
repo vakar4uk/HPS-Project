@@ -22,7 +22,10 @@
                 if (isset($_GET['error'])) {
                     echo "<div id='alert-message' class='alert alert-danger'>Invalid password/username. Please try again!</div>";
                 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> Combining
             ?>
             
         </p>
@@ -32,4 +35,4 @@
     </form>
 </div>
 </div>
-
+</div>
