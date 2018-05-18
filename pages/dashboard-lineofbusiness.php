@@ -19,10 +19,10 @@
                 <!-- Header text -->
                 <div class="lineofbusiness-wrapper">
                     <div class="row">
-                        <div class="col-lg-3 col-md-4">
+                        <div class="col-lg-3 col-md-6 col-sm-12">
                             <div class="my-container">
                                 <div class="carrier-name">
-                                    <p>Pick options</p><span id="icons"><i class="far fa-envelope fa-1x"></i><i class="fas fa-ellipsis-v fa-1x"></i></span>
+                                    <p>Pick type</p><span id="icons"><i class="far fa-envelope fa-1x"></i><i class="fas fa-ellipsis-v fa-1x"></i></span>
                                     <br><hr id="hr">   
                                 </div>
                                 <div id="business-selection-btn" class="lineofbusiness-options">
@@ -44,10 +44,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-3">
+                        <div class="col-lg-3 col-md-6 col-sm-12">
                             <div class="my-container">
                                 <div class="carrier-name">
-                                    <p>Pick lines</p><span id="icons"><i class="far fa-envelope fa-1x"></i><i class="fas fa-ellipsis-v fa-1x"></i></span>
+                                    <p>Pick line</p><span id="icons"><i class="far fa-envelope fa-1x"></i><i class="fas fa-ellipsis-v fa-1x"></i></span>
                                     <hr id="hr">   
                                 </div>
                                 <div id="lineofbusiness-selection-btn" class="lineofbusiness-types">
@@ -66,7 +66,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-md-5">
+                        <div class="col-lg-6 col-md-12 col-sm-12">
                             <div class="my-container">                       
                                 <div class="carrier-name">
                                     <p>Pick states</p><span id="icons"><i class="far fa-envelope fa-1x"></i><i class="fas fa-ellipsis-v fa-1x"></i></span>
@@ -75,7 +75,7 @@
                                 <div id="states-selection-btn" class="lineofbusiness-states">
                                     <div class="row">
                                         <?php foreach ($allStates as $shortName => $name) { ?>                        
-                                        <div class="col-lg-3 col-md-3">                            
+                                        <div class="col-lg-3 col-md-2">                            
                                             <button class="btn btn-default btn-sm selected-states"><?php echo $shortName; ?></button>                    
                                         </div>            
                                         <?php } ?>
