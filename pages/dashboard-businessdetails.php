@@ -53,7 +53,7 @@ include('navbars_footers/top-navbar.php');
                         
                         <div class="form-group row">
                         <div class="col-md-3 col-md-offset-4">
-                                <button id="individual-onexchange" class="btn btn-lg" type="button" onclick="GetValue();">Individual Onexchange</button>
+                                <button id="individual-onexchange" class="btn btn-lg" type="button" onclick="GetValue();">Individual On-Exchange</button>
                         </div>  
                         <div class="col-sm-1 col-md-1">
                                 <input class="form-control" id="onexchange-code" value="X7"> 
@@ -62,7 +62,7 @@ include('navbars_footers/top-navbar.php');
 
                         <div class="form-group row">
                         <div class="col-md-3 col-md-offset-4">
-                                <button id="individual-offexchange" class="btn btn-lg" type="button" onclick="GetValue1();">Individual Offexchange</button>
+                                <button id="individual-offexchange" class="btn btn-lg" type="button" onclick="GetValue1();">Individual Off-Exchange</button>
                         </div>   
                         <div class="col-sm-1 col-md-1">
                                 <input class="form-control" id="offexchange-code" value="C4"> 
@@ -71,7 +71,7 @@ include('navbars_footers/top-navbar.php');
 
                         <div class="form-group row">
                         <div class="col-md-3 col-md-offset-4">        
-                                <button id="group" class="btn btn-lg" type="button" onclick="GetValue2();">Group Offexchange</button>
+                                <button id="group" class="btn btn-lg" type="button" onclick="GetValue2();">Group Off-Exchange</button>
                         </div>
                         <div class="col-sm-1 col-md-1">
                                 <input class="form-control" id="group-code" value="A1"> 
