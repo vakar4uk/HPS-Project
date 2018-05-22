@@ -17,6 +17,110 @@
                     </p>
                 </div>                   
             </div>
+            
+<style>
+table {
+    font-family: arial, sans-serif;
+     border-collapse: collapse; 
+    width: 100%;
+
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 12px;
+    color: #7272C8;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+
+
+<table>
+  <tr>
+    <th>Pick Type</th>
+    <th>Pick Line</th>
+    <th>State</th>
+    <th>Legal Entities</th>
+  </tr>
+  <tr>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td> </td>
+    <td> </td>
+    <td></td>
+    <td></td>
+    
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+           <br>
+           <br>
+      
+    <ul id="dynamic-list"></ul>
+
+<input type="text" id="candidate"/>
+<button onclick="removeItem()">remove item</button>
+            
+<script>
+        function addItem(){
+        var ul = document.getElementById("dynamic-list");
+        var candidate = document.getElementById("carriername");
+        var li = document.createElement("li");
+        li.setAttribute('id',candidate.value);
+        li.appendChild(document.createTextNode(candidate.value));
+        ul.appendChild(li);
+}
+
+        function removeItem(){
+	    var ul = document.getElementById("dynamic-list");
+        var candidate = document.getElementById("candidate");
+        var item = document.getElementById(candidate.value);
+        ul.removeChild(item);
+}
+                
+                
+                
+                
+                
+                
+                
+                </script>        
+            
+            
+            
+            <br>
+            <br>
             <!-- Header text -->  
                 <form id="entity-address" action="" name="entity-address">
                     <div class="my-container">
@@ -262,10 +366,9 @@
                   
 
     </div>
-        <!-- Submit Button -->
-        <input id="legalentity-submit-btn" type="submit" class="btn btn-lg btn-primary pull-right" placeholder="Save" value="Submit">  
+       <input id="legalentity-submit-btn" type="submit" class="btn btn-lg btn-primary pull-right" placeholder="Save" value="Submit">  
 </form>  
-
+ 
     <!-- <div class="row">
             <div id="business-type"  class="col-lg-12 col-md-1">   
                     

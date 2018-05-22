@@ -9,7 +9,7 @@
           <ul class="nav nav-pills navbar-nav">
             <li><a class="lead" href="dashboard.php">DYNAMIC NAME</a></li>
             <li class="active"><a href="#">CORE</a></li>
-            <li><a href="#">PPR</a></li>
+            <li><a href="plan-info.php">PPR</a></li>
             <li><a href="#">EXCHANGELINK</a></li>
             <li><a href="#">SLP</a></li>
             <li><a href="#">SALESLINK</a></li>
