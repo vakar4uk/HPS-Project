@@ -50,7 +50,8 @@ tr:nth-child(even) {
     <td> </td>
     <td> </td>
     <td> </td>
-    <td> </td>
+    <td><select id="rec_mode">        
+      </select></td>
   </tr>
   <tr>
     <td> </td>
@@ -84,16 +85,90 @@ tr:nth-child(even) {
     <td></td>
   </tr>
 </table>
+          
+
+
+    <script>
+ var options =
+[
+  {
+    "text"  : "Option 1",
+    "value" : "Value 1"
+  },
+  {
+    "text"     : "Option 2",
+    "value"    : "Value 2",
+    "selected" : true
+  },
+  {
+    "text"  : "Option 3",
+    "value" : "Value 3"
+  }
+];
+
+var selectBox = document.getElementById('rec_mode');
+
+for(var i = 0, l = options.length; i < l; i++){
+  var option = options[i];
+  selectBox.options.add( new Option(option.text, option.value, option.selected) );
+} 
+    
+                
+    </script>     
+        
+          
            <br>
            <br>
       
-    <ul id="dynamic-list"></ul>
+  <div class="my-container">
 
-<input type="text" id="candidate"/>
-<button onclick="removeItem()">remove item</button>
+       <p>Legal Entites</p>
+        <hr id="hr">
+    
+        <ul style="list-style-type:none" id="dynamic-list"></ul> 
+       <p id="dText"></p> 
+    <input type="text" name="text" id="inputText"/>
+    <button onclick="pushData();">Show</button>   
             
-<script>
-        function addItem(){
+    <script>
+                
+    var myArr = [];
+    
+    function pushData(){
+        
+        var inputText = document.getElementById('carriername').value;
+        
+        myArr.push(inputText);
+        
+        var pval = "";
+        
+        for(i = 0; i < myArr.length; i++){
+            
+        pval = pval + myArr[i] + "<br/>";
+            
+        }
+        
+        document.getElementById('dText').innerHTML = pval;
+        
+    }
+                
+                
+                
+    </script>
+         
+         
+         
+       <!-- <input type="text" id="candidate"/>
+        <button onclick="removeItem()">Remove Legal Entity</button> -->
+
+    </div>  
+    
+    
+    
+    
+    
+    <!--  <script>
+   function addItem(){
         var ul = document.getElementById("dynamic-list");
         var candidate = document.getElementById("carriername");
         var li = document.createElement("li");
@@ -108,14 +183,7 @@ tr:nth-child(even) {
         var item = document.getElementById(candidate.value);
         ul.removeChild(item);
 }
-                
-                
-                
-                
-                
-                
-                
-                </script>        
+                 </script>   -->     
             
             
             
@@ -366,7 +434,7 @@ tr:nth-child(even) {
                   
 
     </div>
-       <input id="legalentity-submit-btn" type="submit" class="btn btn-lg btn-primary pull-right" placeholder="Save" value="Submit">  
+       <input id="legalentity-submit-btn" onclick="addItem()" type="submit" class="btn btn-lg btn-primary pull-right" placeholder="Save" value="Submit">  
 </form>  
  
     <!-- <div class="row">
