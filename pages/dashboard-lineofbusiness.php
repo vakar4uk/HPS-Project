@@ -22,7 +22,7 @@
                         <div class="col-lg-3 col-md-6 col-sm-12">
                             <div class="my-container">
                                 <div class="carrier-name">
-                                    <p>Pick type</p><span id="icons"><i class="far fa-envelope fa-1x"></i><i class="fas fa-ellipsis-v fa-1x"></i></span>
+                                    <p>Business Type</p><span id="icons"><i class="far fa-envelope fa-1x"></i><i class="fas fa-ellipsis-v fa-1x"></i></span>
                                     <br><hr id="hr">   
                                 </div>
                                 <div id="business-selection-btn" class="lineofbusiness-options">
@@ -47,7 +47,7 @@
                         <div class="col-lg-3 col-md-6 col-sm-12">
                             <div class="my-container">
                                 <div class="carrier-name">
-                                    <p>Pick line</p><span id="icons"><i class="far fa-envelope fa-1x"></i><i class="fas fa-ellipsis-v fa-1x"></i></span>
+                                    <p>Line of Business</p><span id="icons"><i class="far fa-envelope fa-1x"></i><i class="fas fa-ellipsis-v fa-1x"></i></span>
                                     <hr id="hr">   
                                 </div>
                                 <div id="lineofbusiness-selection-btn" class="lineofbusiness-types">
@@ -69,7 +69,7 @@
                         <div class="col-lg-6 col-md-12 col-sm-12">
                             <div class="my-container">                       
                                 <div class="carrier-name">
-                                    <p>Pick states</p><span id="icons"><i class="far fa-envelope fa-1x"></i><i class="fas fa-ellipsis-v fa-1x"></i></span>
+                                    <p>States</p><span id="icons"><i class="far fa-envelope fa-1x"></i><i class="fas fa-ellipsis-v fa-1x"></i></span>
                                     <hr id="hr">   
                                 </div>
                                 <div id="states-selection-btn" class="lineofbusiness-states">

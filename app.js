@@ -34,23 +34,37 @@ $(document).ready(function () {
     // Line of business option selection
     $('#on-exchange').click(function () {
         $(this).toggleClass('btn-info');
-        $('#Group1').fadeOut();
-        $('#OffExchange').fadeOut();
-        $('#OnExchange').fadeIn();
+        $('#off-exchange').removeClass('btn-info');
+        $('#group-exchange').removeClass('btn-info');
+        $('.selected-business').removeClass('btn-info');
+        $('.selected-states').removeClass('btn-info');
+        // $('#Group1').fadeOut();
+        // $('#OffExchange').fadeOut();
+        // $('#OnExchange').fadeIn();
+      
+
     });
 
     $('#off-exchange').click(function () {
         $(this).toggleClass('btn-info');
-        $('#OnExchange').fadeOut();
-        $('#Group1').fadeOut();
-        $('#OffExchange').fadeIn();
+        $('#on-exchange').removeClass('btn-info');
+        $('#group-exchange').removeClass('btn-info');
+        $('.selected-business').removeClass('btn-info');
+        $('.selected-states').removeClass('btn-info');
+        // $('#OnExchange').fadeOut();
+        // $('#Group1').fadeOut();
+        // $('#OffExchange').fadeIn();
     });
 
     $('#group-exchange').click(function () {
         $(this).toggleClass('btn-info');
-        $('#OnExchange').fadeOut();
-        $('#OffExchange').fadeOut();
-        $('#Group1').fadeIn();
+        $('#off-exchange').removeClass('btn-info');
+        $('#on-exchange').removeClass('btn-info');
+        $('.selected-business').removeClass('btn-info');
+        $('.selected-states').removeClass('btn-info');
+        // $('#OnExchange').fadeOut();
+        // $('#OffExchange').fadeOut();
+        // $('#Group1').fadeIn();
 
     });
 
