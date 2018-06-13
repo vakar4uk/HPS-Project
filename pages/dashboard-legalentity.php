@@ -17,15 +17,33 @@
                     </p>
                 </div>                   
             </div>
+<<<<<<< HEAD
+            
+            </div>
+
             <!-- Header text -->  
+               <div class= "legal-container">
                 <form id="entity-address" action="">
+=======
+            <!-- Header text -->  
+                <form id="entity-address" action="" name="entity-address">
+>>>>>>> Combining
                     <div class="my-container">
                         <div class="carrier-name">
-                            <p>Name of and Code of Legal Entity</p><span id="icons"><i class="far fa-envelope fa-1x"></i><i class="fas fa-ellipsis-v fa-1x"></i></span>
+                            <p>Name of and Code of Legal Entity *</p><span id="icons"><i class="far fa-envelope fa-1x"></i><i class="fas fa-ellipsis-v fa-1x"></i></span>
                             <hr id="hr">
+<<<<<<< HEAD
                             <input id="carriername-input" type="text" class="form-control" placeholder="John Doe, XC78" required>
+=======
+                            <input id="carriername" name="carriername" type="text" class="form-control" placeholder="John Doe, XC78" required>
+>>>>>>> Combining
                         </div>
+                        <!-- <input type="submit" class="btn btn-lg btn-success btn-block"> -->
+                        <!-- <button id="add-bank-address" class="btn btn-lg btn-success btn-block" type="submit">Submit</button> -->
                     </div>
+                   
+             <br>
+                
 
                     <div class="address-container">
                        <div class="my-container">
@@ -37,7 +55,8 @@
                             <br>
                                 <div class="container-fluid">
                                     <div class="col-lg-4">
-                                        <select class="selectpicker form-group" data-style="btn-default" data-width=290px>
+<<<<<<< HEAD
+                                        <select required class="selectpicker form-group" data-style="btn-default" data-width=290px >
                                     <option value="" selected disabled hidden>Select address type...</option>
                                     <option value="business-address">Business</option>
                                     <option value="home-address">Home</option>
@@ -45,7 +64,18 @@
                                     </div>
                                     <div class="col-lg-8">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" id="addressLine1" placeholder="Address Line 1" data-width=385px>
+                                            <input type="text" class="form-control" id="addressLine1" placeholder="Address Line 1" data-width=385px required>
+=======
+                                        <select class="selectpicker form-group required" name="address-type" data-style="btn-default"data-width=290px>                                        
+                                            <option value="">Select address type...</option>
+                                            <option value="business-address">Business</option>
+                                            <option value="home-address">Home</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-8">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="addressLine1" name="addressLine1" placeholder="Address Line 1 *" data-width=385px required>
+>>>>>>> Combining
                                         </div>
                                     </div>
                                 </div>
@@ -65,12 +95,16 @@
                                 <div class="container-fluid">
                                     <div class="col-lg-5">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" id="addressLine2" placeholder="City">
+<<<<<<< HEAD
+                                            <input type="text" class="form-control" id="addressLine2" placeholder="City" required>
+=======
+                                            <input type="text" class="form-control" id="city" name="city" placeholder="City *" required>
+>>>>>>> Combining
                                         </div>
                                     </div>
                                     <div class="col-lg-4">
-                                        <select class="selectpicker form-group" data-style="btn-default" data-width=280px>
-                                        <option value="" selected disabled hidden>Select State...</option>
+                                        <select class="selectpicker form-group" name="state" data-style="btn-default" data-width=280px required>
+                                            <option value="" selected disabled hidden>Select State...</option>
 
                                         <?php foreach ($allStates as $shortName => $name) { ?>                                                               
                                             <option value="business-address"><?php echo $name; ?></option>                                               
@@ -80,7 +114,11 @@
                                     </div>
                                     <div class="col-lg-3">
                                         <div class="form-group" id="zipcodeField">
-                                            <input type="number" class="form-control" id="zipcode" placeholder="Zipcode">
+<<<<<<< HEAD
+                                            <input type="number" class="form-control" id="zipcode" placeholder="Zipcode" required>
+=======
+                                            <input type="number" name="zipcode" class="form-control" id="zipcode" placeholder="Zipcode *" required>
+>>>>>>> Combining
                                         </div>
                                     </div>
                                 </div>
@@ -89,16 +127,20 @@
                             <div class="row">
                                 <div class="container-fluid">
                                     <div class="col-lg-4">
-                                        <select class="selectpicker form-group" data-style="btn-default" data-width=300px>
-                                    <option value="" selected disabled hidden>Select phone type...</option>
-                                    <option value="work-phone">Work</option>
-                                    <option value="cell-phone">Cell</option>
-                                    <option value="home-phone">Home</option>
-                                </select>
+                                        <select class="selectpicker form-group" name="phone-type" data-style="btn-default" data-width=300px required>
+                                            <option value="" selected disabled hidden>Select phone type...</option>
+                                            <option value="work-phone">Work</option>
+                                            <option value="cell-phone">Cell</option>
+                                            <option value="home-phone">Home</option>
+                                        </select>
                                     </div>
                                     <div class="col-lg-8">
                                         <div class="form-group">
-                                            <input type="number" class="form-control" id="phone-number" placeholder="Enter a phone number...">
+<<<<<<< HEAD
+                                            <input type="number" class="form-control" id="phone-number" placeholder="Enter a phone number..." required>
+=======
+                                            <input type="number" class="form-control" name="phone" id="phone-number" placeholder="Enter a phone number. *" required>
+>>>>>>> Combining
                                         </div>
                                     </div>
                                 </div>
@@ -108,17 +150,38 @@
                                 <div class="container-fluid">
                                     <div class="col-lg-12">
                                         <div class="form-group">
-                                            <input type="email" class="form-control" id="email" placeholder="Enter your email address...">
+<<<<<<< HEAD
+                                            <input type="email" class="form-control" id="email" placeholder="Enter your email address..." required >
+                                       
+                                       
+                                       
+=======
+                                            <input type="email" class="form-control" name="email" id="email" placeholder="Enter your email address *" required>                               
+>>>>>>> Combining
                                         </div>
                                    
                                     </div>
+                                    
                                 </div>
                             </div>
-                </form>
+                    
+             <!-- <button id="add-bank-address" class="btn btn-lg btn-success btn-block" type="submit">Submit</button> -->
+             <br>   
             </div> 
+        
+            
         </div>
+        
     </div>
-            <button id="add-bank-address" class="btn btn-lg btn-success btn-block" type="submit">Add Address</button>                       
+<!-- ADD ADDRESS BUTTON -->
+
+
+
+<<<<<<< HEAD
+<button id="add-bank-address" class="btn btn-lg btn-success btn-block" type="add">Add Address</button>                       
+=======
+<button id="add-bank-address" class="btn btn-lg btn-success btn-block" type="submit">Add Address</button>                       
+>>>>>>> Combining
            <br>
             <script>
                 (function(){
@@ -131,10 +194,12 @@
                     })();
                 </script> 
                 
-                &nbsp;
+                
+                <!-- &nbsp; -->
       
-   
-        <form id="entity-bank" action="">
+  <!-- ADD ADDRESS BUTTON --> 
+<!-- 
+        <form id="entity-bank" action=""> -->
             <div class="bank-details">
                <div class="my-container">
                 <div class="carrier-name">
@@ -146,12 +211,12 @@
                     <div class="container-fluid">
                         <div class="col-lg-6">
                             <div class="form-group">
-                                <input type="number" class="form-control" id="accountNumber" placeholder="Account Number">
+                                <input type="number" name="account-number" class="form-control" id="account-number" placeholder="Account Number *" required>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group">
-                                <input type="number" class="form-control" id="bankNumCode" placeholder="Bank Num Code">
+                                <input type="number" name="bank-num-code" class="form-control" id="bank-num-code" placeholder="Bank Num Code *" required>
                             </div>
                         </div>
                     </div>
@@ -161,12 +226,12 @@
                     <div class="container-fluid">
                         <div class="col-lg-6">
                             <div class="form-group">
-                                <input type="number" class="form-control" id="accountNumber" placeholder="Batch Co Number">
+                                <input type="number" name="batch-code-number" class="form-control" id="batchCoNumber" placeholder="Batch Co Number *" required>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group">
-                                <input type="number" class="form-control" id="bankNumCode" placeholder="Site Code">
+                                <input type="number" name="site-code" class="form-control" id="siteCode" placeholder="Site Code *" required>
                             </div>
                         </div>
                     </div>
@@ -175,7 +240,7 @@
                     <div class="container-fluid">
                         <div class="col-lg-12">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="accountNumber" placeholder="Batch Description">
+                                <input type="text" name="batch-description" class="form-control" id="accountNumber" placeholder="Batch Description *" required>
                             </div>
                         </div>                        
                     </div>
@@ -184,12 +249,12 @@
                     <div class="container-fluid">
                         <div class="col-lg-8">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="additionalBatchInfo" placeholder="Additional Batch Info">
+                                <input type="text" name="additional-batch-info"class="form-control" id="additionalBatchInfo" placeholder="Additional Batch Info *" required>
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="form-group">
-                                <input type="number" class="form-control" id="batchGroupCode" placeholder="Batch Group Code">
+                                <input type="number" name="batch-group-code" class="form-control" id="batchGroupCode" placeholder="Batch Group Code *" required>
                             </div>
                         </div>
                     </div>
@@ -198,22 +263,22 @@
                     <div class="container-fluid">
                         <div class="col-lg-3">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="bankName" placeholder="Bank Name">
+                                <input type="text" name="bank-name" class="form-control" id="bankName" placeholder="Bank Name *" required>
                             </div>
                         </div>
                         <div class="col-lg-3">
                             <div class="form-group">
-                                <input type="number" class="form-control" id="merchantId" placeholder="Merchant ID">
+                                <input type="number" name="merchant-id" class="form-control" id="merchantId" placeholder="Merchant ID *" required>
                             </div>
                         </div>
                         <div class="col-lg-3">
                             <div class="form-group">
-                                <input type="number" class="form-control" id="securityKey" placeholder="Security Key">
+                                <input type="number" name="security-key" class="form-control" id="securityKey" placeholder="Security Key *" required>
                             </div>
                         </div>
                         <div class="col-lg-3">
                             <div class="form-group">
-                                <input class="textbox-n form-control" type="text" onfocus="(this.type='date')"  id="date" placeholder="Security Exp Date"> 
+                                <input class="textbox-n form-control" name="security-expiration-date" type="text" onfocus="(this.type='date')"  id="date" placeholder="Security Exp Date *" required> 
                             </div>                            
                         </div>                        
                     </div>
@@ -224,10 +289,14 @@
                  </div>
                
             </div>           
-        </form>  
+        <!-- </form>   -->
         <br>
            <!-- <div class="col-lg-12"> -->
+<<<<<<< HEAD
+                            <button id="add-bank-details" class="btn btn-lg btn-success btn-block" type="add">Add Bank Details</button>                       
+=======
                             <button id="add-bank-details" class="btn btn-lg btn-success btn-block" type="submit">Add Bank Details</button>                       
+>>>>>>> Combining
            <!-- </div>  --> <br>
            
                <script>
@@ -242,12 +311,61 @@
                                 });
                     })();
                 </script> 
+<<<<<<< HEAD
+                 
+                       &nbsp;
+    </div>
+        <!-- Submit Button -->
+        <button id="add-entity" class="btn btn-lg btn-success btn-block" type="add">Add Legal Entity</button>     
+        
+         <script>
+             
+                    
+                    (function(){
+
+                  var input = $('.legal-container');
+                    $('#add-entity').on('click', function(e){
+                    $(this).before(input.clone());
+                    e.preventDefault();
+                                });
+                    })();
+                </script> 
+                
+                 &nbsp;
+</form>  
+    
+</div>
+=======
                   
 
     </div>
+        <!-- Submit Button -->
+        <input id="legalentity-submit-btn" type="submit" class="btn btn-lg btn-primary pull-right" placeholder="Save" value="Submit">  
+</form>  
+>>>>>>> Combining
+
+    <!-- <div class="row">
+            <div id="business-type"  class="col-lg-12 col-md-1">   
+                    
+					<a class="btn btn-lg btn-success pull-right" href="dashboard.php">Submit</a>
+				</div>
+		</div>
+        <br> -->
+
+        <!-- Submit Button -->
+<<<<<<< HEAD
+
+                 &nbsp;
+                 
+                 
+
+=======
 </div>
+<br>
+<br>
 
-
+>>>>>>> Combining
 <?php
     include('navbars_footers/footer.php');
+    include('navbars_footers/reviewfooter.php');
 ?>

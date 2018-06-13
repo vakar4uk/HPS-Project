@@ -23,7 +23,11 @@
     <!-- The whole screen wrapped by .main-dashboard -->
     <div class="main-landing">
         <div class="container dashboard-container">
+<<<<<<< HEAD
             <div class="row"> <!-- row -->
+=======
+            <div class="row animated slideInDown"> <!-- row -->
+>>>>>>> Combining
                 <div class="col-lg-4">
                     <div class="pull-left">
                         <i class="far fa-user fa-5x"></i>                        
@@ -31,7 +35,11 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="text-center">
+<<<<<<< HEAD
                         <p><img src="../../images/whiteoutline.png" alt="" srcset=""></p>                       
+=======
+                        <p><img id="landing-logo" src="../../images/whiteoutline.png" alt="" srcset=""></p>                       
+>>>>>>> Combining
                     </div>                    
                 </div>
                 <div class="col-lg-4">
@@ -42,7 +50,11 @@
                 </div>
             </div> <!-- row -->
             
+<<<<<<< HEAD
             <div class="dashboard-table">
+=======
+            <div class="dashboard-table animated slideInUp">
+>>>>>>> Combining
                 <div class="row container-fluid"> <!-- row -->
                     <div class="col-lg-4 col-md-4 cell cell-left">
                         <div class="text-center btn btn-block">

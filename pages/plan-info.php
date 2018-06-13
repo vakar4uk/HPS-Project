@@ -1,5 +1,5 @@
 <?php 
-
+    include('navbars_footers/header.php');
     include('navbars_footers/top-navbar-ppr.php');
 
 ?>
@@ -10,7 +10,6 @@
             <div class="carrier-details">
                 <!-- Header text -->
                 <div class="jumbotron">
-                    <span><i class="fas fa-times fa-1x"></i></span>
                     <h3>Plan Information</h3>
                     <p class="description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                         dolore magna aliqua.

@@ -1,68 +1,34 @@
-<?php
-
-  session_start(); 
-
-  include('../inc/arrays.php');
-
-  define("TITLE", "Dashboard");
-
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-   
-   <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <link rel="stylesheet" href="../styles/dashboard.css?version=1">
-    <link rel="stylesheet" href="../styles/bootstrap-3.3.7-dist/css/bootstrap.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-
-    
-    <link rel="icon" href="../images/icon.png">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script>
- <title>Dashboard</title>
-</head>
-
-<body>
-  <div class="col-lg-12 col-md-12">
-    <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-        <div id="text">
-          <div class="navbar-header">      
-                <a class="navbar-brand" href="#">Florida Blue</a>
+<nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <div id="text">       
+          <div class="navbar-header">
+            <a class="navbar-brand btn float-left" href="landing.php">
+              <i class="fas fa-th-large"></i>
+            </a>            
           </div>
-          
-          <ul class="nav navbar-nav center">            
-            <li><a href="dashboard.php">CORE</a></li>
-            <li><a href="dashboard-ppr.php">PPR</a></li>
+          <ul class="nav nav-pills navbar-nav">
+            <li><a class="lead" href="#">DYNAMIC NAME</a></li>
+            <li><a href="dashboard-carrierdetails.php">CORE</a></li>
+            <li class="active"><a href="plan-info.php">PPR</a></li>
             <li><a href="#">EXCHANGELINK</a></li>
             <li><a href="#">SLP</a></li>
             <li><a href="#">SALESLINK</a></li>
             <li><a href="#">OPERATIONS</a></li>
             <li><a href="#">FINANCE & BILLING</a></li>
-              
           </ul>
         </div>
-      </div>      
+      </div>
     </nav>
+ 
 
-    <div class="col-lg-12 col-md-12 my-container">
-      <nav class="navbar navbar-inverse navbar-fixed-top center">
-          <div id="text" class="container">    
-          <ul class="nav navbar-nav">       
-              <li><a href="#">Plan Information</a></li>
-              <li><a href="#">Benefits and CSR</a></li>
-              <li><a href="#">Rates</a></li>
-              <li><a href="#">Plan Coverage</a></li>
-   
-          </ul>
-      </nav>
-  </div>
 
-</div>   
-  
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div id="text" class="container-fluid">
+        <ul class="nav nav-pills navbar-nav core-nav">
+          <li <?php if($currentLocation=='plan-info.php' ) {echo 'class="active"';} ?>><a href="#">Plans Information</a></li>
+          <li><a href="#">Benefits and CSR</a></li>
+          <li><a href="#">Rates</a></li>
+          <li><a href="#">Plan Coverage</a></li>
+        </ul>
+      </div>
+    </nav>
