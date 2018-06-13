@@ -41,8 +41,8 @@ tr:nth-child(even) {
 
 <table>
   <tr>
-    <th>Pick Type</th>
-    <th>Pick Line</th>
+    <th>Business Type</th>
+    <th>Line of Business</th>
     <th>State</th>
     <th>Legal Entities</th>
   </tr>
