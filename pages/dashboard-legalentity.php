@@ -47,42 +47,48 @@ tr:nth-child(even) {
     <th>Legal Entities</th>
   </tr>
   <tr>
-    <td> </td>
-    <td> </td>
-    <td> </td>
+    <td>Individual On Exchange</td>
+    <td>Dental</td>
+    <td>TX</td>
     <td><select id="rec_mode">        
       </select></td>
   </tr>
   <tr>
-    <td> </td>
-    <td> </td>
-    <td></td>
-    <td></td>
+    <td>Group</td>
+    <td>Health</td>
+    <td>CA</td>
+    <td><select id="rec_mode1">        
+      </select></td>
     
   </tr>
   <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>Group</td>
+    <td>Vision</td>
+    <td>CO</td>
+    <td><select id="rec_mode3">        
+      </select></td>
   </tr>
   <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>Indivdual Off Exchange</td>
+    <td>Pediatric Dental</td>
+    <td>NY</td>
+<td><select id="rec_mode4">        
+      </select></td>
   </tr>
   <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>Individual On Exchange</td>
+    <td>Short Term Life</td>
+    <td>WA</td>
+<td><select id="rec_mode5">        
+      </select></td>
   </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+  
+   <tr>
+    <td>Individual Off Exchange</td>
+    <td>Health</td>
+    <td>MA</td>
+<td><select id="rec_mode6">        
+      </select></td>
   </tr>
 </table>
           
@@ -113,9 +119,183 @@ for(var i = 0, l = options.length; i < l; i++){
   selectBox.options.add( new Option(option.text, option.value, option.selected) );
 } 
     
+
                 
-    </script>     
+    </script>   
+
+
+    <script>
+ var options =
+[
+  {
+    "text"  : "Option 1",
+    "value" : "Value 1"
+  },
+  {
+    "text"     : "Option 2",
+    "value"    : "Value 2",
+    "selected" : true
+  },
+  {
+    "text"  : "Option 3",
+    "value" : "Value 3"
+  }
+];
+
+var selectBox = document.getElementById('rec_mode1');
+
+for(var i = 0, l = options.length; i < l; i++){
+  var option = options[i];
+  selectBox.options.add( new Option(option.text, option.value, option.selected) );
+} 
+    
+                
+    </script> 
+       
+       
+   <script>
+ var options =
+[
+  {
+    "text"  : "Option 1",
+    "value" : "Value 1"
+  },
+  {
+    "text"     : "Option 2",
+    "value"    : "Value 2",
+    "selected" : true
+  },
+  {
+    "text"  : "Option 3",
+    "value" : "Value 3"
+  }
+];
+
+var selectBox = document.getElementById('rec_mode2');
+
+for(var i = 0, l = options.length; i < l; i++){
+  var option = options[i];
+  selectBox.options.add( new Option(option.text, option.value, option.selected) );
+} 
+    
+                
+    </script> 
+       
+   <script>
+ var options =
+[
+  {
+    "text"  : "Option 1",
+    "value" : "Value 1"
+  },
+  {
+    "text"     : "Option 2",
+    "value"    : "Value 2",
+    "selected" : true
+  },
+  {
+    "text"  : "Option 3",
+    "value" : "Value 3"
+  }
+];
+
+var selectBox = document.getElementById('rec_mode3');
+
+for(var i = 0, l = options.length; i < l; i++){
+  var option = options[i];
+  selectBox.options.add( new Option(option.text, option.value, option.selected) );
+} 
+    
+                
+    </script> 
+       
+       
+       
+       
+<script>
+ var options =
+[
+  {
+    "text"  : "Option 1",
+    "value" : "Value 1"
+  },
+  {
+    "text"     : "Option 2",
+    "value"    : "Value 2",
+    "selected" : true
+  },
+  {
+    "text"  : "Option 3",
+    "value" : "Value 3"
+  }
+];
+
+var selectBox = document.getElementById('rec_mode4');
+
+for(var i = 0, l = options.length; i < l; i++){
+  var option = options[i];
+  selectBox.options.add( new Option(option.text, option.value, option.selected) );
+} 
+    
+                
+    </script> 
         
+        
+           <script>
+ var options =
+[
+  {
+    "text"  : "Option 1",
+    "value" : "Value 1"
+  },
+  {
+    "text"     : "Option 2",
+    "value"    : "Value 2",
+    "selected" : true
+  },
+  {
+    "text"  : "Option 3",
+    "value" : "Value 3"
+  }
+];
+
+var selectBox = document.getElementById('rec_mode5');
+
+for(var i = 0, l = options.length; i < l; i++){
+  var option = options[i];
+  selectBox.options.add( new Option(option.text, option.value, option.selected) );
+} 
+    
+                
+    </script> 
+        
+           <script>
+ var options =
+[
+  {
+    "text"  : "Option 1",
+    "value" : "Value 1"
+  },
+  {
+    "text"     : "Option 2",
+    "value"    : "Value 2",
+    "selected" : true
+  },
+  {
+    "text"  : "Option 3",
+    "value" : "Value 3"
+  }
+];
+
+var selectBox = document.getElementById('rec_mode6');
+
+for(var i = 0, l = options.length; i < l; i++){
+  var option = options[i];
+  selectBox.options.add( new Option(option.text, option.value, option.selected) );
+} 
+    
+                
+    </script> 
           
            <br>
            <br>
