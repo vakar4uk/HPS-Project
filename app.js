@@ -75,7 +75,16 @@ $(document).ready(function () {
     // clear business
 
     // Line of business option selection
+    // Clear on new selection
+    $('.selected-business').click(function () {
+        $('.selected-business').removeClass('btn-info');
+        
+        // $('#Group1').fadeOut();
+        // $('#OffExchange').fadeOut();
+        // $('#OnExchange').fadeIn();
+      
 
+    });
     // select states
     $('.selected-states').click(function () {
         $(this).toggleClass('btn-info');
@@ -87,6 +96,12 @@ $(document).ready(function () {
         $('.selected-states').removeClass('btn-info');
     });
     // clear states
+
+      // copy states
+      $('#copy-states-btn').click(function () {
+        $('.selected-states').removeClass('btn-info');
+    });
+    // copy states
 
     // select all states
     $('#select-allstates-btn').click(function () {

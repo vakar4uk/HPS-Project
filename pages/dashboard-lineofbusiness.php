@@ -82,10 +82,13 @@
                                                                                                               
                                     </div>
                                     <div id="select-clear-container" class="row">
-                                        <div class="col-lg-6 col-md-6 pull-left">
+                                        <div class="col-lg-4 col-md-4 pull-left">
                                             <button id="select-allstates-btn" class="btn btn-warning btn-lg">Select All</button>
                                         </div>
-                                        <div class="col-lg-6 col-md-6 pull-right">
+                                        <div class="col-lg-4 col-md-4 ">
+                                            <button id="copy-states-btn" class="btn btn-success btn-lg">Copy All</button>     
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 pull-right">
                                             <button id="clear-states-btn" class="btn btn-danger btn-lg">Clear All</button>     
                                         </div>                                        
                                     </div>                      
