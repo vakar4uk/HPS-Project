@@ -869,3 +869,11 @@ div.carrier-info {
 
 }
 
+/* Plan-info CSS */
+#product{
+    float: center;
+}
+.select-product{
+    
+    width: 100%;
+}
