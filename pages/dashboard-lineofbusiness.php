@@ -44,10 +44,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="col-lg-4 col-md-6 col-sm-12">
                             <div class="my-container">
                                 <div class="carrier-name">
-                                    <p>Line of Business</p><span id="icons"><i class="far fa-envelope fa-1x"></i><i class="fas fa-ellipsis-v fa-1x"></i></span>
+                                    <p>Line of Business</p><span id="icons" ><i class="far fa-envelope fa-1x"></i><i class="fas fa-ellipsis-v fa-1x"></i></span>
                                     <hr id="hr">   
                                 </div>
                                 <div id="lineofbusiness-selection-btn" class="lineofbusiness-types">
@@ -59,14 +59,14 @@
                                         <?php } ?>                                                                        
                                     </div>
                                     <div id="select-clear-container" class="row">
-                                        <div class="col-lg-6 pull-right">
-                                            <button id="clear-business-btn" class="btn btn-danger btn-lg">Clear All</button>
+                                        <div class="col-lg-6 pull-right" id="clear-business-container">
+                                            <button id="clear-business-btn" class="btn btn-danger btn-md">Clear All</button>
                                         </div>    
                                     </div>                                       
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-md-12 col-sm-12">
+                        <div class="col-lg-5 col-md-12 col-sm-12">
                             <div class="my-container">                       
                                 <div class="carrier-name">
                                     <p>States</p><span id="icons"><i class="far fa-envelope fa-1x"></i><i class="fas fa-ellipsis-v fa-1x"></i></span>
@@ -81,17 +81,20 @@
                                         <?php } ?>
                                                                                                               
                                     </div>
-                                    <div id="select-clear-container" class="row">
-                                        <div class="col-lg-4 col-md-4 pull-left">
-                                            <button id="select-allstates-btn" class="btn btn-warning btn-lg">Select All</button>
-                                        </div>
-                                        <div class="col-lg-4 col-md-4 ">
-                                            <button id="copy-states-btn" class="btn btn-success btn-lg">Copy All</button>     
-                                        </div>
-                                        <div class="col-lg-4 col-md-4 pull-right">
-                                            <button id="clear-states-btn" class="btn btn-danger btn-lg">Clear All</button>     
-                                        </div>                                        
-                                    </div>                      
+                                    <div class="row">
+                                        <div id="select-clear-container">
+                                            <div class="col-lg-4 col-md-4">
+                                                <button id="select-allstates-btn" class="btn btn-warning btn-block">Select All</button>
+                                            </div>
+                                            <div class="col-lg-4 col-md-4 ">
+                                                <button id="copy-states-btn" class="btn btn-success btn-block">Copy All</button>     
+                                            </div>
+                                            <div class="col-lg-4 col-md-4">
+                                                <button id="clear-states-btn" class="btn btn-danger btn-block">Clear All</button>     
+                                            </div>                                        
+                                        </div>   
+                                    </div>
+                                                      
                                 </div>                         
                             </div>
                         </div>
