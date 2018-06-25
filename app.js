@@ -149,8 +149,9 @@ $(document).ready(function () {
     // Legal entities jquery code
         $("span").click(function(){
             var state = $(this).text().substring(0,2);
+            var business_type = $(".BT").text();
             $(this).css("display","none");
-            $(".legal-entities-table").append("<tr><td>Individual On Exchange</td><td>Dental</td><td><span>"+state+"</span></td><td><select><option value='Legal Entity 1'>Legal Entity 1</option><option value='Legal Entity 2'>Legal Entity 2</option><option value='Legal Entity 3'>Legal Entity 3</option></select></td></tr>");
+            $(".legal-entities-table").append("<tr><td>"+business_type+"</td><td>Dental</td><td><span>"+state+"</span></td><td><select><option value='Legal Entity 1'>Legal Entity 1</option><option value='Legal Entity 2'>Legal Entity 2</option><option value='Legal Entity 3'>Legal Entity 3</option></select></td></tr>");
         });
         
     
