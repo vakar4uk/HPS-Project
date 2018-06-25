@@ -51,7 +51,8 @@ var row2 = $(this).parents().find('.js-row2');
 
 });
  -->
-<table>
+ 
+<table class="legal-entities-table">
   <tr>
     <th>Business Type</th>
     <th>Line of Business</th>
@@ -61,14 +62,17 @@ var row2 = $(this).parents().find('.js-row2');
   <tr>
     <td>Individual On Exchange</td>
     <td>Dental</td>
-    <td>TX, CA, WA, AL, FL</td>
-    <td><select id="rec_mode">        
-      </select></td>
+    <td><span>TX,</span> <span>CA,</span> <span>WA,</span> <span>AL,</span> <span>FL</span></td>
+    <td><select>
+        <option value='Legal Entity 1'>Legal Entity 1</option>
+        <option value='Legal Entity 2'>Legal Entity 2</option>
+        <option value='Legal Entity 3'>Legal Entity 3</option>
+    </select></td>
   </tr>
   <tr>
     <td>Group</td>
     <td>Health</td>
-    <td>CA, NY, FL, ND, NC</td>
+    <td><span>CA,</span> <span>NY,</span> <span>FL,</span> <span>ND,</span> <span>NC</span></td>
     <td><select id="rec_mode1">        
       </select></td>
     
@@ -76,21 +80,21 @@ var row2 = $(this).parents().find('.js-row2');
   <tr>
     <td>Group</td>
     <td>Vision</td>
-    <td>CO, SD. WY, WA, IL</td>
+    <td><span>CO,</span> <span>SD,</span> <span>WY,</span> <span>WA,</span> <span>IL</span></td>
     <td><select id="rec_mode3">        
       </select></td>
   </tr>
   <tr>
     <td>Indivdual Off Exchange</td>
     <td>Pediatric Dental</td>
-    <td>NY, FL, MA, VA, RI</td>
+    <td><span>NY,</span> <span>FL,</span> <span>MA,</span> <span>VA,</span> <span>RI</span></td>
 <td><select id="rec_mode4">        
       </select></td>
   </tr>
   <tr>
     <td>Individual On Exchange</td>
     <td>Short Term Life</td>
-    <td>WA, OR, CA, ID, NV</td>
+    <td><span>WA,</span> <span>OR,</span> <span>CA,</span> <span>ID,</span> <span>NV</span></td>
 <td><select id="rec_mode5">        
       </select></td>
   </tr>
@@ -98,7 +102,7 @@ var row2 = $(this).parents().find('.js-row2');
    <tr>
     <td>Individual Off Exchange</td>
     <td>Health</td>
-    <td>MA, TX, NM, AZ, CO</td>
+    <td><span>MA,</span> <span>TX,</span> <span>NM,</span> <span>AZ,</span> <span>CO</span></td>
 <td><select id="rec_mode6">        
       </select></td>
   </tr>

@@ -24,7 +24,7 @@ $(document).ready(function () {
             reader.readAsDataURL(input.files[0]);
         }
     }
-
+    
     $("#logo-input").change(function () {
         readURL(this);
     });
@@ -146,7 +146,12 @@ $(document).ready(function () {
             $(this).toggleClass("colortoggle");
         });
 
-    
+    // Legal entities jquery code
+        $("span").click(function(){
+            var state = $(this).text().substring(0,2);
+            $(this).css("display","none");
+            $(".legal-entities-table").append("<tr><td>Individual On Exchange</td><td>Dental</td><td><span>"+state+"</span></td><td><select><option value='Legal Entity 1'>Legal Entity 1</option><option value='Legal Entity 2'>Legal Entity 2</option><option value='Legal Entity 3'>Legal Entity 3</option></select></td></tr>");
+        });
         
     
 });
