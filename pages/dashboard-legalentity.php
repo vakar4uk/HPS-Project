@@ -410,7 +410,7 @@ for(var i = 0, l = options.length; i < l; i++){
    <style>
     .toggle-content {
 	display: none;
- 
+    
 }
 
 .toggle-content.is-visible {
@@ -461,7 +461,7 @@ document.addEventListener('click', function (event) {
             <br>
             <br>
             <!-- Header text --> 
-                 <a class="toggle" href="#example">Add Legal Entity</a> 
+                 <button  class="btn btn-lg btn-primary"  class="toggle"><a class="toggle" href="#example" style="color: #ffffff">Add Legal Entity</a></button> 
                  
                  <br>
                  <br>
