@@ -22,7 +22,7 @@
                         <div class="col-lg-3 col-md-6 col-sm-12">
                             <div class="my-container">
                                 <div class="carrier-name">
-                                    <p>Business Type</p><span id="icons"><i class="far fa-envelope fa-1x"></i><i class="fas fa-ellipsis-v fa-1x"></i></span>
+                                    <p>Business Type</p><span id="icons" style="margin-right: 20px"><i class="far fa-envelope fa-1x"></i><i class="fas fa-ellipsis-v fa-1x"></i></span>
                                     <br><hr id="hr">   
                                 </div>
                                 <div id="business-selection-btn" class="lineofbusiness-options">
@@ -44,10 +44,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="col-lg-3 col-md-6 col-sm-12">
                             <div class="my-container">
                                 <div class="carrier-name">
-                                    <p>Line of Business</p><span id="icons" ><i class="far fa-envelope fa-1x"></i><i class="fas fa-ellipsis-v fa-1x"></i></span>
+                                    <p>Line of Business</p><span id="icons" style="margin-right: 20px"><i class="far fa-envelope fa-1x"></i><i class="fas fa-ellipsis-v fa-1x"></i></span>
                                     <hr id="hr">   
                                 </div>
                                 <div id="lineofbusiness-selection-btn" class="lineofbusiness-types">
@@ -66,17 +66,17 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-5 col-md-12 col-sm-12">
+                        <div class="col-lg-6 col-md-12 col-sm-12">
                             <div class="my-container">                       
                                 <div class="carrier-name">
-                                    <p>States</p><span id="icons"><i class="far fa-envelope fa-1x"></i><i class="fas fa-ellipsis-v fa-1x"></i></span>
+                                    <p>States</p><span id="icons" style="margin-right: 20px"><i class="far fa-envelope fa-1x"></i><i class="fas fa-ellipsis-v fa-1x"></i></span>
                                     <hr id="hr">   
                                 </div>
                                 <div id="states-selection-btn" class="lineofbusiness-states">
                                     <div class="row">
                                         <?php foreach ($allStates as $shortName => $name) { ?>                        
-                                        <div class="col-lg-3 col-md-2">                            
-                                            <button class="btn btn-default btn-sm selected-states"><?php echo $shortName; ?></button>                    
+                                        <div class="col-lg-2 col-md-2">                            
+                                            <button class="btn btn-default btn-block btn-sm selected-states"><?php echo $shortName; ?></button>                    
                                         </div>            
                                         <?php } ?>
                                                                                                               

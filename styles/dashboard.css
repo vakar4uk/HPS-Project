@@ -514,13 +514,13 @@ p.file-name {
 
 
 .lineofbusiness-wrapper .my-container {
-    height: 700px;
+    height: 500px;
 }
 
 #business-selection-btn  button.btn {
     /* margin: 34% auto; */
     margin: 0 auto;
-    margin-bottom: 82%;    
+    margin-bottom: 45.3%;    
     padding: 10px;
     width: 90%;
     font-size: 1.0em;    
@@ -529,7 +529,7 @@ p.file-name {
 #lineofbusiness-selection-btn button.btn {
     /* margin: 14% auto; */
     margin: 0 auto;    
-    margin-bottom: 16.25%;
+    margin-bottom: 7.8%;
     padding: auto;
     width: 90%;
     font-size: 1.0em;  
@@ -538,7 +538,7 @@ p.file-name {
 #states-selection-btn  button.btn {
     margin: 4% auto;
     padding: auto;
-    width: 60%;
+    width: 80%;
     font-size: 1.0em;    
 }
 
