@@ -61,7 +61,7 @@ var row2 = $(this).parents().find('.js-row2');
   </tr>
   <tr>
     <td class="BT">Individual On Exchange</td>
-    <td>Dental</td>
+    <td class="LOB">Dental</td>
     <td><span>TX,</span> <span>CA,</span> <span>WA,</span> <span>AL,</span> <span>FL</span></td>
     <td><select>
         <option value='Legal Entity 1'>Legal Entity 1</option>
@@ -71,7 +71,7 @@ var row2 = $(this).parents().find('.js-row2');
   </tr>
   <tr>
     <td class="BT">Group</td>
-    <td>Health</td>
+    <td class="LOB">Health</td>
     <td><span>CA,</span> <span>NY,</span> <span>FL,</span> <span>ND,</span> <span>NC</span></td>
     <td><select id="rec_mode1">        
       </select></td>
@@ -79,21 +79,21 @@ var row2 = $(this).parents().find('.js-row2');
   </tr>
   <tr>
     <td class="BT">Group</td>
-    <td>Vision</td>
+    <td class="LOB">Vision</td>
     <td><span>CO,</span> <span>SD,</span> <span>WY,</span> <span>WA,</span> <span>IL</span></td>
     <td><select id="rec_mode3">        
       </select></td>
   </tr>
   <tr>
     <td class="BT">Indivdual Off Exchange</td>
-    <td>Pediatric Dental</td>
+    <td class="LOB">Pediatric Dental</td>
     <td><span>NY,</span> <span>FL,</span> <span>MA,</span> <span>VA,</span> <span>RI</span></td>
 <td><select id="rec_mode4">        
       </select></td>
   </tr>
   <tr>
     <td class="BT">Individual On Exchange</td>
-    <td>Short Term Life</td>
+    <td class="LOB">Short Term Life</td>
     <td><span>WA,</span> <span>OR,</span> <span>CA,</span> <span>ID,</span> <span>NV</span></td>
 <td><select id="rec_mode5">        
       </select></td>
@@ -101,7 +101,7 @@ var row2 = $(this).parents().find('.js-row2');
   
    <tr>
     <td class="BT">Individual Off Exchange</td>
-    <td>Health</td>
+    <td class="LOB">Health</td>
     <td><span>MA,</span> <span>TX,</span> <span>NM,</span> <span>AZ,</span> <span>CO</span></td>
 <td><select id="rec_mode6">        
       </select></td>
