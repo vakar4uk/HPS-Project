@@ -149,9 +149,13 @@ $(document).ready(function () {
     // Legal entities jquery code
         $("span").click(function(){
             var state = $(this).text().substring(0,2);
-            var business_type = $(".BT").text();
+            // get index of the table row
+            var ind = ($(this).parent().parent().index())-1;
+            // get the business type using the index .BT is an array of business types
+            var business_type = $(".BT").eq(ind).text();
+            var lob = $(".LOB").eq(ind).text();
             $(this).css("display","none");
-            $(".legal-entities-table").append("<tr><td>"+business_type+"</td><td>Dental</td><td><span>"+state+"</span></td><td><select><option value='Legal Entity 1'>Legal Entity 1</option><option value='Legal Entity 2'>Legal Entity 2</option><option value='Legal Entity 3'>Legal Entity 3</option></select></td></tr>");
+            $(".legal-entities-table").append("<tr><td>"+business_type+"</td><td>"+lob+"</td><td><span>"+state+"</span></td><td><select><option value='Legal Entity 1'>Legal Entity 1</option><option value='Legal Entity 2'>Legal Entity 2</option><option value='Legal Entity 3'>Legal Entity 3</option></select></td></tr>");
         });
         
     
