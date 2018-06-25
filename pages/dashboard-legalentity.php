@@ -39,7 +39,18 @@ tr:nth-child(even) {
 }
 </style>
 
+<!-- In order to use parents() means anything above the class -->
+<!-- 
+$(document).ready(function() {
 
+$('.js-click-me').on('click', function (event) {
+var row2 = $(this).parents().find('.js-row2');
+      $(this).addClass("js-hide");
+      row2.removeClass("js-hide");
+  });
+
+});
+ -->
 <table>
   <tr>
     <th>Business Type</th>
