@@ -511,21 +511,26 @@ p.file-name {
 }
 
 /* Line of Business Antony */
+
+
 .lineofbusiness-wrapper .my-container {
     height: 700px;
 }
 
 #business-selection-btn  button.btn {
-    margin: 34% auto;
+    /* margin: 34% auto; */
+    margin: 0 auto;
+    margin-bottom: 82%;    
     padding: 10px;
     width: 90%;
     font-size: 1.0em;    
 }
 
 #lineofbusiness-selection-btn button.btn {
-    margin: 14% auto;
-    margin-bottom: 5%;
-    padding: 10px;
+    /* margin: 14% auto; */
+    margin: 0 auto;    
+    margin-bottom: 16.25%;
+    padding: auto;
     width: 90%;
     font-size: 1.0em;  
 }
@@ -549,6 +554,13 @@ p.file-name {
 
 #states-select-clear button.btn {
     margin: auto auto;    
+}
+#select-clear-container button.btn{
+    width: 90%;
+}
+
+#clear-business-container button.btn{
+    margin-top: 3.5px;
 }
 
 button#select-allstates-btn {
