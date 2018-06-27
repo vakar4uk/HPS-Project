@@ -150,21 +150,25 @@ $(document).ready(function () {
         $("span").click(function(){
             //find the number of spans in the <tr>
             var count = $(this).siblings().length;
+            // checks if there are enough states in the td. Also prevents a row with no states
             if(count > 0){
                 var state = $(this).text().substring(0,2);
                 //find the prev comma and get rid of it if the state is the last state
                 if($(this).hasClass('last')){
                     $(this).prev("span").addClass("last");
+                    // finds the previous span and stores the text
                     var prev = $(this).prev("span").text();
+                    // then replace the text of the previous using js 
                     $(this).prev("span").text(prev.replace(',', ''));
                 }
-                // get index of the table row .parent() -> <td> -> .parent() -> <tr>
+                // get index of the table row $(this).parent() -> <td> -> .parent() -> <tr>
                 var index = ($(this).parent().parent().index())-1;
-                // get the business type using the index .BT is an array of business types
+                // get the business type using index| .BT is an array of business types
                 var business_type = $(".BT").eq(index).text();
+                // same concept as BT but for line of business column
                 var lob = $(".LOB").eq(index).text();
                 $(this).remove();
-                //$(this).css("display","none");
+                // Actually add the row. index+1 because we need to skip the <tr> containing the <th> tags
                 $(".legal-entities-table tr:eq("+(index+1)+")").after("<tr><td class='BT'>"+business_type+"</td><td class='LOB'>"+lob+"</td><td><span>"+state+"</span></td><td><select><option value='Legal Entity 1'>Legal Entity 1</option><option value='Legal Entity 2'>Legal Entity 2</option><option value='Legal Entity 3'>Legal Entity 3</option></select></td></tr>");
             }
         });
