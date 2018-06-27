@@ -165,7 +165,6 @@ $(document).ready(function () {
                 var lob = $(".LOB").eq(index).text();
                 $(this).remove();
                 //$(this).css("display","none");
-                // $(".legal-entities-table").append("<tr><td class='BT'>"+business_type+"</td><td class='LOB'>"+lob+"</td><td><span>"+state+"</span></td><td><select><option value='Legal Entity 1'>Legal Entity 1</option><option value='Legal Entity 2'>Legal Entity 2</option><option value='Legal Entity 3'>Legal Entity 3</option></select></td></tr>");
                 $(".legal-entities-table tr:eq("+(index+1)+")").after("<tr><td class='BT'>"+business_type+"</td><td class='LOB'>"+lob+"</td><td><span>"+state+"</span></td><td><select><option value='Legal Entity 1'>Legal Entity 1</option><option value='Legal Entity 2'>Legal Entity 2</option><option value='Legal Entity 3'>Legal Entity 3</option></select></td></tr>");
             }
         });
