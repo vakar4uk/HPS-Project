@@ -146,16 +146,28 @@ $(document).ready(function () {
             $(this).toggleClass("colortoggle");
         });
 
-    // Legal entities jquery code
+    // Legal Entities Table jquery code
         $("span").click(function(){
-            var state = $(this).text().substring(0,2);
-            // get index of the table row
-            var ind = ($(this).parent().parent().index())-1;
-            // get the business type using the index .BT is an array of business types
-            var business_type = $(".BT").eq(ind).text();
-            var lob = $(".LOB").eq(ind).text();
-            $(this).css("display","none");
-            $(".legal-entities-table").append("<tr><td>"+business_type+"</td><td>"+lob+"</td><td><span>"+state+"</span></td><td><select><option value='Legal Entity 1'>Legal Entity 1</option><option value='Legal Entity 2'>Legal Entity 2</option><option value='Legal Entity 3'>Legal Entity 3</option></select></td></tr>");
+            //find the number of spans in the <tr>
+            var count = $(this).siblings().length;
+            if(count > 0){
+                var state = $(this).text().substring(0,2);
+                //find the prev comma and get rid of it if the state is the last state
+                if($(this).hasClass('last')){
+                    $(this).prev("span").addClass("last");
+                    var prev = $(this).prev("span").text();
+                    $(this).prev("span").text(prev.replace(',', ''));
+                }
+                // get index of the table row .parent() -> <td> -> .parent() -> <tr>
+                var index = ($(this).parent().parent().index())-1;
+                // get the business type using the index .BT is an array of business types
+                var business_type = $(".BT").eq(index).text();
+                var lob = $(".LOB").eq(index).text();
+                $(this).remove();
+                //$(this).css("display","none");
+                // $(".legal-entities-table").append("<tr><td class='BT'>"+business_type+"</td><td class='LOB'>"+lob+"</td><td><span>"+state+"</span></td><td><select><option value='Legal Entity 1'>Legal Entity 1</option><option value='Legal Entity 2'>Legal Entity 2</option><option value='Legal Entity 3'>Legal Entity 3</option></select></td></tr>");
+                $(".legal-entities-table tr:eq("+(index+1)+")").after("<tr><td class='BT'>"+business_type+"</td><td class='LOB'>"+lob+"</td><td><span>"+state+"</span></td><td><select><option value='Legal Entity 1'>Legal Entity 1</option><option value='Legal Entity 2'>Legal Entity 2</option><option value='Legal Entity 3'>Legal Entity 3</option></select></td></tr>");
+            }
         });
         
     

@@ -62,7 +62,7 @@ var row2 = $(this).parents().find('.js-row2');
   <tr>
     <td class="BT">Individual On Exchange</td>
     <td class="LOB">Dental</td>
-    <td><span>TX,</span> <span>CA,</span> <span>WA,</span> <span>AL,</span> <span>FL</span></td>
+    <td><span>TX,</span> <span>CA,</span> <span>WA,</span> <span>AL,</span> <span class="last">FL</span></td>
     <td><select>
         <option value='Legal Entity 1'>Legal Entity 1</option>
         <option value='Legal Entity 2'>Legal Entity 2</option>
@@ -72,7 +72,7 @@ var row2 = $(this).parents().find('.js-row2');
   <tr>
     <td class="BT">Group</td>
     <td class="LOB">Health</td>
-    <td><span>CA,</span> <span>NY,</span> <span>FL,</span> <span>ND,</span> <span>NC</span></td>
+    <td><span>CA,</span> <span>NY,</span> <span>FL,</span> <span>ND,</span> <span class="last">NC</span></td>
     <td><select id="rec_mode1">        
       </select></td>
     
@@ -80,21 +80,21 @@ var row2 = $(this).parents().find('.js-row2');
   <tr>
     <td class="BT">Group</td>
     <td class="LOB">Vision</td>
-    <td><span>CO,</span> <span>SD,</span> <span>WY,</span> <span>WA,</span> <span>IL</span></td>
+    <td><span>CO,</span> <span>SD,</span> <span>WY,</span> <span>WA,</span> <span class="last">IL</span></td>
     <td><select id="rec_mode3">        
       </select></td>
   </tr>
   <tr>
     <td class="BT">Indivdual Off Exchange</td>
     <td class="LOB">Pediatric Dental</td>
-    <td><span>NY,</span> <span>FL,</span> <span>MA,</span> <span>VA,</span> <span>RI</span></td>
+    <td><span>NY,</span> <span>FL,</span> <span>MA,</span> <span>VA,</span> <span class="last">RI</span></td>
 <td><select id="rec_mode4">        
       </select></td>
   </tr>
   <tr>
     <td class="BT">Individual On Exchange</td>
     <td class="LOB">Short Term Life</td>
-    <td><span>WA,</span> <span>OR,</span> <span>CA,</span> <span>ID,</span> <span>NV</span></td>
+    <td><span>WA,</span> <span>OR,</span> <span>CA,</span> <span>ID,</span> <span class="last">NV</span></td>
 <td><select id="rec_mode5">        
       </select></td>
   </tr>
@@ -102,7 +102,7 @@ var row2 = $(this).parents().find('.js-row2');
    <tr>
     <td class="BT">Individual Off Exchange</td>
     <td class="LOB">Health</td>
-    <td><span>MA,</span> <span>TX,</span> <span>NM,</span> <span>AZ,</span> <span>CO</span></td>
+    <td><span>MA,</span> <span>TX,</span> <span>NM,</span> <span>AZ,</span> <span class="last">CO</span></td>
 <td><select id="rec_mode6">        
       </select></td>
   </tr>
