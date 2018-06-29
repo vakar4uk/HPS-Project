@@ -20,6 +20,7 @@ body .main-landing {
 /* ====================== */
 /* Landing Page Container */
 
+
 .main-landing {
     width: 100%;
     height: 100%;
@@ -43,12 +44,8 @@ body .main-landing {
 div.dashboard-table {
     border-radius: 10px;
     color: rgba(29, 77, 139, 0.98);
-<<<<<<< HEAD
-    margin-top: 100px;
-=======
     margin-top: 50px;
     /* margin-bottom: 50px; */
->>>>>>> Combining
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 30px;
@@ -288,8 +285,6 @@ input#logo-upload {
     border: none;
 }
 
-<<<<<<< HEAD
-=======
 /* required field customization */
 .highlight {
     color: red;
@@ -301,7 +296,6 @@ form .error {
 }
 /* required field customization */
 
->>>>>>> Combining
 .jumbotron p.description {
     padding-top: 15px;
     padding-bottom: 17px;
@@ -398,13 +392,10 @@ div#carrier-logo {
     color: #57D4E7;
 }
 
-<<<<<<< HEAD
-=======
 .icons a:hover {
     opacity: 0.7;
 }   
 
->>>>>>> Combining
 /* div.carrier-details > div#show-btn.pull-right {
     display: none;
     position: relative;
@@ -442,18 +433,6 @@ div#carrier-logo {
     margin-right: 15px;
 
     width: 210px;
-<<<<<<< HEAD
-}
-
-#business-type > a {
-    width:220px;
-    margin-right: 15px;
-    
-}
-
-#selected-business-type {
-    /* width: 200px; */
-=======
 }
 
 #business-type > a {
@@ -465,7 +444,6 @@ div#carrier-logo {
 #selected-business-type {
     /* width: 200px; */
     
->>>>>>> Combining
 }
 
 #state-list > button {
@@ -487,33 +465,6 @@ input[type=number]::-webkit-outer-spin-button {
     margin: 0; 
 }
 
-<<<<<<< HEAD
-/* Line of Business Antony */
-#OnExchange{
-    display: none;
-}
-
-#OffExchange{
-    display: none;
-}
-#Group1{
-    display: none;
-}
-
-#business-clear > button {
-    width:220px;
-    margin-right: 150px;
-    
-}
-/* #business-clear> button{
-    margin-bottom: 20px;
-     margin-right: 15px;
-
-} */
-/* DASHBOARD STYLING */
-/* ================= */
-
-=======
 input[type="file"] {
     position: absolute;
     /* background: red; */
@@ -565,21 +516,27 @@ p.file-name {
 }
 
 /* Line of Business Antony */
+
+
 .lineofbusiness-wrapper .my-container {
-    height: 700px;
+    height: 500px;
 }
 
 #business-selection-btn  button.btn {
-    margin: 34% auto;
+    /* margin: 34% auto; */
+    margin: 0 auto;
+    margin-bottom: 30%;
+    /* margin-bottom: 45.3%;     */
     padding: 10px;
     width: 90%;
     font-size: 1.0em;    
 }
 
 #lineofbusiness-selection-btn button.btn {
-    margin: 14% auto;
-    margin-bottom: 5%;
-    padding: 10px;
+    /* margin: 14% auto; */
+    margin: 0 auto;    
+    margin-bottom: 7.8%;
+    padding: auto;
     width: 90%;
     font-size: 1.0em;  
 }
@@ -587,7 +544,7 @@ p.file-name {
 #states-selection-btn  button.btn {
     margin: 4% auto;
     padding: auto;
-    width: 60%;
+    width: 80%;
     font-size: 1.0em;    
 }
 
@@ -603,6 +560,13 @@ p.file-name {
 
 #states-select-clear button.btn {
     margin: auto auto;    
+}
+#select-clear-container button.btn{
+    width: 90%;
+}
+
+#clear-business-container button.btn{
+    margin-top: 3.5px;
 }
 
 button#select-allstates-btn {
@@ -678,7 +642,6 @@ div.modal-body {
     color: #FFFFFF;
 }
 
->>>>>>> Combining
 .dashboard-header {
     margin-bottom: 50px;
     padding-top: 10px;
@@ -715,10 +678,6 @@ div.carrier {
     background: yellow;
 }
 
-<<<<<<< HEAD
-.thumbnail.onboarded img {
-    padding: 30px;
-=======
 .color-coding:hover {
     cursor: pointer;
     opacity: 0.6;
@@ -726,7 +685,6 @@ div.carrier {
 
 .thumbnail.onboarded img {
     padding: 50px;
->>>>>>> Combining
     height: 100%;;
 }
 
@@ -748,11 +706,7 @@ div.carrier div.carrier-info {
 }
 
 div.carrier div.carrier-info > h4{
-<<<<<<< HEAD
-    color: rgba(29, 77, 139, 0.98); ;
-=======
     color: rgba(29, 77, 139, 0.98); 
->>>>>>> Combining
 }
 
 div.carrier-info {
@@ -769,13 +723,6 @@ div.carrier-info {
     /* margin: 5px; */
 }
 
-<<<<<<< HEAD
-.carrier-status .btn {
-    padding: 10px;
-    /* margin: 5px; */
-}
-
-=======
 .carrier-status a.btn {
     padding: 10px;
     padding-left: -2px;
@@ -790,7 +737,6 @@ div.carrier-info {
     padding-right: 5px;
 }
 
->>>>>>> Combining
 .current-onboarding {
     position: relative;
 }
@@ -893,8 +839,8 @@ div.carrier-info {
     background-color:rgba(215, 212, 212, 0.77);
     color: rgba(110, 110, 110, 0.77);
     margin-top: 25px;
-    padding-left: 23px;
-    padding-right: 34px;
+    padding-left: 30px;
+    padding-right: 30px;
 
 }
 
@@ -943,5 +889,16 @@ div.carrier-info {
 
 }
 
+<<<<<<< HEAD
 
+>>>>>>> Combining
+=======
+/* Plan-info CSS */
+#product{
+    float: center;
+}
+.select-product{
+    
+    width: 100%;
+}
 >>>>>>> Combining

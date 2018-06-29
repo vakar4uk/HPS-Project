@@ -196,7 +196,7 @@ $(document).ready(function () {
             reader.readAsDataURL(input.files[0]);
         }
     }
-
+    
     $("#logo-input").change(function () {
         readURL(this);
     });
@@ -206,23 +206,37 @@ $(document).ready(function () {
     // Line of business option selection
     $('#on-exchange').click(function () {
         $(this).toggleClass('btn-info');
-        $('#Group1').fadeOut();
-        $('#OffExchange').fadeOut();
-        $('#OnExchange').fadeIn();
+        $('#off-exchange').removeClass('btn-info');
+        $('#group-exchange').removeClass('btn-info');
+        $('.selected-business').removeClass('btn-info');
+        $('.selected-states').removeClass('btn-info');
+        // $('#Group1').fadeOut();
+        // $('#OffExchange').fadeOut();
+        // $('#OnExchange').fadeIn();
+      
+
     });
 
     $('#off-exchange').click(function () {
         $(this).toggleClass('btn-info');
-        $('#OnExchange').fadeOut();
-        $('#Group1').fadeOut();
-        $('#OffExchange').fadeIn();
+        $('#on-exchange').removeClass('btn-info');
+        $('#group-exchange').removeClass('btn-info');
+        $('.selected-business').removeClass('btn-info');
+        $('.selected-states').removeClass('btn-info');
+        // $('#OnExchange').fadeOut();
+        // $('#Group1').fadeOut();
+        // $('#OffExchange').fadeIn();
     });
 
     $('#group-exchange').click(function () {
         $(this).toggleClass('btn-info');
-        $('#OnExchange').fadeOut();
-        $('#OffExchange').fadeOut();
-        $('#Group1').fadeIn();
+        $('#off-exchange').removeClass('btn-info');
+        $('#on-exchange').removeClass('btn-info');
+        $('.selected-business').removeClass('btn-info');
+        $('.selected-states').removeClass('btn-info');
+        // $('#OnExchange').fadeOut();
+        // $('#OffExchange').fadeOut();
+        // $('#Group1').fadeIn();
 
     });
 
@@ -233,7 +247,16 @@ $(document).ready(function () {
     // clear business
 
     // Line of business option selection
+    // Clear on new selection
+    $('.selected-business').click(function () {
+        $('.selected-business').removeClass('btn-info');
+        
+        // $('#Group1').fadeOut();
+        // $('#OffExchange').fadeOut();
+        // $('#OnExchange').fadeIn();
+      
 
+    });
     // select states
     $('.selected-states').click(function () {
         $(this).toggleClass('btn-info');
@@ -245,6 +268,12 @@ $(document).ready(function () {
         $('.selected-states').removeClass('btn-info');
     });
     // clear states
+
+      // copy states
+      $('#copy-states-btn').click(function () {
+        $('.selected-states').removeClass('btn-info');
+    });
+    // copy states
 
     // select all states
     $('#select-allstates-btn').click(function () {
@@ -289,7 +318,32 @@ $(document).ready(function () {
             $(this).toggleClass("colortoggle");
         });
 
-    
+    // Legal Entities Table jquery code
+        $("span").click(function(){
+            //find the number of spans in the <tr>
+            var count = $(this).siblings().length;
+            // checks if there are enough states in the td. Also prevents a row with no states
+            if(count > 0){
+                var state = $(this).text().substring(0,2);
+                //find the prev comma and get rid of it if the state is the last state
+                if($(this).hasClass('last')){
+                    $(this).prev("span").addClass("last");
+                    // finds the previous span and stores the text
+                    var prev = $(this).prev("span").text();
+                    // then replace the text of the previous using js 
+                    $(this).prev("span").text(prev.replace(',', ''));
+                }
+                // get index of the table row $(this).parent() -> <td> -> .parent() -> <tr>
+                var index = ($(this).parent().parent().index())-1;
+                // get the business type using index| .BT is an array of business types
+                var business_type = $(".BT").eq(index).text();
+                // same concept as BT but for line of business column
+                var lob = $(".LOB").eq(index).text();
+                $(this).remove();
+                // Actually add the row. index+1 because we need to skip the <tr> containing the <th> tags
+                $(".legal-entities-table tr:eq("+(index+1)+")").after("<tr><td class='BT'>"+business_type+"</td><td class='LOB'>"+lob+"</td><td><span>"+state+"</span></td><td><select><option value='Legal Entity 1'>Legal Entity 1</option><option value='Legal Entity 2'>Legal Entity 2</option><option value='Legal Entity 3'>Legal Entity 3</option></select></td></tr>");
+            }
+        });
         
     
 });

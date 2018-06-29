@@ -18,6 +18,7 @@
                 </div>                   
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
             
             </div>
 
@@ -27,6 +28,459 @@
 =======
             <!-- Header text -->  
                 <form id="entity-address" action="" name="entity-address">
+>>>>>>> Combining
+=======
+            </div>
+            
+<style>
+table {
+    font-family: arial, sans-serif;
+     border-collapse: collapse; 
+    width: 100%;
+
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 12px;
+    color: #7272C8;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+
+<!-- In order to use parents() means anything above the class -->
+<!-- 
+$(document).ready(function() {
+
+$('.js-click-me').on('click', function (event) {
+var row2 = $(this).parents().find('.js-row2');
+      $(this).addClass("js-hide");
+      row2.removeClass("js-hide");
+  });
+
+});
+ -->
+ 
+<table class="legal-entities-table">
+  <tr>
+    <th>Business Type</th>
+    <th>Line of Business</th>
+    <th>State</th>
+    <th>Legal Entities</th>
+  </tr>
+  <tr>
+    <td class="BT">Individual On Exchange</td>
+    <td class="LOB">Dental</td>
+    <td><span>TX,</span> <span>CA,</span> <span>WA,</span> <span>AL,</span> <span class="last">FL</span></td>
+    <td><select>
+        <option value='Legal Entity 1'>Legal Entity 1</option>
+        <option value='Legal Entity 2'>Legal Entity 2</option>
+        <option value='Legal Entity 3'>Legal Entity 3</option>
+    </select></td>
+  </tr>
+  <tr>
+    <td class="BT">Group</td>
+    <td class="LOB">Health</td>
+    <td><span>CA,</span> <span>NY,</span> <span>FL,</span> <span>ND,</span> <span class="last">NC</span></td>
+    <td><select id="rec_mode1">        
+      </select></td>
+    
+  </tr>
+  <tr>
+    <td class="BT">Group</td>
+    <td class="LOB">Vision</td>
+    <td><span>CO,</span> <span>SD,</span> <span>WY,</span> <span>WA,</span> <span class="last">IL</span></td>
+    <td><select id="rec_mode3">        
+      </select></td>
+  </tr>
+  <tr>
+    <td class="BT">Indivdual Off Exchange</td>
+    <td class="LOB">Pediatric Dental</td>
+    <td><span>NY,</span> <span>FL,</span> <span>MA,</span> <span>VA,</span> <span class="last">RI</span></td>
+<td><select id="rec_mode4">        
+      </select></td>
+  </tr>
+  <tr>
+    <td class="BT">Individual On Exchange</td>
+    <td class="LOB">Short Term Life</td>
+    <td><span>WA,</span> <span>OR,</span> <span>CA,</span> <span>ID,</span> <span class="last">NV</span></td>
+<td><select id="rec_mode5">        
+      </select></td>
+  </tr>
+  
+   <tr>
+    <td class="BT">Individual Off Exchange</td>
+    <td class="LOB">Health</td>
+    <td><span>MA,</span> <span>TX,</span> <span>NM,</span> <span>AZ,</span> <span class="last">CO</span></td>
+<td><select id="rec_mode6">        
+      </select></td>
+  </tr>
+</table>
+          
+
+
+    <script>
+ var options =
+[
+  {
+    "text"  : "Legal Entity 1",
+    "value" : "Value 1"
+  },
+  {
+    "text"     : "Legal Entity 2",
+    "value"    : "Value 2",
+    "selected" : true
+  },
+  {
+    "text"  : "Legal Entity 3",
+    "value" : "Value 3"
+  }
+];
+
+var selectBox = document.getElementById('rec_mode');
+
+for(var i = 0, l = options.length; i < l; i++){
+  var option = options[i];
+  selectBox.options.add( new Option(option.text, option.value, option.selected) );
+} 
+    
+
+                
+    </script>   
+
+
+    <script>
+ var options =
+[
+  {
+    "text"  : "Legal Entity 1",
+    "value" : "Value 1"
+  },
+  {
+    "text"     : "Legal Entity 2",
+    "value"    : "Value 2",
+    "selected" : true
+  },
+  {
+    "text"  : "Legal Entity 3",
+    "value" : "Value 3"
+  }
+];
+
+var selectBox = document.getElementById('rec_mode1');
+
+for(var i = 0, l = options.length; i < l; i++){
+  var option = options[i];
+  selectBox.options.add( new Option(option.text, option.value, option.selected) );
+} 
+    
+                
+    </script> 
+       
+       
+   <script>
+ var options =
+[
+  {
+    "text"  : "Legal Entity 1",
+    "value" : "Value 1"
+  },
+  {
+    "text"     : "Legal Entity 2",
+    "value"    : "Value 2",
+    "selected" : true
+  },
+  {
+    "text"  : "Legal Entity 3",
+    "value" : "Value 3"
+  }
+];
+
+var selectBox = document.getElementById('rec_mode2');
+
+for(var i = 0, l = options.length; i < l; i++){
+  var option = options[i];
+  selectBox.options.add( new Option(option.text, option.value, option.selected) );
+} 
+    
+                
+    </script> 
+       
+   <script>
+ var options =
+[
+  {
+    "text"  : "Legal Entity 1",
+    "value" : "Value 1"
+  },
+  {
+    "text"     : "Legal Entity 2",
+    "value"    : "Value 2",
+    "selected" : true
+  },
+  {
+    "text"  : "Legal Entity 3",
+    "value" : "Value 3"
+  }
+];
+var selectBox = document.getElementById('rec_mode3');
+
+for(var i = 0, l = options.length; i < l; i++){
+  var option = options[i];
+  selectBox.options.add( new Option(option.text, option.value, option.selected) );
+} 
+    
+                
+    </script> 
+       
+       
+       
+       
+<script>
+ var options =
+[
+  {
+    "text"  : "Legal Entity 1",
+    "value" : "Value 1"
+  },
+  {
+    "text"     : "Legal Entity 2",
+    "value"    : "Value 2",
+    "selected" : true
+  },
+  {
+    "text"  : "Legal Entity 3",
+    "value" : "Value 3"
+  }
+];
+var selectBox = document.getElementById('rec_mode4');
+
+for(var i = 0, l = options.length; i < l; i++){
+  var option = options[i];
+  selectBox.options.add( new Option(option.text, option.value, option.selected) );
+} 
+    
+                
+    </script> 
+        
+        
+           <script>
+ var options =
+[
+  {
+    "text"  : "Legal Entity 1",
+    "value" : "Value 1"
+  },
+  {
+    "text"     : "Legal Entity 2",
+    "value"    : "Value 2",
+    "selected" : true
+  },
+  {
+    "text"  : "Legal Entity 3",
+    "value" : "Value 3"
+  }
+];
+
+var selectBox = document.getElementById('rec_mode5');
+
+for(var i = 0, l = options.length; i < l; i++){
+  var option = options[i];
+  selectBox.options.add( new Option(option.text, option.value, option.selected) );
+} 
+    
+                
+    </script> 
+        
+           <script>
+ var options =
+[
+  {
+    "text"  : "Legal Entity 1",
+    "value" : "Value 1"
+  },
+  {
+    "text"     : "Legal Entity 2",
+    "value"    : "Value 2",
+    "selected" : true
+  },
+  {
+    "text"  : "Legal Entity 3",
+    "value" : "Value 3"
+  }
+];
+var selectBox = document.getElementById('rec_mode6');
+
+for(var i = 0, l = options.length; i < l; i++){
+  var option = options[i];
+  selectBox.options.add( new Option(option.text, option.value, option.selected) );
+} 
+    
+
+  </script> 
+       
+        <br>
+           <br>
+      
+        
+         
+    <table>
+  <tr>
+    <th>Legal Entities</th>
+    <th>Address</th>
+
+  </tr>
+  <tr>
+    <td>Legal Entity 1</td>
+    <td>3421 Forrest Lane, Fayetteville, Arkansas, 72701</td>
+   
+  </tr>
+  <tr>
+    <td>Legal Entity 2</td>
+    <td>3309 Sedona Lane, Plano, Texas, 75075</td>
+   
+    
+  </tr>
+    <tr>
+    <td>Legal Entity 2</td>
+    <td>4523 Chariot Drive, Seattle, Washington, 98101</td>
+   
+    
+  </tr>
+     </table>
+          
+        <!--  
+       <div class="my-container">
+
+     <p>Legal Entites</p>
+        <hr id="hr">
+    
+        <ul style="list-style-type:none" id="dynamic-list"></ul> 
+       <p id="dText"></p> 
+    <input type="text" name="text" id="inputText"/>
+    <button onclick="pushData();">Show</button>   
+            
+    <script>
+                
+    var myArr = [];
+    
+    function pushData(){
+        
+        var inputText = document.getElementById('carriername').value;
+        
+        myArr.push(inputText);
+        
+        var pval = "";
+        
+        for(i = 0; i < myArr.length; i++){
+            
+        pval = pval + myArr[i] + "<br/>";
+            
+        }
+        
+        document.getElementById('dText').innerHTML = pval;
+        
+    }
+                
+                
+                
+    </script> 
+     
+         
+         
+         
+       <!-- <input type="text" id="candidate"/>
+        <button onclick="removeItem()">Remove Legal Entity</button> 
+
+    </div> -->
+    
+
+    
+    
+    
+      <script>
+   function addItem(){
+        var ul = document.getElementById("dynamic-list");
+        var candidate = document.getElementById("carriername");
+        var li = document.createElement("li");
+        li.setAttribute('id',candidate.value);
+        li.appendChild(document.createTextNode(candidate.value));
+        ul.appendChild(li);
+}
+
+        function removeItem(){
+	    var ul = document.getElementById("dynamic-list");
+        var candidate = document.getElementById("candidate");
+        var item = document.getElementById(candidate.value);
+        ul.removeChild(item);
+}
+                 </script>    
+            
+   <style>
+    .toggle-content {
+	display: none;
+    
+}
+
+.toggle-content.is-visible {
+	display: block;
+    
+}
+       
+ </style>
+
+    
+    <script>
+     // Show an element
+var show = function (elem) {
+	elem.classList.add('is-visible');
+};
+
+// Hide an element
+var hide = function (elem) {
+	elem.classList.remove('is-visible');
+};
+
+// Toggle element visibility
+var toggle = function (elem) {
+	elem.classList.toggle('is-visible');
+};
+
+// Listen for click events
+document.addEventListener('click', function (event) {
+
+	// Make sure clicked element is our toggle
+	if (!event.target.classList.contains('toggle')) return;
+
+	// Prevent default link behavior
+	event.preventDefault();
+
+	// Get the content
+	var content = document.querySelector(event.target.hash);
+	if (!content) return;
+
+	// Toggle the content
+	toggle(content);
+
+}, false);       
+            
+            
+    </script>         
+            
+            <br>
+            <br>
+            <!-- Header text --> 
+                 <button  class="btn btn-lg btn-primary"  class="toggle"><a class="toggle" href="#example" style="color: #ffffff">Add Legal Entity</a></button> 
+                 
+                 <br>
+                 <br>
+                 
+                  <div class='toggle-content' id="example">
+                    <form id="entity-address" action="" name="entity-address">
 >>>>>>> Combining
                     <div class="my-container">
                         <div class="carrier-name">
@@ -338,11 +792,13 @@
 =======
                   
 
-    </div>
-        <!-- Submit Button -->
-        <input id="legalentity-submit-btn" type="submit" class="btn btn-lg btn-primary pull-right" placeholder="Save" value="Submit">  
+
+       <input id="legalentity-submit-btn" onclick="addItem()" type="submit" class="btn btn-lg btn-primary pull-right" placeholder="Save" value="Submit">  
 </form>  
 >>>>>>> Combining
+
+            </div>
+
 
     <!-- <div class="row">
             <div id="business-type"  class="col-lg-12 col-md-1">   
@@ -354,6 +810,7 @@
 
         <!-- Submit Button -->
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                  &nbsp;
                  
@@ -361,6 +818,9 @@
 
 =======
 </div>
+=======
+
+>>>>>>> Combining
 <br>
 <br>
 
