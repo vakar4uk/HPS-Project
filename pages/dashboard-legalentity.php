@@ -743,5 +743,5 @@ document.addEventListener('click', function (event) {
 
 <?php
     include('navbars_footers/footer.php');
-    include('navbars_footers/reviewfooter.php');
+    // include('navbars_footers/reviewfooter.php');
 ?>
