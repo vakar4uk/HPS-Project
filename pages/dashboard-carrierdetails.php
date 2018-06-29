@@ -28,24 +28,6 @@
                 </div>
 
                 <div class="my-container">
-<<<<<<< HEAD
-                    <div class="carrier-name">
-                        <p>Carrier Logo</p>
-                        <label>
-                                <span>Click to upload or drop an image here...</span>
-                                <input id="logo-upload" class="btn btn-block btn-sm btn-info" type="file">
-                        </label>
-                        <span id="icons"><i class="far fa-list-alt"></i><i class="fas fa-ellipsis-v fa-1x"></i></span>
-                    </div>
-                </div>
-
-                <a id="save-next-btn"  href="dashboard-businessdetails.php" class="btn btn-lg btn-primary pull-right">Next</a>
-
-            </div>
-        </div>   
-</div>
-
-=======
                     <div id="carrier-logo" class="carrier-name">
                         <p>Carrier Logo</p><span id="icons"><i class="far fa-envelope fa-1x"></i><i class="fas fa-ellipsis-v fa-1x"></i></span>
                         <hr id="hr">
@@ -77,7 +59,6 @@
 </div>
 <!-- Modal -->
 
->>>>>>> Combining
 <?php
     include('navbars_footers/footer.php');
 ?>

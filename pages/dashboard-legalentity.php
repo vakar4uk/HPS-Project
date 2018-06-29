@@ -17,19 +17,12 @@
                     </p>
                 </div>                   
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-            
             </div>
 
             <!-- Header text -->  
                <div class= "legal-container">
                 <form id="entity-address" action="">
-=======
-            <!-- Header text -->  
                 <form id="entity-address" action="" name="entity-address">
->>>>>>> Combining
-=======
             </div>
             
 <style>
@@ -481,16 +474,11 @@ document.addEventListener('click', function (event) {
                  
                   <div class='toggle-content' id="example">
                     <form id="entity-address" action="" name="entity-address">
->>>>>>> Combining
                     <div class="my-container">
                         <div class="carrier-name">
                             <p>Name of and Code of Legal Entity *</p><span id="icons"><i class="far fa-envelope fa-1x"></i><i class="fas fa-ellipsis-v fa-1x"></i></span>
                             <hr id="hr">
-<<<<<<< HEAD
-                            <input id="carriername-input" type="text" class="form-control" placeholder="John Doe, XC78" required>
-=======
                             <input id="carriername" name="carriername" type="text" class="form-control" placeholder="John Doe, XC78" required>
->>>>>>> Combining
                         </div>
                         <!-- <input type="submit" class="btn btn-lg btn-success btn-block"> -->
                         <!-- <button id="add-bank-address" class="btn btn-lg btn-success btn-block" type="submit">Submit</button> -->
@@ -509,17 +497,6 @@ document.addEventListener('click', function (event) {
                             <br>
                                 <div class="container-fluid">
                                     <div class="col-lg-4">
-<<<<<<< HEAD
-                                        <select required class="selectpicker form-group" data-style="btn-default" data-width=290px >
-                                    <option value="" selected disabled hidden>Select address type...</option>
-                                    <option value="business-address">Business</option>
-                                    <option value="home-address">Home</option>
-                                </select>
-                                    </div>
-                                    <div class="col-lg-8">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" id="addressLine1" placeholder="Address Line 1" data-width=385px required>
-=======
                                         <select class="selectpicker form-group required" name="address-type" data-style="btn-default"data-width=290px>                                        
                                             <option value="">Select address type...</option>
                                             <option value="business-address">Business</option>
@@ -529,7 +506,6 @@ document.addEventListener('click', function (event) {
                                     <div class="col-lg-8">
                                         <div class="form-group">
                                             <input type="text" class="form-control" id="addressLine1" name="addressLine1" placeholder="Address Line 1 *" data-width=385px required>
->>>>>>> Combining
                                         </div>
                                     </div>
                                 </div>
@@ -549,11 +525,7 @@ document.addEventListener('click', function (event) {
                                 <div class="container-fluid">
                                     <div class="col-lg-5">
                                         <div class="form-group">
-<<<<<<< HEAD
-                                            <input type="text" class="form-control" id="addressLine2" placeholder="City" required>
-=======
                                             <input type="text" class="form-control" id="city" name="city" placeholder="City *" required>
->>>>>>> Combining
                                         </div>
                                     </div>
                                     <div class="col-lg-4">
@@ -568,11 +540,7 @@ document.addEventListener('click', function (event) {
                                     </div>
                                     <div class="col-lg-3">
                                         <div class="form-group" id="zipcodeField">
-<<<<<<< HEAD
-                                            <input type="number" class="form-control" id="zipcode" placeholder="Zipcode" required>
-=======
                                             <input type="number" name="zipcode" class="form-control" id="zipcode" placeholder="Zipcode *" required>
->>>>>>> Combining
                                         </div>
                                     </div>
                                 </div>
@@ -590,11 +558,7 @@ document.addEventListener('click', function (event) {
                                     </div>
                                     <div class="col-lg-8">
                                         <div class="form-group">
-<<<<<<< HEAD
-                                            <input type="number" class="form-control" id="phone-number" placeholder="Enter a phone number..." required>
-=======
                                             <input type="number" class="form-control" name="phone" id="phone-number" placeholder="Enter a phone number. *" required>
->>>>>>> Combining
                                         </div>
                                     </div>
                                 </div>
@@ -604,14 +568,7 @@ document.addEventListener('click', function (event) {
                                 <div class="container-fluid">
                                     <div class="col-lg-12">
                                         <div class="form-group">
-<<<<<<< HEAD
-                                            <input type="email" class="form-control" id="email" placeholder="Enter your email address..." required >
-                                       
-                                       
-                                       
-=======
                                             <input type="email" class="form-control" name="email" id="email" placeholder="Enter your email address *" required>                               
->>>>>>> Combining
                                         </div>
                                    
                                     </div>
@@ -631,11 +588,7 @@ document.addEventListener('click', function (event) {
 
 
 
-<<<<<<< HEAD
-<button id="add-bank-address" class="btn btn-lg btn-success btn-block" type="add">Add Address</button>                       
-=======
 <button id="add-bank-address" class="btn btn-lg btn-success btn-block" type="submit">Add Address</button>                       
->>>>>>> Combining
            <br>
             <script>
                 (function(){
@@ -746,11 +699,7 @@ document.addEventListener('click', function (event) {
         <!-- </form>   -->
         <br>
            <!-- <div class="col-lg-12"> -->
-<<<<<<< HEAD
-                            <button id="add-bank-details" class="btn btn-lg btn-success btn-block" type="add">Add Bank Details</button>                       
-=======
                             <button id="add-bank-details" class="btn btn-lg btn-success btn-block" type="submit">Add Bank Details</button>                       
->>>>>>> Combining
            <!-- </div>  --> <br>
            
                <script>
@@ -765,37 +714,11 @@ document.addEventListener('click', function (event) {
                                 });
                     })();
                 </script> 
-<<<<<<< HEAD
-                 
-                       &nbsp;
-    </div>
-        <!-- Submit Button -->
-        <button id="add-entity" class="btn btn-lg btn-success btn-block" type="add">Add Legal Entity</button>     
-        
-         <script>
-             
-                    
-                    (function(){
-
-                  var input = $('.legal-container');
-                    $('#add-entity').on('click', function(e){
-                    $(this).before(input.clone());
-                    e.preventDefault();
-                                });
-                    })();
-                </script> 
-                
-                 &nbsp;
-</form>  
-    
-</div>
-=======
                   
 
 
        <input id="legalentity-submit-btn" onclick="addItem()" type="submit" class="btn btn-lg btn-primary pull-right" placeholder="Save" value="Submit">  
 </form>  
->>>>>>> Combining
 
             </div>
 
@@ -809,22 +732,15 @@ document.addEventListener('click', function (event) {
         <br> -->
 
         <!-- Submit Button -->
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                  &nbsp;
                  
                  
 
-=======
 </div>
-=======
 
->>>>>>> Combining
-<br>
-<br>
 
->>>>>>> Combining
+
 <?php
     include('navbars_footers/footer.php');
     include('navbars_footers/reviewfooter.php');
