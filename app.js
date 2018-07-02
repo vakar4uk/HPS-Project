@@ -147,7 +147,8 @@ $(document).ready(function () {
         });
 
     // Legal Entities Table jquery code
-        $("span").click(function(){
+        // $("span").click(function(){
+        $(".legal-entities-table").find("span").click(function(){
             //find the number of spans in the <tr>
             var count = $(this).siblings().length;
             // checks if there are enough states in the td. Also prevents a row with no states
