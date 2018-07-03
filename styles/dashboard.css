@@ -515,6 +515,56 @@ p.file-name {
     width: 300px;
 }
 
+.add{
+    /* margin-right: 2px; */
+}
+
+.remove{
+
+}
+.add-modal > .modal-dialog > .modal-content > .modal-header{
+    color: white;
+    background-color: rgba(29, 77, 139, 0.98);    
+    /* background-color: #5cb85c; */
+    border-radius:5px 5px 0 0; 
+}
+.add-modal > .modal-dialog > .modal-content > .modal-footer{
+    /* Margin-top might need to be edited once there is actual content */    
+    color: white;
+    margin-top: 300px;
+    background-color: rgba(29, 77, 139, 0.98);    
+    /* background-color: #5cb85c; */
+    border-radius:0 0 5px 5px; 
+}
+
+.add-modal > .modal-dialog > .modal-content{
+    height: 500px;
+    background-color: white;
+    color: black;
+}
+
+.remove-modal > .modal-dialog > .modal-content > .modal-header{
+    color: white;
+    /* background-color: #d9534f; */
+    background-color: rgba(29, 77, 139, 0.98);    
+    border-radius:5px 5px 0 0;
+}
+
+.remove-modal > .modal-dialog > .modal-content > .modal-footer{
+    /* Margin-top might need to be edited once there is actual content */
+    margin-top: 300px;
+    color: white;
+    background-color: rgba(29, 77, 139, 0.98);    
+    /* background-color: #d9534f; */
+    border-radius:0 0 5px 5px;
+}
+
+.remove-modal > .modal-dialog > .modal-content{
+    height: 500px;
+    background-color: white;
+    color: black;
+}
+
 /* Line of Business Antony */
 
 

@@ -100,7 +100,7 @@ include('navbars_footers/top-navbar.php');
                                 <input class="form-control form-control-lg no-border" id="title" type="text" placeholder="Title goes here...">
                                 <br>
                                 <textarea class="form-control" id="textarea" rows="10" placeholder="Text goes here..."></textarea>   
-                                <a id= "CancelNoteBtn" class="btn btn-primary">Cancel</a>
+                                <a id= "CancelNoteBtn" class="btn btn-primary" data-dismiss="modal">Cancel</a>
                                 <a id= "AddNoteBtn" class="btn btn-primary">+ Add Note</a>
                                 <br><br><br>
                               </div>
