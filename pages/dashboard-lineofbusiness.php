@@ -22,8 +22,22 @@
                         <div class="col-lg-3 col-md-6 col-sm-12">
                             <div class="my-container">
                                 <div class="carrier-name">
-                                    <p>Business Type</p><span id="icons" style="margin-right: 20px"><i class="far fa-envelope fa-1x"></i><i class="fas fa-ellipsis-v fa-1x"></i></span>
-                                    <br><hr id="hr">   
+                                    <p>Business Type</p>
+                                        <span id="icons" style="margin-right:30px;">
+                                            <ul class="nav navbar-nav navbar-right">
+                                                    <li><a href="" style="padding-left: 0px; padding-right: 0px; padding-top: 5px;"><i class="far fa-envelope fa-1x" style="color:rgba(60, 222, 204, 0.91); padding-left:0px;"></i></a>
+                                                    </li>
+                                                        <li class="dropdown">
+                                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="padding-right:0px; padding-top:5px;"><i class="fas fa-ellipsis-v" style="color:rgba(60, 222, 204, 0.91);"></i></a>
+                                                        <ul class="dropdown-menu">
+                                                            <li><a href="#" data-toggle="modal" data-target="#notes"><i class="far fa-file-alt" style="color:rgba(60, 222, 204, 0.91); margin-right: 13px;"></i>Notes</a></li>
+                                                            <li><a href=""><i class= "fas fa-sliders-h" style="color:rgba(60, 222, 204, 0.91); margin-right: 8px;"></i>Customizations</a></li>
+                                                            <li><a href=""><i class="fas fa-clipboard-check" style="color:rgba(60, 222, 204, 0.91); margin-right: 13px;"></i>Add To-Do</a></li>
+                                                        </ul>
+                                                    </li>
+                                            </ul>
+                                        </span>
+                                    <hr id="hr"style="margin-top: 2px;">
                                 </div>
                                 <div id="business-selection-btn" class="lineofbusiness-options">
                                     <div class="row">
@@ -47,8 +61,22 @@
                         <div class="col-lg-3 col-md-6 col-sm-12">
                             <div class="my-container">
                                 <div class="carrier-name">
-                                    <p>Line of Business</p><span id="icons" style="margin-right: 20px"><i class="far fa-envelope fa-1x"></i><i class="fas fa-ellipsis-v fa-1x"></i></span>
-                                    <hr id="hr">   
+                                    <p>Line of Business</p>
+                                    <span id="icons" style="margin-right:30px;">
+                                            <ul class="nav navbar-nav navbar-right">
+                                                    <li><a href="" style="padding-left: 0px; padding-right: 0px; padding-top: 5px;"><i class="far fa-envelope fa-1x" style="color:rgba(60, 222, 204, 0.91); padding-left:0px;"></i></a>
+                                                    </li>
+                                                        <li class="dropdown">
+                                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="padding-right:0px; padding-top:5px;"><i class="fas fa-ellipsis-v" style="color:rgba(60, 222, 204, 0.91);"></i></a>
+                                                        <ul class="dropdown-menu">
+                                                            <li><a href="#" data-toggle="modal" data-target="#notes"><i class="far fa-file-alt" style="color:rgba(60, 222, 204, 0.91); margin-right: 13px;"></i>Notes</a></li>
+                                                            <li><a href=""><i class= "fas fa-sliders-h" style="color:rgba(60, 222, 204, 0.91); margin-right: 8px;"></i>Customizations</a></li>
+                                                            <li><a href=""><i class="fas fa-clipboard-check" style="color:rgba(60, 222, 204, 0.91); margin-right: 13px;"></i>Add To-Do</a></li>
+                                                        </ul>
+                                                    </li>
+                                            </ul>
+                                        </span>
+                                    <hr id="hr"style="margin-top: 2px;"> 
                                 </div>
                                 <div id="lineofbusiness-selection-btn" class="lineofbusiness-types">
                                     <div class="row">
@@ -69,8 +97,22 @@
                         <div class="col-lg-6 col-md-12 col-sm-12">
                             <div class="my-container">                       
                                 <div class="carrier-name">
-                                    <p>States</p><span id="icons" style="margin-right: 20px"><i class="far fa-envelope fa-1x"></i><i class="fas fa-ellipsis-v fa-1x"></i></span>
-                                    <hr id="hr">   
+                                    <p>States</p>
+                                        <span id="icons" style="margin-right:30px;">
+                                            <ul class="nav navbar-nav navbar-right">
+                                                    <li><a href="" style="padding-left: 0px; padding-right: 0px; padding-top: 5px;"><i class="far fa-envelope fa-1x" style="color:rgba(60, 222, 204, 0.91); padding-left:0px;"></i></a>
+                                                    </li>
+                                                        <li class="dropdown">
+                                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="padding-right:0px; padding-top:5px;"><i class="fas fa-ellipsis-v" style="color:rgba(60, 222, 204, 0.91);"></i></a>
+                                                        <ul class="dropdown-menu">
+                                                            <li><a href="#" data-toggle="modal" data-target="#notes"><i class="far fa-file-alt" style="color:rgba(60, 222, 204, 0.91); margin-right: 13px;"></i>Notes</a></li>
+                                                            <li><a href=""><i class= "fas fa-sliders-h" style="color:rgba(60, 222, 204, 0.91); margin-right: 8px;"></i>Customizations</a></li>
+                                                            <li><a href=""><i class="fas fa-clipboard-check" style="color:rgba(60, 222, 204, 0.91); margin-right: 13px;"></i>Add To-Do</a></li>
+                                                        </ul>
+                                                    </li>
+                                            </ul>
+                                        </span>
+                                    <hr id="hr"style="margin-top: 2px;">
                                 </div>
                                 <div id="states-selection-btn" class="lineofbusiness-states">
                                     <div class="row">
