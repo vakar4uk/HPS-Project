@@ -517,6 +517,9 @@ p.file-name {
 .remove{
 
 }
+.done{
+
+}
 .add-modal > .modal-dialog > .modal-content > .modal-header{
     color: white;
     background-color: rgba(29, 77, 139, 0.98);    
@@ -526,14 +529,14 @@ p.file-name {
 .add-modal > .modal-dialog > .modal-content > .modal-footer{
     /* Margin-top might need to be edited once there is actual content */    
     color: white;
-    margin-top: 300px;
+    margin-top: 100px;
     background-color: rgba(29, 77, 139, 0.98);    
     /* background-color: #5cb85c; */
     border-radius:0 0 5px 5px; 
 }
 
 .add-modal > .modal-dialog > .modal-content{
-    height: 500px;
+    height: 1200px;
     background-color: white;
     color: black;
 }

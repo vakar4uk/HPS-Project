@@ -187,8 +187,10 @@ $(document).ready(function () {
         
     // Legal Entities Split Functionality
     $(".split").click(function(){
+        $(".split").prop("disabled", true);
         // get the index of the row
         var index = ($(this).parent().parent().parent().index())-1;
+        console.log(index);
         // # of span tags in the current states column
         var spans = $(".legal-entities-table tr:eq("+(index+1)+") span").length;
         if(spans > 1){
@@ -210,7 +212,22 @@ $(document).ready(function () {
         }
         
     });
-    
+    $(".add").click(function(){
+        $(".split").prop("disabled", false);
+    });
+    // Legal Entities Done functionality
+    $(".legal-entities-table").on('click', '.done', function(){
+        $(".split").prop("disabled", false);
+        var index = ($(this).parent().parent().parent().index())-1;
+        var spans = $(".legal-entities-table tr:eq("+(index+1)+") span").length;
+        if(spans > 0){
+            $(".legal-entities-table tr:eq("+(index)+") span").attr("draggable","false");
+            $(".legal-entities-table tr:eq("+(index+1)+") span").attr("draggable","false");
+            $(".legal-entities-table tr:eq("+(index)+") td").removeAttr("ondragover");
+            $(this).replaceWith("<button type='button' class='add btn btn-sm btn-success col-lg-5' data-toggle='modal' data-target='.add-modal'>Add</button><button type='button' class='split btn btn-sm btn-danger col-lg-5 pull-right'>Split</button>");
+        }
+        
+    });
 
 
 });
