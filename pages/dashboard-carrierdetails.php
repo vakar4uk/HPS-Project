@@ -20,8 +20,22 @@
 
                 <div class="my-container">
                     <div class="carrier-name">
-                        <p>Name of the Carrier</p><span id="icons"><i class="far fa-envelope fa-1x"></i><i class="fas fa-ellipsis-v fa-1x"></i></span>
-                        <hr id="hr">
+                        <p>Name of the Carrier</p>
+                            <span id="icons">
+                                <ul class="nav navbar-nav navbar-right">
+                                        <li><a href=""><i class="far fa-envelope fa-1x" style="color:rgba(60, 222, 204, 0.91); padding-left:0px;"></i></a>
+                                        </li>
+                                            <li class="dropdown">
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fas fa-ellipsis-v" style="color:rgba(60, 222, 204, 0.91);"></i></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#" data-toggle="modal" data-target="#notes"><i class="far fa-file-alt" style="color:rgba(60, 222, 204, 0.91); margin-right: 13px;"></i>Notes</a></li>
+                                                <li><a href=""><i class= "fas fa-sliders-h" style="color:rgba(60, 222, 204, 0.91); margin-right: 8px;"></i>Customizations</a></li>
+                                                <li><a href=""><i class="fas fa-clipboard-check" style="color:rgba(60, 222, 204, 0.91); margin-right: 13px;"></i>Add To-Do</a></li>
+                                            </ul>
+                                        </li>
+                                </ul>
+                            </span>
+                        <hr id="hr"style="margin-top: 2px;">
                         <input id="carriername-input" type="text" class="form-control" placeholder="Enter name here...">
                         
                     </div>
@@ -29,8 +43,21 @@
 
                 <div class="my-container">
                     <div id="carrier-logo" class="carrier-name">
-                        <p>Carrier Logo</p><span id="icons"><i class="far fa-envelope fa-1x"></i><i class="fas fa-ellipsis-v fa-1x"></i></span>
-                        <hr id="hr">
+                        <p>Carrier Logo</p>
+                            <span id="icons">
+                                <ul class="nav navbar-nav navbar-right">
+                                        <li><a href=""><i class="far fa-envelope fa-1x" style="color:rgba(60, 222, 204, 0.91); padding-left:0px;"></i></a>
+                                        </li>
+                                            <li class="dropdown">
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fas fa-ellipsis-v" style="color:rgba(60, 222, 204, 0.91);"></i></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#" data-toggle="modal" data-target="#notes"><i class="far fa-file-alt" style="color:rgba(60, 222, 204, 0.91); margin-right: 13px;"></i>Notes</a></li>
+                                                <li><a href=""><i class= "fas fa-sliders-h" style="color:rgba(60, 222, 204, 0.91); margin-right: 8px;"></i>Customizations</a></li>
+                                                <li><a href=""><i class="fas fa-clipboard-check" style="color:rgba(60, 222, 204, 0.91); margin-right: 13px;"></i>Add To-Do</a></li>
+                                            </ul>
+                                </ul>
+                            </span>
+                            <hr id="hr">
                         <div id="drag-drop-container">
                             <div id="image-upload">
                                 <label id="logo-drop-area">

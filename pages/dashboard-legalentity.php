@@ -38,27 +38,13 @@
                         background-color: #dddddd;
                     }
                 </style>
-
-                <!-- In order to use parents() means anything above the class -->
-                <!-- 
-$(document).ready(function() {
-
-$('.js-click-me').on('click', function (event) {
-var row2 = $(this).parents().find('.js-row2');
-      $(this).addClass("js-hide");
-      row2.removeClass("js-hide");
-  });
-
-});
- -->
-
                 <table class="legal-entities-table">
                     <tr>
                         <th>Business Type</th>
                         <th>Line of Business</th>
                         <th>State</th>
                         <th>Legal Entities</th>
-                        <th>Action</th>
+                        <th>Actions</th>
                     </tr>
                     <tr>
                         <td class="BT">Individual On Exchange</td>
@@ -73,11 +59,9 @@ var row2 = $(this).parents().find('.js-row2');
                         <td>
                             <div class="btn-toolbar">
                                     <button type="button" class="add btn btn-sm btn-success col-lg-5" data-toggle="modal" data-target=".add-modal">Add</button>
-                                    <button type="button" class="remove btn btn-sm btn-danger col-lg-5 pull-right" data-toggle="modal" data-target=".remove-modal">Split</button>
+                                    <button type="button" class="split btn btn-sm btn-danger col-lg-5 pull-right">Split</button>
                             </div>
                         </td>
-                        <!-- <button type="button" class="btn btn-outline-success">Add</button>
-    <button type="button" class="btn btn-outline-danger">Remove</button> -->
                     </tr>
                     <tr>
                         <td class="BT">Group</td>
@@ -88,7 +72,7 @@ var row2 = $(this).parents().find('.js-row2');
                         <td>
                             <div class="btn-toolbar">
                                     <button type="button" class="add btn btn-sm btn-success col-lg-5" data-toggle="modal" data-target=".add-modal">Add</button>
-                                    <button type="button" class="remove btn btn-sm btn-danger col-lg-5 pull-right" data-toggle="modal" data-target=".remove-modal">Split</button>
+                                    <button type="button" class="split btn btn-sm btn-danger col-lg-5 pull-right">Split</button>                                    
                             </div>
                         </td>
                     </tr>
@@ -101,7 +85,7 @@ var row2 = $(this).parents().find('.js-row2');
                         <td>
                             <div class="btn-toolbar">
                                     <button type="button" class="add btn btn-sm btn-success col-lg-5" data-toggle="modal" data-target=".add-modal">Add</button>
-                                    <button type="button" class="remove btn btn-sm btn-danger col-lg-5 pull-right" data-toggle="modal" data-target=".remove-modal">Split</button>
+                                    <button type="button" class="split btn btn-sm btn-danger col-lg-5 pull-right">Split</button>
                             </div>
                         </td>
                     </tr>
@@ -114,7 +98,7 @@ var row2 = $(this).parents().find('.js-row2');
                         <td>
                             <div class="btn-toolbar">
                                     <button type="button" class="add btn btn-sm btn-success col-lg-5" data-toggle="modal" data-target=".add-modal">Add</button>
-                                    <button type="button" class="remove btn btn-sm btn-danger col-lg-5 pull-right" data-toggle="modal" data-target=".remove-modal">Split</button>
+                                    <button type="button" class="split btn btn-sm btn-danger col-lg-5 pull-right">Split</button>
                             </div>
                         </td>
                     </tr>
@@ -127,7 +111,7 @@ var row2 = $(this).parents().find('.js-row2');
                         <td>
                             <div class="btn-toolbar">
                                 <button type="button" class="add btn btn-sm btn-success col-lg-5" data-toggle="modal" data-target=".add-modal">Add</button>
-                                <button type="button" class="remove btn btn-sm btn-danger col-lg-5 pull-right" data-toggle="modal" data-target=".remove-modal">Split</button>
+                                <button type="button" class="split btn btn-sm btn-danger col-lg-5 pull-right">Split</button>
                             </div>
                         </td>
                     </tr>
@@ -141,13 +125,13 @@ var row2 = $(this).parents().find('.js-row2');
                         <td>
                             <div class="btn-toolbar">
                                     <button type="button" class="add btn btn-sm btn-success col-lg-5" data-toggle="modal" data-target=".add-modal">Add</button>
-                                    <button type="button" class="remove btn btn-sm btn-danger col-lg-5 pull-right" data-toggle="modal" data-target=".remove-modal">Split</button>
+                                    <button type="button" class="split btn btn-sm btn-danger col-lg-5 pull-right">Split</button>
                             </div>
                         </td>
                     </tr>
                 </table>
 
-                <!-- Code for Add/Remove Modals -->
+                <!-- Code for Add Modal -->
 
                 <div class="modal fade add-modal" tabindex="-1" role="dialog">
                         <div class="modal-dialog modal-lg">
@@ -170,27 +154,7 @@ var row2 = $(this).parents().find('.js-row2');
                           </div>
                         </div>
                 </div>
-                <div class="modal fade remove-modal" tabindex="-1" role="dialog">
-                        <div class="modal-dialog modal-lg">
-                          <div class="modal-content">
-                                <div class="modal-header">
-                                        <h3 class="modal-title">Split
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </h3>
-                                </div>
-                                <div class="modal-body">
-                                    <h1>Stuff Goes here</h1>
-                                </div>
-                                <div class="modal-footer">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">
-                                          Cancel
-                                        </button>
-                                </div>
-                          </div>
-                        </div>
-                </div>
+
 
                 <script>
                     var options = [{
