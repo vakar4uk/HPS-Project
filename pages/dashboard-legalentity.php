@@ -144,7 +144,7 @@
                                         </h3>
                                 </div>
                                 <div class="modal-body">
-                                        <form id="entity-address" action="" name="entity-address">
+                                        <form action="">
                                                 <div class="my-container">
                                                     <div class="carrier-name">
                                                         <p>Name of and Code of Legal Entity *</p><span id="icons"><i class="far fa-envelope fa-1x"></i><i class="fas fa-ellipsis-v fa-1x"></i></span>
