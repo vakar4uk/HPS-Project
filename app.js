@@ -147,8 +147,8 @@ $(document).ready(function () {
         });
 
     // Legal Entities Table jquery code
-        // Disabled because functionality has been changed
-        // This now gets rid of commas from the previous column
+        // Disabled previous states functionality because requirements have been changed
+        // This now gets rid of commas from the previous column when a state is clicked
         $(".legal-entities-table").find("span").mousedown(function(){
             //find the number of spans in the <tr>
             var count = $(this).siblings().length;
@@ -202,28 +202,36 @@ $(document).ready(function () {
             $(".legal-entities-table tr:eq("+(index+1)+") span").each(function( index, element ) {
                 $( element ).attr("id","states"+index );
             });
-            // adds row with no states under selected row
-            $(".legal-entities-table tr:eq("+(index+1)+")").after("<tr><td class='BT'>"+business_type+"</td><td class='LOB'>"+lob+"</td><td id='drop-off' ondrop='drop(event)' ondragover='allowDrop(event)'></td><td><select><option value='Legal Entity 1'>Legal Entity 1</option><option value='Legal Entity 2'>Legal Entity 2</option><option value='Legal Entity 3'>Legal Entity 3</option></select></td><td><div class='btn-toolbar'><button type='button' class='done btn btn-sm btn-warning col-lg-5'>Done</button></div></td></tr>");
+            // adds row with no states under selected row also add js function calls for drag and drop
+            // also makes special ids for new states <td> so that it does not get confused later 
+            $(".legal-entities-table tr:eq("+(index+1)+")").after("<tr><td class='BT'>"+business_type+"</td><td class='LOB'>"+lob+"</td><td id='drop-off"+(index+1)+"'"+" ondrop='drop(event,"+(index+1)+")' ondragover='allowDrop(event)'></td><td><select><option value='Legal Entity 1'>Legal Entity 1</option><option value='Legal Entity 2'>Legal Entity 2</option><option value='Legal Entity 3'>Legal Entity 3</option></select></td><td><div class='btn-toolbar'><button type='button' class='done btn btn-sm btn-warning col-lg-5'>Done</button></div></td></tr>");
             // make spans draggable
             $(".legal-entities-table tr:eq("+(index+1)+") span").attr("draggable","true");
             $(".legal-entities-table tr:eq("+(index+1)+") span").attr("ondragstart","drag(event)");
-            // $(".legal-entities-table tr:eq("+(index+1)+") span").attr("id","states");
-            
         }
         
     });
-    $(".add").click(function(){
-        $(".split").prop("disabled", false);
-    });
+    // $(".add").click(function(){
+    //     $(".split").prop("disabled", false);
+    // });
     // Legal Entities Done functionality
     $(".legal-entities-table").on('click', '.done', function(){
-        $(".split").prop("disabled", false);
+        // $(".split").prop("disabled", false);
         var index = ($(this).parent().parent().parent().index())-1;
         var spans = $(".legal-entities-table tr:eq("+(index+1)+") span").length;
+        //if there is more than 1 state
         if(spans > 0){
+            //enable the split action on table when it has been click
+            $(".split").prop("disabled", false);
+            // remove draging functionality from rows
             $(".legal-entities-table tr:eq("+(index)+") span").attr("draggable","false");
             $(".legal-entities-table tr:eq("+(index+1)+") span").attr("draggable","false");
             $(".legal-entities-table tr:eq("+(index)+") td").removeAttr("ondragover");
+            $(".legal-entities-table tr:eq("+(index)+") td").removeAttr("id");
+            //remove id from states so that js functions will not confused
+            $(".legal-entities-table tr:eq("+(index)+") span").removeAttr("id");
+            $(".legal-entities-table tr:eq("+(index+1)+") span").removeAttr("id");
+            // replace Done with add and split
             $(this).replaceWith("<button type='button' class='add btn btn-sm btn-success col-lg-5' data-toggle='modal' data-target='.add-modal'>Add</button><button type='button' class='split btn btn-sm btn-danger col-lg-5 pull-right'>Split</button>");
         }
         
@@ -231,7 +239,7 @@ $(document).ready(function () {
 
 
 });
-
+// JS functions to assist drag and drop functionality
 // allow the drop
 function allowDrop(e) {
     e.preventDefault();
@@ -243,7 +251,7 @@ function drag(e) {
 }
 
 //when the span is dropped
-function drop(e) {
+function drop(e, i) {
     e.preventDefault();
     // Get the id
     var data = e.dataTransfer.getData("text");
@@ -251,15 +259,15 @@ function drop(e) {
     var content = document.getElementById(data).innerHTML;
     // get rid of the comma
     content = content.replace(/,/i,"");
-    // Get the length of new states cell
-    var len = document.getElementById("drop-off").childNodes.length;
+    // Get the specific drop-off id 
+    dropoff = document.getElementById("drop-off"+i);
     // if the len is 0 add a space
-    if(len == 0){
-        document.getElementById(data).innerHTML = content;
+    if(dropoff.hasChildNodes()){
+        document.getElementById(data).innerHTML = ", "+ content;        
     }
     // else add a comma and a space
     else{
-        document.getElementById(data).innerHTML = ", "+ content;
+        document.getElementById(data).innerHTML = content;        
     }
     // add the state to the cell
     e.target.appendChild(document.getElementById(data));

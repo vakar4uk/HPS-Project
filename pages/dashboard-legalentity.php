@@ -144,7 +144,7 @@
                                         </h3>
                                 </div>
                                 <div class="modal-body">
-                                        <form id="entity-address" action="" name="entity-address">
+                                        <form action="">
                                                 <div class="my-container">
                                                     <div class="carrier-name">
                                                         <p>Name of and Code of Legal Entity *</p><span id="icons"><i class="far fa-envelope fa-1x"></i><i class="fas fa-ellipsis-v fa-1x"></i></span>
@@ -684,7 +684,7 @@
                 <br>
                 <br>
                 <!-- Header text -->
-                <button class="btn btn-lg btn-primary" class="toggle"><a class="toggle" href="#example" style="color: #ffffff">Add Legal Entity</a></button>
+                <!-- <button class="btn btn-lg btn-primary" class="toggle"><a class="toggle" href="#example" style="color: #ffffff">Add Legal Entity</a></button> -->
 
                 <br>
                 <br>
