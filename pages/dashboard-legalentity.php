@@ -684,7 +684,7 @@
                 <br>
                 <br>
                 <!-- Header text -->
-                <button class="btn btn-lg btn-primary" class="toggle"><a class="toggle" href="#example" style="color: #ffffff">Add Legal Entity</a></button>
+                <!-- <button class="btn btn-lg btn-primary" class="toggle"><a class="toggle" href="#example" style="color: #ffffff">Add Legal Entity</a></button> -->
 
                 <br>
                 <br>
