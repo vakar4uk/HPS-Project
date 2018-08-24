@@ -11,7 +11,7 @@
             <li class="active"><a href="#">CORE</a></li>
             <li><a href="plan-info.php">PPR</a></li>
             <li><a href="#">EXCHANGELINK</a></li>
-            <li><a href="#">SLP</a></li>
+            <li><a href="dashboard-slp-general.php">SLP</a></li>
             <li><a href="#">SALESLINK</a></li>
             <li><a href="#">OPERATIONS</a></li>
             <li><a href="#">FINANCE & BILLING</a></li>

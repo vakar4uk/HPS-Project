@@ -150,6 +150,14 @@ nav .nav.navbar-nav > li  a:hover {
     margin: auto 20px;   
 }
 
+.containertable { 
+    width: 100%;  
+    margin: auto 20px;   
+}
+
+
+
+
 #my-dropdown {
     width: 100%;  
     background: #A6A6B2;   
@@ -248,7 +256,8 @@ div.thumbnail {
 }
 
 .carrier-details {
-    margin-top: 150px;    
+    margin-top: 150px; 
+    margin-right:150px;
     text-align: center;
     padding-bottom: 10px;   
 }
